@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  14 MAY 2015 21:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  19 MAY 2015 22:22
 entering extended mode
 **Main.tex
 (C:\Users\dani\Desktop\PFG\Documentacion\Main.tex
@@ -1154,27 +1154,41 @@ cumentacion/imagenes/ejemplo4.png>] [33] [34
 
 ]
 Cap\'{\i }tulo 5.
-[35] [36
+[35] <./imagenes/aproxLevelSet1.png, id=211, 310.15875pt x 274.77657pt>
+File: ./imagenes/aproxLevelSet1.png Graphic file (type png)
+
+<use ./imagenes/aproxLevelSet1.png>
+Package pdftex.def Info: ./imagenes/aproxLevelSet1.png used on input line 677.
+(pdftex.def)             Requested size: 180.67499pt x 160.0623pt.
+
+<./imagenes/aproxLevelSet2.png, id=212, 297.36093pt x 264.23718pt>
+File: ./imagenes/aproxLevelSet2.png Graphic file (type png)
+
+<use ./imagenes/aproxLevelSet2.png>
+Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 682.
+(pdftex.def)             Requested size: 180.67499pt x 160.5474pt.
+ [36 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet1.png> <C:/
+Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet2.png>] [37] [38
 
 ]
 Cap\'{\i }tulo 6.
-[37] [38
-
-]
-Cap\'{\i }tulo 7.
 [39] [40
 
 ]
-Cap\'{\i }tulo 8.
+Cap\'{\i }tulo 7.
 [41] [42
+
+]
+Cap\'{\i }tulo 8.
+[43] [44
 
 ]
 Cap\'{\i }tulo 9.
 
-LaTeX Warning: Reference `dedicacionTemporal' on page 43 undefined on input lin
-e 692.
+LaTeX Warning: Reference `dedicacionTemporal' on page 45 undefined on input lin
+e 729.
 
-[43] [44
+[45] [46
 
 ]
 Cap\'{\i }tulo 10.
@@ -1188,7 +1202,7 @@ dices.tex' on input line 85.
 Package srcltx Info: Expanded filename `Config/bibliography.tex' to `Config/bib
 liography.tex' on input line 97.
 :<+ Config/bibliography.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [45] [46
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [47] [48
 
 ])
 :<-
@@ -1205,7 +1219,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 -sity of Gi-rona,
  []
 
-[47
+[49
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 85--89
@@ -1232,17 +1246,17 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[48] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
+[50] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6281 strings out of 493921
- 93517 string characters out of 3147285
- 165256 words of memory out of 3000000
- 9162 multiletter control sequences out of 15000+200000
- 17700 words of font info for 66 fonts, out of 3000000 for 9000
+ 6297 strings out of 493921
+ 93928 string characters out of 3147285
+ 164256 words of memory out of 3000000
+ 9176 multiletter control sequences out of 15000+200000
+ 18059 words of font info for 67 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
@@ -1265,9 +1279,9 @@ blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
 txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on Main.pdf (60 pages, 21100434 bytes).
+Output written on Main.pdf (62 pages, 21153518 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
+ 329 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 196 words of extra memory for PDF output out of 10000 (max. 10000000)
 

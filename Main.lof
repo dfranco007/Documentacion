@@ -29,13 +29,14 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de proyecciones en l\'aminas de materiales sintetizados mediante la deposici\'on qu\IeC {\'\i }mica de vapor\relax }}{32}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{35}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Representaci\'on de la curva C\relax }}{36}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{37}
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{39}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{41}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{41}
+\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{43}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{43}
+\contentsline {xchapter}{Gesti\'on del proyecto}{45}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{45}
+\contentsline {xchapter}{Conclusiones}{47}
