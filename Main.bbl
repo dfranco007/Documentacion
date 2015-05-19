@@ -1,0 +1,90 @@
+\begin{thebibliography}{10}
+
+\bibitem{suta1}
+Suta L., Bessy F., Veja C., and Vaida M.-F.
+\newblock Active contours: Application to plant recognition.
+\newblock {\em Intelligent Computer Communication and Processing (ICCP), 2012
+  IEEE International Conference on}, pages 181 -- 187, 2012.
+
+\bibitem{ieee1}
+IEEE Xplore~Digital Library.
+\newblock {\em http://ieeexplore.ieee.org/}.
+
+\bibitem{terry1}
+Terry~S. Yoo.
+\newblock {\em Insight into Images: Principles and Practice for Segmentation,
+  Registration, and Image Analysis}.
+\newblock A K Peters, Ltd, 2004.
+
+\bibitem{zhang1}
+Yu-Jin Zhang.
+\newblock {\em Advances in Image and Video Segmentation}.
+\newblock 2006.
+
+\bibitem{mc1}
+Kevin McGuinness.
+\newblock {\em Image Segmentation, Evaluation, and Applications}.
+\newblock PhD thesis, Dublin City University, 2010.
+\newblock Pages 11-17.
+
+\bibitem{basa1}
+Basavaprasad B. and Ravi M.
+\newblock A comparative study on classification of image segmentation methods
+  with a focus on graph based techniques.
+\newblock {\em International Journal of Research in Engineering and
+  Technology}, vol. 3, 2014.
+
+\bibitem{oli1}
+Arnau Oliver~Malagelada.
+\newblock {\em Automatic Mass Segmentation In Mammographic Images}.
+\newblock PhD thesis, University of Girona,
+  http://eia.udg.edu/~aoliver/publications/tesi/, 2008.
+\newblock Chapter 2.3.3.
+
+\bibitem{eri2015}
+Erik Smistad, Thomas~L. Falch, Mohammadmehdi Bozorgi, Anne~C. Elster, and Frank
+  Lindseth.
+\newblock Medical image segmentation on {GPU}s -- {A} comprehensive review.
+\newblock 2015.
+
+\bibitem{kass1}
+Kass M., Witkin A., and Terzopoulos D.
+\newblock Snakes: Active contour models.
+\newblock {\em International Journal of Computer Vision}, pages 321--331, 1988.
+
+\bibitem{aaron1}
+Aaron Hagan and Ye~Zhao.
+\newblock Parallel 3d image segmentation of large data sets on a gpu cluster.
+\newblock vol. 5876:960 -- 969, 2009.
+
+\bibitem{cudaseg}
+Hormuz Mostofi and Keble College.
+\newblock {\em Fast Level Set Segmentation of Biomedical Images using Graphics
+  Processing Units}.
+\newblock PhD thesis, University of Oxford, 2009.
+\newblock https://code.google.com/p/cudaseg/.
+
+\bibitem{jeon1}
+M.~Jeon, M.~Alexander, and N.~Pizzi.
+\newblock Parallel image segmentation with level set methods.
+\newblock 2015.
+
+\bibitem{moha1}
+Mohammad~Reza Hajihashemi and Magda EI-Shenawee.
+\newblock Mpi parallelization of the level-set reconstruction algorithm.
+\newblock pages 1 -- 4, 2009.
+
+\bibitem{yong1}
+Yonggang Shi and William~Clem Karl.
+\newblock A fast implementation of the level set method without solving partial
+  differential equations.
+\newblock 2005.
+\newblock http://iss.bu.edu/yshi.
+
+\bibitem{gitHub1}
+Franco D.
+\newblock Implementacion paralela.
+\newblock 2015.
+\newblock https://github.com/dfranco007/parallelOfeli.
+
+\end{thebibliography}

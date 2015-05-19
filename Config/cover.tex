@@ -1,0 +1,48 @@
+%
+% Este fichero produce la primera página del PFC/Tesis, con el
+% título, tu nombre, el nombre del supervisor, etc.
+%
+% La mayoría, si no todo el contenido de esta página está incluido a través 
+% de comandos (p.e. \thesistitle) que han sido definidos en Config/pfc_options.tex
+%
+% Editar a voluntad.
+%
+
+\thispagestyle{empty} % no imprimir ni número, ni cabecera ni pié de página
+
+%
+% Usa \tb para colocar varios items en la página. Uso:
+%
+% \tb{w}{h}{v}{t}
+%
+% donde:
+%
+% w = ancho de la caja con el texto (1.0 = ancho de página)
+% h = posición horizontal del centro de la caja de texto (0.0 = izquierda, 1.0 = derecha)
+% v = posición vertical del centro de la caja de texto (0.0 = arriba, 1.0 = abajo)
+% t = texto a incluir en la caja de texto
+%
+
+\tb{0.8}{0.50}{0.22}{
+	\rule{175mm}{0.3mm} \\ \ \\ \
+	\huge Segmentación automática de imágenes para el análisis de materiales bidimensionales sintetizados mediante deposición química de vapor
+	\rule{175mm}{0.3mm} \\ \ \\ \
+	}                      % título
+\tb{0.8}{0.50}{0.32}{\Large Grado en Ingeniería Informática}
+\tb{0.8}{0.50}{0.35}{\large Ingeniería de Computadores}
+
+\tb{0.8}{0.50}{0.41}{\Large Proyecto de Fin de Grado}
+\tb{0.5}{0.50}{0.44}{2015}                   
+
+\tb{0.8}{0.50}{0.50}{\large \textit{Autor:}\\ Daniel Franco Barranco \ }   
+                       
+\tb{0.8}{0.50}{0.58}{\large \textit{Supervisores:}\\ Ibai Gurrutxaga Goikoetxea \\ Javier Francisco Muguerza Rivero}   
+
+\tb{0.9}{0.50}{0.73}{
+	\includegraphics[width=0.30\columnwidth]{imagenes/upvLogo}
+	\hspace{1.5in}
+	\includegraphics[width=0.30\columnwidth]{imagenes/inforLogo}
+} 
+
+\ \clearpage                       
+\thispagestyle{empty} \ \clearpage 

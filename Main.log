@@ -1,0 +1,1273 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  14 MAY 2015 21:27
+entering extended mode
+**Main.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/itsas_pfc.cls
+
+LaTeX Warning: You have requested document class `Config/itsas_pfc',
+               but the document class provides `itsas_pfc'.
+
+Document Class: itsas_pfc 2007/03/06 Itsas document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk12.clo"
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/pfc_options.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
+Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip52
+\LTright=\skip53
+\LTpre=\skip54
+\LTpost=\skip55
+\LTchunksize=\count88
+\LTcapwidth=\dimen103
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count89
+\LT@rows=\count90
+\c@LT@tables=\count91
+\c@LT@chunks=\count92
+\LT@p@ftn=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count93
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count94
+\rotFPtop=\skip56
+\rotFPbot=\skip57
+\rot@float@box=\box30
+\rot@mess@toks=\toks16
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\minitoc.sty"
+Package: minitoc 2008/07/16 v60 Package minitoc (JPFD)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\mtcmess.sty"
+Package: mtcmess 2006/03/14
+)
+Package minitoc Info: I0001
+(minitoc)             *** minitoc package, version 60 ***.
+\tf@mtc=\write3
+\mtcindent=\skip58
+\mtcskipamount=\skip59
+Package minitoc Info: I0005
+(minitoc)             compatible with hyperref.
+Package minitoc Info: I0023
+(minitoc)             part level macros available.
+Package minitoc Info: I0003
+(minitoc)             chapter level macros available.
+\mtc@toks=\toks17
+\mtc@strutbox=\box31
+\mtc@hstrutbox=\box32
+Package minitoc Info: I0002
+(minitoc)             Autoconfiguration of extensions.
+
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc0)
+Package minitoc Info: I0012
+(minitoc)             Long extensions (Unix-like) will be used.
+Package minitoc Info: I0031
+(minitoc)             ==> this version is configured for UNIX-like 
+(minitoc)                 (long extensions) file names.
+\c@mtc=\count95
+\c@minitocdepth=\count96
+\c@ptc=\count97
+\c@parttocdepth=\count98
+\ptcindent=\skip60
+Package minitoc Info: I0010
+(minitoc)             The english language is selected.
+(minitoc)              on input line 4910.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
+File: english.mld 2006/01/13
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\minitoc\english.mld"
+File: english.mld 2006/01/13
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\epsf\epsf.sty"
+This is `epsf.tex' v2.7.4 <14 February 2011>
+\epsffilein=\read1
+\epsfframemargin=\dimen106
+\epsfframethickness=\dimen107
+\epsfrsize=\dimen108
+\epsftmp=\dimen109
+\epsftsize=\dimen110
+\epsfxsize=\dimen111
+\epsfysize=\dimen112
+\pspoints=\dimen113
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\textpos\textpos.sty"
+Package: textpos 2014/01/03 v1.7j
+
+Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\TP@textbox=\box33
+\TP@holdbox=\box34
+\TPHorizModule=\dimen114
+\TPVertModule=\dimen115
+\TP@margin=\dimen116
+\TP@absmargin=\dimen117
+
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+\TPboxrulesize=\dimen118
+\TP@ox=\dimen119
+\TP@oy=\dimen120
+\TP@tbargs=\toks18
+\TP@prevdepth=\dimen121
+TextBlockOrigin set to 0pt x 0pt
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\srcltx\srcltx.sty"
+Package: srcltx 2006/11/12 v1.6 Source specials for inverse search in DVI files
+
+\src@lastline=\count99
+\src@new@everypar=\toks19
+\src@new@output=\toks20
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/spanish5.ldf
+Language: spanish.ldf 2007/02/21 v5.0a Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count100
+\U@D=\dimen122
+)
+\es@datefmt=\count101
+\es@quottoks=\toks21
+\es@quotdepth=\count102
+Package babel Info: Making " an active character on input line 488.
+Package babel Info: Making . an active character on input line 581.
+Package babel Info: Making < an active character on input line 626.
+Package babel Info: Making > an active character on input line 626.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+Package srcltx Info: Expanded filename `latin1.def' to `latin1.def.tex' on inpu
+t line 131.
+
+:<+ latin1.def.tex
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+)
+:<-
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip \abovecaptionski
+p \sbox \@tempboxa {\footnotesize #1: #2}\ifdim \wd \@tempboxa >\hsize {\footno
+tesize #1: #2\par } \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@
+tempboxa \hfil }\fi \vskip \belowcaptionskip .
+\c@ContinuedFloat=\count103
+Package caption Info: longtable package is loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+)
+Package caption Info: rotating package is loaded.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count104
+\c@subtable=\count105
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count106
+\float@exts=\toks24
+\float@box=\box35
+\@float@everytoks=\toks25
+\@floatcapt=\box36
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks26
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)))
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 23.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 23.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen130
+\scratchbox=\box37
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen131
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks28
+)
+Package minitoc(hints) Info: I0049
+(minitoc(hints))             ==> You requested the hints option. 
+(minitoc(hints))             Some hints are eventually given below.
+ ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package srcltx Info: Expanded filename `Config/rename.tex' to `Config/rename.te
+x' on input line 29.
+
+:<+ Config/rename.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/rename.tex)
+:<-
+Package srcltx Info: Expanded filename `Config/cover.tex' to `Config/cover.tex'
+ on input line 35.
+:<+ Config/cover.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/cover.tex
+Overfull \hbox (19.9151pt too wide) in paragraph at lines 30--30
+ [][] 
+ []
+
+
+Overfull \hbox (19.9151pt too wide) in paragraph at lines 30--30
+ [] 
+ []
+
+<imagenes/upvLogo.jpg, id=1, 341.275pt x 195.73125pt>
+File: imagenes/upvLogo.jpg Graphic file (type jpg)
+
+<use imagenes/upvLogo.jpg>
+Package pdftex.def Info: imagenes/upvLogo.jpg used on input line 45.
+(pdftex.def)             Requested size: 161.32767pt x 92.52829pt.
+
+<imagenes/inforLogo.jpg, id=2, 301.125pt x 127.22531pt>
+File: imagenes/inforLogo.jpg Graphic file (type jpg)
+
+<use imagenes/inforLogo.jpg>
+Package pdftex.def Info: imagenes/inforLogo.jpg used on input line 45.
+(pdftex.def)             Requested size: 161.32767pt x 68.16289pt.
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+ <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/upvLogo.jpg> <C:/Users/dani/
+Desktop/PFG/Documentacion/imagenes/inforLogo.jpg>] [2
+
+])
+:<-
+Package srcltx Info: Expanded filename `Config/begin.tex' to `Config/begin.tex'
+ on input line 41.
+:<+ Config/begin.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/begin.tex)
+:<-
+Package srcltx Info: Expanded filename `file-acknowledgements.tex' to `file-ack
+nowledgements.tex' on input line 47.
+:<+ file-acknowledgements.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\file-acknowledgements.tex)
+:<-
+Package srcltx Info: Expanded filename `Config/toc.tex' to `Config/toc.tex' on 
+input line 54.
+:<+ Config/toc.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/toc.tex
+Package minitoc Info: I0024
+(minitoc)             PREPARING MINITOCS FROM Main.toc on input line 2.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc1.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc2.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc3.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc4.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc5.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc6.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc7.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc8.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc9.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc10.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc11.
+ [1
+
+
+
+] [2
+
+]
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3])
+\tf@toc=\write4
+ [4]
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.lof)
+\tf@lof=\write5
+ [5
+
+] [6
+
+]
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.lot
+LaTeX Font Info:    Try loading font information for U+lasy on input line 6.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+))
+\tf@lot=\write6
+ [7] [8
+
+])
+:<-
+Package srcltx Info: Expanded filename `Config/headers.tex' to `Config/headers.
+tex' on input line 60.
+:<+ Config/headers.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/headers.tex)
+:<-
+Package srcltx Info: Expanded filename `file-abstract.tex' to `file-abstract.te
+x' on input line 66.
+:<+ file-abstract.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\file-abstract.tex [9
+
+
+] [10
+
+])
+:<-
+Package srcltx Info: Expanded filename `Config/chapters.tex' to `Config/chapter
+s.tex' on input line 72.
+:<+ Config/chapters.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/chapters.tex)
+:<-
+Package srcltx Info: Expanded filename `file-chapter1.tex' to `file-chapter1.te
+x' on input line 78.
+:<+ file-chapter1.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\file-chapter1.tex
+Cap\'{\i }tulo 1.
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc1) [1
+
+
+
+] [2] [3] [4]
+Cap\'{\i }tulo 2.
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc2) [5
+
+
+] [6]
+Overfull \hbox (75.24939pt too wide) in paragraph at lines 60--67
+[][][] 
+ []
+
+[7] [8
+
+]
+Cap\'{\i }tulo 3.
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc3
+Overfull \hbox (6.25946pt too wide) in paragraph at lines 2--2
+ [][] []\OT1/cmr/bx/n/10.95 Segmentacion de ima-gen ba-sada en el tra-ta-mient
+o 
+ []
+
+) [9
+
+] <./imagenes/tecnicasSegmentacion.png, id=83, 568.37344pt x 387.69844pt>
+File: ./imagenes/tecnicasSegmentacion.png Graphic file (type png)
+
+<use ./imagenes/tecnicasSegmentacion.png>
+Package pdftex.def Info: ./imagenes/tecnicasSegmentacion.png used on input line
+ 103.
+(pdftex.def)             Requested size: 350.99762pt x 239.42993pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 105.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 105.
+See the caption package documentation for explanation.
+
+[10]
+Overfull \hbox (3.68619pt too wide) in paragraph at lines 142--143
+[][]\OT1/cmr/m/n/12 Tambien existe la po-si-bi-li-dad de de-fi-nir va-rias in-
+ten-si-da-des um-bra-les (como
+ []
+
+[11 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/tecnicasSegmentacion.png>
+] <./imagenes/imageHistogram.png, id=92, 188.20313pt x 88.83188pt>
+File: ./imagenes/imageHistogram.png Graphic file (type png)
+
+<use ./imagenes/imageHistogram.png>
+Package pdftex.def Info: ./imagenes/imageHistogram.png used on input line 151.
+(pdftex.def)             Requested size: 272.99881pt x 128.86525pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 153.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 153.
+See the caption package documentation for explanation.
+
+<./imagenes/thresholding1.jpg, id=94, 3189.9175pt x 2155.05125pt>
+File: ./imagenes/thresholding1.jpg Graphic file (type jpg)
+
+<use ./imagenes/thresholding1.jpg>
+Package pdftex.def Info: ./imagenes/thresholding1.jpg used on input line 165.
+(pdftex.def)             Requested size: 162.60638pt x 109.83052pt.
+
+<./imagenes/thresholding2.jpg, id=95, 3189.9175pt x 2155.05125pt>
+File: ./imagenes/thresholding2.jpg Graphic file (type jpg)
+
+<use ./imagenes/thresholding2.jpg>
+Package pdftex.def Info: ./imagenes/thresholding2.jpg used on input line 170.
+(pdftex.def)             Requested size: 162.60638pt x 109.83052pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 174.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 174.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/imageHistogram.png>]
+<./imagenes/thresholding3.jpg, id=101, 1441.385pt x 807.015pt>
+File: ./imagenes/thresholding3.jpg Graphic file (type jpg)
+
+<use ./imagenes/thresholding3.jpg>
+Package pdftex.def Info: ./imagenes/thresholding3.jpg used on input line 181.
+(pdftex.def)             Requested size: 162.60638pt x 91.0377pt.
+
+<./imagenes/thresholding4.jpg, id=102, 642.4pt x 359.3425pt>
+File: ./imagenes/thresholding4.jpg Graphic file (type jpg)
+
+<use ./imagenes/thresholding4.jpg>
+Package pdftex.def Info: ./imagenes/thresholding4.jpg used on input line 186.
+(pdftex.def)             Requested size: 162.60638pt x 90.95395pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 190.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 190.
+See the caption package documentation for explanation.
+
+<./imagenes/thresholding5.png, id=103, 382.42876pt x 289.83281pt>
+File: ./imagenes/thresholding5.png Graphic file (type png)
+
+<use ./imagenes/thresholding5.png>
+Package pdftex.def Info: ./imagenes/thresholding5.png used on input line 197.
+(pdftex.def)             Requested size: 162.60638pt x 123.23701pt.
+
+<./imagenes/thresholding6.png, id=104, 380.92313pt x 288.3272pt>
+File: ./imagenes/thresholding6.png Graphic file (type png)
+
+<use ./imagenes/thresholding6.png>
+Package pdftex.def Info: ./imagenes/thresholding6.png used on input line 202.
+(pdftex.def)             Requested size: 162.60638pt x 123.07637pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 206.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 206.
+See the caption package documentation for explanation.
+
+[13 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/thresholding1.jpg> <C:/Us
+ers/dani/Desktop/PFG/Documentacion/imagenes/thresholding2.jpg> <C:/Users/dani/D
+esktop/PFG/Documentacion/imagenes/thresholding3.jpg> <C:/Users/dani/Desktop/PFG
+/Documentacion/imagenes/thresholding4.jpg> <C:/Users/dani/Desktop/PFG/Documenta
+cion/imagenes/thresholding5.png> <C:/Users/dani/Desktop/PFG/Documentacion/image
+nes/thresholding6.png>]
+<./imagenes/clustering1.jpg, id=109, 3019.28pt x 1967.35pt>
+File: ./imagenes/clustering1.jpg Graphic file (type jpg)
+
+<use ./imagenes/clustering1.jpg>
+Package pdftex.def Info: ./imagenes/clustering1.jpg used on input line 236.
+(pdftex.def)             Requested size: 162.60638pt x 105.93813pt.
+
+<./imagenes/clustering2.png, id=110, 3019.28pt x 1967.35pt>
+File: ./imagenes/clustering2.png Graphic file (type png)
+
+<use ./imagenes/clustering2.png>
+Package pdftex.def Info: ./imagenes/clustering2.png used on input line 241.
+(pdftex.def)             Requested size: 162.60638pt x 105.93813pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 245.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 245.
+See the caption package documentation for explanation.
+
+<./imagenes/clustering3.png, id=111, 295.1025pt x 198.7425pt>
+File: ./imagenes/clustering3.png Graphic file (type png)
+
+<use ./imagenes/clustering3.png>
+Package pdftex.def Info: ./imagenes/clustering3.png used on input line 251.
+(pdftex.def)             Requested size: 180.67499pt x 121.68155pt.
+
+<./imagenes/clustering4.png, id=112, 293.59688pt x 197.98969pt>
+File: ./imagenes/clustering4.png Graphic file (type png)
+
+<use ./imagenes/clustering4.png>
+Package pdftex.def Info: ./imagenes/clustering4.png used on input line 256.
+(pdftex.def)             Requested size: 180.67499pt x 121.83997pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 260.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 260.
+See the caption package documentation for explanation.
+
+[14] <./imagenes/morphology1.jpg, id=116, 242.24904pt x 105.5142pt>
+File: ./imagenes/morphology1.jpg Graphic file (type jpg)
+
+<use ./imagenes/morphology1.jpg>
+Package pdftex.def Info: ./imagenes/morphology1.jpg used on input line 270.
+(pdftex.def)             Requested size: 272.99881pt x 118.92215pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 272.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 272.
+See the caption package documentation for explanation.
+
+[15 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/clustering1.jpg> <C:/User
+s/dani/Desktop/PFG/Documentacion/imagenes/clustering2.png (PNG copy)> <C:/Users
+/dani/Desktop/PFG/Documentacion/imagenes/clustering3.png> <C:/Users/dani/Deskto
+p/PFG/Documentacion/imagenes/clustering4.png>] [16 <C:/Users/dani/Desktop/PFG/D
+ocumentacion/imagenes/morphology1.jpg>] [17]
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
+.
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
+.
+
+Missing character: There is no º in font cmr12!
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
+.
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
+.
+
+Missing character: There is no º in font cmr12!
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
+.
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
+.
+
+Missing character: There is no º in font cmr12!
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
+.
+
+
+LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
+.
+
+Missing character: There is no º in font cmr12!
+<./imagenes/operator0.jpg, id=130, 642.4pt x 481.8pt>
+File: ./imagenes/operator0.jpg Graphic file (type jpg)
+
+<use ./imagenes/operator0.jpg>
+Package pdftex.def Info: ./imagenes/operator0.jpg used on input line 379.
+(pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
+
+<./imagenes/operator1.jpg, id=131, 640.3925pt x 479.7925pt>
+File: ./imagenes/operator1.jpg Graphic file (type jpg)
+
+<use ./imagenes/operator1.jpg>
+Package pdftex.def Info: ./imagenes/operator1.jpg used on input line 384.
+(pdftex.def)             Requested size: 162.60638pt x 121.822pt.
+
+<./imagenes/operator2.jpg, id=132, 638.385pt x 477.785pt>
+File: ./imagenes/operator2.jpg Graphic file (type jpg)
+
+<use ./imagenes/operator2.jpg>
+Package pdftex.def Info: ./imagenes/operator2.jpg used on input line 390.
+(pdftex.def)             Requested size: 162.60638pt x 121.69868pt.
+
+<./imagenes/operator3.jpg, id=133, 640.3925pt x 479.7925pt>
+File: ./imagenes/operator3.jpg Graphic file (type jpg)
+
+<use ./imagenes/operator3.jpg>
+Package pdftex.def Info: ./imagenes/operator3.jpg used on input line 395.
+(pdftex.def)             Requested size: 162.60638pt x 121.822pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 399.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 399.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18]
+[19 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/operator0.jpg> <C:/Users/
+dani/Desktop/PFG/Documentacion/imagenes/operator1.jpg> <C:/Users/dani/Desktop/P
+FG/Documentacion/imagenes/operator2.jpg> <C:/Users/dani/Desktop/PFG/Documentaci
+on/imagenes/operator3.jpg>]
+<./imagenes/activeContour1.jpg, id=142, 241.81541pt x 115.34293pt>
+File: ./imagenes/activeContour1.jpg Graphic file (type jpg)
+
+<use ./imagenes/activeContour1.jpg>
+Package pdftex.def Info: ./imagenes/activeContour1.jpg used on input line 426.
+(pdftex.def)             Requested size: 312.00119pt x 148.82112pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 429.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 429.
+See the caption package documentation for explanation.
+
+<./imagenes/activeContour2.png, id=143, 567.62062pt x 377.91188pt>
+File: ./imagenes/activeContour2.png Graphic file (type png)
+
+<use ./imagenes/activeContour2.png>
+Package pdftex.def Info: ./imagenes/activeContour2.png used on input line 436.
+(pdftex.def)             Requested size: 312.00119pt x 207.73108pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 438.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 438.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 3769) has occurred while \output is active []
+
+ [20 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour1.jpg>] [21
+ <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour2.png>]
+<./imagenes/levelSet1.jpg, id=150, 213.77466pt x 114.04205pt>
+File: ./imagenes/levelSet1.jpg Graphic file (type jpg)
+
+<use ./imagenes/levelSet1.jpg>
+Package pdftex.def Info: ./imagenes/levelSet1.jpg used on input line 459.
+(pdftex.def)             Requested size: 272.99881pt x 145.65138pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 461.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 461.
+See the caption package documentation for explanation.
+
+<./imagenes/levelSet2.jpg, id=151, 803.0pt x 602.25pt>
+File: ./imagenes/levelSet2.jpg Graphic file (type jpg)
+
+<use ./imagenes/levelSet2.jpg>
+Package pdftex.def Info: ./imagenes/levelSet2.jpg used on input line 467.
+(pdftex.def)             Requested size: 272.99881pt x 204.7531pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 469.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 469.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/levelSet1.jpg>]
+Overfull \hbox (20.18303pt too wide) in paragraph at lines 481--482
+[][]\OT1/cmr/m/n/12 Este sub-grupo agrupa to-dos las tecni-cas re-la-cio-na-da
+s con la tecnica []habitual[]
+ []
+
+
+Underfull \vbox (badness 2762) has occurred while \output is active []
+
+ [23 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/levelSet2.jpg>]
+<./imagenes/regionGrowing1.jpg, id=158, 198.90239pt x 198.90239pt>
+File: ./imagenes/regionGrowing1.jpg Graphic file (type jpg)
+
+<use ./imagenes/regionGrowing1.jpg>
+Package pdftex.def Info: ./imagenes/regionGrowing1.jpg used on input line 491.
+(pdftex.def)             Requested size: 155.99762pt x 156.00516pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 493.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 493.
+See the caption package documentation for explanation.
+
+<./imagenes/regionGrowing6.jpg, id=159, 458.71375pt x 335.2525pt>
+File: ./imagenes/regionGrowing6.jpg Graphic file (type jpg)
+
+<use ./imagenes/regionGrowing6.jpg>
+Package pdftex.def Info: ./imagenes/regionGrowing6.jpg used on input line 501.
+(pdftex.def)             Requested size: 162.60638pt x 118.83897pt.
+
+<./imagenes/regionGrowing2.jpg, id=160, 462.72874pt x 324.21124pt>
+File: ./imagenes/regionGrowing2.jpg Graphic file (type jpg)
+
+<use ./imagenes/regionGrowing2.jpg>
+Package pdftex.def Info: ./imagenes/regionGrowing2.jpg used on input line 507.
+(pdftex.def)             Requested size: 162.60638pt x 113.93076pt.
+
+<./imagenes/regionGrowing3.jpg, id=161, 462.72874pt x 334.24875pt>
+File: ./imagenes/regionGrowing3.jpg Graphic file (type jpg)
+
+<use ./imagenes/regionGrowing3.jpg>
+Package pdftex.def Info: ./imagenes/regionGrowing3.jpg used on input line 512.
+(pdftex.def)             Requested size: 162.60638pt x 117.45802pt.
+
+<./imagenes/regionGrowing4.jpg, id=162, 459.7175pt x 332.24126pt>
+File: ./imagenes/regionGrowing4.jpg Graphic file (type jpg)
+
+<use ./imagenes/regionGrowing4.jpg>
+Package pdftex.def Info: ./imagenes/regionGrowing4.jpg used on input line 517.
+(pdftex.def)             Requested size: 162.60638pt x 117.51808pt.
+
+<./imagenes/regionGrowing5.jpg, id=163, 458.71375pt x 329.23pt>
+File: ./imagenes/regionGrowing5.jpg Graphic file (type jpg)
+
+<use ./imagenes/regionGrowing5.jpg>
+Package pdftex.def Info: ./imagenes/regionGrowing5.jpg used on input line 522.
+(pdftex.def)             Requested size: 162.60638pt x 116.70415pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--525
+[][] []
+ []
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 527.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 527.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing1.jpg>]
+Overfull \vbox (61.91502pt too high) has occurred while \output is active []
+
+
+[25 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing6.jpg> <C:/U
+sers/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing2.jpg> <C:/Users/dani
+/Desktop/PFG/Documentacion/imagenes/regionGrowing3.jpg> <C:/Users/dani/Desktop/
+PFG/Documentacion/imagenes/regionGrowing4.jpg> <C:/Users/dani/Desktop/PFG/Docum
+entacion/imagenes/regionGrowing5.jpg>]
+<./imagenes/watershed1.jpg, id=171, 242.00215pt x 80.45746pt>
+File: ./imagenes/watershed1.jpg Graphic file (type jpg)
+
+<use ./imagenes/watershed1.jpg>
+Package pdftex.def Info: ./imagenes/watershed1.jpg used on input line 545.
+(pdftex.def)             Requested size: 312.00119pt x 103.73036pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 548.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 548.
+See the caption package documentation for explanation.
+
+<./imagenes/watershed2.png, id=172, 633.86812pt x 159.59625pt>
+File: ./imagenes/watershed2.png Graphic file (type png)
+
+<use ./imagenes/watershed2.png>
+Package pdftex.def Info: ./imagenes/watershed2.png used on input line 555.
+(pdftex.def)             Requested size: 350.99762pt x 88.37726pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 558.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 558.
+See the caption package documentation for explanation.
+
+<./imagenes/watershed3.png, id=173, 378.66469pt x 184.43906pt>
+File: ./imagenes/watershed3.png Graphic file (type png)
+
+<use ./imagenes/watershed3.png>
+Package pdftex.def Info: ./imagenes/watershed3.png used on input line 565.
+(pdftex.def)             Requested size: 234.00238pt x 113.97954pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 567.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 567.
+See the caption package documentation for explanation.
+
+[26 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/watershed3.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/watershed1.jpg> <C:/User
+s/dani/Desktop/PFG/Documentacion/imagenes/watershed2.png>]
+<./imagenes/graphCuts1.jpg, id=180, 227.79504pt x 173.73708pt>
+File: ./imagenes/graphCuts1.jpg Graphic file (type jpg)
+
+<use ./imagenes/graphCuts1.jpg>
+Package pdftex.def Info: ./imagenes/graphCuts1.jpg used on input line 588.
+(pdftex.def)             Requested size: 195.0pt x 148.7323pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 590.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 590.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (7.77979pt too wide) in paragraph at lines 594--594
+[][]\OT1/cmr/bx/n/17.28 Conclusiones de los ti-pos de seg-men-tacion 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/graphCuts1.jpg>] [29] [3
+0
+
+]
+Cap\'{\i }tulo 4.
+<./imagenes/ejemplo1.png, id=190, 97.86563pt x 74.52844pt>
+File: ./imagenes/ejemplo1.png Graphic file (type png)
+
+<use ./imagenes/ejemplo1.png>
+Package pdftex.def Info: ./imagenes/ejemplo1.png used on input line 624.
+(pdftex.def)             Requested size: 162.60638pt x 123.83769pt.
+
+<./imagenes/ejemplo2.png, id=191, 328.22626pt x 261.97874pt>
+File: ./imagenes/ejemplo2.png Graphic file (type png)
+
+<use ./imagenes/ejemplo2.png>
+Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 629.
+(pdftex.def)             Requested size: 162.60638pt x 129.78581pt.
+
+<./imagenes/ejemplo3.png, id=192, 952.30782pt x 759.58781pt>
+File: ./imagenes/ejemplo3.png Graphic file (type png)
+
+<use ./imagenes/ejemplo3.png>
+Package pdftex.def Info: ./imagenes/ejemplo3.png used on input line 634.
+(pdftex.def)             Requested size: 162.60638pt x 129.69614pt.
+
+<./imagenes/ejemplo4.png, id=193, 2258.4375pt x 2107.875pt>
+File: ./imagenes/ejemplo4.png Graphic file (type png)
+
+<use ./imagenes/ejemplo4.png>
+Package pdftex.def Info: ./imagenes/ejemplo4.png used on input line 639.
+(pdftex.def)             Requested size: 162.60638pt x 151.74759pt.
+ [31]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/ejemplo1.png> <C:/Users/
+dani/Desktop/PFG/Documentacion/imagenes/ejemplo2.png (PNG copy)> <C:/Users/dani
+/Desktop/PFG/Documentacion/imagenes/ejemplo3.png> <C:/Users/dani/Desktop/PFG/Do
+cumentacion/imagenes/ejemplo4.png>] [33] [34
+
+]
+Cap\'{\i }tulo 5.
+[35] [36
+
+]
+Cap\'{\i }tulo 6.
+[37] [38
+
+]
+Cap\'{\i }tulo 7.
+[39] [40
+
+]
+Cap\'{\i }tulo 8.
+[41] [42
+
+]
+Cap\'{\i }tulo 9.
+
+LaTeX Warning: Reference `dedicacionTemporal' on page 43 undefined on input lin
+e 692.
+
+[43] [44
+
+]
+Cap\'{\i }tulo 10.
+)
+:<-
+Package srcltx Info: Expanded filename `Config/appendices.tex' to `Config/appen
+dices.tex' on input line 85.
+:<+ Config/appendices.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/appendices.tex)
+:<-
+Package srcltx Info: Expanded filename `Config/bibliography.tex' to `Config/bib
+liography.tex' on input line 97.
+:<+ Config/bibliography.tex
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [45] [46
+
+])
+:<-
+:<+ Main.bbl
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.bbl
+Underfull \hbox (badness 5064) in paragraph at lines 38--43
+[][]\OT1/cmr/m/n/12 Arnau Oli-ver Ma-la-ge-lada.  \OT1/cmr/m/it/12 Au-to-ma-tic
+ Mass Seg-men-ta-tion In
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--43
+\OT1/cmr/m/it/12 Mam-mo-grap-hic Ima-ges\OT1/cmr/m/n/12 .  PhD the-sis, Uni-ver
+-sity of Gi-rona,
+ []
+
+[47
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 85--89
+[][]\OT1/cmr/m/n/12 Franco D.  Im-ple-men-ta-cion pa-ra-lela.  2015.
+ []
+
+)
+:<-
+Package minitoc Info: I0009
+(minitoc)             Listing minitoc auxiliary files. 
+(minitoc)             Creating the Main.maf file.
+
+Package minitoc(hints) Warning: W0033
+(minitoc(hints))                The caption package should be 
+(minitoc(hints))                loaded BEFORE the minitoc package.
+
+Package minitoc(hints) Info: I0053
+(minitoc(hints))             You have loaded the float package; 
+(minitoc(hints))             please be aware that the minitoc package 
+(minitoc(hints))             facilities can not be used for new types 
+(minitoc(hints))             of floats defined by the float package.
+
+Package minitoc(hints) Warning: W0024
+(minitoc(hints))                Some hints have been written 
+(minitoc(hints))                in the Main.log file.
+
+[48] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6281 strings out of 493921
+ 93517 string characters out of 3147285
+ 165256 words of memory out of 3000000
+ 9162 multiletter control sequences out of 15000+200000
+ 17700 words of font info for 66 fonts, out of 3000000 for 9000
+ 842 hyphenation exceptions out of 8191
+ 38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
+txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
+ols/msam10.pfb>
+Output written on Main.pdf (60 pages, 21100434 bytes).
+PDF statistics:
+ 320 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+

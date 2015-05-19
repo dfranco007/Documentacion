@@ -1,0 +1,41 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Introducci\'on}{1}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conceptos b\'asicos}{5}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Clasificaci\'on de t\'ecnicas de segmentaci\'on}{9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Clasificaci\'on de las t\'ecnicas de segmentaci\'on\relax }}{11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Histograma\footnotemark que muestra tres aparentes segmentos de la imagen con dos umbrales: $T_1$ y $T_2$\relax }}{12}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Segmentaci\'on con \textit {thresholding}\relax }}{13}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Segmentaci\'on con \textit {thresholding} con varios umbrales\relax }}{13}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Segmentaci\'on con \textit {thresholding} en imagen con iluminaci\'on gradiente\relax }}{13}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Segmentaci\'on utilizando K-means con K=16\relax }}{15}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Segmentaci\'on utilizando K-means con K=6\relax }}{15}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Ejemplo de dilataci\'on de la t\'ecnica de morfolog\IeC {\'\i }a\relax }}{16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Detecci\'on de bordes con el uso de los operadores\relax }}{19}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Ejemplo de un contorno activo\relax }}{20}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Ejemplo de segmentaci\'on de plantas presentando en \cite {suta1} utilizando los contornos activos\relax }}{21}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Ilustraci\'on de la superficie de \textit {level set}\relax }}{22}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Ilustraci\'on del m\'etodo de \textit {level set}\relax }}{23}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {region growing}\relax }}{24}
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Ejemplo de la t\'ecnica de \textit {region growing}\relax }}{25}
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{26}
+\contentsline {figure}{\numberline {3.31}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{27}
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{27}
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {graph cut} en una imagen 3x3\relax }}{28}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Necesidades del cliente}{31}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo de proyecciones en l\'aminas de materiales sintetizados mediante la deposici\'on qu\IeC {\'\i }mica de vapor\relax }}{32}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{35}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{37}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{39}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{41}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Gesti\'on del proyecto}{43}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusiones}{45}
