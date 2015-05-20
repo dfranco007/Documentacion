@@ -440,7 +440,7 @@ donde $G_{\alpha}$ es una convolución con un filtro pasabajo gaussiano. Está pro
 \end{figure}
 
 
-\subsection{Level set}
+\subsection{Level set}\label{levelSet}
 Conjuntos de nivel, o \textit{Level set} en inglés, es un tipo de segmentación muy parecida a la que hemos explicado en \ref{cap:actContour} ya que también se trata de expandir un contorno dado previamente para encontrar los bordes de la imagen. La ventaja de este método frente al referido es que permite juntar y dividir contornos sin ningún cálculo extra necesario.
 
 El contorno está representado por la función de level set, que está definida en una dimensión más que las dimensiones de la imagen a segmentar, es decir, para una imagen 2D tendríamos una superficie de level set de tres dimensiones mientras que para una imagen de 3D tendríamos una superficie de 4D. En el caso de una superfície de 3D esta tiene una forma cónica como se puede ver en \ref{levelSet1}. Suponiendo entonces que la imagen a tratar tiene dos dimensiones, podríamos definir la función de level set como $z = \phi(x,y,t)$ que devuelve la altura de la superficie de level set en el punto $(x,y)$ del plano de la imagen en el tiempo $t$. El contorno es definido implícitamente como <<zero level set>>, donde la altura del plano respecto a la superficie es cero ($\phi(x,y,t) = 0$). Esto es justo la intersección entre el plano de la imagen y la superficie. 
@@ -667,7 +667,7 @@ Hay muchos artículos sobre este algoritmo y alguna implementación paralela pero 
 
 Como se ha mencionado anteriormente, no se tienen por que resolver las PDEs en el algoritmo de \textit{level set} ya que, en la segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de PDEs conlleva el que se tengan que realizar reinicializaciones de la función de level set (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado en \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y no calculan PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el level set original. 
 
-En este trabajo se presenta una nueva estrategía de implementación del método de \textit{level set}. En el ejemplo de un espacio Euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}.
+En este trabajo se presenta una nueva estrategía de implementación del método de \textit{level set}. En el ejemplo de un espacio Euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}. La función $\phi$ tendrá un valor negativo dentro de la curva C y un valor positivo fuera de ella, por eso se dice que representa implícitamente a la curva C. 
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}	
@@ -688,7 +688,7 @@ En este trabajo se presenta una nueva estrategía de implementación del método de
 	\label{aproxLevelSet}
 \end{figure}
 
-Estando entonces en una representación de dos dimensiones, y siguiendo el ejemplo de la rejilla mostrada anteriormente se pueden definir dos listas de vecindad del contorno: $L_{in}$ y $L_{out}$. 	
+Estando entonces en una representación de dos dimensiones, y siguiendo el ejemplo de la rejilla mostrada anteriormente se pueden definir dos listas de vecindad del contorno C: $L_{in}$ y $L_{out}$. 	
 
 \
 
@@ -704,6 +704,17 @@ Siendo x una coordenada de la rejilla denotada como $x = {x_1,x_2,...,x_k}$ y $N
 \begin{equation}
 N(x) = {y \in D | \sum_{k=1}^{K} |y_k - x_k| = 1}  \forall x \in D
 \end{equation}
+
+Como podemos observar en la figura \ref{aproxLevelSet} la lista $L_{in}$ está formada por los puntos de la rejilla que están dentro de la curva C y $L_{out}$ está formada por los puntos de la rejilla que están fuera de C. Por lo tanto, como se puede ver en las definiciones formales de las listas, cada punto de ellas tiene que tener un punto vecino de la otra lista, de manera que las dos esten "pegadas".
+
+Recordando lo visto en \ref{levelSet} en el clásico \textit{level set} la siguiente PDE es resuelta para evolucionar el contorno C bajo una función de velocidad F:
+\begin{equation}\label{speedLevelSet}
+\frac{d\phi}{dt} + F|\nabla \phi| = 0
+\end{equation}
+La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1} . En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolcuión de la PDE mostrada en \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. 
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  19 MAY 2015 22:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  20 MAY 2015 11:44
 entering extended mode
 **Main.tex
 (C:\Users\dani\Desktop\PFG\Documentacion\Main.tex
@@ -1186,7 +1186,7 @@ Cap\'{\i }tulo 8.
 Cap\'{\i }tulo 9.
 
 LaTeX Warning: Reference `dedicacionTemporal' on page 45 undefined on input lin
-e 729.
+e 740.
 
 [45] [46
 
@@ -1252,10 +1252,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6297 strings out of 493921
- 93928 string characters out of 3147285
+ 6301 strings out of 493921
+ 93983 string characters out of 3147285
  164256 words of memory out of 3000000
- 9176 multiletter control sequences out of 15000+200000
+ 9180 multiletter control sequences out of 15000+200000
  18059 words of font info for 67 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1279,7 +1279,7 @@ blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
 txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on Main.pdf (62 pages, 21153518 bytes).
+Output written on Main.pdf (62 pages, 21154973 bytes).
 PDF statistics:
  329 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
