@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  20 MAY 2015 18:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  21 MAY 2015 13:18
 entering extended mode
 **Main.tex
 (C:\Users\dani\Desktop\PFG\Documentacion\Main.tex
@@ -382,7 +382,27 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)))
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen130
+\lightrulewidth=\dimen131
+\cmidrulewidth=\dimen132
+\belowrulesep=\dimen133
+\belowbottomsep=\dimen134
+\aboverulesep=\dimen135
+\abovetopsep=\dimen136
+\cmidrulesep=\dimen137
+\cmidrulekern=\dimen138
+\defaultaddspace=\dimen139
+\@cmidla=\count107
+\@cmidlb=\count108
+\@aboverulesep=\dimen140
+\@belowrulesep=\dimen141
+\@thisruleclass=\count109
+\@lastruleclass=\count110
+\@thisrulewidth=\dimen142
+))
 (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -406,16 +426,16 @@ LaTeX Font Info:    ... okay on input line 23.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count107
-\scratchdimen=\dimen130
+\scratchcounter=\count111
+\scratchdimen=\dimen143
 \scratchbox=\box37
-\nofMPsegments=\count108
-\nofMParguments=\count109
+\nofMPsegments=\count112
+\nofMParguments=\count113
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count110
-\MPscratchDim=\dimen131
-\MPnumerator=\count111
-\makeMPintoPDFobject=\count112
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen144
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
 \everyMPtoPDFconversion=\toks28
 )
 Package minitoc(hints) Info: I0049
@@ -1168,27 +1188,50 @@ File: ./imagenes/aproxLevelSet2.png Graphic file (type png)
 Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 682.
 (pdftex.def)             Requested size: 180.67499pt x 160.5474pt.
  [36 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet1.png> <C:/
-Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet2.png>] [37] [38
+Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet2.png>] [37] [38]
+Overfull \hbox (370.88281pt too wide) in paragraph at lines 770--790
+ [][][] 
+ []
+
+<./imagenes/switchLevelSet.png, id=223, 535.2497pt x 243.91125pt>
+File: ./imagenes/switchLevelSet.png Graphic file (type png)
+
+<use ./imagenes/switchLevelSet.png>
+Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 796.
+(pdftex.def)             Requested size: 272.99881pt x 124.40797pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 798.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 798.
+See the caption package documentation for explanation.
+
+[39 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/switchLevelSet.png>]
+[40
 
 ]
 Cap\'{\i }tulo 6.
-[39] [40
-
-]
-Cap\'{\i }tulo 7.
 [41] [42
 
 ]
-Cap\'{\i }tulo 8.
+Cap\'{\i }tulo 7.
 [43] [44
+
+]
+Cap\'{\i }tulo 8.
+[45] [46
 
 ]
 Cap\'{\i }tulo 9.
 
-LaTeX Warning: Reference `dedicacionTemporal' on page 45 undefined on input lin
-e 740.
+LaTeX Warning: Reference `dedicacionTemporal' on page 47 undefined on input lin
+e 821.
 
-[45] [46
+[47] [48
 
 ]
 Cap\'{\i }tulo 10.
@@ -1202,7 +1245,7 @@ dices.tex' on input line 85.
 Package srcltx Info: Expanded filename `Config/bibliography.tex' to `Config/bib
 liography.tex' on input line 97.
 :<+ Config/bibliography.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [47] [48
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [49] [50
 
 ])
 :<-
@@ -1219,7 +1262,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 -sity of Gi-rona,
  []
 
-[49
+[51
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 85--89
@@ -1246,16 +1289,16 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[50] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
+[52] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6301 strings out of 493921
- 93983 string characters out of 3147285
- 164256 words of memory out of 3000000
- 9180 multiletter control sequences out of 15000+200000
+ 6366 strings out of 493921
+ 94959 string characters out of 3147285
+ 166435 words of memory out of 3000000
+ 9240 multiletter control sequences out of 15000+200000
  18059 words of font info for 67 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1279,9 +1322,9 @@ blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
 txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on Main.pdf (62 pages, 21154974 bytes).
+Output written on Main.pdf (64 pages, 21174006 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
+ 337 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

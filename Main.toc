@@ -32,13 +32,14 @@
 \contentsline {section}{\numberline {4.2}Necesidades extra}{33}
 \contentsline {chapter}{\numberline {5}Optimizaciones y mejoras del \textit {level set} original}{35}
 \contentsline {subsection}{\numberline {5.0.1}Aproximaci\'on a la t\'ecnica de \textit {level set}}{36}
-\contentsline {chapter}{\numberline {6}Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{39}
-\contentsline {chapter}{\numberline {7}Funciones extras a\~nadidas en base a la segmentaci\'on}{41}
-\contentsline {chapter}{\numberline {8}Comparaci\'on de resultados temporales y rendimiento}{43}
-\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{45}
-\contentsline {subsection}{\numberline {9.0.2}Gesti\'on del alcance}{45}
-\contentsline {subsection}{\numberline {9.0.3}Gesti\'on del tiempo}{45}
-\contentsline {subsection}{\numberline {9.0.4}Gesti\'on del riesgos}{45}
-\contentsline {subsection}{\numberline {9.0.5}Gesti\'on del costes}{45}
-\contentsline {chapter}{\numberline {10}Conclusiones}{47}
-\contentsline {chapter}{Bibliograf\'{\i }a}{49}
+\contentsline {subsubsection}{Algoritmo}{37}
+\contentsline {chapter}{\numberline {6}Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{41}
+\contentsline {chapter}{\numberline {7}Funciones extras a\~nadidas en base a la segmentaci\'on}{43}
+\contentsline {chapter}{\numberline {8}Comparaci\'on de resultados temporales y rendimiento}{45}
+\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{47}
+\contentsline {subsection}{\numberline {9.0.2}Gesti\'on del alcance}{47}
+\contentsline {subsection}{\numberline {9.0.3}Gesti\'on del tiempo}{47}
+\contentsline {subsection}{\numberline {9.0.4}Gesti\'on del riesgos}{47}
+\contentsline {subsection}{\numberline {9.0.5}Gesti\'on del costes}{47}
+\contentsline {chapter}{\numberline {10}Conclusiones}{49}
+\contentsline {chapter}{Bibliograf\'{\i }a}{51}

@@ -30,13 +30,14 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{35}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Representaci\'on de la curva C\relax }}{36}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Ilustraci\'on de las operaciones realizadas en el paso 3 del algoritmo\relax }}{39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{39}
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{41}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{41}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{43}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{43}
+\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{45}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{45}
+\contentsline {xchapter}{Gesti\'on del proyecto}{47}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{47}
+\contentsline {xchapter}{Conclusiones}{49}

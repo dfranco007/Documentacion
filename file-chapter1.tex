@@ -641,7 +641,7 @@ El en proyecto que el cliente está desarrollando hay una parte que necesita real
 		\end{subfigure}
 	\end{center}
 	\caption{Ejemplo de proyecciones en láminas de materiales sintetizados mediante la deposición química de vapor}	
-	\caption*{Las islas puede que estén muy separadas, como se puede ver en \ref{ejemplo1} o muy juntas como en \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.}
+	\caption*{Descripción: Las islas puede que estén muy separadas, como se puede ver en \ref{ejemplo1} o muy juntas como en \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.}
 	\label{ejemploImagenes}
 \end{figure}
 
@@ -684,7 +684,7 @@ En este trabajo se presenta una nueva estrategía de implementación del método de
 		\end{subfigure}
 	\end{center}
 	\caption{Representación de la curva C}
-	\caption*{Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.}	
+	\caption*{Descripción: Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.}	
 	\label{aproxLevelSet}
 \end{figure}
 
@@ -711,14 +711,95 @@ Recordando lo visto en \ref{levelSet} en el clásico \textit{level set} la siguie
 \begin{equation}\label{speedLevelSet}
 \frac{d\phi}{dt} + F|\nabla \phi| = 0
 \end{equation}
-La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1} . En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolcuión de la PDE mostrada en \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. 
+La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolcuión de la PDE mostrada en \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacía fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
 
 
+\subsubsection{Algoritmo}
 
+Para la realización dle algoritmo son necesarias estas estructuras:
 
+\begin{itemize}
+	\item Un array para la función de level set $\phi$;
+	\item Un array para la velocidad (F) con la que se propagará la curva;
+	\item Dos listas de vecindad de la curva: $L_{in}$ y $L_{out}$.	
+\end{itemize}
 
+Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como <<puntos interiores>> y a los puntos que están fuera de C pero que no pertenecen a $L_{out}$ como <<puntos exteriores>>. Para agilizar aún más el cálculo, los valores que puede tomar la función $\phi$ son cuatro enteros: {-2, -1, 1, 3}.
+\begin{equation}
+\phi (x) = 
+\left \{
+\begin{array}{rcl}
+3 & si & x \mbox{ es un punto exterior} \\
+1 & si & x \in L_{out} \\ 
+-1 & si & x \in L_{in} \\
+-3 & si & x \mbox{ es un punto interior}
+\end{array}
+\right .
+\end{equation}
 
+ Para la función F de velocidad sólo se usa el signo, por lo que también es un \textit{array} de enteros con los valores: {1, 0, -1}. En cuanto a las listas, son listas ligadas de manera que la inserción y el borrado de puntos se pueden hacer de manera rápida. 
+ 
+ En \cite{yong1}, antes de presentar el algoritmo se explican dos operaciones básicas que se ha de hacer en el algoritmo.
+ 
+ La operación \textit{switch\_in()} para un punto x $\in L_{out}$ se define como:
+ 
+ \
+ 
+ switch\_in(x):
+ \begin{itemize}
+ 	\item Paso 1: Se quita el punto de $L_{out}$ y se pasa a $L_{in}$. Se cambia el valor de $\phi$ en ese punto: $\phi$(x) = -1.
+ 	\item Paso 2: Se añaden los puntos vecinos de x a $L_{out}$ y se cambian sus respectivos valores en $\phi$. Más formalmente: $\forall y$ $\in$ N(x) que satisfaga $\phi(y) = 3$ se añade $y$ a $L_{out}$ y se pone $\phi(y) = 1$
+ \end{itemize}
+ Con esta operación se mueve el contorno un punto de la rejilla hacia fuera. Similarmente se define la operación \textit{switch\_out()} para un punto x $\in$ $L_{in}$:
 
+\ 
+
+ switch\_out(x):
+ 
+ \begin{itemize}
+ 	\item Paso 1: Se quita el punto de  $L_{in}$ y se pasa a $L_{out}$. Se cambia el valor de $\phi$ en ese punto: $\phi$(x) = 1.
+ 	\item Paso 2: Se añaden los puntos vecinos de x a $L_{in}$ y se cambia sus respectivos valores en $\phi$. Más formalmente: $\forall y $ $\in$ N(x) que satisfaga $\phi(y) = -3$ se añade $y$ a $L_{out}$ y se pone $\phi(y) = -1$
+ \end{itemize}
+
+La función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno.
+
+Aclaradas las cuestiones  anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} es el siguiente:
+ 
+ \begin{table}[H]
+ 	\centering
+ 	\begin{tabular}{|l|}
+		\hline		
+		\tabitem Paso 1: Inicializar el <<array>> $\phi$, $F_{ext}$ y las dos listas $L_{out}$ y $L_{in}$. \\
+		\tabitem Paso 2: Primer ciclo donde se escanean las dos listas para actualizar $\phi$, $L_{out}$ y $L_{in}$. \\
+		\quad \quad \quad \quad - Se calcula la velocidad para cada punto de $L_{out}$ y $L_{in}$.
+		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se hace  la operación \\ 
+		\quad \quad \quad \quad \ \ \textit{switch\_in()} $\forall x \in L_{out}$ si F(x) $>$ 0. \\ 
+		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
+		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
+		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
+		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{in}$ y se hace  la operación \\ 
+		\quad \quad \quad \quad \ \ \textit{switch\_out()} $\forall x \in L_{in}$ si F(x) $<$ 0. \\ 
+		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
+		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
+		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
+		\quad \quad \quad \quad - Se comprueba la condición de parada y si se satisface se continua al paso 3, \\ ç
+		\quad \quad \quad \quad \ \ si no, seguiremos en el paso 2. \\
+		\tabitem Paso 3:  Segundo ciclo donde se realiza un suavizado del contorno con un filtro Gaussiano. \\
+ 		\hline
+ 	\end{tabular}
+ 	\caption{Algoritmo completo de la aproximación del \textit{level set}}
+ \end{table}
+ 
+ \begin{figure}[H]
+ 	\captionsetup{justification=centering}
+ 	\centering
+ 	\includegraphics[width=.7\textwidth]{./imagenes/switchLevelSet}
+ 	\caption{Ilustración de las operaciones realizadas en el paso 3 del algoritmo}
+ 	\subcaption*{Fuente: modificaciones de imágenes en \cite{yong1}}	
+ 	\label{switchLevelSet}
+ \end{figure}
+ 
+ 
 \chapter{Paralelización de la aproximación del \textit{level set}}
 
 \chapter{Funciones extras añadidas en base a la segmentación}
