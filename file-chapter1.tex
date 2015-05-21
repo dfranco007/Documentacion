@@ -739,66 +739,89 @@ Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como
 
  Para la función F de velocidad sólo se usa el signo, por lo que también es un \textit{array} de enteros con los valores: {1, 0, -1}. En cuanto a las listas, son listas ligadas de manera que la inserción y el borrado de puntos se pueden hacer de manera rápida. 
  
- En \cite{yong1}, antes de presentar el algoritmo se explican dos operaciones básicas que se ha de hacer en el algoritmo.
- 
- La operación \textit{switch\_in()} para un punto x $\in L_{out}$ se define como:
- 
- \
- 
- switch\_in(x):
- \begin{itemize}
- 	\item Paso 1: Se quita el punto de $L_{out}$ y se pasa a $L_{in}$. Se cambia el valor de $\phi$ en ese punto: $\phi$(x) = -1.
- 	\item Paso 2: Se añaden los puntos vecinos de x a $L_{out}$ y se cambian sus respectivos valores en $\phi$. Más formalmente: $\forall y$ $\in$ N(x) que satisfaga $\phi(y) = 3$ se añade $y$ a $L_{out}$ y se pone $\phi(y) = 1$
- \end{itemize}
- Con esta operación se mueve el contorno un punto de la rejilla hacia fuera. Similarmente se define la operación \textit{switch\_out()} para un punto x $\in$ $L_{in}$:
-
-\ 
-
- switch\_out(x):
+ Antes de presentar el algoritmo se aclararán ciertas cuestiones. Para empezar, hay dos operaciones básicas que se utilizan en el algoritmo:
  
  \begin{itemize}
- 	\item Paso 1: Se quita el punto de  $L_{in}$ y se pasa a $L_{out}$. Se cambia el valor de $\phi$ en ese punto: $\phi$(x) = 1.
- 	\item Paso 2: Se añaden los puntos vecinos de x a $L_{in}$ y se cambia sus respectivos valores en $\phi$. Más formalmente: $\forall y $ $\in$ N(x) que satisfaga $\phi(y) = -3$ se añade $y$ a $L_{out}$ y se pone $\phi(y) = -1$
+ 	\item  La operación \textit{switch\_in()} para un punto x $\in L_{out}$ se define como:
+ 	switch\_in(x):
+ 	\begin{itemize}
+ 		\item Paso 1: Se quita el punto de $L_{out}$ y se pasa a $L_{in}$. Se cambia el valor de $\phi$ en ese punto: $\phi$(x) = -1.
+ 		\item Paso 2: Se añaden los puntos vecinos de x a $L_{out}$ y se cambian sus respectivos valores en $\phi$. Más formalmente: $\forall y$ $\in$ N(x) que satisfaga $\phi(y) = 3$ se añade $y$ a $L_{out}$ y se pone $\phi(y) = 1$
+ 	\end{itemize}
+ 	Con esta operación se mueve el contorno un punto de la rejilla hacia fuera. 
+ 	\item Similarmente se define la operación \textit{switch\_out()} para un punto x $\in$ $L_{in}$:
+ 	 switch\_out(x): 	 
+ 	 \begin{itemize}
+ 	 	\item Paso 1: Se quita el punto de  $L_{in}$ y se pasa a $L_{out}$. Se cambia el valor de $\phi$ en ese punto: $\phi$(x) = 1.
+ 	 	\item Paso 2: Se añaden los puntos vecinos de x a $L_{in}$ y se cambia sus respectivos valores en $\phi$. Más formalmente: $\forall y $ $\in$ N(x) que satisfaga $\phi(y) = -3$ se añade $y$ a $L_{out}$ y se pone $\phi(y) = -1$
+ 	 \end{itemize}
+ 	Con esta operación se mueve el contorno un punto de la rejilla hacia dentro. 
  \end{itemize}
 
-La función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno.
+Por otro lado, la función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos que se citan en \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
 
-Aclaradas las cuestiones  anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} es el siguiente:
+Aclaradas las cuestiones anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo ($F_{int}$) y de los datos en el primer ciclo ($F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando $F_{int}$ sea positiva, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
+
+Repasando un poco más el algoritmo  \ref{algoritmoFastLevelSet} queda por aclarar las condiciones de parada del algoritmo. Así pués, el algoritmo se parará en el caso de que se cumpla una de estas dos condiciones:
+
+\begin{enumerate}
+	\item Que la velocidad $F_{ext}$ de todos la vecindad del contorno cumpla con:
+	\begin{enumerate}	
+	\item Formalmente: $F(x) \leq 0 \forall x \in L_{out}$, es decir, que no se tenga que expandir el contorno por ninguno de sus puntos.
+	\item Formalmente: $F(x) \geq 0 \forall x \in L_{in}$, es decir, que no se tenga que contraer el contorno en ninguno de sus puntos.
+	\end{enumerate}
+	\item Que se alcance un determinado número de iteraciones establecido.
+\end{enumerate}
  
- \begin{table}[H]
- 	\centering
- 	\begin{tabular}{|l|}
-		\hline		
-		\tabitem Paso 1: Inicializar el <<array>> $\phi$, $F_{ext}$ y las dos listas $L_{out}$ y $L_{in}$. \\
-		\tabitem Paso 2: Primer ciclo donde se escanean las dos listas para actualizar $\phi$, $L_{out}$ y $L_{in}$. \\
-		\quad \quad \quad \quad - Se calcula la velocidad para cada punto de $L_{out}$ y $L_{in}$.
-		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se hace  la operación \\ 
-		\quad \quad \quad \quad \ \ \textit{switch\_in()} $\forall x \in L_{out}$ si F(x) $>$ 0. \\ 
-		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
-		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
-		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
-		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{in}$ y se hace  la operación \\ 
-		\quad \quad \quad \quad \ \ \textit{switch\_out()} $\forall x \in L_{in}$ si F(x) $<$ 0. \\ 
-		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
-		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
-		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
-		\quad \quad \quad \quad - Se comprueba la condición de parada y si se satisface se continua al paso 3, \\ ç
-		\quad \quad \quad \quad \ \ si no, seguiremos en el paso 2. \\
-		\tabitem Paso 3:  Segundo ciclo donde se realiza un suavizado del contorno con un filtro Gaussiano. \\
- 		\hline
- 	\end{tabular}
- 	\caption{Algoritmo completo de la aproximación del \textit{level set}}
- \end{table}
- 
- \begin{figure}[H]
+   Para finalizar, el coste del algoritmo es de orden O(2A($P_1$ + $P_2$)), donde A es el número de puntos entre el primer contorno creado y el último ya evolucionado, $P_1$ y $P_2$ el coste de las operaciones de switch() y el coste que tiene el borrado y la inserción de los puntos en las listas respectivamente. El escalar 2 es debido a que los puntos pueden llegar a ser pertenecer a una lista primero, y luego a otra, realizando así las operaciones dos veces. Nótese que ese A será mucho menor que la O(mn) que sería la anchura (m) por la altura(n) de la imagen, ya que si en la imagen se detectan varios objetos, el tamaño en puntos o \textit{pixels} de cada objeto se restará a ese O(mn).
+   
+ \begin{figure}[]
  	\captionsetup{justification=centering}
  	\centering
- 	\includegraphics[width=.7\textwidth]{./imagenes/switchLevelSet}
+ 	\includegraphics[width=.9\textwidth]{./imagenes/switchLevelSet}
  	\caption{Ilustración de las operaciones realizadas en el paso 3 del algoritmo}
  	\subcaption*{Fuente: modificaciones de imágenes en \cite{yong1}}	
  	\label{switchLevelSet}
  \end{figure}
  
+ \begin{table}[]
+ 	\centering
+ 	\begin{tabular}{|l|}
+ 		\hline		
+ 		\tabitem Paso 1: Inicializar el <<array>> $\phi$, $F_{ext}$ y las dos listas $L_{out}$ y $L_{in}$. \\
+ 		\tabitem Paso 2: Primer ciclo donde se escanean las dos listas para actualizar $\phi$, $L_{out}$ y $L_{in}$. \\
+ 		\quad \quad \quad \quad - Se calcula la velocidad para cada punto de $L_{out}$ y $L_{in}$. \\
+ 		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se hace  la operación \\ 
+ 		\quad \quad \quad \quad \ \ \textit{switch\_in(x)} $\forall x \in L_{out}$ si F(x) $>$ 0. \\ 
+ 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
+ 		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
+ 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
+ 		\quad \quad \quad \quad - Evolución hacia dentro. Recorremos la lista $L_{in}$ y se hace  la operación \\ 
+ 		\quad \quad \quad \quad \ \ \textit{switch\_out(x)} $\forall x \in L_{in}$ si F(x) $<$ 0. \\ 
+ 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
+ 		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
+ 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
+ 		\quad \quad \quad \quad - Se comprueba la condición de parada y si se satisface se continua al paso 3, \\ 
+ 		\quad \quad \quad \quad \ \ si no, seguiremos en el paso 2. \\
+ 		\tabitem Paso 3: Segundo ciclo donde se realiza un suavizado del contorno con un \\ 
+ 		\quad \quad \quad \quad \ \ filtro Gaussiano. \\
+ 		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se calcula G $\oplus \ \phi(X)$. \\ 
+ 		\quad \quad \quad \quad \ \ Si  G $\oplus \phi(X)$ < 0 se realiza la operación \textit{switch\_in(x)} \\ 
+ 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
+ 		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
+ 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
+ 		\quad \quad \quad \quad - Evolución hacia dentro. Recorremos la lista $L_{in}$ y se calcula  G $\oplus \ \phi(X)$. \\ 
+ 		\quad \quad \quad \quad \ \ Si G $\oplus \phi(X)$ > 0 se realiza la operación \textit{switch\_out(x)}  \\ 
+ 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
+ 		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
+ 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
+ 		\tabitem Paso 4:  Si se satisface la condición de parada del ciclo uno, se termina el algoritmo, \\
+ 		\quad \quad \quad \quad \ \ no, se vuelve al paso 2. \\
+ 		\hline
+ 	\end{tabular}
+ 	\caption{Algoritmo completo de la aproximación del \textit{level set}}
+ 	\label{algoritmoFastLevelSet}
+ \end{table}
  
 \chapter{Paralelización de la aproximación del \textit{level set}}
 

@@ -1,7 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  21 MAY 2015 13:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  21 MAY 2015 19:11
 entering extended mode
 **Main.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.tex
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -13,7 +15,9 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/itsas_pfc.cls
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/itsas_pfc.cls"
 
 LaTeX Warning: You have requested document class `Config/itsas_pfc',
                but the document class provides `itsas_pfc'.
@@ -35,7 +39,8 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/pfc_options.tex
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/pfc_options.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
@@ -230,7 +235,8 @@ Package minitoc Info: I0003
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc0)
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.mtc0")
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
@@ -299,7 +305,8 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/spanish5.ldf
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/spanish5.ldf"
 Language: spanish.ldf 2007/02/21 v5.0a Spanish support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
@@ -403,7 +410,8 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count110
 \@thisrulewidth=\dimen142
 ))
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -449,12 +457,16 @@ Package srcltx Info: Expanded filename `Config/rename.tex' to `Config/rename.te
 x' on input line 29.
 
 :<+ Config/rename.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/rename.tex)
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/rename.tex")
 :<-
 Package srcltx Info: Expanded filename `Config/cover.tex' to `Config/cover.tex'
  on input line 35.
 :<+ Config/cover.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/cover.tex
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/cover.tex"
 Overfull \hbox (19.9151pt too wide) in paragraph at lines 30--30
  [][] 
  []
@@ -479,25 +491,33 @@ Package pdftex.def Info: imagenes/inforLogo.jpg used on input line 45.
 (pdftex.def)             Requested size: 161.32767pt x 68.16289pt.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
- <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/upvLogo.jpg> <C:/Users/dani/
-Desktop/PFG/Documentacion/imagenes/inforLogo.jpg>] [2
+ <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin 
+de grado/Documentacion/imagenes/upvLogo.jpg> <C:/Users/Dani/Desktop/Universidad
+/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/inf
+orLogo.jpg>] [2
 
 ])
 :<-
 Package srcltx Info: Expanded filename `Config/begin.tex' to `Config/begin.tex'
  on input line 41.
 :<+ Config/begin.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/begin.tex)
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/begin.tex")
 :<-
 Package srcltx Info: Expanded filename `file-acknowledgements.tex' to `file-ack
 nowledgements.tex' on input line 47.
 :<+ file-acknowledgements.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\file-acknowledgements.tex)
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\file-acknowledgements.tex")
 :<-
 Package srcltx Info: Expanded filename `Config/toc.tex' to `Config/toc.tex' on 
 input line 54.
 :<+ Config/toc.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/toc.tex
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/toc.tex"
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM Main.toc on input line 2.
 Package minitoc Info: I0033
@@ -529,7 +549,8 @@ Package minitoc Info: I0033
 ] [2
 
 ]
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.toc
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.toc"
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -542,14 +563,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3])
 \tf@toc=\write4
  [4]
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.lof)
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.lof")
 \tf@lof=\write5
  [5
 
 ] [6
 
 ]
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.lot
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.lot"
 LaTeX Font Info:    Try loading font information for U+lasy on input line 6.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
@@ -563,12 +586,16 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 Package srcltx Info: Expanded filename `Config/headers.tex' to `Config/headers.
 tex' on input line 60.
 :<+ Config/headers.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/headers.tex)
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/headers.tex")
 :<-
 Package srcltx Info: Expanded filename `file-abstract.tex' to `file-abstract.te
 x' on input line 66.
 :<+ file-abstract.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\file-abstract.tex [9
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\file-abstract.tex" [9
 
 
 ] [10
@@ -578,20 +605,28 @@ x' on input line 66.
 Package srcltx Info: Expanded filename `Config/chapters.tex' to `Config/chapter
 s.tex' on input line 72.
 :<+ Config/chapters.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/chapters.tex)
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/chapters.tex")
 :<-
 Package srcltx Info: Expanded filename `file-chapter1.tex' to `file-chapter1.te
 x' on input line 78.
 :<+ file-chapter1.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\file-chapter1.tex
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\file-chapter1.tex"
 Cap\'{\i }tulo 1.
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc1) [1
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.mtc1") [1
 
 
 
 ] [2] [3] [4]
 Cap\'{\i }tulo 2.
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc2) [5
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.mtc2") [5
 
 
 ] [6]
@@ -603,7 +638,9 @@ Overfull \hbox (75.24939pt too wide) in paragraph at lines 60--67
 
 ]
 Cap\'{\i }tulo 3.
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc3
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.mtc3"
 Overfull \hbox (6.25946pt too wide) in paragraph at lines 2--2
  [][] []\OT1/cmr/bx/n/10.95 Segmentacion de ima-gen ba-sada en el tra-ta-mient
 o 
@@ -635,8 +672,9 @@ Overfull \hbox (3.68619pt too wide) in paragraph at lines 142--143
 ten-si-da-des um-bra-les (como
  []
 
-[11 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/tecnicasSegmentacion.png>
-] <./imagenes/imageHistogram.png, id=92, 188.20313pt x 88.83188pt>
+[11 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/tecnicasSegmentacion.png>]
+<./imagenes/imageHistogram.png, id=92, 188.20313pt x 88.83188pt>
 File: ./imagenes/imageHistogram.png Graphic file (type png)
 
 <use ./imagenes/imageHistogram.png>
@@ -680,7 +718,8 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/imageHistogram.png>]
+ [12 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/imageHistogram.png>]
 <./imagenes/thresholding3.jpg, id=101, 1441.385pt x 807.015pt>
 File: ./imagenes/thresholding3.jpg Graphic file (type jpg)
 
@@ -729,12 +768,16 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 206.
 See the caption package documentation for explanation.
 
-[13 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/thresholding1.jpg> <C:/Us
-ers/dani/Desktop/PFG/Documentacion/imagenes/thresholding2.jpg> <C:/Users/dani/D
-esktop/PFG/Documentacion/imagenes/thresholding3.jpg> <C:/Users/dani/Desktop/PFG
-/Documentacion/imagenes/thresholding4.jpg> <C:/Users/dani/Desktop/PFG/Documenta
-cion/imagenes/thresholding5.png> <C:/Users/dani/Desktop/PFG/Documentacion/image
-nes/thresholding6.png>]
+[13 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/thresholding1.jpg> <C:/Users/Dani/Desktop/Un
+iversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/ima
+genes/thresholding2.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatr
+imestre/Proyecto de fin de grado/Documentacion/imagenes/thresholding3.jpg> <C:/
+Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de gr
+ado/Documentacion/imagenes/thresholding4.jpg> <C:/Users/Dani/Desktop/Universida
+d/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/th
+resholding5.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/
+Proyecto de fin de grado/Documentacion/imagenes/thresholding6.png>]
 <./imagenes/clustering1.jpg, id=109, 3019.28pt x 1967.35pt>
 File: ./imagenes/clustering1.jpg Graphic file (type jpg)
 
@@ -800,11 +843,15 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 272.
 See the caption package documentation for explanation.
 
-[15 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/clustering1.jpg> <C:/User
-s/dani/Desktop/PFG/Documentacion/imagenes/clustering2.png (PNG copy)> <C:/Users
-/dani/Desktop/PFG/Documentacion/imagenes/clustering3.png> <C:/Users/dani/Deskto
-p/PFG/Documentacion/imagenes/clustering4.png>] [16 <C:/Users/dani/Desktop/PFG/D
-ocumentacion/imagenes/morphology1.jpg>] [17]
+[15 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/clustering1.jpg> <C:/Users/Dani/Desktop/Univ
+ersidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/image
+nes/clustering2.png (PNG copy)> <C:/Users/Dani/Desktop/Universidad/4º Curso/2�
+� cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/clustering3.png>
+ <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin 
+de grado/Documentacion/imagenes/clustering4.png>] [16 <C:/Users/Dani/Desktop/Un
+iversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/ima
+genes/morphology1.jpg>] [17]
 
 LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
 .
@@ -883,10 +930,13 @@ See the caption package documentation for explanation.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-[19 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/operator0.jpg> <C:/Users/
-dani/Desktop/PFG/Documentacion/imagenes/operator1.jpg> <C:/Users/dani/Desktop/P
-FG/Documentacion/imagenes/operator2.jpg> <C:/Users/dani/Desktop/PFG/Documentaci
-on/imagenes/operator3.jpg>]
+[19 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/operator0.jpg> <C:/Users/Dani/Desktop/Univer
+sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
+s/operator1.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/
+Proyecto de fin de grado/Documentacion/imagenes/operator2.jpg> <C:/Users/Dani/D
+esktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Document
+acion/imagenes/operator3.jpg>]
 <./imagenes/activeContour1.jpg, id=142, 241.81541pt x 115.34293pt>
 File: ./imagenes/activeContour1.jpg Graphic file (type jpg)
 
@@ -924,8 +974,10 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 3769) has occurred while \output is active []
 
- [20 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour1.jpg>] [21
- <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour2.png>]
+ [20 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/activeContour1.jpg>] [21 <C:/Users/Dani/Des
+ktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentac
+ion/imagenes/activeContour2.png>]
 <./imagenes/levelSet1.jpg, id=150, 213.77466pt x 114.04205pt>
 File: ./imagenes/levelSet1.jpg Graphic file (type jpg)
 
@@ -963,7 +1015,8 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/levelSet1.jpg>]
+ [22 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/levelSet1.jpg>]
 Overfull \hbox (20.18303pt too wide) in paragraph at lines 481--482
 [][]\OT1/cmr/m/n/12 Este sub-grupo agrupa to-dos las tecni-cas re-la-cio-na-da
 s con la tecnica []habitual[]
@@ -972,7 +1025,8 @@ s con la tecnica []habitual[]
 
 Underfull \vbox (badness 2762) has occurred while \output is active []
 
- [23 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/levelSet2.jpg>]
+ [23 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/levelSet2.jpg>]
 <./imagenes/regionGrowing1.jpg, id=158, 198.90239pt x 198.90239pt>
 File: ./imagenes/regionGrowing1.jpg Graphic file (type jpg)
 
@@ -1042,15 +1096,20 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing1.jpg>]
+ [24 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/regionGrowing1.jpg>]
 Overfull \vbox (61.91502pt too high) has occurred while \output is active []
 
 
-[25 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing6.jpg> <C:/U
-sers/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing2.jpg> <C:/Users/dani
-/Desktop/PFG/Documentacion/imagenes/regionGrowing3.jpg> <C:/Users/dani/Desktop/
-PFG/Documentacion/imagenes/regionGrowing4.jpg> <C:/Users/dani/Desktop/PFG/Docum
-entacion/imagenes/regionGrowing5.jpg>]
+[25 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/regionGrowing6.jpg> <C:/Users/Dani/Desktop/U
+niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
+agenes/regionGrowing2.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cua
+trimestre/Proyecto de fin de grado/Documentacion/imagenes/regionGrowing3.jpg> <
+C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de
+ grado/Documentacion/imagenes/regionGrowing4.jpg> <C:/Users/Dani/Desktop/Univer
+sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
+s/regionGrowing5.jpg>]
 <./imagenes/watershed1.jpg, id=171, 242.00215pt x 80.45746pt>
 File: ./imagenes/watershed1.jpg Graphic file (type jpg)
 
@@ -1102,12 +1161,15 @@ Package caption Warning: \subcaption
 (caption)                outside box or environment on input line 567.
 See the caption package documentation for explanation.
 
-[26 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/watershed3.png>]
+[26 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/watershed3.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/watershed1.jpg> <C:/User
-s/dani/Desktop/PFG/Documentacion/imagenes/watershed2.png>]
-<./imagenes/graphCuts1.jpg, id=180, 227.79504pt x 173.73708pt>
+ [27 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/watershed1.jpg> <C:/Users/Dani/Desktop/Univ
+ersidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/image
+nes/watershed2.png>] <./imagenes/graphCuts1.jpg, id=180, 227.79504pt x 173.7370
+8pt>
 File: ./imagenes/graphCuts1.jpg Graphic file (type jpg)
 
 <use ./imagenes/graphCuts1.jpg>
@@ -1132,8 +1194,8 @@ Overfull \hbox (7.77979pt too wide) in paragraph at lines 594--594
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/graphCuts1.jpg>] [29] [3
-0
+ [28 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/graphCuts1.jpg>] [29] [30
 
 ]
 Cap\'{\i }tulo 4.
@@ -1167,10 +1229,13 @@ Package pdftex.def Info: ./imagenes/ejemplo4.png used on input line 639.
  [31]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/ejemplo1.png> <C:/Users/
-dani/Desktop/PFG/Documentacion/imagenes/ejemplo2.png (PNG copy)> <C:/Users/dani
-/Desktop/PFG/Documentacion/imagenes/ejemplo3.png> <C:/Users/dani/Desktop/PFG/Do
-cumentacion/imagenes/ejemplo4.png>] [33] [34
+ [32 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/ejemplo1.png> <C:/Users/Dani/Desktop/Univer
+sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
+s/ejemplo2.png (PNG copy)> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cua
+trimestre/Proyecto de fin de grado/Documentacion/imagenes/ejemplo3.png> <C:/Use
+rs/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado
+/Documentacion/imagenes/ejemplo4.png>] [33] [34
 
 ]
 Cap\'{\i }tulo 5.
@@ -1187,51 +1252,69 @@ File: ./imagenes/aproxLevelSet2.png Graphic file (type png)
 <use ./imagenes/aproxLevelSet2.png>
 Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 682.
 (pdftex.def)             Requested size: 180.67499pt x 160.5474pt.
- [36 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet1.png> <C:/
-Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet2.png>] [37] [38]
-Overfull \hbox (370.88281pt too wide) in paragraph at lines 770--790
- [][][] 
+ [36 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/aproxLevelSet1.png> <C:/Users/Dani/Desktop/
+Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/i
+magenes/aproxLevelSet2.png>] [37]
+Overfull \hbox (25.31432pt too wide) in paragraph at lines 745--747
+[][]\OT1/cmr/m/n/12 La ope-racion \OT1/cmr/m/it/12 switch[]in() \OT1/cmr/m/n/1
+2 para un punto x $\OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]$ \OT1/cmr/m/n/12 se 
+de-fine como: switch[]in(x): 
  []
 
-<./imagenes/switchLevelSet.png, id=223, 535.2497pt x 243.91125pt>
+[38] [39]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 778.
+
+<./imagenes/switchLevelSet.png, id=226, 535.2497pt x 243.91125pt>
 File: ./imagenes/switchLevelSet.png Graphic file (type png)
 
 <use ./imagenes/switchLevelSet.png>
-Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 796.
-(pdftex.def)             Requested size: 272.99881pt x 124.40797pt.
+Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 781.
+(pdftex.def)             Requested size: 350.99762pt x 159.9547pt.
 
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 798.
+(caption)                outside box or environment on input line 783.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 798.
+(caption)                outside box or environment on input line 783.
 See the caption package documentation for explanation.
 
-[39 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/switchLevelSet.png>]
-[40
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 787.
+
+
+Overfull \hbox (67.02457pt too wide) in paragraph at lines 789--822
+ [][][] 
+ []
+
+[40 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/switchLevelSet.png>] [41] [42
 
 ]
 Cap\'{\i }tulo 6.
-[41] [42
-
-]
-Cap\'{\i }tulo 7.
 [43] [44
 
 ]
-Cap\'{\i }tulo 8.
+Cap\'{\i }tulo 7.
 [45] [46
+
+]
+Cap\'{\i }tulo 8.
+[47] [48
 
 ]
 Cap\'{\i }tulo 9.
 
-LaTeX Warning: Reference `dedicacionTemporal' on page 47 undefined on input lin
-e 821.
+LaTeX Warning: Reference `dedicacionTemporal' on page 49 undefined on input lin
+e 844.
 
-[47] [48
+[49] [50
 
 ]
 Cap\'{\i }tulo 10.
@@ -1240,17 +1323,23 @@ Cap\'{\i }tulo 10.
 Package srcltx Info: Expanded filename `Config/appendices.tex' to `Config/appen
 dices.tex' on input line 85.
 :<+ Config/appendices.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/appendices.tex)
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/appendices.tex")
 :<-
 Package srcltx Info: Expanded filename `Config/bibliography.tex' to `Config/bib
 liography.tex' on input line 97.
 :<+ Config/bibliography.tex
-(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [49] [50
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Config/bibliography.tex" [51] [52
 
 ])
 :<-
 :<+ Main.bbl
-(C:\Users\dani\Desktop\PFG\Documentacion\Main.bbl
+
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.bbl"
 Underfull \hbox (badness 5064) in paragraph at lines 38--43
 [][]\OT1/cmr/m/n/12 Arnau Oli-ver Ma-la-ge-lada.  \OT1/cmr/m/it/12 Au-to-ma-tic
  Mass Seg-men-ta-tion In
@@ -1262,7 +1351,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 -sity of Gi-rona,
  []
 
-[51
+[53
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 85--89
@@ -1289,20 +1378,22 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[52] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
+[54]
+("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
+de grado\Documentacion\Main.aux")
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6366 strings out of 493921
- 94959 string characters out of 3147285
- 166435 words of memory out of 3000000
- 9240 multiletter control sequences out of 15000+200000
+ 6369 strings out of 493921
+ 98132 string characters out of 3147286
+ 167435 words of memory out of 3000000
+ 9243 multiletter control sequences out of 15000+200000
  18059 words of font info for 67 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+ <C:\Users\Dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
 crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program
@@ -1322,9 +1413,9 @@ blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
 txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on Main.pdf (64 pages, 21174006 bytes).
+Output written on Main.pdf (66 pages, 21179919 bytes).
 PDF statistics:
- 337 PDF objects out of 1000 (max. 8388607)
+ 343 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
