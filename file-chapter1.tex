@@ -760,7 +760,7 @@ Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como
 
 Por otro lado, la función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos que se citan en \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
 
-Aclaradas las cuestiones anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo ($F_{int}$) y de los datos en el primer ciclo ($F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando $F_{int}$ sea positiva, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
+Aclaradas las cuestiones anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo (velocidad $F_{int}$) y de los datos en el primer ciclo (velocidad $F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando el valor de $F_{int}$ sea positivo, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando el valor de $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
 
 Repasando un poco más el algoritmo  \ref{algoritmoFastLevelSet} queda por aclarar las condiciones de parada del algoritmo. Así pués, el algoritmo se parará en el caso de que se cumpla una de estas dos condiciones:
 
@@ -823,7 +823,15 @@ Repasando un poco más el algoritmo  \ref{algoritmoFastLevelSet} queda por aclara
  	\label{algoritmoFastLevelSet}
  \end{table}
  
+ 
+ 
+ 
 \chapter{Paralelización de la aproximación del \textit{level set}}
+
+
+
+
+
 
 \chapter{Funciones extras añadidas en base a la segmentación}
 
