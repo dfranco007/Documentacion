@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  21 MAY 2015 19:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  24 MAY 2015 21:17
 entering extended mode
 **Main.tex
 
@@ -542,6 +542,8 @@ Package minitoc Info: I0033
 (minitoc)             Writing Main.mtc10.
 Package minitoc Info: I0033
 (minitoc)             Writing Main.mtc11.
+Package minitoc Info: I0033
+(minitoc)             Writing Main.mtc12.
  [1
 
 
@@ -852,42 +854,6 @@ nes/clustering2.png (PNG copy)> <C:/Users/Dani/Desktop/Universidad/4º Curso/2�
 de grado/Documentacion/imagenes/clustering4.png>] [16 <C:/Users/Dani/Desktop/Un
 iversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/ima
 genes/morphology1.jpg>] [17]
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
-.
-
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
-.
-
-Missing character: There is no � in font cmr12!
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
-.
-
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 360
-.
-
-Missing character: There is no � in font cmr12!
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
-.
-
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
-.
-
-Missing character: There is no � in font cmr12!
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
-.
-
-
-LaTeX Warning: Command \textordmasculine invalid in math mode on input line 370
-.
-
-Missing character: There is no � in font cmr12!
 <./imagenes/operator0.jpg, id=130, 642.4pt x 481.8pt>
 File: ./imagenes/operator0.jpg Graphic file (type jpg)
 
@@ -1252,72 +1218,142 @@ File: ./imagenes/aproxLevelSet2.png Graphic file (type png)
 <use ./imagenes/aproxLevelSet2.png>
 Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 682.
 (pdftex.def)             Requested size: 180.67499pt x 160.5474pt.
- [36 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/aproxLevelSet1.png> <C:/Users/Dani/Desktop/
-Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/i
-magenes/aproxLevelSet2.png>] [37]
-Overfull \hbox (25.31432pt too wide) in paragraph at lines 745--747
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 688.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 688.
+See the caption package documentation for explanation.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+[37 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/aproxLevelSet1.png> <C:/Users/Dani/Desktop/U
+niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
+agenes/aproxLevelSet2.png>]
+Overfull \hbox (25.31432pt too wide) in paragraph at lines 746--748
 [][]\OT1/cmr/m/n/12 La ope-racion \OT1/cmr/m/it/12 switch[]in() \OT1/cmr/m/n/1
 2 para un punto x $\OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]$ \OT1/cmr/m/n/12 se 
 de-fine como: switch[]in(x): 
  []
 
-[38] [39]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 778.
-
-<./imagenes/switchLevelSet.png, id=226, 535.2497pt x 243.91125pt>
-File: ./imagenes/switchLevelSet.png Graphic file (type png)
-
-<use ./imagenes/switchLevelSet.png>
-Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 781.
-(pdftex.def)             Requested size: 350.99762pt x 159.9547pt.
+[38]
+Overfull \hbox (67.02457pt too wide) in paragraph at lines 767--800
+ [][][] 
+ []
 
 
 Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 783.
+(caption)                outside box or environment on input line 801.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 783.
+(caption)                outside box or environment on input line 801.
+See the caption package documentation for explanation.
+
+[39] [40]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 821.
+
+<./imagenes/switchLevelSet.png, id=229, 535.2497pt x 243.91125pt>
+File: ./imagenes/switchLevelSet.png Graphic file (type png)
+
+<use ./imagenes/switchLevelSet.png>
+Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 824.
+(pdftex.def)             Requested size: 312.00119pt x 142.1832pt.
+
+
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 826.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 787.
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 826.
+See the caption package documentation for explanation.
+
+[41 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/switchLevelSet.png>]
+<./imagenes/chanVese1.png, id=234, 80.55093pt x 79.04532pt>
+File: ./imagenes/chanVese1.png Graphic file (type png)
+
+<use ./imagenes/chanVese1.png>
+Package pdftex.def Info: ./imagenes/chanVese1.png used on input line 843.
+(pdftex.def)             Requested size: 90.3375pt x 88.65315pt.
+
+<./imagenes/chanVese2.png, id=235, 77.53969pt x 77.53969pt>
+File: ./imagenes/chanVese2.png Graphic file (type png)
+
+<use ./imagenes/chanVese2.png>
+Package pdftex.def Info: ./imagenes/chanVese2.png used on input line 848.
+(pdftex.def)             Requested size: 90.3375pt x 90.33769pt.
+
+<./imagenes/chanVese3.png, id=236, 79.79813pt x 76.03406pt>
+File: ./imagenes/chanVese3.png Graphic file (type png)
+
+<use ./imagenes/chanVese3.png>
+Package pdftex.def Info: ./imagenes/chanVese3.png used on input line 853.
+(pdftex.def)             Requested size: 90.3375pt x 86.07642pt.
+
+<./imagenes/chanVese4.png, id=237, 82.05656pt x 78.2925pt>
+File: ./imagenes/chanVese4.png Graphic file (type png)
+
+<use ./imagenes/chanVese4.png>
+Package pdftex.def Info: ./imagenes/chanVese4.png used on input line 858.
+(pdftex.def)             Requested size: 90.3375pt x 86.19487pt.
 
 
-Overfull \hbox (67.02457pt too wide) in paragraph at lines 789--822
- [][][] 
- []
+Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
+(caption)                outside box or environment on input line 863.
+See the caption package documentation for explanation.
 
-[40 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/switchLevelSet.png>] [41] [42
 
-]
+Package caption Warning: \subcaption
+(caption)                outside box or environment on input line 863.
+See the caption package documentation for explanation.
+
+[42 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/chanVese1.png> <C:/Users/Dani/Desktop/Univer
+sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
+s/chanVese2.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/
+Proyecto de fin de grado/Documentacion/imagenes/chanVese3.png> <C:/Users/Dani/D
+esktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Document
+acion/imagenes/chanVese4.png>]
 Cap\'{\i }tulo 6.
-[43] [44
+[43
+
+] [44] [45] [46
 
 ]
 Cap\'{\i }tulo 7.
-[45] [46
-
-]
-Cap\'{\i }tulo 8.
 [47] [48
 
 ]
-Cap\'{\i }tulo 9.
-
-LaTeX Warning: Reference `dedicacionTemporal' on page 49 undefined on input lin
-e 852.
-
+Cap\'{\i }tulo 8.
 [49] [50
 
 ]
+Cap\'{\i }tulo 9.
+[51] [52
+
+]
 Cap\'{\i }tulo 10.
+
+LaTeX Warning: Reference `dedicacionTemporal' on page 53 undefined on input lin
+e 972.
+
+[53] [54
+
+]
+Cap\'{\i }tulo 11.
 )
 :<-
 Package srcltx Info: Expanded filename `Config/appendices.tex' to `Config/appen
@@ -1332,7 +1368,7 @@ liography.tex' on input line 97.
 :<+ Config/bibliography.tex
 
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/bibliography.tex" [51] [52
+de grado\Documentacion\Config/bibliography.tex" [55] [56
 
 ])
 :<-
@@ -1351,10 +1387,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 -sity of Gi-rona,
  []
 
-[53
+[57
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 85--89
+Underfull \hbox (badness 10000) in paragraph at lines 96--100
 [][]\OT1/cmr/m/n/12 Franco D.  Im-ple-men-ta-cion pa-ra-lela.  2015.
  []
 
@@ -1378,7 +1414,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[54]
+[58]
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
 de grado\Documentacion\Main.aux")
 
@@ -1386,10 +1422,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6369 strings out of 493921
- 98132 string characters out of 3147286
- 167435 words of memory out of 3000000
- 9243 multiletter control sequences out of 15000+200000
+ 6407 strings out of 493921
+ 98862 string characters out of 3147286
+ 171435 words of memory out of 3000000
+ 9274 multiletter control sequences out of 15000+200000
  18059 words of font info for 67 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1413,9 +1449,9 @@ blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
 txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
 ols/msam10.pfb>
-Output written on Main.pdf (66 pages, 21179963 bytes).
+Output written on Main.pdf (70 pages, 21222000 bytes).
 PDF statistics:
- 343 PDF objects out of 1000 (max. 8388607)
+ 360 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

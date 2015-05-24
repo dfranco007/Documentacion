@@ -13,14 +13,16 @@
 \contentsline {xchapter}{Necesidades del cliente}{31}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{35}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{41}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{40}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{43}
+\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{43}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{45}
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{47}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{47}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{49}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{49}
+\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{51}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{51}
+\contentsline {xchapter}{Gesti\'on del proyecto}{53}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusiones}{55}

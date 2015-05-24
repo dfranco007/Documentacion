@@ -356,7 +356,7 @@ Este operador es parecido al operador de Sobel pero este no enfatiza los pixels 
 			-1 & -2 & +2 \\ \hline
 			-1 & +1 & +1 \\ \hline
 		\end{tabular}
- 		\caption*{$0º$}
+ 		\caption*{0}
  	}
  	\parbox{.45\linewidth}{
  		\centering
@@ -366,7 +366,7 @@ Este operador es parecido al operador de Sobel pero este no enfatiza los pixels 
 				-1 & -2 & +1 \\ \hline
 				-1 & +1 & +1 \\ \hline
 			\end{tabular}
- 		\caption*{$45º$}
+ 		\caption*{45}
  	}
 	\captionsetup{justification=centering}
  	\caption{Máscaras utilizadas por el operador de Prewitt de tamaño 3x3}
@@ -661,9 +661,9 @@ Como se ha dado a conocer en \ref{sec:conclusiones} hay muchos tipos de mejoras 
 
 Repasando este algoritmo, las ventajas que tiene son que la segmentación conseguida es precisa y que no añade sobrecoste al hacer la división o unión del contorno. Sin embargo, el algoritmo se basa en la resolución de ecuaciones diferenciales, lo que supone que el algoritmo sea costoso y lento. Se han desarrollado varias implementaciones en GPU como se puede ver en el repaso realizado en \cite[sección 3.6]{eri2015}, en \cite{aaron1} donde se realizan sobre imágenes 3D y en el proyecto de fin de carrera \cite{cudaseg} en el que también se utilizan GPUs etc. De la misma manera, también se han desarrollado paralelizaciones en arquitecturas SMP(\textit{Symmetric Multi-Processing}) como en \cite{jeon1} o en arquitecturas de memoria distrbuida con MPI(\textit{Message Passing Interface}) como en \cite{moha1}. 
 
-Hay muchos artículos sobre este algoritmo y alguna implementación paralela pero sobre el algoritmo original, por lo tanto, a pesar de la paralelización consiguen tiempos elevados por encima de las necesidades de este proyecto. Estas paralelizaciones y otras técnicas de optimización que presentan varios trabajos se centran siempre en resolver las PDEs asociadas a la evolución del \textit{level set}. Sin embargo, para muchos problemas de imagen, como la segmentación, no es necesario tanta precisión ya que el objetivo final es encontrar los bordes de los objetos. En este caso, el proceso evolutivo no tiene tanto interes como el resultado final. Siguiendo esta idea se presenta el artículo \cite{yong1}, que será la pieza clave de la segmentación realizada en este proyecto.
+Hay muchos artículos sobre este algoritmo y alguna implementación paralela pero sobre el algoritmo original, por lo tanto, a pesar de la paralelización consiguen tiempos elevados por encima de las necesidades de este proyecto. Estas paralelizaciones y otras técnicas de optimización que presentan varios trabajos se centran siempre en resolver las PDEs asociadas a la evolución del \textit{level set}. Sin embargo, para muchos problemas de imagen, como la segmentación, no es necesario tanta precisión ya que el objetivo final es encontrar los bordes de los objetos. En este caso, el proceso evolutivo no tiene tanto interés como el resultado final. Siguiendo esta idea se presenta el artículo \cite{yong1}, que será la pieza clave de la segmentación realizada en este proyecto.
 
-\subsection{Aproximación a la técnica de \textit{level set}}
+\section{Aproximación a la técnica de \textit{level set}}
 
 Como se ha mencionado anteriormente, no se tienen por que resolver las PDEs en el algoritmo de \textit{level set} ya que, en la segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de PDEs conlleva el que se tengan que realizar reinicializaciones de la función de level set (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado en \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y no calculan PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el level set original. 
 
@@ -685,6 +685,7 @@ En este trabajo se presenta una nueva estrategía de implementación del método de
 	\end{center}
 	\caption{Representación de la curva C}
 	\caption*{Descripción: Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.}	
+ 	\subcaption*{Fuente: \cite{yong1}}	
 	\label{aproxLevelSet}
 \end{figure}
 
@@ -758,7 +759,49 @@ Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como
  	Con esta operación se mueve el contorno un punto de la rejilla hacia dentro. 
  \end{itemize}
 
-Por otro lado, la función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos que se citan en \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
+Por otro lado, la función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva \cite{chan}. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos que se citan en \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|}
+		\hline		
+		\tabitem Paso 1: Inicializar el <<array>> $\phi$, $F_{ext}$ y las dos listas $L_{out}$ y $L_{in}$. \\
+		\tabitem Paso 2: Primer ciclo donde se escanean las dos listas para actualizar $\phi$, $L_{out}$ y $L_{in}$. \\
+		\quad \quad \quad \quad - Se calcula la velocidad para cada punto de $L_{out}$ y $L_{in}$. \\
+		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se hace  la operación \\ 
+		\quad \quad \quad \quad \ \ \textit{switch\_in(x)} $\forall x \in L_{out}$ si F(x) $>$ 0. \\ 
+		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
+		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
+		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
+		\quad \quad \quad \quad - Evolución hacia dentro. Recorremos la lista $L_{in}$ y se hace  la operación \\ 
+		\quad \quad \quad \quad \ \ \textit{switch\_out(x)} $\forall x \in L_{in}$ si F(x) $<$ 0. \\ 
+		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
+		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
+		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
+		\quad \quad \quad \quad - Se comprueba la condición de parada y si se satisface se continua al paso 3, \\ 
+		\quad \quad \quad \quad \ \ si no, seguiremos en el paso 2. \\
+		\tabitem Paso 3: Segundo ciclo donde se realiza un suavizado del contorno con un \\ 
+		\quad \quad \quad \quad \ \ filtro Gaussiano. \\
+		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se calcula G $\oplus \ \phi(X)$. \\ 
+		\quad \quad \quad \quad \ \ Si  G $\oplus \phi(X) <$ 0 se realiza la operación \textit{switch\_in(x)} \\ 
+		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
+		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
+		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
+		\quad \quad \quad \quad - Evolución hacia dentro. Recorremos la lista $L_{in}$ y se calcula  G $\oplus \ \phi(X)$. \\ 
+		\quad \quad \quad \quad \ \ Si G $\oplus \phi(X)$ > 0 se realiza la operación \textit{switch\_out(x)}  \\ 
+		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
+		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
+		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
+		\tabitem Paso 4:  Si se satisface la condición de parada del ciclo uno, se termina el algoritmo, \\
+		\quad \quad \quad \quad \ \ si no, se vuelve al paso 2. \\
+		\hline
+	\end{tabular}
+	\caption{Algoritmo completo de la aproximación del \textit{level set}}
+	\subcaption*{Fuente: \cite{yong1}}	
+	\label{algoritmoFastLevelSet}
+\end{table}
+
 
 Aclaradas las cuestiones anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo (velocidad $F_{int}$) y de los datos en el primer ciclo (velocidad $F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando el valor de $F_{int}$ sea positivo, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando el valor de $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
 
@@ -767,88 +810,175 @@ Repasando un poco más el algoritmo  \ref{algoritmoFastLevelSet} queda por aclara
 \begin{enumerate}
 	\item Que la velocidad $F_{ext}$ de todos la vecindad del contorno cumpla con:
 	\begin{enumerate}	
-	\item Formalmente: $F(x) \leq 0 \forall x \in L_{out}$, es decir, que no se tenga que expandir el contorno por ninguno de sus puntos.
-	\item Formalmente: $F(x) \geq 0 \forall x \in L_{in}$, es decir, que no se tenga que contraer el contorno en ninguno de sus puntos.
+		\item Formalmente: $F(x) \leq 0 \forall x \in L_{out}$, es decir, que no se tenga que expandir el contorno por ninguno de sus puntos.
+		\item Formalmente: $F(x) \geq 0 \forall x \in L_{in}$, es decir, que no se tenga que contraer el contorno en ninguno de sus puntos.
 	\end{enumerate}
 	\item Que se alcance un determinado número de iteraciones establecido.
 \end{enumerate}
  
-   Para finalizar, el coste del algoritmo es de orden O(2A($P_1$ + $P_2$)), donde A es el número de puntos entre el primer contorno creado y el último ya evolucionado, $P_1$ y $P_2$ el coste de las operaciones de switch() y el coste que tiene el borrado y la inserción de los puntos en las listas respectivamente. El escalar 2 es debido a que los puntos pueden llegar a ser pertenecer a una lista primero, y luego a otra, realizando así las operaciones dos veces. Nótese que ese A será mucho menor que la O(mn) que sería la anchura (m) por la altura(n) de la imagen, ya que si en la imagen se detectan varios objetos, el tamaño en puntos o \textit{pixels} de cada objeto se restará a ese O(mn).
+Para finalizar, el coste del algoritmo es de orden O(2A($P_1$ + $P_2$)), donde A es el número de puntos entre el primer contorno creado y el último ya evolucionado, $P_1$ y $P_2$ el coste de las operaciones de switch() y el coste que tiene el borrado y la inserción de los puntos en las listas respectivamente. El escalar 2 es debido a que los puntos pueden llegar a ser pertenecer a una lista primero, y luego a otra, realizando así las operaciones dos veces. Nótese que ese A será mucho menor que la O(mn) que sería la anchura (m) por la altura(n) de la imagen, ya que si en la imagen se detectan varios objetos, el tamaño en puntos o \textit{pixels} de cada objeto se restará a ese O(mn).
    
  \begin{figure}[]
  	\captionsetup{justification=centering}
  	\centering
- 	\includegraphics[width=.9\textwidth]{./imagenes/switchLevelSet}
+ 	\includegraphics[width=.8\textwidth]{./imagenes/switchLevelSet}
  	\caption{Ilustración de las operaciones realizadas en el paso 3 del algoritmo}
  	\subcaption*{Fuente: modificaciones de imágenes en \cite{yong1}}	
  	\label{switchLevelSet}
  \end{figure}
  
- \begin{table}[]
- 	\centering
- 	\begin{tabular}{|l|}
- 		\hline		
- 		\tabitem Paso 1: Inicializar el <<array>> $\phi$, $F_{ext}$ y las dos listas $L_{out}$ y $L_{in}$. \\
- 		\tabitem Paso 2: Primer ciclo donde se escanean las dos listas para actualizar $\phi$, $L_{out}$ y $L_{in}$. \\
- 		\quad \quad \quad \quad - Se calcula la velocidad para cada punto de $L_{out}$ y $L_{in}$. \\
- 		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se hace  la operación \\ 
- 		\quad \quad \quad \quad \ \ \textit{switch\_in(x)} $\forall x \in L_{out}$ si F(x) $>$ 0. \\ 
- 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
- 		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
- 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
- 		\quad \quad \quad \quad - Evolución hacia dentro. Recorremos la lista $L_{in}$ y se hace  la operación \\ 
- 		\quad \quad \quad \quad \ \ \textit{switch\_out(x)} $\forall x \in L_{in}$ si F(x) $<$ 0. \\ 
- 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
- 		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
- 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
- 		\quad \quad \quad \quad - Se comprueba la condición de parada y si se satisface se continua al paso 3, \\ 
- 		\quad \quad \quad \quad \ \ si no, seguiremos en el paso 2. \\
- 		\tabitem Paso 3: Segundo ciclo donde se realiza un suavizado del contorno con un \\ 
- 		\quad \quad \quad \quad \ \ filtro Gaussiano. \\
- 		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se calcula G $\oplus \ \phi(X)$. \\ 
- 		\quad \quad \quad \quad \ \ Si  G $\oplus \phi(X)$ < 0 se realiza la operación \textit{switch\_in(x)} \\ 
- 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
- 		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
- 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
- 		\quad \quad \quad \quad - Evolución hacia dentro. Recorremos la lista $L_{in}$ y se calcula  G $\oplus \ \phi(X)$. \\ 
- 		\quad \quad \quad \quad \ \ Si G $\oplus \phi(X)$ > 0 se realiza la operación \textit{switch\_out(x)}  \\ 
- 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{out}$. Para ello se tendrá que \\
- 		\quad \quad \quad \quad \ \ recorrer la lista y para cada punto $x \in L_{out}$,\\
- 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) > 0$, se borra $x$ de $L_{out}$ y se cambia $\phi(x) = 3$. \\
- 		\tabitem Paso 4:  Si se satisface la condición de parada del ciclo uno, se termina el algoritmo, \\
- 		\quad \quad \quad \quad \ \ no, se vuelve al paso 2. \\
- 		\hline
- 	\end{tabular}
- 	\caption{Algoritmo completo de la aproximación del \textit{level set}}
- 	\label{algoritmoFastLevelSet}
- \end{table}
+ 
+ 
+\section{Evolución del contorno}
+
+Se ha querido añadir esta sección para destacar y hablar un poco más en detalle sobre la evolución de la curva que se ha elegido en esta aproximación: la presentada en \cite{chan}. Este popular trabajo es conocido como \textit{Chan-Vese model} y a diferencia de como se realizaba la segmentación, utilizando el uso de detectores de bordes basados en el gradiente, este trabajo realiza la detección de objetos cuyos bordes no tienen porque estar definidos por el gradiente. Este método es flexible y potente, capaz de realizar la segmentación de muchos tipos de imágenes que con métodos tradicionales como \textit{thresholding} o métodos basados en el gradiente no podían realizarse. Este método también permite que el contorno se inicialice dentro del objeto o incluso entre el objeto y el fondo ya que el resultado final será siempre el mismo. La figura \ref{chanVese} muestra las posibiles inicializaciones. Esta característica será de utilidad como se comentará en posteriores capítulos.
+
+Para tener una mínima idea del avance que esto supuso en la segmentación de imágenes, si volvemos a utilizar el buscador \cite{ieee1} y encontramos dicho artículo, el número de citaciones de otros artículos registrados en ese explorador alcanza casi la cifra de 2.000, lo que tampoco quiere decir que no haya más trabajos no registrados en \cite{ieee1} que lo citen. 
+ 
+\begin{figure}[H]
+	\captionsetup{justification=centering}	
+	\begin{center}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.5\textwidth]{./imagenes/chanVese1}
+			\subcaption{}\label{chanVese1}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.5\textwidth]{./imagenes/chanVese2}	
+			\subcaption{}\label{chanVese2}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.5\textwidth]{./imagenes/chanVese3}	
+			\subcaption{}\label{chanVese3}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.5\textwidth]{./imagenes/chanVese4}	
+			\subcaption{}\label{chanVese4}
+		\end{subfigure}
+	\end{center}
+	\caption{Posibles inicializaciones del contorno con el método de Chan-Vese}
+ 	\subcaption*{Fuente: \cite{chan}}	
+	\label{chanVese}
+\end{figure} 
  
  
  
+\chapter{Implementación de la aproximación y Ofeli}
+
+Una vez encontrada una técnica que satisficiera los requisitos del proyecto, se empezó a buscar alguna implementación sobre esta técnica. En esa búsqueda se encontró el trabajo \cite{ofeli}. Este trabajo llamado Ofeli (\textit{Open, Fast and Efficient Level set Implementation}) está desarrollado con Qt que es una de librerias multiplataforma para la realización de aplicaciones con GUI (\textit{graphical user interface}) en C++. Esta aplicación es muy completa ya que aparte del algoritmo de interés implementa varias funcionalidades extra como varios tipos de filtrado, preprocesamiento, varios tipos de evolución del contorno etc.
+
+\section{Ofeli}
+
+\subsection{Introducción}
+
+En esta sección se explicará brevemente el uso de la interfaz gráfica y las posibilidades que este trabajo ofrece. Más adelante, se explicará la estructura de la implementación y las clases que se utilizan. Se realizará un esquema general para que el lector pueda comprender cuales son los procesos o pautas que se dan en esta implementación para poder segmentar una imagen.
+
+\subsection{Diseño de la herramienta Ofeli}
+
+Como se ha dicho anteriormente esta implementación se ha desarrollado 
+
+TERMINAR
+
+
+\subsection{Estructura}
+
+La implementación está formada por varias clases que se han dividido en dos tipos: las clases o ficheor que pertecen a la GUI (etiquetadas con la palabra <<GUI->> por delanete de sus nombres) y las clases que pertenecen a la implementación del algoritmo (etiquetadas con la palabra <<Impl->>).
+
+\begin{enumerate}
+	\item Impl-\textbf{ActiveContour}: clase padre de todos los tipos de contornos. Formada por lo ficheros:
+		\begin{enumerate}
+			\item activecontour.cpp
+			\item activecontour.hpp
+		\end{enumerate}
+	\item Impl-\textbf{ACwithoutEdges}: clase que implementa el contorno que evolucionará en una imagen a escala de grises. Formada por lo ficheros:
+	\begin{enumerate}
+		\item ac\_withoutedges.cpp
+		\item ac\_withoutedges.hpp
+	\end{enumerate}
+	\item Impl-ACwithoutEdgesYUV: clase que implementa el contorno que evolucionará en una imagen a color. Formada por lo ficheros:
+	\begin{enumerate}
+		\item ac\_withoutedges\_yuv.cpp
+		\item ac\_withoutedges\_yuv.hpp
+	\end{enumerate}
+	\item Impl-\textbf{list}: implementación de una lista ligada genérica. Formada por lo ficheros:
+	\begin{enumerate}
+		\item linked\_list.tpp
+		\item linked\_list.hpp
+	\end{enumerate}
+	\item Impl-Filters: clase que implementa los filtros que se le pueden aplicar a la imagen antes de realizar la segmentación. Formada por lo ficheros:
+	\begin{enumerate}
+		\item filters.cpp
+		\item filters.hpp
+	\end{enumerate}
+	\item Impl-GeodesicAC: clase que implementa un contorno geodésico. Formada por lo ficheros:
+	\begin{enumerate}
+		\item geodesic\_ac.cpp
+		\item geodesic\_ac.hpp
+	\end{enumerate}
+	\item Impl-HausdorffDistance: clase que implementa la distancia de Hausdorff. Formada por lo ficheros:
+	\begin{enumerate}
+		\item hausdorff\_distance.cpp
+		\item hausdorff\_distance.hpp
+	\end{enumerate}
+	\item GUI-ImageViewer: formada por los ficheros:
+	\begin{enumerate}
+		\item imageviewer.cpp
+		\item imageviewer.hpp
+	\end{enumerate}
+	\item GUI-PixmapWidget: formada por los ficheros:
+	\begin{enumerate}
+		\item pixmapwidget.cpp
+		\item pixmapwidget.hpp
+	\end{enumerate}
+\end{enumerate}
+ 
+Se han resaltado las tres clases que interesarán: \textit{ActiveContour}, \textit{ACwithoutEdges} y \textit{list}. Las demás clases añaden funcionalidades extra que no son necesarias en este proyecto.
+ 
+\subsection{Clase \textit{ActiveContour}}
+
+
+
+
+
+
  
 \chapter{Paralelización de la aproximación del \textit{level set}}
-
-
-
-
-
 
 \chapter{Funciones extras añadidas en base a la segmentación}
 
 \chapter{Comparación de resultados temporales y rendimiento}
 
+
+
+
+
+
+
 \chapter{Gestión del proyecto}
 
-\subsection{Gestión del alcance}
+\section{Gestión del alcance}
 
-\subsection{Gestión del tiempo}
+\section{Gestión del tiempo}
 
-\subsection{Gestión del riesgos}
+\section{Gestión de los riesgos}
 
 El único riesgo más aparente que se puede producir en este proyecto es la pérdida de la memoría escrita o de la implementación paralela realizada a lo largo del proyecto. Para evitar que pueda producirse tal situación se requiere el uso de dos herramientas online: el sistema de almacenamiento de Google, \textit{Drive}, y un sistema de gestión de versiones, en este caso \textit{Github}. Con estas dos herramineta se ha podido realizar un sistema de \textit{backup} sencillo como gestión de este riesgo. La memoría con todos sus documentos se ha guardado diariamente en el \textit{Drive} de manera que en caso de pérdida se pueda recuperar los avances de un día anterior. La implementación se ha ido creando en manera de versiones en las que se le han ido añadiendo funcionalidades extras en cada versión. Cada una de estas versiones se ha ido subiendo a la plataforma \textit{Github} del autor de esta memoria en \cite{gitHub1}. 
 
-\subsection{Gestión del costes}
+\section{Gestión del costes}
 
 Los costes de este proyecto ha sido únicamente la dedicación de horas humanas con las que se ha realizado. Esto se puede ver en la tabla \ref{dedicacionTemporal}. 
 
+
+
+
+
+
+
+
 \chapter{Conclusiones}
+
+
+CONCLUSIONES
