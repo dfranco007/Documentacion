@@ -1,9 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  24 MAY 2015 21:17
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.3.11)  27 MAY 2015 20:03
 entering extended mode
 **Main.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.tex"
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -15,9 +13,7 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/itsas_pfc.cls"
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/itsas_pfc.cls
 
 LaTeX Warning: You have requested document class `Config/itsas_pfc',
                but the document class provides `itsas_pfc'.
@@ -39,8 +35,7 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/pfc_options.tex"
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/pfc_options.tex
 ("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
@@ -235,8 +230,7 @@ Package minitoc Info: I0003
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.mtc0")
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.mtc0)
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
@@ -305,8 +299,7 @@ Package: babel 2008/07/08 v3.8m The Babel package
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/spanish5.ldf"
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/spanish5.ldf
 Language: spanish.ldf 2007/02/21 v5.0a Spanish support from the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
@@ -410,8 +403,7 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count110
 \@thisrulewidth=\dimen142
 ))
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.aux")
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -457,16 +449,12 @@ Package srcltx Info: Expanded filename `Config/rename.tex' to `Config/rename.te
 x' on input line 29.
 
 :<+ Config/rename.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/rename.tex")
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/rename.tex)
 :<-
 Package srcltx Info: Expanded filename `Config/cover.tex' to `Config/cover.tex'
  on input line 35.
 :<+ Config/cover.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/cover.tex"
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/cover.tex
 Overfull \hbox (19.9151pt too wide) in paragraph at lines 30--30
  [][] 
  []
@@ -491,33 +479,25 @@ Package pdftex.def Info: imagenes/inforLogo.jpg used on input line 45.
 (pdftex.def)             Requested size: 161.32767pt x 68.16289pt.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
- <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin 
-de grado/Documentacion/imagenes/upvLogo.jpg> <C:/Users/Dani/Desktop/Universidad
-/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/inf
-orLogo.jpg>] [2
+ <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/upvLogo.jpg> <C:/Users/dani/
+Desktop/PFG/Documentacion/imagenes/inforLogo.jpg>] [2
 
 ])
 :<-
 Package srcltx Info: Expanded filename `Config/begin.tex' to `Config/begin.tex'
  on input line 41.
 :<+ Config/begin.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/begin.tex")
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/begin.tex)
 :<-
 Package srcltx Info: Expanded filename `file-acknowledgements.tex' to `file-ack
 nowledgements.tex' on input line 47.
 :<+ file-acknowledgements.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\file-acknowledgements.tex")
+(C:\Users\dani\Desktop\PFG\Documentacion\file-acknowledgements.tex)
 :<-
 Package srcltx Info: Expanded filename `Config/toc.tex' to `Config/toc.tex' on 
 input line 54.
 :<+ Config/toc.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/toc.tex"
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/toc.tex
 Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM Main.toc on input line 2.
 Package minitoc Info: I0033
@@ -551,8 +531,7 @@ Package minitoc Info: I0033
 ] [2
 
 ]
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.toc"
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
@@ -565,39 +544,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3])
 \tf@toc=\write4
  [4]
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.lof")
-\tf@lof=\write5
- [5
-
-] [6
-
-]
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.lot"
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.lof
 LaTeX Font Info:    Try loading font information for U+lasy on input line 6.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-))
+) [5
+
+])
+\tf@lof=\write5
+ [6]
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.lot)
 \tf@lot=\write6
- [7] [8
+ [7
+
+] [8
 
 ])
 :<-
 Package srcltx Info: Expanded filename `Config/headers.tex' to `Config/headers.
 tex' on input line 60.
 :<+ Config/headers.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/headers.tex")
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/headers.tex)
 :<-
 Package srcltx Info: Expanded filename `file-abstract.tex' to `file-abstract.te
 x' on input line 66.
 :<+ file-abstract.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\file-abstract.tex" [9
+(C:\Users\dani\Desktop\PFG\Documentacion\file-abstract.tex [9
 
 
 ] [10
@@ -607,750 +580,472 @@ de grado\Documentacion\file-abstract.tex" [9
 Package srcltx Info: Expanded filename `Config/chapters.tex' to `Config/chapter
 s.tex' on input line 72.
 :<+ Config/chapters.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/chapters.tex")
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/chapters.tex)
 :<-
 Package srcltx Info: Expanded filename `file-chapter1.tex' to `file-chapter1.te
 x' on input line 78.
 :<+ file-chapter1.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\file-chapter1.tex"
+(C:\Users\dani\Desktop\PFG\Documentacion\file-chapter1.tex
 Cap\'{\i }tulo 1.
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.mtc1") [1
+[1
 
 
-
-] [2] [3] [4]
-Cap\'{\i }tulo 2.
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.mtc2") [5
-
-
-] [6]
-Overfull \hbox (75.24939pt too wide) in paragraph at lines 60--67
-[][][] 
+] [2]
+Overfull \hbox (1.95427pt too wide) in paragraph at lines 34--35
+[][]\OT1/cmr/m/n/12 En la sexta parte del do-cu-mento, for-mada por el septimo
+ y oc-tavo captulo,
  []
 
-[7] [8
+[3] [4
+
+]
+Cap\'{\i }tulo 2.
+[5] <./imagenes/publicaciones.png, id=65, 374.14781pt x 227.34938pt>
+File: ./imagenes/publicaciones.png Graphic file (type png)
+
+<use ./imagenes/publicaciones.png>
+Package pdftex.def Info: ./imagenes/publicaciones.png used on input line 65.
+(pdftex.def)             Requested size: 350.99762pt x 213.29214pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/publicaciones.png>] [7] [
+8
 
 ]
 Cap\'{\i }tulo 3.
+<./imagenes/tecnicasSegmentacion2.png, id=77, 551.81157pt x 392.96812pt>
+File: ./imagenes/tecnicasSegmentacion2.png Graphic file (type png)
 
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.mtc3"
-Overfull \hbox (6.25946pt too wide) in paragraph at lines 2--2
- [][] []\OT1/cmr/bx/n/10.95 Segmentacion de ima-gen ba-sada en el tra-ta-mient
-o 
- []
-
-) [9
-
-] <./imagenes/tecnicasSegmentacion.png, id=83, 568.37344pt x 387.69844pt>
-File: ./imagenes/tecnicasSegmentacion.png Graphic file (type png)
-
-<use ./imagenes/tecnicasSegmentacion.png>
-Package pdftex.def Info: ./imagenes/tecnicasSegmentacion.png used on input line
- 103.
-(pdftex.def)             Requested size: 350.99762pt x 239.42993pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 105.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 105.
-See the caption package documentation for explanation.
-
-[10]
+<use ./imagenes/tecnicasSegmentacion2.png>
+Package pdftex.def Info: ./imagenes/tecnicasSegmentacion2.png used on input lin
+e 110.
+(pdftex.def)             Requested size: 390.0pt x 277.74411pt.
+ [9] [10 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/tecnicasSegmentacion
+2.png>]
 Overfull \hbox (3.68619pt too wide) in paragraph at lines 142--143
 [][]\OT1/cmr/m/n/12 Tambien existe la po-si-bi-li-dad de de-fi-nir va-rias in-
 ten-si-da-des um-bra-les (como
  []
 
-[11 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/tecnicasSegmentacion.png>]
-<./imagenes/imageHistogram.png, id=92, 188.20313pt x 88.83188pt>
+<./imagenes/imageHistogram.png, id=84, 188.20313pt x 88.83188pt>
 File: ./imagenes/imageHistogram.png Graphic file (type png)
 
 <use ./imagenes/imageHistogram.png>
 Package pdftex.def Info: ./imagenes/imageHistogram.png used on input line 151.
 (pdftex.def)             Requested size: 272.99881pt x 128.86525pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 153.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 153.
-See the caption package documentation for explanation.
-
-<./imagenes/thresholding1.jpg, id=94, 3189.9175pt x 2155.05125pt>
+<./imagenes/thresholding1.jpg, id=86, 3189.9175pt x 2155.05125pt>
 File: ./imagenes/thresholding1.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding1.jpg>
 Package pdftex.def Info: ./imagenes/thresholding1.jpg used on input line 165.
 (pdftex.def)             Requested size: 162.60638pt x 109.83052pt.
 
-<./imagenes/thresholding2.jpg, id=95, 3189.9175pt x 2155.05125pt>
+<./imagenes/thresholding2.jpg, id=87, 3189.9175pt x 2155.05125pt>
 File: ./imagenes/thresholding2.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding2.jpg>
 Package pdftex.def Info: ./imagenes/thresholding2.jpg used on input line 170.
 (pdftex.def)             Requested size: 162.60638pt x 109.83052pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 174.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 174.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/imageHistogram.png>]
-<./imagenes/thresholding3.jpg, id=101, 1441.385pt x 807.015pt>
+ [11 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/imageHistogram.png>]
+<./imagenes/thresholding3.jpg, id=95, 1441.385pt x 807.015pt>
 File: ./imagenes/thresholding3.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding3.jpg>
-Package pdftex.def Info: ./imagenes/thresholding3.jpg used on input line 181.
+Package pdftex.def Info: ./imagenes/thresholding3.jpg used on input line 183.
 (pdftex.def)             Requested size: 162.60638pt x 91.0377pt.
 
-<./imagenes/thresholding4.jpg, id=102, 642.4pt x 359.3425pt>
+<./imagenes/thresholding4.jpg, id=96, 642.4pt x 359.3425pt>
 File: ./imagenes/thresholding4.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding4.jpg>
-Package pdftex.def Info: ./imagenes/thresholding4.jpg used on input line 186.
+Package pdftex.def Info: ./imagenes/thresholding4.jpg used on input line 188.
 (pdftex.def)             Requested size: 162.60638pt x 90.95395pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 190.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 190.
-See the caption package documentation for explanation.
-
-<./imagenes/thresholding5.png, id=103, 382.42876pt x 289.83281pt>
+<./imagenes/thresholding5.png, id=97, 382.42876pt x 289.83281pt>
 File: ./imagenes/thresholding5.png Graphic file (type png)
 
 <use ./imagenes/thresholding5.png>
-Package pdftex.def Info: ./imagenes/thresholding5.png used on input line 197.
-(pdftex.def)             Requested size: 162.60638pt x 123.23701pt.
+Package pdftex.def Info: ./imagenes/thresholding5.png used on input line 201.
+(pdftex.def)             Requested size: 126.47194pt x 95.84854pt.
 
-<./imagenes/thresholding6.png, id=104, 380.92313pt x 288.3272pt>
+<./imagenes/thresholding6.png, id=98, 380.92313pt x 288.3272pt>
 File: ./imagenes/thresholding6.png Graphic file (type png)
 
 <use ./imagenes/thresholding6.png>
-Package pdftex.def Info: ./imagenes/thresholding6.png used on input line 202.
-(pdftex.def)             Requested size: 162.60638pt x 123.07637pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 206.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 206.
-See the caption package documentation for explanation.
-
-[13 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/thresholding1.jpg> <C:/Users/Dani/Desktop/Un
-iversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/ima
-genes/thresholding2.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatr
-imestre/Proyecto de fin de grado/Documentacion/imagenes/thresholding3.jpg> <C:/
-Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de gr
-ado/Documentacion/imagenes/thresholding4.jpg> <C:/Users/Dani/Desktop/Universida
-d/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/th
-resholding5.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/
-Proyecto de fin de grado/Documentacion/imagenes/thresholding6.png>]
-<./imagenes/clustering1.jpg, id=109, 3019.28pt x 1967.35pt>
+Package pdftex.def Info: ./imagenes/thresholding6.png used on input line 206.
+(pdftex.def)             Requested size: 126.47194pt x 95.7246pt.
+ [12 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/thresholding1.jpg> <C:/U
+sers/dani/Desktop/PFG/Documentacion/imagenes/thresholding2.jpg> <C:/Users/dani/
+Desktop/PFG/Documentacion/imagenes/thresholding3.jpg> <C:/Users/dani/Desktop/PF
+G/Documentacion/imagenes/thresholding4.jpg> <C:/Users/dani/Desktop/PFG/Document
+acion/imagenes/thresholding5.png> <C:/Users/dani/Desktop/PFG/Documentacion/imag
+enes/thresholding6.png>]
+<./imagenes/clustering1.jpg, id=103, 3019.28pt x 1967.35pt>
 File: ./imagenes/clustering1.jpg Graphic file (type jpg)
 
 <use ./imagenes/clustering1.jpg>
-Package pdftex.def Info: ./imagenes/clustering1.jpg used on input line 236.
+Package pdftex.def Info: ./imagenes/clustering1.jpg used on input line 242.
 (pdftex.def)             Requested size: 162.60638pt x 105.93813pt.
 
-<./imagenes/clustering2.png, id=110, 3019.28pt x 1967.35pt>
+<./imagenes/clustering2.png, id=104, 3019.28pt x 1967.35pt>
 File: ./imagenes/clustering2.png Graphic file (type png)
 
 <use ./imagenes/clustering2.png>
-Package pdftex.def Info: ./imagenes/clustering2.png used on input line 241.
+Package pdftex.def Info: ./imagenes/clustering2.png used on input line 247.
 (pdftex.def)             Requested size: 162.60638pt x 105.93813pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 245.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 245.
-See the caption package documentation for explanation.
-
-<./imagenes/clustering3.png, id=111, 295.1025pt x 198.7425pt>
+<./imagenes/clustering3.png, id=105, 295.1025pt x 198.7425pt>
 File: ./imagenes/clustering3.png Graphic file (type png)
 
 <use ./imagenes/clustering3.png>
-Package pdftex.def Info: ./imagenes/clustering3.png used on input line 251.
+Package pdftex.def Info: ./imagenes/clustering3.png used on input line 259.
 (pdftex.def)             Requested size: 180.67499pt x 121.68155pt.
 
-<./imagenes/clustering4.png, id=112, 293.59688pt x 197.98969pt>
+<./imagenes/clustering4.png, id=106, 293.59688pt x 197.98969pt>
 File: ./imagenes/clustering4.png Graphic file (type png)
 
 <use ./imagenes/clustering4.png>
-Package pdftex.def Info: ./imagenes/clustering4.png used on input line 256.
+Package pdftex.def Info: ./imagenes/clustering4.png used on input line 264.
 (pdftex.def)             Requested size: 180.67499pt x 121.83997pt.
+ [13] [14 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/clustering1.jpg> <C
+:/Users/dani/Desktop/PFG/Documentacion/imagenes/clustering2.png (PNG copy)> <C:
+/Users/dani/Desktop/PFG/Documentacion/imagenes/clustering3.png> <C:/Users/dani/
+Desktop/PFG/Documentacion/imagenes/clustering4.png>] <./imagenes/morphology1-1.
+jpg, id=114, 121.4136pt x 105.5142pt>
+File: ./imagenes/morphology1-1.jpg Graphic file (type jpg)
 
+<use ./imagenes/morphology1-1.jpg>
+Package pdftex.def Info: ./imagenes/morphology1-1.jpg used on input line 281.
+(pdftex.def)             Requested size: 144.54053pt x 125.61981pt.
 
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 260.
-See the caption package documentation for explanation.
+<./imagenes/morphology1-2.png, id=115, 631.60968pt x 548.80031pt>
+File: ./imagenes/morphology1-2.png Graphic file (type png)
 
+<use ./imagenes/morphology1-2.png>
+Package pdftex.def Info: ./imagenes/morphology1-2.png used on input line 286.
+(pdftex.def)             Requested size: 144.54053pt x 125.58498pt.
+ [15 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/morphology1-1.jpg> <C:/U
+sers/dani/Desktop/PFG/Documentacion/imagenes/morphology1-2.png>]
+Underfull \vbox (badness 3503) has occurred while \output is active []
 
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 260.
-See the caption package documentation for explanation.
-
-[14] <./imagenes/morphology1.jpg, id=116, 242.24904pt x 105.5142pt>
-File: ./imagenes/morphology1.jpg Graphic file (type jpg)
-
-<use ./imagenes/morphology1.jpg>
-Package pdftex.def Info: ./imagenes/morphology1.jpg used on input line 270.
-(pdftex.def)             Requested size: 272.99881pt x 118.92215pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 272.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 272.
-See the caption package documentation for explanation.
-
-[15 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/clustering1.jpg> <C:/Users/Dani/Desktop/Univ
-ersidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/image
-nes/clustering2.png (PNG copy)> <C:/Users/Dani/Desktop/Universidad/4º Curso/2�
-� cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/clustering3.png>
- <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin 
-de grado/Documentacion/imagenes/clustering4.png>] [16 <C:/Users/Dani/Desktop/Un
-iversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/ima
-genes/morphology1.jpg>] [17]
-<./imagenes/operator0.jpg, id=130, 642.4pt x 481.8pt>
+ [16]
+<./imagenes/operator0.jpg, id=128, 642.4pt x 481.8pt>
 File: ./imagenes/operator0.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator0.jpg>
-Package pdftex.def Info: ./imagenes/operator0.jpg used on input line 379.
+Package pdftex.def Info: ./imagenes/operator0.jpg used on input line 398.
 (pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
 
-<./imagenes/operator1.jpg, id=131, 640.3925pt x 479.7925pt>
+<./imagenes/operator1.jpg, id=129, 640.3925pt x 479.7925pt>
 File: ./imagenes/operator1.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator1.jpg>
-Package pdftex.def Info: ./imagenes/operator1.jpg used on input line 384.
+Package pdftex.def Info: ./imagenes/operator1.jpg used on input line 403.
 (pdftex.def)             Requested size: 162.60638pt x 121.822pt.
 
-<./imagenes/operator2.jpg, id=132, 638.385pt x 477.785pt>
+<./imagenes/operator2.jpg, id=130, 638.385pt x 477.785pt>
 File: ./imagenes/operator2.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator2.jpg>
-Package pdftex.def Info: ./imagenes/operator2.jpg used on input line 390.
+Package pdftex.def Info: ./imagenes/operator2.jpg used on input line 409.
 (pdftex.def)             Requested size: 162.60638pt x 121.69868pt.
 
-<./imagenes/operator3.jpg, id=133, 640.3925pt x 479.7925pt>
+<./imagenes/operator3.jpg, id=131, 640.3925pt x 479.7925pt>
 File: ./imagenes/operator3.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator3.jpg>
-Package pdftex.def Info: ./imagenes/operator3.jpg used on input line 395.
+Package pdftex.def Info: ./imagenes/operator3.jpg used on input line 414.
 (pdftex.def)             Requested size: 162.60638pt x 121.822pt.
+ [17] [18 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/operator0.jpg> <C:/
+Users/dani/Desktop/PFG/Documentacion/imagenes/operator1.jpg> <C:/Users/dani/Des
+ktop/PFG/Documentacion/imagenes/operator2.jpg> <C:/Users/dani/Desktop/PFG/Docum
+entacion/imagenes/operator3.jpg>]
+<./imagenes/activeContour1-1.jpg, id=139, 119.10097pt x 115.34293pt>
+File: ./imagenes/activeContour1-1.jpg Graphic file (type jpg)
 
+<use ./imagenes/activeContour1-1.jpg>
+Package pdftex.def Info: ./imagenes/activeContour1-1.jpg used on input line 449
+.
+(pdftex.def)             Requested size: 162.60638pt x 157.48378pt.
 
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 399.
-See the caption package documentation for explanation.
+<./imagenes/activeContour1-2.png, id=140, 636.12656pt x 600.74437pt>
+File: ./imagenes/activeContour1-2.png Graphic file (type png)
 
+<use ./imagenes/activeContour1-2.png>
+Package pdftex.def Info: ./imagenes/activeContour1-2.png used on input line 454
+.
+(pdftex.def)             Requested size: 162.60638pt x 153.55904pt.
 
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 399.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [18]
-[19 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/operator0.jpg> <C:/Users/Dani/Desktop/Univer
-sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
-s/operator1.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/
-Proyecto de fin de grado/Documentacion/imagenes/operator2.jpg> <C:/Users/Dani/D
-esktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Document
-acion/imagenes/operator3.jpg>]
-<./imagenes/activeContour1.jpg, id=142, 241.81541pt x 115.34293pt>
-File: ./imagenes/activeContour1.jpg Graphic file (type jpg)
-
-<use ./imagenes/activeContour1.jpg>
-Package pdftex.def Info: ./imagenes/activeContour1.jpg used on input line 426.
-(pdftex.def)             Requested size: 312.00119pt x 148.82112pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 429.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 429.
-See the caption package documentation for explanation.
-
-<./imagenes/activeContour2.png, id=143, 567.62062pt x 377.91188pt>
+<./imagenes/activeContour2.png, id=141, 567.62062pt x 377.91188pt>
 File: ./imagenes/activeContour2.png Graphic file (type png)
 
 <use ./imagenes/activeContour2.png>
-Package pdftex.def Info: ./imagenes/activeContour2.png used on input line 436.
+Package pdftex.def Info: ./imagenes/activeContour2.png used on input line 467.
 (pdftex.def)             Requested size: 312.00119pt x 207.73108pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 438.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 438.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 3769) has occurred while \output is active []
-
- [20 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/activeContour1.jpg>] [21 <C:/Users/Dani/Des
-ktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentac
-ion/imagenes/activeContour2.png>]
-<./imagenes/levelSet1.jpg, id=150, 213.77466pt x 114.04205pt>
+ [19 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour1-1.jpg> <C
+:/Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour1-2.png>] [20 <C:/
+Users/dani/Desktop/PFG/Documentacion/imagenes/activeContour2.png>]
+<./imagenes/levelSet1.jpg, id=149, 213.77466pt x 114.04205pt>
 File: ./imagenes/levelSet1.jpg Graphic file (type jpg)
 
 <use ./imagenes/levelSet1.jpg>
-Package pdftex.def Info: ./imagenes/levelSet1.jpg used on input line 459.
+Package pdftex.def Info: ./imagenes/levelSet1.jpg used on input line 492.
 (pdftex.def)             Requested size: 272.99881pt x 145.65138pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 461.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 461.
-See the caption package documentation for explanation.
-
-<./imagenes/levelSet2.jpg, id=151, 803.0pt x 602.25pt>
+<./imagenes/levelSet2.jpg, id=150, 803.0pt x 602.25pt>
 File: ./imagenes/levelSet2.jpg Graphic file (type jpg)
 
 <use ./imagenes/levelSet2.jpg>
-Package pdftex.def Info: ./imagenes/levelSet2.jpg used on input line 467.
+Package pdftex.def Info: ./imagenes/levelSet2.jpg used on input line 501.
 (pdftex.def)             Requested size: 272.99881pt x 204.7531pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 469.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 469.
-See the caption package documentation for explanation.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/levelSet1.jpg>]
-Overfull \hbox (20.18303pt too wide) in paragraph at lines 481--482
+ [21 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/levelSet1.jpg>]
+Overfull \hbox (20.18303pt too wide) in paragraph at lines 516--517
 [][]\OT1/cmr/m/n/12 Este sub-grupo agrupa to-dos las tecni-cas re-la-cio-na-da
 s con la tecnica []habitual[]
  []
 
 
-Underfull \vbox (badness 2762) has occurred while \output is active []
+Underfull \vbox (badness 2990) has occurred while \output is active []
 
- [23 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/levelSet2.jpg>]
-<./imagenes/regionGrowing1.jpg, id=158, 198.90239pt x 198.90239pt>
+ [22 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/levelSet2.jpg>]
+<./imagenes/regionGrowing1.jpg, id=157, 198.90239pt x 198.90239pt>
 File: ./imagenes/regionGrowing1.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing1.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing1.jpg used on input line 491.
+Package pdftex.def Info: ./imagenes/regionGrowing1.jpg used on input line 526.
 (pdftex.def)             Requested size: 155.99762pt x 156.00516pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 493.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 493.
-See the caption package documentation for explanation.
-
-<./imagenes/regionGrowing6.jpg, id=159, 458.71375pt x 335.2525pt>
+<./imagenes/regionGrowing6.jpg, id=158, 458.71375pt x 335.2525pt>
 File: ./imagenes/regionGrowing6.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing6.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing6.jpg used on input line 501.
+Package pdftex.def Info: ./imagenes/regionGrowing6.jpg used on input line 537.
 (pdftex.def)             Requested size: 162.60638pt x 118.83897pt.
 
-<./imagenes/regionGrowing2.jpg, id=160, 462.72874pt x 324.21124pt>
+<./imagenes/regionGrowing2.jpg, id=159, 462.72874pt x 324.21124pt>
 File: ./imagenes/regionGrowing2.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing2.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing2.jpg used on input line 507.
+Package pdftex.def Info: ./imagenes/regionGrowing2.jpg used on input line 543.
 (pdftex.def)             Requested size: 162.60638pt x 113.93076pt.
 
-<./imagenes/regionGrowing3.jpg, id=161, 462.72874pt x 334.24875pt>
+<./imagenes/regionGrowing3.jpg, id=160, 462.72874pt x 334.24875pt>
 File: ./imagenes/regionGrowing3.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing3.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing3.jpg used on input line 512.
+Package pdftex.def Info: ./imagenes/regionGrowing3.jpg used on input line 548.
 (pdftex.def)             Requested size: 162.60638pt x 117.45802pt.
 
-<./imagenes/regionGrowing4.jpg, id=162, 459.7175pt x 332.24126pt>
+<./imagenes/regionGrowing4.jpg, id=161, 459.7175pt x 332.24126pt>
 File: ./imagenes/regionGrowing4.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing4.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing4.jpg used on input line 517.
+Package pdftex.def Info: ./imagenes/regionGrowing4.jpg used on input line 553.
 (pdftex.def)             Requested size: 162.60638pt x 117.51808pt.
 
-<./imagenes/regionGrowing5.jpg, id=163, 458.71375pt x 329.23pt>
+<./imagenes/regionGrowing5.jpg, id=162, 458.71375pt x 329.23pt>
 File: ./imagenes/regionGrowing5.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing5.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing5.jpg used on input line 522.
+Package pdftex.def Info: ./imagenes/regionGrowing5.jpg used on input line 558.
 (pdftex.def)             Requested size: 162.60638pt x 116.70415pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 505--525
+Underfull \hbox (badness 10000) in paragraph at lines 541--561
 [][] []
  []
 
 
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 527.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 527.
-See the caption package documentation for explanation.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/regionGrowing1.jpg>]
-Overfull \vbox (61.91502pt too high) has occurred while \output is active []
-
-
-[25 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/regionGrowing6.jpg> <C:/Users/Dani/Desktop/U
-niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
-agenes/regionGrowing2.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cua
-trimestre/Proyecto de fin de grado/Documentacion/imagenes/regionGrowing3.jpg> <
-C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de
- grado/Documentacion/imagenes/regionGrowing4.jpg> <C:/Users/Dani/Desktop/Univer
-sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
-s/regionGrowing5.jpg>]
-<./imagenes/watershed1.jpg, id=171, 242.00215pt x 80.45746pt>
+ [23 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing1.jpg>] [24
+ <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing6.jpg> <C:/User
+s/dani/Desktop/PFG/Documentacion/imagenes/regionGrowing2.jpg> <C:/Users/dani/De
+sktop/PFG/Documentacion/imagenes/regionGrowing3.jpg> <C:/Users/dani/Desktop/PFG
+/Documentacion/imagenes/regionGrowing4.jpg> <C:/Users/dani/Desktop/PFG/Document
+acion/imagenes/regionGrowing5.jpg>]
+<./imagenes/watershed1.jpg, id=169, 242.00215pt x 80.45746pt>
 File: ./imagenes/watershed1.jpg Graphic file (type jpg)
 
 <use ./imagenes/watershed1.jpg>
-Package pdftex.def Info: ./imagenes/watershed1.jpg used on input line 545.
+Package pdftex.def Info: ./imagenes/watershed1.jpg used on input line 584.
 (pdftex.def)             Requested size: 312.00119pt x 103.73036pt.
 
+Underfull \vbox (badness 5260) has occurred while \output is active []
 
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 548.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 548.
-See the caption package documentation for explanation.
-
-<./imagenes/watershed2.png, id=172, 633.86812pt x 159.59625pt>
+ [25]
+<./imagenes/watershed2.png, id=174, 633.86812pt x 159.59625pt>
 File: ./imagenes/watershed2.png Graphic file (type png)
 
 <use ./imagenes/watershed2.png>
-Package pdftex.def Info: ./imagenes/watershed2.png used on input line 555.
+Package pdftex.def Info: ./imagenes/watershed2.png used on input line 594.
 (pdftex.def)             Requested size: 350.99762pt x 88.37726pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 558.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 558.
-See the caption package documentation for explanation.
-
-<./imagenes/watershed3.png, id=173, 378.66469pt x 184.43906pt>
+<./imagenes/watershed3.png, id=175, 378.66469pt x 184.43906pt>
 File: ./imagenes/watershed3.png Graphic file (type png)
 
 <use ./imagenes/watershed3.png>
-Package pdftex.def Info: ./imagenes/watershed3.png used on input line 565.
+Package pdftex.def Info: ./imagenes/watershed3.png used on input line 604.
 (pdftex.def)             Requested size: 234.00238pt x 113.97954pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 567.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 567.
-See the caption package documentation for explanation.
-
-[26 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/watershed3.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/watershed1.jpg> <C:/Users/Dani/Desktop/Univ
-ersidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/image
-nes/watershed2.png>] <./imagenes/graphCuts1.jpg, id=180, 227.79504pt x 173.7370
-8pt>
+ [26 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/watershed1.jpg> <C:/User
+s/dani/Desktop/PFG/Documentacion/imagenes/watershed2.png>] [27 <C:/Users/dani/D
+esktop/PFG/Documentacion/imagenes/watershed3.png>]
+<./imagenes/graphCuts1.jpg, id=182, 227.79504pt x 173.73708pt>
 File: ./imagenes/graphCuts1.jpg Graphic file (type jpg)
 
 <use ./imagenes/graphCuts1.jpg>
-Package pdftex.def Info: ./imagenes/graphCuts1.jpg used on input line 588.
+Package pdftex.def Info: ./imagenes/graphCuts1.jpg used on input line 628.
 (pdftex.def)             Requested size: 195.0pt x 148.7323pt.
 
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 590.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 590.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (7.77979pt too wide) in paragraph at lines 594--594
+Overfull \hbox (7.77979pt too wide) in paragraph at lines 635--635
 [][]\OT1/cmr/bx/n/17.28 Conclusiones de los ti-pos de seg-men-tacion 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [28 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/graphCuts1.jpg>] [29] [30
-
-]
+[28 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/graphCuts1.jpg>]
 Cap\'{\i }tulo 4.
-<./imagenes/ejemplo1.png, id=190, 97.86563pt x 74.52844pt>
+<./imagenes/ejemplo1.png, id=186, 97.86563pt x 74.52844pt>
 File: ./imagenes/ejemplo1.png Graphic file (type png)
 
 <use ./imagenes/ejemplo1.png>
-Package pdftex.def Info: ./imagenes/ejemplo1.png used on input line 624.
+Package pdftex.def Info: ./imagenes/ejemplo1.png used on input line 671.
 (pdftex.def)             Requested size: 162.60638pt x 123.83769pt.
 
-<./imagenes/ejemplo2.png, id=191, 328.22626pt x 261.97874pt>
+<./imagenes/ejemplo2.png, id=187, 328.22626pt x 261.97874pt>
 File: ./imagenes/ejemplo2.png Graphic file (type png)
 
 <use ./imagenes/ejemplo2.png>
-Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 629.
+Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 676.
 (pdftex.def)             Requested size: 162.60638pt x 129.78581pt.
 
-<./imagenes/ejemplo3.png, id=192, 952.30782pt x 759.58781pt>
+<./imagenes/ejemplo3.png, id=188, 952.30782pt x 759.58781pt>
 File: ./imagenes/ejemplo3.png Graphic file (type png)
 
 <use ./imagenes/ejemplo3.png>
-Package pdftex.def Info: ./imagenes/ejemplo3.png used on input line 634.
+Package pdftex.def Info: ./imagenes/ejemplo3.png used on input line 681.
 (pdftex.def)             Requested size: 162.60638pt x 129.69614pt.
 
-<./imagenes/ejemplo4.png, id=193, 2258.4375pt x 2107.875pt>
+<./imagenes/ejemplo4.png, id=189, 2258.4375pt x 2107.875pt>
 File: ./imagenes/ejemplo4.png Graphic file (type png)
 
 <use ./imagenes/ejemplo4.png>
-Package pdftex.def Info: ./imagenes/ejemplo4.png used on input line 639.
+Package pdftex.def Info: ./imagenes/ejemplo4.png used on input line 686.
 (pdftex.def)             Requested size: 162.60638pt x 151.74759pt.
- [31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [29
 
- [32 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/ejemplo1.png> <C:/Users/Dani/Desktop/Univer
-sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
-s/ejemplo2.png (PNG copy)> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cua
-trimestre/Proyecto de fin de grado/Documentacion/imagenes/ejemplo3.png> <C:/Use
-rs/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado
-/Documentacion/imagenes/ejemplo4.png>] [33] [34
+]
+Underfull \vbox (badness 2538) has occurred while \output is active []
+
+ [30 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/ejemplo1.png> <C:/Users/
+dani/Desktop/PFG/Documentacion/imagenes/ejemplo2.png (PNG copy)> <C:/Users/dani
+/Desktop/PFG/Documentacion/imagenes/ejemplo3.png> <C:/Users/dani/Desktop/PFG/Do
+cumentacion/imagenes/ejemplo4.png>] [31] [32
 
 ]
 Cap\'{\i }tulo 5.
-[35] <./imagenes/aproxLevelSet1.png, id=211, 310.15875pt x 274.77657pt>
+[33] <./imagenes/aproxLevelSet1.png, id=207, 310.15875pt x 274.77657pt>
 File: ./imagenes/aproxLevelSet1.png Graphic file (type png)
 
 <use ./imagenes/aproxLevelSet1.png>
-Package pdftex.def Info: ./imagenes/aproxLevelSet1.png used on input line 677.
+Package pdftex.def Info: ./imagenes/aproxLevelSet1.png used on input line 724.
 (pdftex.def)             Requested size: 180.67499pt x 160.0623pt.
 
-<./imagenes/aproxLevelSet2.png, id=212, 297.36093pt x 264.23718pt>
+<./imagenes/aproxLevelSet2.png, id=208, 297.36093pt x 264.23718pt>
 File: ./imagenes/aproxLevelSet2.png Graphic file (type png)
 
 <use ./imagenes/aproxLevelSet2.png>
-Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 682.
+Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 729.
 (pdftex.def)             Requested size: 180.67499pt x 160.5474pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 688.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 688.
-See the caption package documentation for explanation.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-[37 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/aproxLevelSet1.png> <C:/Users/Dani/Desktop/U
-niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
-agenes/aproxLevelSet2.png>]
-Overfull \hbox (25.31432pt too wide) in paragraph at lines 746--748
+ [34 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet1.png> <C:/
+Users/dani/Desktop/PFG/Documentacion/imagenes/aproxLevelSet2.png>] [35]
+Overfull \hbox (25.31432pt too wide) in paragraph at lines 795--797
 [][]\OT1/cmr/m/n/12 La ope-racion \OT1/cmr/m/it/12 switch[]in() \OT1/cmr/m/n/1
 2 para un punto x $\OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]$ \OT1/cmr/m/n/12 se 
 de-fine como: switch[]in(x): 
  []
 
-[38]
-Overfull \hbox (67.02457pt too wide) in paragraph at lines 767--800
+[36]
+Overfull \hbox (67.02457pt too wide) in paragraph at lines 816--849
  [][][] 
  []
 
 
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 801.
-See the caption package documentation for explanation.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 801.
-See the caption package documentation for explanation.
-
-[39] [40]
+ [37]
+[38]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 821.
+               Default added (so using `tbp') on input line 871.
 
-<./imagenes/switchLevelSet.png, id=229, 535.2497pt x 243.91125pt>
+<./imagenes/switchLevelSet.png, id=225, 535.2497pt x 243.91125pt>
 File: ./imagenes/switchLevelSet.png Graphic file (type png)
 
 <use ./imagenes/switchLevelSet.png>
-Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 824.
+Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 874.
 (pdftex.def)             Requested size: 312.00119pt x 142.1832pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 826.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 826.
-See the caption package documentation for explanation.
-
-[41 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/switchLevelSet.png>]
-<./imagenes/chanVese1.png, id=234, 80.55093pt x 79.04532pt>
+ [39 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/switchLevelSet.png>]
+<./imagenes/chanVese1.png, id=230, 80.55093pt x 79.04532pt>
 File: ./imagenes/chanVese1.png Graphic file (type png)
 
 <use ./imagenes/chanVese1.png>
-Package pdftex.def Info: ./imagenes/chanVese1.png used on input line 843.
+Package pdftex.def Info: ./imagenes/chanVese1.png used on input line 894.
 (pdftex.def)             Requested size: 90.3375pt x 88.65315pt.
 
-<./imagenes/chanVese2.png, id=235, 77.53969pt x 77.53969pt>
+<./imagenes/chanVese2.png, id=231, 77.53969pt x 77.53969pt>
 File: ./imagenes/chanVese2.png Graphic file (type png)
 
 <use ./imagenes/chanVese2.png>
-Package pdftex.def Info: ./imagenes/chanVese2.png used on input line 848.
+Package pdftex.def Info: ./imagenes/chanVese2.png used on input line 899.
 (pdftex.def)             Requested size: 90.3375pt x 90.33769pt.
 
-<./imagenes/chanVese3.png, id=236, 79.79813pt x 76.03406pt>
+<./imagenes/chanVese3.png, id=232, 79.79813pt x 76.03406pt>
 File: ./imagenes/chanVese3.png Graphic file (type png)
 
 <use ./imagenes/chanVese3.png>
-Package pdftex.def Info: ./imagenes/chanVese3.png used on input line 853.
+Package pdftex.def Info: ./imagenes/chanVese3.png used on input line 904.
 (pdftex.def)             Requested size: 90.3375pt x 86.07642pt.
 
-<./imagenes/chanVese4.png, id=237, 82.05656pt x 78.2925pt>
+<./imagenes/chanVese4.png, id=233, 82.05656pt x 78.2925pt>
 File: ./imagenes/chanVese4.png Graphic file (type png)
 
 <use ./imagenes/chanVese4.png>
-Package pdftex.def Info: ./imagenes/chanVese4.png used on input line 858.
+Package pdftex.def Info: ./imagenes/chanVese4.png used on input line 909.
 (pdftex.def)             Requested size: 90.3375pt x 86.19487pt.
-
-
-Package caption Warning: \captionsetup{subtype*=...} or \subcaptionof
-(caption)                outside box or environment on input line 863.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: \subcaption
-(caption)                outside box or environment on input line 863.
-See the caption package documentation for explanation.
-
-[42 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/chanVese1.png> <C:/Users/Dani/Desktop/Univer
-sidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagene
-s/chanVese2.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/
-Proyecto de fin de grado/Documentacion/imagenes/chanVese3.png> <C:/Users/Dani/D
-esktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Document
-acion/imagenes/chanVese4.png>]
+ [40 <C:/Users/dani/Desktop/PFG/Documentacion/imagenes/chanVese1.png> <C:/Users
+/dani/Desktop/PFG/Documentacion/imagenes/chanVese2.png> <C:/Users/dani/Desktop/
+PFG/Documentacion/imagenes/chanVese3.png> <C:/Users/dani/Desktop/PFG/Documentac
+ion/imagenes/chanVese4.png>]
 Cap\'{\i }tulo 6.
-[43
+[41
 
-] [44] [45] [46
+] [42] [43] [44
 
 ]
 Cap\'{\i }tulo 7.
-[47] [48
+[45] [46
 
 ]
 Cap\'{\i }tulo 8.
-[49] [50
+[47] [48
 
 ]
 Cap\'{\i }tulo 9.
-[51] [52
+[49] [50
 
 ]
 Cap\'{\i }tulo 10.
 
-LaTeX Warning: Reference `dedicacionTemporal' on page 53 undefined on input lin
-e 972.
+LaTeX Warning: Reference `dedicacionTemporal' on page 51 undefined on input lin
+e 1027.
 
-[53] [54
+[51] [52
 
 ]
 Cap\'{\i }tulo 11.
@@ -1359,23 +1054,17 @@ Cap\'{\i }tulo 11.
 Package srcltx Info: Expanded filename `Config/appendices.tex' to `Config/appen
 dices.tex' on input line 85.
 :<+ Config/appendices.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/appendices.tex")
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/appendices.tex)
 :<-
 Package srcltx Info: Expanded filename `Config/bibliography.tex' to `Config/bib
 liography.tex' on input line 97.
 :<+ Config/bibliography.tex
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/bibliography.tex" [55] [56
+(C:\Users\dani\Desktop\PFG\Documentacion\Config/bibliography.tex [53] [54
 
 ])
 :<-
 :<+ Main.bbl
-
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.bbl"
+(C:\Users\dani\Desktop\PFG\Documentacion\Main.bbl
 Underfull \hbox (badness 5064) in paragraph at lines 38--43
 [][]\OT1/cmr/m/n/12 Arnau Oli-ver Ma-la-ge-lada.  \OT1/cmr/m/it/12 Au-to-ma-tic
  Mass Seg-men-ta-tion In
@@ -1387,7 +1076,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 -sity of Gi-rona,
  []
 
-[57
+[55
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 96--100
@@ -1399,6 +1088,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the Main.maf file.
+
+Package minitoc(hints) Warning: W0078
+(minitoc(hints))                You have used \dominitoc, 
+(minitoc(hints))                but not \minitoc.
+
 
 Package minitoc(hints) Warning: W0033
 (minitoc(hints))                The caption package should be 
@@ -1414,44 +1108,41 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[58]
-("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.aux")
+[56] (C:\Users\dani\Desktop\PFG\Documentacion\Main.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 6407 strings out of 493921
- 98862 string characters out of 3147286
- 171435 words of memory out of 3000000
- 9274 multiletter control sequences out of 15000+200000
- 18059 words of font info for 67 fonts, out of 3000000 for 9000
+ 6397 strings out of 493921
+ 95625 string characters out of 3147285
+ 169435 words of memory out of 3000000
+ 9268 multiletter control sequences out of 15000+200000
+ 16144 words of font info for 60 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,46p,1421b,519s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
-crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
-txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
-ols/msam10.pfb>
-Output written on Main.pdf (70 pages, 21222000 bytes).
+ <C:\Users\dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/latxfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/symbols/msam10.pfb>
+Output written on Main.pdf (68 pages, 21545768 bytes).
 PDF statistics:
- 360 PDF objects out of 1000 (max. 8388607)
+ 353 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,19 +1,19 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Introducci\'on}{\reset@font\mtcSfont 10}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Introducci\'on}{\reset@font\mtcSfont 9}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Segmentaci\'on de imagen basada en el tratamiento de los \textit {pixels}}{\reset@font\mtcSfont 10}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.1}Thresholding}{\reset@font\mtcSSfont 10}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Clustering}{\reset@font\mtcSSfont 14}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.3}Morphology}{\reset@font\mtcSSfont 15}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Segmentaci\'on de imagen basada en la detecci\'on de bordes}{\reset@font\mtcSfont 16}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Detecci\'on de borde usando gradientes}{\reset@font\mtcSSfont 17}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Roberts operator}{\reset@font\mtcSSSfont 17}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Sobel operator}{\reset@font\mtcSSSfont 18}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Prewitt operator}{\reset@font\mtcSSSfont 18}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Active Contours}{\reset@font\mtcSSfont 19}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Level set}{\reset@font\mtcSSfont 21}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Segmentaci\'on de imagen basada en regiones crecientes}{\reset@font\mtcSfont 23}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Region growing}{\reset@font\mtcSSfont 23}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax \textit {Region growing} o \textit {Seeded-based region growing segmentation}}{\reset@font\mtcSSSfont 24}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Watershed}{\reset@font\mtcSSSfont 26}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Clustering}{\reset@font\mtcSSfont 13}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.3}Morphology}{\reset@font\mtcSSfont 14}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Segmentaci\'on de imagen basada en la detecci\'on de bordes}{\reset@font\mtcSfont 15}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.1}Detecci\'on de borde usando gradientes}{\reset@font\mtcSSfont 16}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Roberts operator}{\reset@font\mtcSSSfont 16}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Sobel operator}{\reset@font\mtcSSSfont 17}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Prewitt operator}{\reset@font\mtcSSSfont 17}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.2}Active Contours}{\reset@font\mtcSSfont 18}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.3.3}Level set}{\reset@font\mtcSSfont 20}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.4}Segmentaci\'on de imagen basada en regiones crecientes}{\reset@font\mtcSfont 22}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.1}Region growing}{\reset@font\mtcSSfont 22}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax \textit {Region growing} o \textit {Seeded-based region growing segmentation}}{\reset@font\mtcSSSfont 23}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode $\blacksquare $ \hskip 1em\relax Watershed}{\reset@font\mtcSSSfont 25}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.2}Split/Merge}{\reset@font\mtcSSfont 27}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.3}Graph cut}{\reset@font\mtcSSfont 28}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Conclusiones de los tipos de segmentaci\'on}{\reset@font\mtcSfont 29}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.4.3}Graph cut}{\reset@font\mtcSSfont 27}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.5}Conclusiones de los tipos de segmentaci\'on}{\reset@font\mtcSfont 28}}

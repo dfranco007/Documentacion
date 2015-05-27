@@ -1,22 +1,21 @@
-\tocchapter{Introducción}
+\chapter{Introducción}
 
-\section{Introducción}
-Este proyecto se ha desarrollado para dar respuesta a un proyecto emergente dentro de la fundación Donostia International Physics Center (DIPC). Por ello, ciertas de las actividades a desarrollar han sido propuestas por ese dicho proyecto ya que son necesarias para su avance y desarrollo. Así pues, se ha mantenido contacto con el director del proyecto interno del DIPC durante el ciclo de vida de este proyecto.
+Este proyecto se ha desarrollado para dar respuesta a un proyecto emergente dentro de la fundación Donostia International Physics Center (DIPC). Por ello, ciertas de las actividades a desarrollar han sido propuestas por dicho proyecto ya que son necesarias para su avance y desarrollo. Así pues, se ha mantenido contacto con el director del proyecto interno del DIPC durante el ciclo de vida de este proyecto.
 
 El objetivo de este proyecto es el análisis computacional y experimental de la segmentación de imágenes, en este caso, producidas mediante la deposición química de vapor de materiales sintetizados. En el tratamiento de estas imágenes, aparte del objetivo principal de poder encontrar los diferentes elementos que se encuentran en ella, también se presentan varias tareas complementarias: porcentaje de recubrimiento de los elementos encontrados, aislamiento y densidad espectral de cada elemento. 
 
-Una vez realizadas estas tareas, se requiere paralelizar el tipo de segmentación utilizado para poder satisfaccer necesidades como el tratamiento de cada \textit{frame} de una secuencia de vídeo de manera que pueda dar una respuesta en tiempo real.
+Una vez realizadas estas tareas, se requiere paralelizar el tipo de técnica de segmentación escogida para poder satisfaccer necesidades como el tratamiento de cada \textit{frame} de una secuencia de vídeo de manera que se pueda dar una respuesta en tiempo real.
 
 
 \section{Motivación}
 
 Como se explicará más adelante en el apartado \ref{cap:EvoSeg} la segmentación es algo que ha avanzado mucho durante las últimas décadas. Esto se debe a que muchas de las tecnologías que utilizamos diaríamente hacen uso en cierta manera de la segmentación de imagen para realizar ciertas funciones. La segmentación de imagen está presente en la  detección de movimiento y posicionamiento humano en las consolas, en aplicaciones fotográficas en las que se detectan los rostros humanos, en imágenes de satélites espaciales para la predicción temporal del telediario, en la localización de tumores u otros síntomas patológicos en radiografías médicas etc. 
 
-Aparte de ayudar a mejorar ciertas funciones de la vida cotidiana, la segmentación se ha vuelto en muchos campos como la medicina indispensable para hacer ciertos trabajos. Por no decir, que la segmentación es la pieza clave en trabajos como la cirugía robotizada, ya que es necesario que al estar realizando la operación se detecten con precisión todas las partes físicas del cuerpo humano para no poner en riesgo la vida del paciente. También se utiliza en trabajos como la reconstrucción craneal y/o cerebral en 3D de pacientes.
+Aparte de ayudar a mejorar ciertas funciones de la vida cotidiana, la segmentación se ha vuelto en muchos campos como la medicina indispensable para hacer ciertos trabajos. Por no decir, que es la pieza clave en trabajos como la cirugía robotizada, ya que es necesario que al estar realizando la operación se detecten con precisión todas las partes físicas del cuerpo humano para no poner en riesgo la vida del paciente. Otra utilidad también sería la reconstrucción craneal y/o cerebral en 3D de pacientes.
 
-Las técnicas de segmentación más avanzadas consiguen información detallada sobre la imagen tratada logrando así un resultado mejor, sin embargo cuanta más precisión se necesita más costoso es el algoritmo. Por lo tanto, muchas veces se suele buscar un equilibrio entre la precisión necesaria con la respuesta temporal que se necesita para elegir un algoritmo adecuado. Por esta razón, hay muchos trabajos que tratan de mejorar esta respuesta temporal de los algoritmos de segmentación en base a optimizaciones y avances. El resultado de esto son miles de articulos relacionados con implementaciones paralelas e implementaciones en GPU aparte de optimizaciones matemáticas y algorítmicas. 
+Las técnicas de segmentación más avanzadas consiguen información detallada sobre la imagen tratada logrando así un resultado mejor, sin embargo cuanta más precisión se necesita más costoso es el algoritmo. Por lo tanto, muchas veces se suele buscar un equilibrio entre la precisión necesaria y la respuesta temporal mínima exigida a la hora de elegir un algoritmo adecuado. Por esta razón, hay muchos trabajos que tratan de mejorar esta respuesta temporal de los algoritmos de segmentación en base a optimizaciones y avances. El resultado de esto son miles de articulos relacionados con implementaciones paralelas e implementaciones en GPU aparte de optimizaciones matemáticas y algorítmicas. 
 
-En conclusión, la paralelización de métodos de segmentación esta a la <<orden del día>> puesto que es necesaria una respuesta rápida en determinados ámbitos de uso. Este trabajo pretende crear una versión paralela robusta sobre una aproximación al método de level set para proporcionar una respuesta rápida sobre este tipo de segmentación. 
+En conclusión, la paralelización de métodos de segmentación está a la <<orden del día>> puesto que es necesaria una respuesta rápida en determinados ámbitos de uso. Este trabajo pretende crear una versión paralela robusta sobre una aproximación al método de \textit{level set} para proporcionar una respuesta rápida sobre este tipo de segmentación. 
 
 
 \section{Estructura de la memoria}
@@ -24,50 +23,53 @@ En conclusión, la paralelización de métodos de segmentación esta a la <<orden de
 
 Este documento está estructurado en varios apartados. 
 
-En el primer apartado(obviando el índice, la tabla de figuras y de listas) se presentan varios conceptos básicos: la definición de la segmentación y la evolución histórica de esta. Realizada esta introducción, se comentan las aplicaciones que hoy en día tiene este ámbito que, como se podrá observar, serán muchas. Con esta primera parte se espera poder ubicar al lector sobre este análisis de imágenes, pieza angular de este proyecto, para que pueda entender correctamente el resto de la documentación.
+En la primera parte de la documentación, formada por el primer capítulo, se presentan varios conceptos básicos: la definición de la segmentación y la evolución histórica de esta. Realizada esta introducción, se comentan las aplicaciones que hoy en día tiene este ámbito que, como se podrá observar, serán muchas. Con esta primera parte se espera poder ubicar al lector sobre este análisis de imágenes, pieza angular de este proyecto, para que pueda entender correctamente el resto de la documentación.
 
-En la segunda parte, se presenta una clasificación de los diferentes tipos de segmentación de imágenes, explicando individualmente sus características y trabajos que se hayan realizado de estas técnicas. 
+En la segunda parte, formada por el segundo y tercer capítulo, se presenta una clasificación de los diferentes tipos de segmentación de imágenes, explicando individualmente sus características y trabajos que se hayan realizado de estas técnicas. 
 
-La tercera parte del documento se centra en un tipo de segmentación concreto: Level Set. Se comentarán variaciones de la técnica y mejoras hasta llegar a una aproximación de esta técnica la cuál mejorará el tiempo de ejecución significativamente y con la que se ha trabajado en el proyecto. Además, se realizará la paralelización de esta última para poder satisfaccer necesidades de una aplicación de tiempo real como es el tratamiento de cada frame de un vídeo.
+La cuarta parte, que lo forma el cuarto capítulo, se centra en la gestión con el cliente del DIPC. Se nombran sus necesidades, requisitos mínimos y extras necesarios para el desarrollo de su proyecto.
 
-Aparte de todo ello, se realizarán ciertas operaciones extra una vez segmentada la imagen: porcentaje de recubrimiento de los elementos u objetos encontrados, densidad espectral de cada uno de ellos y aislar estos. 
+La quinta parte de la documentación, formada por el quinto y sexto capítulo, se centra en una técnica de segmentación concreta: \textit{Level Set}. Se comentarán variaciones de la técnica y mejoras hasta llegar a una aproximación la cuál mejorará el tiempo de ejecución significativamente y con la que se ha trabajado en el proyecto. Se trabajará en base a un trabajo encontrado que tiene las características idoneas para abordar el proyecto \cite{ofeli}. La explicación y de este trabajo se encuentra en el sexto capítulo.
 
-En la cuarta parte del proyecto se realizará un análisis de rendimiento de la solución obtenida frente a las implementaciones anteriores del tipo de segmentación utilizada e incluso con otros tipos de implementaciones de segmentación.
+En la sexta parte del documento, formada por el séptimo y octavo capítulo, se encuentra todo lo relacionado con la paralelización dela técnica utilizada. La primera toma de contacto o la primera propuesta de paralelización creada, las posteriores fases desarrolladas, las conclusiones y decisiones tomadas con cada fase y las respuestas temporales y rendimientos.
+ 
+En la séptima parte, formada por el octavo capítulo, se presentan las funcionalidades extra añadidas, a posteriori de la segmetnación, que ha necesitado el cliente para el desarrollo de su proyecto, intentando satisfaccer así todas sus necesidades.
 
-Por último, en esta quinta parte, se presentan las conclusiones del trabajo realizado y algunos aspectos de la gestión del mismo. Al final del documento puede encontrase la bibliografía y los anexos.
+En la última parte, noveno capítulo, se presentan las conclusiones del trabajo realizado y algunos aspectos de la gestión del mismo. Al final del documento puede encontrase la bibliografía y los anexos.
 
-\tocchapter{Conceptos básicos}
+
+
+
+
+
+
+
+\chapter{Conceptos básicos}
 
 \section{Definición de segmentación}
 
-La segmentación de imagen, también nombrada a veces como \textit{labelling}, es el proceso de dividir la imagen en grupos o regiones contiguas cuyos elementos(p. e. pixels o voxels) tienen propiedades o características comunes. Estas regiones servirán para identificar los objetos de la imagen que posteriormente podrán ser clasificados y etiquetados en base a sus propiedades fisiológicas\cite[pag. 121]{terry1}. 
+La segmentación de imagen, también nombrada a veces como \textit{labelling}, es el proceso de dividir la imagen en grupos o regiones contiguas cuyos elementos(p. e. pixels o voxels) tienen propiedades o características comunes. Estas regiones servirán para identificar los objetos de la imagen que posteriormente podrán ser clasificados y etiquetados en base a sus propiedades \cite[pag. 121]{terry1}. 
 
 El resultado final de la segmentación de la imagen será un conjunto de regiones o segmentos que formarán la imagen original. Cada uno de los pixels de una región tendrá una característica común con los pixels de su región y una diferencia significativa respecto a pixels de otra región(por ello se habrán agrupado en distinto segmento), ya sea por ejemplo, en el color, la textura o la intensidad. Por lo tanto, se podrán extraer los segmentos de interes de la imagen, es decir, los objetos que esta contiene.
 
-
-
 \section{Evolución de la segmentación}\label{cap:EvoSeg}
 
-Los primeros desarrollos en el ámbito de la segmentación de imagen se remontan a hace 50 años. En 1965 se desarrolló un operador para detectar bordes entre diferentes partes de una imagen, conocido como \textit{Roberts operator} o \textit{Roberts Edge Detector}. Este detector fue el primer paso hacia la descomposición de imágenes en diferentes segmentos o regiones. En esa misma década también se propusieron varios detectores de bordes como \textit{Sobel} y \textit{Prewitt edge detectors}. A partir de ahí, comezaron a surgir diferentes algoritmos y técnicas de segmentación. Junto con esto, también se aumentó el alcance de estas técnicas: de imagen 2D a 3D, de imágenes fijas a imágenes en <<movimiento>> o secuencias de imagen, de escalas de gris a imágenes a color etc. Esto se puede ver en \cite[Capítulo 1]{zhang1}.
+Los primeros desarrollos en el ámbito de la segmentación de imagen se remontan a hace 50 años. En 1965 se desarrolló un operador para detectar bordes entre diferentes partes de una imagen, conocido como \textit{Roberts operator} o \textit{Roberts Edge Detector}. Este detector fue el primer paso hacia la descomposición de imágenes en diferentes segmentos o regiones. En esa misma década también se propusieron varios detectores de bordes como \textit{Sobel} y \textit{Prewitt edge detectors}. A partir de ahí, comezaron a surgir diferentes algoritmos y técnicas de segmentación. Junto con esto, también se aumentó el alcance de estas técnicas: de imagen 2D a 3D, de imágenes fijas a imágenes en <<movimiento>> o secuencias de imagen, de escalas de gris a imágenes a color etc \cite[Capítulo 1]{zhang1}.
 
-A pesar de los años de investigación dedicados a estas técnicas y el gran número de ellas existentes, la segmentación de imagen siendo un tema de investigación desafiante y no existe aún un estandar de segmentación que funcione bien para cualquier tipo de imagen. Estas técnicas están en continua evolución y aún estan lejos de su madurez. Prueba de ello está en que muchas conferencias de técnicas de imagen tienen apartados de segmentación de imagen, el número de articulos de este ámbito aumenta cada año y muchos libros de procesamiento de imagen tienen capítulos referidos a la segmentación\cite[Capítulo 1]{zhang1}.
+A pesar de los años de investigación dedicados a estas técnicas y el gran número de ellas existentes, la segmentación de imagen sigue siendo un tema de investigación desafiante y no existe aún un estandar de segmentación que funcione bien para cualquier tipo de imagen. Estas técnicas están en continua evolución y aún estan lejos de su madurez. Prueba de ello está en que muchas conferencias de técnicas de imagen tienen apartados de segmentación de imagen, el número de articulos de este ámbito aumenta cada año y muchos libros de procesamiento de imagen tienen capítulos referidos a la segmentación \cite[Capítulo 1]{zhang1}.
 
-Para que el lector se haga una idea, se ha realizado una búsqueda en \cite{ieee1} con las palabras <<image segmentation>> en varios años. Este buscador encuentra artículos, conferencias, estandares, libros, revistas y cursos de aprendizaje relacionados con las palabras introducidas. La tabla \ref{regisIEEE} muestra el número de resultados de esa búsqueda desde 1960 hasta 2015. Como se puede observar, el número de resultados aumenta notablemente cada lustro.
-
-\	
+Para que el lector se haga una idea, se ha realizado una búsqueda en \cite{ieee1} con las palabras <<image segmentation>> en varios años. Este buscador encuentra artículos, conferencias, estandares, libros, revistas y cursos de aprendizaje relacionados con las palabras introducidas. La figura \ref{regisIEEE} muestra el número de resultados de esa búsqueda desde 1960 hasta 2015. Como se puede observar, el número de resultados aumenta notablemente cada lustro.	
 	
-\begin{table}[h]
-	\begin{tabular}{ccccccccccc}
-		\hline
-		\multicolumn{1}{|c|}{\textbf{1959-1965}} & \multicolumn{1}{c|}{\textbf{1970}} & \multicolumn{1}{c|}{\textbf{1975}} & \multicolumn{1}{c|}{\textbf{1980}} & \multicolumn{1}{c|}{\textbf{1985}} & \multicolumn{1}{c|}{\textbf{1990}} & \multicolumn{1}{c|}{\textbf{1995}} & \multicolumn{1}{c|}{\textbf{2000}} & \multicolumn{1}{c|}{\textbf{2005}} & \multicolumn{1}{c|}{\textbf{2010}} & \multicolumn{1}{c|}{\textbf{2015}} \\ \hline
-		\multicolumn{1}{|c|}{11}                 & \multicolumn{1}{c|}{6}             & \multicolumn{1}{c|}{22}            & \multicolumn{1}{c|}{96}            & \multicolumn{1}{c|}{221}           & \multicolumn{1}{c|}{1062}          & \multicolumn{1}{c|}{3113}          & \multicolumn{1}{c|}{5547}          & \multicolumn{1}{c|}{7894}          & \multicolumn{1}{c|}{16885}         & \multicolumn{1}{c|}{16045}         \\ \hline
-		\multicolumn{1}{l}{}                     & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}              
-	\end{tabular} 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.9\textwidth]{./imagenes/publicaciones}
 	\captionsetup{justification=centering}
 	\caption{Resultados de busqueda en \cite{ieee1} con las palabras <<image segmentation>> }
+	\vspace{2 mm}			
+	Fuente: \cite{ieee1}
 	\label{regisIEEE}
-\end{table}
-
+\end{figure}
+ 
 \section{Aplicaciones}
 
 Las aplicaciones de segmentación de imágenes son muchas y muy diversas. Cualquier proceso que requiera la extracción de información de una imagen utilizará, en cierta medida, una técnica de segmentación. A continuación nombraremos algunas de las aplicaciones que se han ido recopilando en la realización de esta documentación, por lo que el número de aplicaciones totales será mucho mayor:
@@ -89,24 +91,30 @@ Las aplicaciones de segmentación de imágenes son muchas y muy diversas. Cualquie
 \end{itemize}
 
 
-\tocchapter{Clasificación de técnicas de segmentación}
+
+
+
+
+
+\chapter{Clasificación de técnicas de segmentación}
 
 \section{Introducción}
 
-Hay bastante controversia en cuanto a la clasificación de las diferentes técnicas de segmentación, por el gran número de estas técnicas existentes, por las diferentes maneras en las que cada una tiene representada la imagen, las diferentes características que utilizan de la imagen etc. Hay trabajos, como \cite{mc1}, que realizan una clasificación de los algoritmos desde dos puntos de vista diferentes: en función de como puede ser utilizado el algoritmo, es decir, las aplicaciones que pueda tener y otra en base al algoritmo en sí, fijandose en como realiza la segmentación. Por otro lado, también hay otros que realizan esta clasificación para ámbitos muy concretos, como se dice en \cite[pag. 11]{mc1}.
+Hay bastante controversia en cuanto a la clasificación de las diferentes técnicas de segmentación, por el gran número de estas técnicas existentes, por las diferentes maneras en las que cada una tiene representada la imagen, las diferentes características que utilizan de la imagen etc. Hay trabajos que realizan una clasificación de los algoritmos desde dos puntos de vista diferentes: en función de como puede ser utilizado el algoritmo, es decir, las aplicaciones que pueda tener y otra en base al algoritmo en sí, fijandose en como realiza la segmentación \cite{mc1}. Por otro lado, también hay otros que realizan esta clasificación para ámbitos muy concretos \cite[pag. 11]{mc1}.
 
-Referencias <<actuales>> utilizadas anteriormente como \cite{zhang1} realizan una clasificación más clara, creando la división en cuatro grupos: algoritmos basados en detectar la discontinuidad de las diferentes regiones de la imagen, los llamados \textit{edge-based algorithms}, o basados en detectar la continuidad o la similitud de las regiones, los llamados \textit{region-based algorithms}. Posteriormente hace una subdivisión de estos dos grupos en función de la estrategía de procesamiento: los que realizan un procesamiento secuencial, donde el procesamiento de pasos previos se tienen en cuenta en pasos posteriores, y los que realizan un procesamiento paralelo, es decir, decisiones independientes y simultáneas. Para más información consultar \cite[Sección 1]{zhang1}.
+\textit{Zhang} propone una clasificación más clara \cite{zhang1}, creando la división en cuatro grupos: algoritmos basados en detectar la discontinuidad de las diferentes regiones de la imagen, los llamados \textit{edge-based algorithms}, o basados en detectar la continuidad o la similitud de las regiones, los llamados \textit{region-based algorithms}. Posteriormente hace una subdivisión de estos dos grupos en función de la estrategía de procesamiento: los que realizan un procesamiento secuencial, donde el procesamiento de pasos previos se tienen en cuenta en pasos posteriores, y los que realizan un procesamiento paralelo, es decir, decisiones independientes y simultáneas \cite[Sección 1]{zhang1}.
 
 \begin{figure}[ht]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=0.9\textwidth]{./imagenes/tecnicasSegmentacion}
+	\includegraphics[width=1\textwidth]{./imagenes/tecnicasSegmentacion2}
 	\caption{Clasificación de las técnicas de segmentación}
-	\subcaption*{Fuente: \cite{basa1}}	
+	\vspace{2 mm}			
+	Fuente: \cite{basa1}
 	\label{tecnicasSegmentacion}
 \end{figure}
 
-La clasificación elegida tiene varios aspectos en común con la última presentada y está descrita en \cite{basa1}. Se ha preferido esta clasificación al ser clara en cuanto a la división de las técnicas y las características que estas tienen frente a otras clasificaciones. En la figura  \ref{tecnicasSegmentacion} se muestra el esquema de la clasificación elegida.
+La clasificación elegida tiene varios aspectos en común con la última presentada y descrita \cite{basa1}. Se ha preferido esta clasificación al ser clara en cuanto a la división de las técnicas y las características que estas tienen frente a otras clasificaciones. En la figura  \ref{tecnicasSegmentacion} se muestra el esquema de la clasificación elegida.
 
 \section{Segmentación de imagen basada en el tratamiento de los \textit{pixels}}\label{cap:tratPixel}
 
@@ -116,19 +124,13 @@ Este tipo de segmentación consiste en dividir la imagen en segmentos o  conjunto
 
 Este tipo de segmentación es la más simple de todas y se basa en clasificar los \textit{pixels} en dos grupos en función de la intensidad de estos: los que superan la intensidad umbral definida y los que no la superan. El resultado de esta segmentación sería una imagen binaria. 
 
+Esta técnica puede ser definida como:
+
 \
 
 Para una imagen NxM :
 
-\
-
 for $i = 1,2, ... , N \ $and$ \ j = 1,2, ... , M $
-
-\
-
-Esta técnica puede ser definida como:
-
-\
 \begin{equation}
  f(n) = \left\{ 
 \begin{array}{l l}
@@ -137,29 +139,27 @@ Esta técnica puede ser definida como:
 \end{array} \right. 
 \end{equation}
 
-\
-
-También existe la posibilidad de definir varias intensidades umbrales (como en \ref{thresholding4}), con el fin de particionar la imagen en más segmentos. En sí, se podrán definir tantos umbrales como niveles de gris contiene la imagen, aunque habrá que buscar un buen equilibrio. 
+También existe la posibilidad de definir varias intensidades umbrales (como en la figura \ref{thresholding4}), con el fin de particionar la imagen en más segmentos. En sí, se podrán definir tantos umbrales como niveles de gris contiene la imagen, aunque habrá que buscar un buen equilibrio. 
 
 La ventaja de este tipo de segmentación es que es relativamente sencilla comparada con otros tipos de segmentación más avanzada como \textit{watershed} o \textit{level set}. Aun así, esta segmentación funciona bien cuando el fondo y los objetos siguen una distribución bimodal, es decir, que hay una diferencia <<notable>> entre las dos partes. Comunmente esta característica no se da en todas las imágenes, por lo que no tendrá buenos resultados con imágenes en las que el fondo no se distinga bien de los objetos \cite{basa1}. Además, esta segmentación tampoco se comporta bien con imágenes que tienen una iluminación gradiente grande como \ref{thresholding6}. Aunque es verdad que para ello también existen varias mejoras que hacen que la segmentación se <<adapte>> para conseguir mejores resultados.
 
-En la figura \ref{tecnicasSegmentacion} se muestran varias subclases de \textit{thresholding}. Aunque no se explicarán en profundidad conviene saber que hay varias maneras de realizar esta segmentación. Primeramente se nombra el método de Otso, \textit{Otsu's method} en inglés, que adapta el umbral en función de la dispersión de los niveles de gris. El segundo método, el método \textit{Global},es el más simple y el que hemos estado explicando hasta ahora. Y por último,el método \textit{Adaptative}, mencionado anteriormente, que se adapta a la intensidad de la imagen.
+En la figura \ref{tecnicasSegmentacion} se muestran varias subclases de \textit{thresholding}. Aunque no se explicarán en profundidad conviene saber que hay varias maneras de realizar esta segmentación. Primeramente se nombra el método de Otso, \textit{Otsu's method} en inglés, que adapta el umbral en función de la dispersión de los niveles de gris. El segundo método, el método \textit{Global}, es el más simple y el que hemos estado explicando hasta ahora. Y por último, el método \textit{Adaptative}, mencionado anteriormente, que se adapta a la intensidad de la imagen.
 
-\begin{figure}[ht]
+\begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
 	\includegraphics[width=.7\textwidth]{./imagenes/imageHistogram}
-	\caption{Histograma\protect\footnotemark que muestra tres aparentes segmentos de la imagen con dos umbrales: $T_1$ y $T_2$}
-	\subcaption*{Fuente: \cite{basa1}}	
+	\caption{Histograma que muestra tres aparentes segmentos de la imagen con dos umbrales}
+	\vspace{2 mm}					
+	Fuente: \cite{basa1}	
 	\label{imageHistogram}
 \end{figure}
 
-\footnotetext{Representa la frecuencia relativa de los niveles de gris de la imagen}
-
-A continuación se muestran varios ejemplos de segmentación utilizando \textit{Thresholding}.
-
+Las figuras \ref{thresHold1}, \ref{thresHold2} y \ref{thresHold3} muestran varios ejemplos de segmentación utilizando \textit{thresholding}.
+\vspace{-3 mm}			
 \begin{figure}[H]
 	\captionsetup{justification=centering}
+	\centering
 	\begin{subfigure}[t]{2.5in}
 		\centering
 		\includegraphics[width=.9\textwidth]{./imagenes/thresholding1}
@@ -170,12 +170,14 @@ A continuación se muestran varios ejemplos de segmentación utilizando \textit{Th
 		\includegraphics[width=.9\textwidth]{./imagenes/thresholding2}
 		\subcaption{Imagen segmentada}\label{thresholding2}
 	\end{subfigure}
-	\caption{Segmentación con \textit{thresholding}}
-	\subcaption*{Fuente: commons.wikimedia.org}	
+	\caption{Segmentación con \textit{thresholding}}	
+	\vspace{2 mm}			
+	Fuente: commons.wikimedia.org	
+	\label{thresHold1}
 \end{figure}	
-
 \begin{figure}[H]	
-	\captionsetup{justification=centering}		
+	\captionsetup{justification=centering}	
+	\centering	
 	\begin{subfigure}[t]{2.5in}
 		\centering
 		\includegraphics[width=.9\textwidth]{./imagenes/thresholding3}
@@ -187,40 +189,43 @@ A continuación se muestran varios ejemplos de segmentación utilizando \textit{Th
 		\subcaption{Imagen segmentada}\label{thresholding4}
 	\end{subfigure}
 	\caption{Segmentación con \textit{thresholding} con varios umbrales}
-	\subcaption*{Fuente: rosavallsformacio.tv y photo-kako.com para la realización de la segmentación}
-\end{figure}
-			
+	\vspace{2 mm}			
+	Fuente: \textit{rosavallsformacio.tv} y \textit{photo-kako.com} para la realización de la segmentación
+	\label{thresHold2}
+\end{figure}	
 \begin{figure}[H]
+	\centering
 	\captionsetup{justification=centering}
 	\begin{subfigure}[t]{2.5in}
 		\centering
-		\includegraphics[width=.9\textwidth]{./imagenes/thresholding5}
+		\includegraphics[width=.7\textwidth]{./imagenes/thresholding5}
 		\subcaption{Imagen original}\label{thresholding5}
 	\end{subfigure}
 	\begin{subfigure}[t]{2.5in}
 		\centering
-		\includegraphics[width=.9\textwidth]{./imagenes/thresholding6}
+		\includegraphics[width=.7\textwidth]{./imagenes/thresholding6}
 		\subcaption{Imagen segmentada}\label{thresholding6}
 	\end{subfigure}
 	\caption{Segmentación con \textit{thresholding} en imagen con iluminación gradiente}
-	\subcaption*{Fuente: homepages.inf.ed.ac.uk/rbf/HIPR2/}
+	\vspace{2 mm}			
+	Fuente: \textit{homepages.inf.ed.ac.uk/rbf/HIPR2/}
+	\label{thresHold3}
 \end{figure}
+
 
 \subsection{Clustering}
 
 Junto con la técnica de \textit{thresholding} el \textit{clustering} son las técnicas de segmentación más utilizadas. En general esta técnica divide los puntos en varios \textit{clusters} o grupos en función de la distancia entre ellos. En este caso concreto, los puntos serán los pixels de la imagen y la distancia entre ellos estará relacionada con la intensidad, color y textura, pudiendo combinar varios de estos factores. 
 
-Los algoritmos de \textit{clustering} se pueden dividir entre jerárquicos y particionales, donde la principal diferencia entre los dos está en que el jerárquico produce una serie de particiones anidadas de forma jerárquica y el particional genera particiones disjuntas. Los algoritmos jerárquicos suelen ser más precisos, sin embargo, no valen para una cantidad de datos grande como en una imagen ya que el coste computacional es muy elevado. Por lo tanto, la opción escogida suele ser el \textit{clustering} particional. No obstante, esta técnica tiene varias deventajas:
+Los algoritmos de \textit{clustering} se pueden dividir entre jerárquicos y particionales, donde la principal diferencia entre los dos está en que el jerárquico produce una serie de particiones anidadas de forma jerárquica y el particional genera particiones disjuntas. Los algoritmos jerárquicos suelen ser más precisos, sin embargo, no valen para una cantidad de datos grande como en una imagen ya que el coste computacional es muy elevado. Por lo tanto, la opción escogida suele ser el \textit{clustering} particional. No obstante, esta técnica tiene varias deventajas \cite{oli1}:
 
 \begin{enumerate}
-	\item Es necesario saber previamente el número de \textit{clusters} que hay en la imagen. 
+	\item Generalmente es necesario saber previamente el número de \textit{clusters} que hay en la imagen. 
 	\item No utilizan información espacial inherente a la imagen.
 	\item En algunos algoritmos de clustering, como el K-means que se explicará a continuación, no se asegura un resultado óptimo, ya que distintas inicializaciones dan como diferentes resultados.
 \end{enumerate} 
 
-Parte de lo escrito anteriormente se puede encontrar en \cite{oli1}.
-
-En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestran varias subclases de la técnica de \textit{clustering} que corresponden a diferentes algoritmos de creación de los \textit{clusters}. El algoritmo \textit{Fuzzy C-Means} agrupa los pixels utilizando la lógica difusa, donde cada pixel tendrá un grado de pertenencia a su \textit{cluster}. Por otro lado, esta el algoritmo K-means, que es el más utilizado y por ello se explicará con más detalle su funcionamiento:
+En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestran varias subclases de la técnica de \textit{clustering} que corresponden a diferentes algoritmos de creación de los \textit{clusters}. El algoritmo \textit{Fuzzy C-Means} agrupa los pixels utilizando la lógica difusa, donde cada pixel tendrá un grado de pertenencia a su \textit{cluster}. En general, hay muchos tipos de técnicas de clustering por lo que las técnicas restantes se agruparán en la sección de \textit{Others} de la figura \ref{tecnicasSegmentacion}. El algoritmo K-means es el más utilizado y por ello se explicará con más detalle su funcionamiento:
 
 \begin{enumerate}
  \item Se asignan \textit{K} primeros \textit{pixels} como centroides.
@@ -231,6 +236,7 @@ En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestr
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}
+	\centering
 	\begin{subfigure}[t]{2.5in}
 		\centering
 		\includegraphics[width=.9\textwidth]{./imagenes/clustering1}
@@ -242,9 +248,11 @@ En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestr
 		\subcaption{Imagen segmentada}\label{clustering2}
 	\end{subfigure}
 	\caption{Segmentación utilizando K-means con K=16}
-	\subcaption*{Fuente: commons.wikipedia.org}
+	\vspace{2 mm}			
+	Fuente: commons.wikipedia.org
 \end{figure}
 \begin{figure}[H]
+	\centering
 	\captionsetup{justification=centering}
 	\begin{subfigure}[t]{2.5in}
 		\centering
@@ -257,19 +265,30 @@ En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestr
 		\subcaption{Imagen segmentada}\label{clustering4}
 	\end{subfigure}
 	\caption{Segmentación utilizando K-means con K=6}
-	\subcaption*{Fuente: imagedatabase.cs.washington.edu/demo/kmcluster/}
+	\vspace{2 mm}			
+	Fuente: \textit{imagedatabase.cs.washington.edu/demo/kmcluster/}
 \end{figure}
 
 \subsection{Morphology}
 
-La técnica de la morfología, o \textit{morphology} en inglés, aunque no aparezca en el esquema de la figura \ref{tecnicasSegmentacion} también se puede clasificar dentro de las técnicas basadas en el tratamiento de los \textit{pixels}. Hay varios métodos de morfología y se basan en una máscara llamada \textit{structuring element} para investigar cada \textit{pixel}. El valor de cada \textit{pixel} está determinado por el de sus vecinos que pertenecen a esa máscara. Los métodos más simples de esta técnica son la dilatación y la erosión. Para una imagen binaria, la dilatación convierte en uno todos los \textit{pixels} de la máscara si los pixels "abajo" del pixel central son 0s como se muestra en la imagen \ref{morphology1}. La erosión es el caso contrario, es decir, convierte en 0s todos los elementos de la máscara si esta contiene algún elemento que sea 0. La combinación de estas simples operaciones junto con otras como el complemento, la unión y la intersección, se pueden llegar a realizar operaciones más avanzadas y complejas. 
+La técnica de la morfología, o \textit{morphology} en inglés, se clasificaría dentro de las técnicas basadas en el tratamiento de los \textit{pixels}. Hay varios métodos de morfología y se basan en una máscara llamada \textit{structuring element} para investigar cada \textit{pixel}. El valor de cada \textit{pixel} está determinado por el de sus vecinos que pertenecen a esa máscara. Los métodos más simples de esta técnica son la dilatación y la erosión. Para una imagen binaria, la dilatación convierte en uno todos los \textit{pixels} de la máscara si los pixels <<debajo>> del pixel central son ceros como se muestra en la imagen \ref{morphology1}. La erosión es el caso contrario, es decir, convierte en ceros todos los elementos de la máscara si esta contiene algún elemento que sea cero. La combinación de estas simples operaciones junto con otras como el complemento, la unión y la intersección, se pueden llegar a realizar operaciones más avanzadas y complejas. 
  
 \begin{figure}[ht]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.7\textwidth]{./imagenes/morphology1}
+	\begin{subfigure}[t]{2.5in}
+		\centering
+		\includegraphics[width=.8\textwidth]{./imagenes/morphology1-1}
+		\subcaption{Imagen sin tratar}\label{morphology1.1}
+	\end{subfigure}	
+	\begin{subfigure}[t]{2.5in}
+		\centering
+		\includegraphics[width=.8\textwidth]{./imagenes/morphology1-2}
+		\subcaption{Resultado de la dilatación}\label{morphology1.2}
+	\end{subfigure}
 	\caption{Ejemplo de dilatación de la técnica de morfología}
-	\subcaption*{Fuente: \cite{eri2015}}	
+	\vspace{2 mm}
+	Fuente: \cite{eri2015}
 	\label{morphology1}
 \end{figure}
 
@@ -277,7 +296,7 @@ La técnica de la morfología, o \textit{morphology} en inglés, aunque no aparezca
 
 Este tipo de segmentación consiste en encontrar los bordes de los objetos contenidos en la imagen con el fin de poder dividir la imagen en función de los bordes encontrados. Los detectores de bordes tradicionales suelen utilizar los operadores diferenciales de detección de bordes comentados en \ref{cap:EvoSeg}, es decir, los operadores \textit{Sobel}, \textit{Roberts} y \textit{Prewitt edge detectors} que están basados en el gradiente de la función de intensidad de una imagen. Normalmente los bordes suelen detectarse en las intersecciones de dos regiones de la imagen que tienen diferentes intensidades.
 
-La ventaja de este tipo de segmentación frente a la comentada en \ref{cap:tratPixel} es que aparte de hacer la división de las diferentes regiones sabremos exactamente donde se encuentran los bordes de estas, siendo útil para poder extraerlas y poder tratarlas individualmente. Por lo tanto, esta técnica funcionará mejor cuando la diferencia entre las regiones tenga buena calidad. Una de las posibles <<desventajas>> puede ser que la detección de muchos bordes dificulte la extracción de las regiones de interes.
+La ventaja de este tipo de segmentación frente a la basada en el tratamiento de pixels es que aparte de hacer la división de las diferentes regiones sabremos exactamente donde se encuentran los bordes de estas, siendo útil para poder extraerlas y poder tratarlas individualmente. Por lo tanto, esta técnica funcionará mejor cuando la diferencia entre las regiones tenga buena calidad. Una de las posibles <<desventajas>> puede ser que la detección de muchos bordes dificulte la extracción de las regiones de interes.
 
 Existen varios subgrupos dentro de esta clasificación: \textit{Edge detection} o <<Detección de bordes>> en castellano, técnicas que tienen que ver con el gradiente de la imagen \textit{Gradient mode}, \textit{Active contours} o <<Contornos activos>> y \textit{Level sets} o técnicas del <<Conjuto de nivel>>.
 
@@ -396,7 +415,9 @@ Este operador es parecido al operador de Sobel pero este no enfatiza los pixels 
 		\subcaption{Resultado de \textit{Prewitt operator}}\label{operator3}
 	\end{subfigure}
 	\caption{Detección de bordes con el uso de los operadores}
-	\subcaption*{Fuente: commons.wikipedia.org}
+	\vspace{2 mm}
+	\centering
+	Fuente: commons.wikipedia.org
 \end{figure}
 
 \subsection{Active Contours}\label{cap:actContour}
@@ -419,29 +440,41 @@ En cuanto a la energía externa hay varias maneras de definirla. Una elección pop
 \begin{equation}
 E_{int} = |\nabla [G_{\alpha} I(x)]|
 \end{equation}
-donde $G_{\alpha}$ es una convolución con un filtro pasabajo gaussiano. Está propuesta de energía hace que el contorno se expanda hasta los bordes que haya en la imagen como se puede ver en \ref{activeContour1}.
+donde $G_{\alpha}$ es una convolución con un filtro pasabajo gaussiano. Está propuesta de energía hace que el contorno se expanda hasta los bordes que haya en la imagen como se puede ver en la figura \ref{activeContour1}.
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
-	\includegraphics[width=.8\textwidth]{./imagenes/activeContour1}
+	\begin{subfigure}[t]{2.5in}
+		\centering
+		\includegraphics[width=.9\textwidth]{./imagenes/activeContour1-1}
+		\subcaption{}\label{activeContour1.1}
+	\end{subfigure}
+	\begin{subfigure}[t]{2.5in}
+		\centering
+		\includegraphics[width=.9\textwidth]{./imagenes/activeContour1-2}
+		\subcaption{}\label{activeContour1.2}
+	\end{subfigure}
 	\caption{Ejemplo de un contorno activo}
-	\caption*{Descripción: La imagen de la izquierda corresponde a la imagen de entrada, mientras que la de la izquierda corresponde a la convolución de la magnitud gradiente de la imagen de entrada con un filtro pasabajo gaussiano. La línea roja en la imagen de la derecha es el contorno activo que se moverá hasta la línea verde que corresponde con el borde de la imagen original.}
-	\subcaption*{Fuente: \cite{eri2015}}	
+	\vspace{2 mm}
+	Fuente: \cite{eri2015}
 	\label{activeContour1}
 \end{figure}
 
+La imagen \ref{activeContour1.1} corresponde a la imagen de entrada, mientras que la imagen \ref{activeContour1.2} corresponde a la convolución de la magnitud gradiente de la imagen de entrada con un filtro pasabajo gaussiano. La línea roja en la imagen \ref{activeContour1.2} es el contorno activo que se moverá hasta la línea verde que corresponde con el borde de la imagen original.
+
 \begin{figure}[H]
-	\captionsetup{justification=centering}
-	\centering
+	\captionsetup{justification=centering}	
 	\includegraphics[width=.8\textwidth]{./imagenes/activeContour2}
 	\caption{Ejemplo de segmentación de plantas presentando en \cite{suta1} utilizando los contornos activos}
-	\subcaption*{Fuente: \cite{suta1}}	
+	\centering
+	\vspace{2 mm}
+	Fuente: \cite{suta1}	
 	\label{activeContour2}
 \end{figure}
 
 
 \subsection{Level set}\label{levelSet}
-Conjuntos de nivel, o \textit{Level set} en inglés, es un tipo de segmentación muy parecida a la que hemos explicado en \ref{cap:actContour} ya que también se trata de expandir un contorno dado previamente para encontrar los bordes de la imagen. La ventaja de este método frente al referido es que permite juntar y dividir contornos sin ningún cálculo extra necesario.
+Conjuntos de nivel, o \textit{Level set} en inglés, es un tipo de segmentación muy parecida a la que hemos explicado en la sección \ref{cap:actContour} ya que también se trata de expandir un contorno dado previamente para encontrar los bordes de la imagen. La ventaja de este método frente al referido es que permite juntar y dividir contornos sin ningún cálculo extra necesario.
 
 El contorno está representado por la función de level set, que está definida en una dimensión más que las dimensiones de la imagen a segmentar, es decir, para una imagen 2D tendríamos una superficie de level set de tres dimensiones mientras que para una imagen de 3D tendríamos una superficie de 4D. En el caso de una superfície de 3D esta tiene una forma cónica como se puede ver en \ref{levelSet1}. Suponiendo entonces que la imagen a tratar tiene dos dimensiones, podríamos definir la función de level set como $z = \phi(x,y,t)$ que devuelve la altura de la superficie de level set en el punto $(x,y)$ del plano de la imagen en el tiempo $t$. El contorno es definido implícitamente como <<zero level set>>, donde la altura del plano respecto a la superficie es cero ($\phi(x,y,t) = 0$). Esto es justo la intersección entre el plano de la imagen y la superficie. 
 
@@ -458,7 +491,8 @@ De la idea de que modificaciones de \textit{pixels} lejanos al contorno no afect
 	\centering
 	\includegraphics[width=.7\textwidth]{./imagenes/levelSet1}
 	\caption{Ilustración de la superficie de \textit{level set}}
-	\subcaption*{Fuente: \cite{eri2015}}	
+	\vspace{2 mm}
+	Fuente: \cite{eri2015}
 	\label{levelSet1}
 \end{figure}
 \begin{figure}[H]
@@ -466,7 +500,8 @@ De la idea de que modificaciones de \textit{pixels} lejanos al contorno no afect
 	\centering
 	\includegraphics[width=.7\textwidth]{./imagenes/levelSet2}
 	\caption{Ilustración del método de \textit{level set}}
-	\subcaption*{Fuente: commons.wikipedia.org}	
+	\vspace{2 mm}
+	Fuente: commons.wikipedia.org
 	\label{levelSet2}
 \end{figure}
 
@@ -482,7 +517,7 @@ Este subgrupo agrupa todos las técnicas relacionadas con la técnica <<habitual>>
 
 \subsubsection{$\blacksquare$ \quad \textit{Region growing} o \textit{Seeded-based region growing segmentation}}
 
-Este tipo de segmentación comienza con la selección de un \textit{pixel}, nombrado a menudo como semilla o \textit{seed} en inglés, que está dentro del objeto de interes. Normalmente la semilla se elige manualmente. A partir de ese \textit{pixel} semilla (primer punto de la región) se comenzará a extender la región procesando sus vecinos y añadiendolos en base a un criterio predefinido. Este criterio de inserción será en base a la intensidad, color o textura de la semilla y los puntos que pertenezcan a la región. Cada vez que se inserta un nuevo punto a la región la característica que se este utilizando para realizar la inserción se volverá a calcula, por ejemplo, si se utiliza el nivel de gris, se volverá a calcular el valor medio de los niveles de gris que hay en la región. De esta manera, la región se irá expandiendo añadiendo vecinos hasta que encuentre alguno que no cumplan con la condición de inserción impuesta por el criterio. Si un punto no ha sido añadido a ninguna región se podrá añadir a una región cercana suya si la diferencia entre el nivel de gris de este punto y el nivel de gris medio de la región no supera un valor umbral \textit{T} dado. 
+Este tipo de segmentación comienza con la selección de un \textit{pixel}, nombrado a menudo como semilla o \textit{seed} en inglés, que está dentro del objeto de interes. Normalmente la semilla se elige manualmente. A partir de ese \textit{pixel} semilla (primer punto de la región) se comenzará a extender la región procesando sus vecinos y añadiendolos en base a un criterio predefinido. Este criterio de inserción será en base a la intensidad, color o textura de la semilla y los puntos que pertenezcan a la región. Cada vez que se inserta un nuevo punto a la región la característica que se este utilizando para realizar la inserción se volverá a calcular, por ejemplo, si se utiliza el nivel de gris, se volverá a calcular el valor medio de los niveles de gris que hay en la región. De esta manera, la región se irá expandiendo añadiendo vecinos hasta que encuentre alguno que no cumplan con la condición de inserción impuesta por el criterio. Si un punto no ha sido añadido a ninguna región se podrá añadir a una región cercana suya si la diferencia entre el nivel de gris de este punto y el nivel de gris medio de la región no supera un valor umbral \textit{T} dado. 
 
 Esta técnica es útil cuando la intensidad del fondo y del objeto son muy parecidas pero están separadas por un borde <<notable>> o por otra región.
 \begin{figure}[H]
@@ -490,7 +525,8 @@ Esta técnica es útil cuando la intensidad del fondo y del objeto son muy parecid
 	\centering
 	\includegraphics[width=.4\textwidth]{./imagenes/regionGrowing1}
 	\caption{Ejemplo del funcionamiento de la técnica de \textit{region growing}}
-	\subcaption*{Fuente: \cite{eri2015}}	
+	\vspace{2 mm}
+	Fuente: \cite{eri2015}
 	\label{regionGrowing1}
 \end{figure}
 \begin{figure}[H]
@@ -523,9 +559,12 @@ Esta técnica es útil cuando la intensidad del fondo y del objeto son muy parecid
 		\subcaption{\textit{Region growing} con un valor umbral T=155}\label{regionGrowing5}
 	\end{subfigure}
 	\caption{Ejemplo de la técnica de \textit{region growing}}
-	\caption*{Descripción: Ejemplo de la técnica de \textit{region growing} donde se quiere encontrar la parte del rayo más fuerte en la imagen. Para ello se eligen como semilla los puntos con mayor valor de gris posible(255). El criterio de inserción de los \textit{pixels} es tener el "mismo" nivel de gris. En este caso se ha decidido que los puntos que no han sido insertados en una región se inserten en una cercana si superan el valor umbral \textit{T} dado. Por ello en \ref{regionGrowing2} solo aparecen los puntos semilla ya que no se habrán unido puntos con este criterio y el valor \textit{T} es demasiado alto. En las posteriores imágenes a \ref{regionGrowing2} ese valor \textit{T} se va disminuyendo y cada vez se insertan más puntos en la región. }
-	\subcaption*{Fuente: commons.wikipedia.org}
+	\centering
+	\vspace{2 mm}
+	Fuente: commons.wikipedia.org
 \end{figure}
+
+Ejemplo de la técnica de \textit{region growing} donde se quiere encontrar la parte del rayo más fuerte en la imagen. Para ello se eligen como semilla los puntos con mayor valor de gris posible(255). El criterio de inserción de los \textit{pixels} es tener el "mismo" nivel de gris. En este caso se ha decidido que los puntos que no han sido insertados en una región se inserten en una cercana si superan el valor umbral \textit{T} dado. Por ello en \ref{regionGrowing2} solo aparecen los puntos semilla ya que no se habrán unido puntos con este criterio y el valor \textit{T} es demasiado alto. En las imágenes \ref{regionGrowing3}, \ref{regionGrowing4} y \ref{regionGrowing5} ese valor \textit{T} se va disminuyendo y cada vez se insertan más puntos en la región. 
 
 \subsubsection{$\blacksquare$ \quad Watershed}
 
@@ -539,32 +578,33 @@ El segundo tipo de puntos son nombrados como \textit{watersheds} ,o cuencas en c
 
 El objetivo final de esta técnica será encontrar los bordes de las cuencas, que representarán los bordes de la imagen original. Para ello existen varias maneras de hacerlo, la más común es la técnica de \textit{flooding}. La idea es simple, imaginemos que se empieza a hechar agua en los puntos de tipo uno, es decir, los que representan un mínimo local y son <<cuencas>>. El nivel del agua empezará a subir hasta que llege a un punto en el que la cuenca se empiece a desbordar y vaya a juntarse con otra cuenca. En ese momento, se construye una presa o un muro de manera que el agua no se desborde. Esas presas o muros construidos serán los bordes de las cuencas. Con todas estas presas se habrá conseguido la segmentación de la imagen.
 
-\begin{figure}
+\begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
 	\includegraphics[width=.8\textwidth]{./imagenes/watershed1}
 	\caption{Ejemplo del funcionamiento de la técnica de \textit{watershed}}
-	\caption*{Descripción: Ejemplo del funcionamiento de la técnica de \textit{watershed} donde la intensidad de los pixels de la imagen de la izquierda serán la altura de ese mismo punto en la imagen derecha, creando así ese terreno.}
-	\subcaption*{Fuente: \cite{eri2015}}	
+	\vspace{2 mm}
+	Fuente: \cite{eri2015}
 	\label{watershed1}
 \end{figure}
-
-\begin{figure}
+Ejemplo del funcionamiento de la técnica de \textit{watershed} donde la intensidad de los pixels de la imagen de la izquierda serán la altura de ese mismo punto en la imagen derecha, creando así ese terreno.
+\begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
 	\includegraphics[width=.9\textwidth]{./imagenes/watershed2}
 	\caption{Funcionamiento de la técnica de \textit{watershed}}
-	\caption*{Descripción: Funcionamiento de la técnica de \textit{watershed} donde se puede ver como va creciendo el nivel de agua hasta encontrar ese <<punto>> de desbordamiento en el que se marcan los bordes.}
-	\subcaption*{Fuente: http://www.di.ubi.pt/$\sim$agomes/cvm/teoricas/07-regionsegmentation.pdf}	
+	\vspace{2 mm}	
+	Fuente: \textit{http://www.di.ubi.pt/$\sim$agomes/cvm/teoricas/07-regionsegmentation.pdf}	
 	\label{watershed2}
 \end{figure}
-
+Funcionamiento de la técnica de \textit{watershed} donde se puede ver como va creciendo el nivel de agua hasta encontrar ese <<punto>> de desbordamiento en el que se marcan los bordes.
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
 	\includegraphics[width=.6\textwidth]{./imagenes/watershed3}
 	\caption{Funcionamiento de la técnica de \textit{watershed}}
-	\subcaption*{Fuente: http://www.di.ubi.pt/$\sim$agomes/cvm/teoricas/07-regionsegmentation.pdf}	
+	\vspace{2 mm}		
+	Fuente: \textit{http://www.di.ubi.pt/$\sim$agomes/cvm/teoricas/07-regionsegmentation.pdf}
 	\label{watershed3}
 \end{figure}
 
@@ -587,7 +627,8 @@ La segmentación se realiza aplicando un algoritmo de corte de grafos. El objetiv
 	\centering
 	\includegraphics[width=.5\textwidth]{./imagenes/graphCuts1}
 	\caption{Funcionamiento de la técnica de \textit{graph cut} en una imagen 3x3}
-	\subcaption*{Fuente: \cite{eri2015}}	
+	\vspace{2 mm}		
+	Fuente: \cite{eri2015}
 	\label{graphCuts1}
 \end{figure}
 
@@ -595,12 +636,18 @@ La segmentación se realiza aplicando un algoritmo de corte de grafos. El objetiv
 
 Como se ha podido ver a lo largo de este capítulo, hay muchos tipos de técnicas de segmentación de imágenes. Además, existen más técnicas de segmentación que no se han explicado en este trabajo ya que se han añadido las más conocidas y populares con el fin de establecer una base para el lector. 
 
-Aparte de las técnicas que no se han explicado hay que decir que existen muchas mejoras, optimizaciones y variantes de todas las técnicas de segmentación. Por ello en este trabajo se han explicado las ideas principales de los algoritmos sin tener en cuenta esto ya que el trabajo se habría extendido demasiado. En caso de que el lector este interesado en conocer los últimos avances mundiales sobre alguna segmentación en concreto o indagar en las posibles mejoras que se hayan trabajado a lo largo de los años se le recomienda el uso del explorador \cite{ieee1} para dicho proposito.
+Aparte de las técnicas que no se han explicado hay que decir que existen muchas mejoras, optimizaciones y variantes de todas las técnicas de segmentación. Por ello en este trabajo se han explicado las ideas principales de los algoritmos sin tener en cuenta esto ya que el trabajo se habría extendido demasiado.
+
+
+
+
+
+
 
 
 \chapter{Necesidades del cliente} 
 
-La primera toma de contacto con el director del proyecto interno de la fundación del DIPC fue el día FECHA. El proyecto que se está desarrollando es confidencial por lo que no se puede explicar en esta memoría ningún dato sobre el mismo exceptuando la parte que se ha desarrollado en este proyecto.
+La primera toma de contacto con el director del proyecto interno de la fundación del DIPC fue en el mes de febrero. El proyecto que se está desarrollando es confidencial por lo que no se puede explicar en esta memoría ningún dato sobre el mismo exceptuando la parte que se ha desarrollado en este proyecto.
 Por lo que, lo primero que nos presentó el cliente fueron las necesidades que el tenía sobre la segmentación de imágenes.
 
 \section{Requisitos del proyecto del DIPC}
@@ -641,9 +688,9 @@ El en proyecto que el cliente está desarrollando hay una parte que necesita real
 		\end{subfigure}
 	\end{center}
 	\caption{Ejemplo de proyecciones en láminas de materiales sintetizados mediante la deposición química de vapor}	
-	\caption*{Descripción: Las islas puede que estén muy separadas, como se puede ver en \ref{ejemplo1} o muy juntas como en \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.}
 	\label{ejemploImagenes}
 \end{figure}
+Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{ejemplo1} o muy juntas como en la imagen \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.
 
 \section{Necesidades extra}
 
@@ -657,15 +704,15 @@ Aparte de los principales requisitos también se propusieron necesidades extras q
 
 \chapter{Optimizaciones y mejoras del \textit{level set} original} 
 
-Como se ha dado a conocer en \ref{sec:conclusiones} hay muchos tipos de mejoras y optimizaciones de cada técnica de segmentación existentes. A la hora de afrontar el problema que el cliente proponía se tenía que elegir un tipo de segmentación de las técnicas estudiadas. Entre todas ellas se escogió el algortimo de \textit{level set}, por ser un algoritmo de segmentación famoso, lo que facilitaría la búsqueda de información sobre el, y además, el cliente había asegurado que se iban a tener buenos resultados con esta técnica según su propia experiencia. 
+Como se ha dado a conocer en el capítulo \ref{sec:conclusiones} hay muchos tipos de mejoras y optimizaciones de cada técnica de segmentación existentes. A la hora de afrontar el problema que el cliente proponía se tenía que elegir un tipo de segmentación de las técnicas estudiadas. Entre todas ellas se escogió el algortimo de \textit{level set}, por ser un algoritmo de segmentación famoso, lo que facilitaría la búsqueda de información sobre el, y además, el cliente había asegurado que se iban a tener buenos resultados con esta técnica según su propia experiencia. 
 
-Repasando este algoritmo, las ventajas que tiene son que la segmentación conseguida es precisa y que no añade sobrecoste al hacer la división o unión del contorno. Sin embargo, el algoritmo se basa en la resolución de ecuaciones diferenciales, lo que supone que el algoritmo sea costoso y lento. Se han desarrollado varias implementaciones en GPU como se puede ver en el repaso realizado en \cite[sección 3.6]{eri2015}, en \cite{aaron1} donde se realizan sobre imágenes 3D y en el proyecto de fin de carrera \cite{cudaseg} en el que también se utilizan GPUs etc. De la misma manera, también se han desarrollado paralelizaciones en arquitecturas SMP(\textit{Symmetric Multi-Processing}) como en \cite{jeon1} o en arquitecturas de memoria distrbuida con MPI(\textit{Message Passing Interface}) como en \cite{moha1}. 
+Repasando este algoritmo, las ventajas que tiene son que la segmentación conseguida es precisa y que no añade sobrecoste al hacer la división o unión del contorno. Sin embargo, el algoritmo se basa en la resolución de ecuaciones diferenciales, lo que supone que el algoritmo sea costoso y lento. Se han desarrollado varias implementaciones en GPU \cite{eri2015}, también sobre imágenes 3D \cite{aaron1} y hasta en proyectos de fin de carrera también se utilizan GPUs \cite{cudaseg} etc. De la misma manera, también se han desarrollado paralelizaciones en arquitecturas SMP(\textit{Symmetric Multi-Processing}) \cite{jeon1} o en arquitecturas de memoria distrbuida con MPI(\textit{Message Passing Interface})  \cite{moha1}. 
 
-Hay muchos artículos sobre este algoritmo y alguna implementación paralela pero sobre el algoritmo original, por lo tanto, a pesar de la paralelización consiguen tiempos elevados por encima de las necesidades de este proyecto. Estas paralelizaciones y otras técnicas de optimización que presentan varios trabajos se centran siempre en resolver las PDEs asociadas a la evolución del \textit{level set}. Sin embargo, para muchos problemas de imagen, como la segmentación, no es necesario tanta precisión ya que el objetivo final es encontrar los bordes de los objetos. En este caso, el proceso evolutivo no tiene tanto interés como el resultado final. Siguiendo esta idea se presenta el artículo \cite{yong1}, que será la pieza clave de la segmentación realizada en este proyecto.
+Hay muchos artículos sobre este algoritmo y alguna implementación paralela pero sobre el algoritmo original, por lo tanto, a pesar de la paralelización consiguen tiempos elevados por encima de las necesidades de este proyecto. Estas paralelizaciones y otras técnicas de optimización que presentan varios trabajos se centran siempre en resolver las PDEs asociadas a la evolución del \textit{level set}. Sin embargo, para muchos problemas de imagen, como la segmentación, no es necesario tanta precisión ya que el objetivo final es encontrar los bordes de los objetos. En este caso, el proceso evolutivo no tiene tanto interés como el resultado final. Siguiendo esta idea Shi y Karl presentaron  un artículo muy interesante que será la pieza clave de la segmentación realizada en este proyecto \cite{yong1}.
 
 \section{Aproximación a la técnica de \textit{level set}}
 
-Como se ha mencionado anteriormente, no se tienen por que resolver las PDEs en el algoritmo de \textit{level set} ya que, en la segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de PDEs conlleva el que se tengan que realizar reinicializaciones de la función de level set (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado en \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y no calculan PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el level set original. 
+Como se ha mencionado anteriormente, no se tienen por que resolver las PDEs en el algoritmo de \textit{level set} ya que, en la segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de PDEs conlleva el que se tengan que realizar reinicializaciones de la función de level set (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado por Shi y Karl \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y no calculan PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el level set original. 
 
 En este trabajo se presenta una nueva estrategía de implementación del método de \textit{level set}. En el ejemplo de un espacio Euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}. La función $\phi$ tendrá un valor negativo dentro de la curva C y un valor positivo fuera de ella, por eso se dice que representa implícitamente a la curva C. 
 
@@ -684,10 +731,12 @@ En este trabajo se presenta una nueva estrategía de implementación del método de
 		\end{subfigure}
 	\end{center}
 	\caption{Representación de la curva C}
-	\caption*{Descripción: Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.}	
- 	\subcaption*{Fuente: \cite{yong1}}	
+	\vspace{2 mm}		
+	\centering
+	Fuente: \cite{yong1}	
 	\label{aproxLevelSet}
 \end{figure}
+Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.
 
 Estando entonces en una representación de dos dimensiones, y siguiendo el ejemplo de la rejilla mostrada anteriormente se pueden definir dos listas de vecindad del contorno C: $L_{in}$ y $L_{out}$. 	
 
@@ -708,11 +757,11 @@ N(x) = {y \in D | \sum_{k=1}^{K} |y_k - x_k| = 1}  \forall x \in D
 
 Como podemos observar en la figura \ref{aproxLevelSet} la lista $L_{in}$ está formada por los puntos de la rejilla que están dentro de la curva C y $L_{out}$ está formada por los puntos de la rejilla que están fuera de C. Por lo tanto, como se puede ver en las definiciones formales de las listas, cada punto de ellas tiene que tener un punto vecino de la otra lista, de manera que las dos esten "pegadas".
 
-Recordando lo visto en \ref{levelSet} en el clásico \textit{level set} la siguiente PDE es resuelta para evolucionar el contorno C bajo una función de velocidad F:
+Recordando lo visto en la sección de explicación del level set (\ref{levelSet}) en el clásico \textit{level set} la siguiente PDE es resuelta para evolucionar el contorno C bajo una función de velocidad F:
 \begin{equation}\label{speedLevelSet}
 \frac{d\phi}{dt} + F|\nabla \phi| = 0
 \end{equation}
-La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolcuión de la PDE mostrada en \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacía fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
+La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolcuión de la PDE mostrada en la ecuación \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacía fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
 
 
 \subsubsection{Algoritmo}
@@ -759,7 +808,7 @@ Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como
  	Con esta operación se mueve el contorno un punto de la rejilla hacia dentro. 
  \end{itemize}
 
-Por otro lado, la función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva \cite{chan}. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos que se citan en \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
+Por otro lado, la función F de velocidad presentanda antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva \cite{chan}. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
 
 
 \begin{table}[H]
@@ -798,17 +847,18 @@ Por otro lado, la función F de velocidad presentanda antes, normalmente se suele
 		\hline
 	\end{tabular}
 	\caption{Algoritmo completo de la aproximación del \textit{level set}}
-	\subcaption*{Fuente: \cite{yong1}}	
+	\vspace{2 mm}		
+	Fuente: \cite{yong1}
 	\label{algoritmoFastLevelSet}
 \end{table}
 
 
-Aclaradas las cuestiones anteriores, el rápido algoritmo de \textit{level set} presentando en \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo (velocidad $F_{int}$) y de los datos en el primer ciclo (velocidad $F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando el valor de $F_{int}$ sea positivo, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando el valor de $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
+Aclaradas las cuestiones anteriores, el rápido algoritmo de \textit{level set} \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo (velocidad $F_{int}$) y de los datos en el primer ciclo (velocidad $F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando el valor de $F_{int}$ sea positivo, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando el valor de $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
 
-Repasando un poco más el algoritmo  \ref{algoritmoFastLevelSet} queda por aclarar las condiciones de parada del algoritmo. Así pués, el algoritmo se parará en el caso de que se cumpla una de estas dos condiciones:
+Repasando un poco más el algoritmo \ref{algoritmoFastLevelSet} queda por aclarar las condiciones de parada del algoritmo. Así pués, el algoritmo se parará en el caso de que se cumpla una de estas dos condiciones:
 
 \begin{enumerate}
-	\item Que la velocidad $F_{ext}$ de todos la vecindad del contorno cumpla con:
+	\item Que la velocidad $F_{ext}$ de toda la vecindad del contorno cumpla con:
 	\begin{enumerate}	
 		\item Formalmente: $F(x) \leq 0 \forall x \in L_{out}$, es decir, que no se tenga que expandir el contorno por ninguno de sus puntos.
 		\item Formalmente: $F(x) \geq 0 \forall x \in L_{in}$, es decir, que no se tenga que contraer el contorno en ninguno de sus puntos.
@@ -823,7 +873,8 @@ Para finalizar, el coste del algoritmo es de orden O(2A($P_1$ + $P_2$)), donde A
  	\centering
  	\includegraphics[width=.8\textwidth]{./imagenes/switchLevelSet}
  	\caption{Ilustración de las operaciones realizadas en el paso 3 del algoritmo}
- 	\subcaption*{Fuente: modificaciones de imágenes en \cite{yong1}}	
+	\vspace{2 mm}		
+ 	Fuente: modificaciones de imágenes en \cite{yong1}	
  	\label{switchLevelSet}
  \end{figure}
  
@@ -860,7 +911,9 @@ Para tener una mínima idea del avance que esto supuso en la segmentación de imág
 		\end{subfigure}
 	\end{center}
 	\caption{Posibles inicializaciones del contorno con el método de Chan-Vese}
- 	\subcaption*{Fuente: \cite{chan}}	
+	\vspace{2 mm}	
+	\centering	
+ 	Fuente: \cite{chan}	
 	\label{chanVese}
 \end{figure} 
  
@@ -868,7 +921,7 @@ Para tener una mínima idea del avance que esto supuso en la segmentación de imág
  
 \chapter{Implementación de la aproximación y Ofeli}
 
-Una vez encontrada una técnica que satisficiera los requisitos del proyecto, se empezó a buscar alguna implementación sobre esta técnica. En esa búsqueda se encontró el trabajo \cite{ofeli}. Este trabajo llamado Ofeli (\textit{Open, Fast and Efficient Level set Implementation}) está desarrollado con Qt que es una de librerias multiplataforma para la realización de aplicaciones con GUI (\textit{graphical user interface}) en C++. Esta aplicación es muy completa ya que aparte del algoritmo de interés implementa varias funcionalidades extra como varios tipos de filtrado, preprocesamiento, varios tipos de evolución del contorno etc.
+Una vez encontrada una técnica que satisficiera los requisitos del proyecto, se empezó a buscar alguna implementación sobre esta técnica. En esa búsqueda se encontró un trabajo llamado Ofeli (\textit{Open, Fast and Efficient Level set Implementation}) \cite{ofeli}. Este trabajo está desarrollado con Qt que es una de librerias multiplataforma para la realización de aplicaciones con GUI (\textit{graphical user interface}) en C++. Esta aplicación es muy completa ya que aparte del algoritmo de interés implementa varias funcionalidades extra como varios tipos de filtrado, preprocesamiento, varios tipos de evolución del contorno etc.
 
 \section{Ofeli}
 
@@ -947,9 +1000,11 @@ Se han resaltado las tres clases que interesarán: \textit{ActiveContour}, \texti
  
 \chapter{Paralelización de la aproximación del \textit{level set}}
 
+\chapter{Comparación de resultados temporales y rendimiento}
+
 \chapter{Funciones extras añadidas en base a la segmentación}
 
-\chapter{Comparación de resultados temporales y rendimiento}
+
 
 
 

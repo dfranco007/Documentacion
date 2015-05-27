@@ -3,26 +3,25 @@
 \contentsline {xchapter}{Introducci\'on}{1}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conceptos b\'asicos}{5}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Resultados de busqueda en \cite {ieee1} con las palabras <<image segmentation>> \relax }}{7}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Clasificaci\'on de t\'ecnicas de segmentaci\'on}{9}
 \contentsline {table}{\numberline {3.1}{\ignorespaces M\'ascaras utilizadas por el operador de Roberts de tama\~no 2x2\relax }}{17}
-\contentsline {table}{\numberline {3.2}{\ignorespaces M\'ascaras utilizadas por el operador de Sobel de tama\~no 3x3\relax }}{18}
-\contentsline {table}{\numberline {3.3}{\ignorespaces M\'ascaras utilizadas por el operador de Prewitt de tama\~no 3x3\relax }}{18}
+\contentsline {table}{\numberline {3.2}{\ignorespaces M\'ascaras utilizadas por el operador de Sobel de tama\~no 3x3\relax }}{17}
+\contentsline {table}{\numberline {3.3}{\ignorespaces M\'ascaras utilizadas por el operador de Prewitt de tama\~no 3x3\relax }}{17}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Necesidades del cliente}{31}
+\contentsline {xchapter}{Necesidades del cliente}{29}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{35}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{40}
+\contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{33}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{38}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{43}
+\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{41}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{47}
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{47}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{49}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{51}
+\contentsline {xchapter}{Gesti\'on del proyecto}{51}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{53}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{55}
+\contentsline {xchapter}{Conclusiones}{53}
