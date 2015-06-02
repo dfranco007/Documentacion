@@ -35,6 +35,7 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Posibles inicializaciones del contorno con el m\'etodo de Chan-Vese\relax }}{40}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{41}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Esquema de las funciones utilizadas en el trabajo de Ofeli para realizar el algoritmo de level set aproximado\relax }}{43}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
 \addvspace {10\p@ }

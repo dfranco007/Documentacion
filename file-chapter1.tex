@@ -761,7 +761,7 @@ Recordando lo visto en la sección de explicación del level set (\ref{levelSet}) 
 \begin{equation}\label{speedLevelSet}
 \frac{d\phi}{dt} + F|\nabla \phi| = 0
 \end{equation}
-La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolcuión de la PDE mostrada en la ecuación \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacía fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
+La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolución de la PDE mostrada en la ecuación \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacía fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
 
 
 \subsubsection{Algoritmo}
@@ -925,15 +925,7 @@ Una vez encontrada una técnica que satisficiera los requisitos del proyecto, se 
 
 \section{Ofeli}
 
-\subsection{Introducción}
-
-En esta sección se explicará brevemente el uso de la interfaz gráfica y las posibilidades que este trabajo ofrece. Más adelante, se explicará la estructura de la implementación y las clases que se utilizan. Se realizará un esquema general para que el lector pueda comprender cuales son los procesos o pautas que se dan en esta implementación para poder segmentar una imagen.
-
-\subsection{Diseño de la herramienta Ofeli}
-
-Como se ha dicho anteriormente esta implementación se ha desarrollado 
-
-TERMINAR
+En esta sección se explicará la estructura de la implementación y las clases que se utilizan en este trabajo. Se realizará un esquema general para que el lector pueda comprender cuales son los procesos o pautas que se dan en esta implementación para poder segmentar una imagen.
 
 
 \subsection{Estructura}
@@ -990,17 +982,54 @@ La implementación está formada por varias clases que se han dividido en dos tipo
  
 Se han resaltado las tres clases que interesarán: \textit{ActiveContour}, \textit{ACwithoutEdges} y \textit{list}. Las demás clases añaden funcionalidades extra que no son necesarias en este proyecto.
  
-\subsection{Clase \textit{ActiveContour}}
+\subsection{Esquema general}
 
+ \begin{figure}[H]
+ 	\captionsetup{justification=centering}
+ 	\centering
+ 	\includegraphics[width=1.3\textwidth]{./imagenes/esquemaOfeli}
+ 	\caption{Esquema de las funciones utilizadas en el trabajo de Ofeli para realizar el algoritmo de level set aproximado}	
+ 	\label{esquemaOfeli}
+ \end{figure}
 
+Como se puede observar la estructura del código es prácticamente igual al algoritmo de aproximación presentado en \ref{algoritmoFastLevelSet} exceptuando que en esta implementación la velocidad de cada punto se calcula a la hora de tratar este, no se calculan todas las velocidades de todos los puntos como se sugiere en el algoritmo \ref{algoritmoFastLevelSet}. El cálculo de estas velocidades son las funciones  \textit{compute\_(internal/external)\_speed\_($Fd/F_{int}$)} que se pueden ver en el esquema \ref{esquemaOfeli}. Las funciones  \textit{update\_for\_means\_(in/out)(1/2)} que se salen del algoritmo de aproximación presentado en \ref{algoritmoFastLevelSet} se realizan para poder <<adaptar>> el contorno a la imagen de manera que se pueda evolucionar este independientemente de los niveles de gris que se estén utilizando en la imagen. Esto se refiere a que se va haciendo una media de las intensidades de los puntos pertenecientes a las listas que representan implicitamente el contorno, es decir, $L_{out}$ y $L_{in}$, de manera que el umbral con el que se va decidiendo la velocidad de cada punto va cambiando en función de los puntos que representan el contorno.
 
+Otra cuestión a comentar es la etiqueta <<virtual>> que tienen varias funciones en el esquema \ref{esquemaOfeli} que significa exactamente, que la función es virtual. Una función virtual en el lenguaje de programación C++ se utiliza en cuestiones de herencia y polimorfismo, de manera que clases hijas puedan redefinir funciones definidas como virtuales en la clase padre. Así pués, las funciones  \textit{compute\_external\_speed\_Fd} y \textit{update\_for\_means\_(in/out)(1/2)} están definidas con esta cláusula ya que dependen de los datos, en este caso de las imágenes, y hay varias clases para trabajar con ellas en este trabajo. Si son imágenes a color se utilizará la clase \textit{ACwithoutEdgesYUV}, mientras que si es una imagen a escala de grises se trabajará con la clase \textit{ACwithoutEdges} como se ha explicado en el anterior apartado.
 
-
-
+Comentadas estas cuestiones se deduce que todas las funciones presentadas en el esquema \ref{esquemaOfeli} están implementadas en \textit{ActiveContour}, la clase padre, exceptuando aquellas que tienen la etiqueta <<virtual>> que las implementarán las clases hijas \textit{ACwithoutEdges} y \textit{ACwithoutEdgesYUV} dependiendo de las características de la imagen.
  
+Para finalizar, la implementación de la lista ligada se utiliza para representar las listas $L_{out}$ y $L_{in}$ con las que estaremos trabajando continuamente en los dos ciclos.
+ 
+ 
+ 
+ 
+
 \chapter{Paralelización de la aproximación del \textit{level set}}
 
+Las clases a modificar sobre el trabajo de Ofeli \cite{ofeli} para poder realizar una implementación paralela son: \textit{ActiveContour}, \textit{ACwithoutEdges} y \textit{list}. De manera que se paralelizará el código para realizar la segmentación de imágenes a escala de grises, ya que en un principio el cliente sólo está interesado en este tipo de imágenes. Aún así, una vez realizada la segmentación para este tipo de imágenes sería muy sencillo poder realizarlas para imágenes a color, ya que como se ha visto en el capítulo anterior, la mayoría de las funciones son comunes a la clase \textit{ActiveContour}. 
+
+La paralelización se realizará mediante OpenMP\cite{openmp} por lo que las pruebas se realizarán en máquinas con una arquitectura SMP. Para aprovechar las mejores opciones que esta API(\textit{Application Programming Interface}) nos ofrece para poder sacarle el máximo rendimiento posible al algoritmo se ha consultado un tutorial de \textit{Livermore Computing Center}, uno de los centros computacionales de primera clase del mundo \cite{live1}.
+
+\section{Planteamiento de la paralelización}
+
+
+
+
+
+
+
+
+
 \chapter{Comparación de resultados temporales y rendimiento}
+
+
+
+
+
+
+
+
+
 
 \chapter{Funciones extras añadidas en base a la segmentación}
 

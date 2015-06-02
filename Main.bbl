@@ -1,14 +1,20 @@
 \begin{thebibliography}{10}
 
+\bibitem{ieee1}
+IEEE Xplore~Digital Library.
+\newblock {\em http://ieeexplore.ieee.org/}.
+
 \bibitem{suta1}
 Suta L., Bessy F., Veja C., and Vaida M.-F.
 \newblock Active contours: Application to plant recognition.
 \newblock {\em Intelligent Computer Communication and Processing (ICCP), 2012
   IEEE International Conference on}, pages 181 -- 187, 2012.
 
-\bibitem{ieee1}
-IEEE Xplore~Digital Library.
-\newblock {\em http://ieeexplore.ieee.org/}.
+\bibitem{ofeli}
+Fabien Bessy.
+\newblock Open, fast and efficient level set implementation.
+\newblock 2012-2013.
+\newblock https://code.google.com/p/ofeli/.
 
 \bibitem{terry1}
 Terry~S. Yoo.
@@ -86,11 +92,13 @@ T.~Chan and L.~Vese.
 \newblock Active contours without edges.
 \newblock vol. 10:266--277, Feb 2001.
 
-\bibitem{ofeli}
-Fabien Bessy.
-\newblock Open, fast and efficient level set implementation.
-\newblock 2012-2013.
-\newblock https://code.google.com/p/ofeli/.
+\bibitem{openmp}
+OpenMP®~API specification for~parallel programming.
+\newblock {\em http://openmp.org/}.
+
+\bibitem{live1}
+Livermore Computing~Center (LC).
+\newblock {\em https://computing.llnl.gov}.
 
 \bibitem{gitHub1}
 Franco D.

@@ -35,11 +35,10 @@
 \contentsline {section}{\numberline {5.2}Evoluci\'on del contorno}{40}
 \contentsline {chapter}{\numberline {6}Implementaci\'on de la aproximaci\'on y Ofeli}{41}
 \contentsline {section}{\numberline {6.1}Ofeli}{41}
-\contentsline {subsection}{\numberline {6.1.1}Introducci\'on}{41}
-\contentsline {subsection}{\numberline {6.1.2}Dise\~no de la herramienta Ofeli}{41}
-\contentsline {subsection}{\numberline {6.1.3}Estructura}{42}
-\contentsline {subsection}{\numberline {6.1.4}Clase \textit {ActiveContour}}{43}
+\contentsline {subsection}{\numberline {6.1.1}Estructura}{41}
+\contentsline {subsection}{\numberline {6.1.2}Esquema general}{43}
 \contentsline {chapter}{\numberline {7}Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
+\contentsline {section}{\numberline {7.1}Planteamiento de la paralelizaci\'on}{45}
 \contentsline {chapter}{\numberline {8}Comparaci\'on de resultados temporales y rendimiento}{47}
 \contentsline {chapter}{\numberline {9}Funciones extras a\~nadidas en base a la segmentaci\'on}{49}
 \contentsline {chapter}{\numberline {10}Gesti\'on del proyecto}{51}
