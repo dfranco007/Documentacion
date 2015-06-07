@@ -39,12 +39,20 @@
 \contentsline {subsection}{\numberline {6.1.2}Esquema general}{43}
 \contentsline {chapter}{\numberline {7}Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
 \contentsline {section}{\numberline {7.1}Planteamiento de la paralelizaci\'on}{45}
-\contentsline {chapter}{\numberline {8}Comparaci\'on de resultados temporales y rendimiento}{47}
-\contentsline {chapter}{\numberline {9}Funciones extras a\~nadidas en base a la segmentaci\'on}{49}
-\contentsline {chapter}{\numberline {10}Gesti\'on del proyecto}{51}
-\contentsline {section}{\numberline {10.1}Gesti\'on del alcance}{51}
-\contentsline {section}{\numberline {10.2}Gesti\'on del tiempo}{51}
-\contentsline {section}{\numberline {10.3}Gesti\'on de los riesgos}{51}
-\contentsline {section}{\numberline {10.4}Gesti\'on del costes}{51}
-\contentsline {chapter}{\numberline {11}Conclusiones}{53}
-\contentsline {chapter}{Bibliograf\'{\i }a}{55}
+\contentsline {subsection}{\numberline {7.1.1}Primera implementaci\'on}{48}
+\contentsline {subsubsection}{Lista enlazada}{49}
+\contentsline {subsubsection}{Divisi\'on de la lista}{49}
+\contentsline {subsubsection}{Uni\'on de las sublistas}{50}
+\contentsline {subsubsection}{Secciones cr\IeC {\'\i }ticas}{51}
+\contentsline {subsection}{\numberline {7.1.2}Rendimiento}{53}
+\contentsline {section}{\numberline {7.2}Primer paso de mejora}{53}
+\contentsline {section}{\numberline {7.3}Segundo paso de mejora}{53}
+\contentsline {chapter}{\numberline {8}Funciones extras a\~nadidas en base a la segmentaci\'on}{55}
+\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{57}
+\contentsline {section}{\numberline {9.1}Gesti\'on del alcance}{57}
+\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{57}
+\contentsline {section}{\numberline {9.3}Gesti\'on de los riesgos}{57}
+\contentsline {section}{\numberline {9.4}Gesti\'on del costes}{57}
+\contentsline {chapter}{\numberline {10}Conclusiones}{59}
+\contentsline {chapter}{\numberline {11}Propuestas de mejora}{61}
+\contentsline {chapter}{Bibliograf\'{\i }a}{63}

@@ -38,11 +38,17 @@
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Esquema de las funciones utilizadas en el trabajo de Ofeli para realizar el algoritmo de level set aproximado\relax }}{43}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Ejemplo de condici\'on de carrera al querer a\~nadir un punto vecino en com\'un a puntos tratados por distintos threads\relax }}{48}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Esquema de la primera implementaci\'on\relax }}{48}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Esquema de la colocaci\'on de los \textit {heads} de trozo de lista a crear\relax }}{50}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Ejemplo de creaci\'on de cada sublista usando los \textit {heads} establecidos\relax }}{50}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{50}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{51}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Comparaci\'on de resultados temporales y rendimiento}{47}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{55}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{49}
+\contentsline {xchapter}{Gesti\'on del proyecto}{57}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{51}
+\contentsline {xchapter}{Conclusiones}{59}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{53}
+\contentsline {xchapter}{Propuestas de mejora}{61}
