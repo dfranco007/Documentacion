@@ -17,11 +17,13 @@
 \contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{41}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'on obtenidos en la primera implementaci\'on paralela\relax }}{53}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'on de la segunda implementaci\'on\relax }}{56}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{55}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{61}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{57}
+\contentsline {xchapter}{Gesti\'on del proyecto}{63}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{59}
+\contentsline {xchapter}{Conclusiones}{65}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Propuestas de mejora}{61}
+\contentsline {xchapter}{Propuestas de mejora}{67}

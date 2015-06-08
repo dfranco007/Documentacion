@@ -44,11 +44,14 @@
 \contentsline {figure}{\numberline {7.4}{\ignorespaces Ejemplo de creaci\'on de cada sublista usando los \textit {heads} establecidos\relax }}{50}
 \contentsline {figure}{\numberline {7.5}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{50}
 \contentsline {figure}{\numberline {7.6}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{51}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera implementaci\'on paralela\relax }}{54}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera y segunda implementaci\'on\relax }}{56}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Ejemplo de una malla de cuatro locks de establecidos en forma rectangular\relax }}{57}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{55}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{61}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{57}
+\contentsline {xchapter}{Gesti\'on del proyecto}{63}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{59}
+\contentsline {xchapter}{Conclusiones}{65}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Propuestas de mejora}{61}
+\contentsline {xchapter}{Propuestas de mejora}{67}

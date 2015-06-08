@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  7 JUN 2015 13:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  8 JUN 2015 13:28
 entering extended mode
 **Main.tex
 
@@ -1214,23 +1214,66 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [52]
-[53] [54
+Overfull \hbox (31.59499pt too wide) in paragraph at lines 1192--1197
+ [][][] 
+ []
+
+<./imagenes/grafico1Imple.png, id=287, 641.39626pt x 389.20406pt>
+File: ./imagenes/grafico1Imple.png Graphic file (type png)
+
+<use ./imagenes/grafico1Imple.png>
+Package pdftex.def Info: ./imagenes/grafico1Imple.png used on input line 1203.
+(pdftex.def)             Requested size: 312.00119pt x 189.32793pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+[54 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/grafico1Imple.png>]
+Overfull \hbox (13.97017pt too wide) in paragraph at lines 1263--1268
+ [][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+<./imagenes/grafico2Imple.png, id=299, 492.33937pt x 295.85532pt>
+File: ./imagenes/grafico2Imple.png Graphic file (type png)
+
+<use ./imagenes/grafico2Imple.png>
+Package pdftex.def Info: ./imagenes/grafico2Imple.png used on input line 1275.
+(pdftex.def)             Requested size: 312.00119pt x 187.49585pt.
+ [56 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/grafico2Imple.png>] <./imagenes/mallaLocks.
+png, id=304, 2860.6875pt x 2107.875pt>
+File: ./imagenes/mallaLocks.png Graphic file (type png)
+
+<use ./imagenes/mallaLocks.png>
+Package pdftex.def Info: ./imagenes/mallaLocks.png used on input line 1293.
+(pdftex.def)             Requested size: 272.99881pt x 201.15079pt.
+ [57 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/mallaLocks.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+[59] [60
 
 ]
 Cap\'{\i }tulo 8.
-[55] [56
+[61] [62
 
 ]
 Cap\'{\i }tulo 9.
 
-LaTeX Warning: Reference `dedicacionTemporal' on page 57 undefined on input lin
-e 1221.
+LaTeX Warning: Reference `dedicacionTemporal' on page 63 undefined on input lin
+e 1371.
 
-[57] [58
+[63] [64
 
 ]
 Cap\'{\i }tulo 10.
-[59] [60
+[65] [66
 
 ]
 Cap\'{\i }tulo 11.
@@ -1248,7 +1291,7 @@ liography.tex' on input line 97.
 :<+ Config/bibliography.tex
 
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/bibliography.tex" [61] [62
+de grado\Documentacion\Config/bibliography.tex" [67] [68
 
 ])
 :<-
@@ -1267,7 +1310,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--49
 -sity of Gi-rona,
  []
 
-[63
+[69
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 96--98
@@ -1304,7 +1347,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[64]
+[70]
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
 de grado\Documentacion\Main.aux")
 
@@ -1312,10 +1355,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8255 strings out of 493921
- 123453 string characters out of 3147286
- 228181 words of memory out of 3000000
- 11094 multiletter control sequences out of 15000+200000
+ 8294 strings out of 493921
+ 124192 string characters out of 3147286
+ 230181 words of memory out of 3000000
+ 11130 multiletter control sequences out of 15000+200000
  16300 words of font info for 61 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
  38i,13n,58p,1421b,1200s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1339,9 +1382,9 @@ nts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
 mti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/las
 y10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Main.pdf (76 pages, 21676929 bytes).
+Output written on Main.pdf (82 pages, 22113642 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
+ 420 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 286 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -45,14 +45,19 @@
 \contentsline {subsubsection}{Uni\'on de las sublistas}{50}
 \contentsline {subsubsection}{Secciones cr\IeC {\'\i }ticas}{51}
 \contentsline {subsection}{\numberline {7.1.2}Rendimiento}{53}
-\contentsline {section}{\numberline {7.2}Primer paso de mejora}{53}
-\contentsline {section}{\numberline {7.3}Segundo paso de mejora}{53}
-\contentsline {chapter}{\numberline {8}Funciones extras a\~nadidas en base a la segmentaci\'on}{55}
-\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{57}
-\contentsline {section}{\numberline {9.1}Gesti\'on del alcance}{57}
-\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{57}
-\contentsline {section}{\numberline {9.3}Gesti\'on de los riesgos}{57}
-\contentsline {section}{\numberline {9.4}Gesti\'on del costes}{57}
-\contentsline {chapter}{\numberline {10}Conclusiones}{59}
-\contentsline {chapter}{\numberline {11}Propuestas de mejora}{61}
-\contentsline {chapter}{Bibliograf\'{\i }a}{63}
+\contentsline {subsubsection}{Conclusi\'on}{54}
+\contentsline {section}{\numberline {7.2}Primer paso de mejora: segunda implementaci\'on}{54}
+\contentsline {subsection}{\numberline {7.2.1}Rendimiento}{56}
+\contentsline {subsubsection}{Conclusi\'on}{56}
+\contentsline {section}{\numberline {7.3}Segundo paso de mejora: tercera implementaci\'on}{57}
+\contentsline {subsection}{\numberline {7.3.1}Rendimiento}{59}
+\contentsline {subsubsection}{Conclusi\'on}{59}
+\contentsline {chapter}{\numberline {8}Funciones extras a\~nadidas en base a la segmentaci\'on}{61}
+\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{63}
+\contentsline {section}{\numberline {9.1}Gesti\'on del alcance}{63}
+\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{63}
+\contentsline {section}{\numberline {9.3}Gesti\'on de los riesgos}{63}
+\contentsline {section}{\numberline {9.4}Gesti\'on del costes}{63}
+\contentsline {chapter}{\numberline {10}Conclusiones}{65}
+\contentsline {chapter}{\numberline {11}Propuestas de mejora}{67}
+\contentsline {chapter}{Bibliograf\'{\i }a}{69}

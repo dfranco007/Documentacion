@@ -1182,17 +1182,167 @@ return;
  
 Realizada la primera implementación, llega la hora de comprobar su rendimiento y ver la mejora obtenida respecto a la versión serie. En estas primeras pruebas se ha utilizado únicamente una imagen, de tamaño 3000x2800 y que es exactamente la que se muestra en la figura \ref{ejemplo4}.
 
+Las pruebas realizadas han sido en un ordenador de la Universidad del País Vasco con el \textit{hostname}: u010415. Este ordenador tiene una arquitectura SMP y dispone de cuatro procesadores \textit{AMD Opteron(tm) Processor 6168} los cuales tienen doce cores que trabajan a 1900 MHz. Por lo tanto, se disponen de 48 cores para poder realizar las pruebas. También se ha considerado añadir que se ha tenido que separar la parte gráfica del trabajo original de Ofeli y extraer el algoritmo de evolución para poder realizar las pruebas. El tiempo original de Ofeli y del algoritmo sin la parte gráfica en serie es el mismo, ya que en este primero la parte gráfica no trabaja mientras está evolucionando el algoritmo.
+
+Mientras no se diga lo contrario, todas las ejecuciones se realizarán en la misma máquina y los tiempos de todas las tablas que aparezcan serán la media de cinco ejecuciones.
+
+\begin{table}[h]
+	\centering
+	 	\captionsetup{justification=centering}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		{\bf Número de thread} & Serie  & 2      & 4     & 8     & 16     & 32     & 48     \\ \hline
+		{\bf Tiempo}           & 16,522 & 11,630 & 7,797 & 9,377 & 14,371 & 27,663 & 31,371 \\ \hline
+	\end{tabular}	
+	\caption{Tiempos de ejecución obtenidos en la primera implementación paralela}
+\end{table}
+
+\begin{figure}[H]
+ 	\captionsetup{justification=centering}
+ 	\centering
+ 	\includegraphics[width=.8\textwidth]{./imagenes/grafico1Imple}
+ 	\caption{Gráfica de los tiempos de ejecución de la primera implementación paralela}	
+ 	\label{grafico1Imple}
+\end{figure}
+
+Como se puede observar en la figura \ref{grafico1Imple}, esta primera implementación sólo escala bien hasta los cuatro \textit{cores}. 
+
+\subsubsection{Conclusión}
+
+Se sospecha que la sección crítica está siendo el <<cuello de botella>> en esta implementación ya que esta se hace prácticamente siempre, devido a que el contorno suele tender a expandirse, y puede que repetida varias veces por cada punto, al realizarse por cada nuevo vecino. 
+
+\section{Primer paso de mejora: segunda implementación}
+
+Concluido ya que el problema está en la sección crítica se intenta reducir las operaciones dentro de esta reduciendo así el tiempo que cada \textit{thread} está dentro de ella. La <<sección crítica mejorada>> tendrá únicamente dos asignaciones, reduciendo considerablemente el tiempo dentro de ella. El flag se utilizará para saber qué \textit{thread} ha sido el que ha entrado a la sección crítica para posteriormente hacer la operación correspondiente.
+
+\newpage
+
+\begin{lstlisting}
+ void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
+ {
+ 	bool flag = false;
+ 	if( phi[neighbor_offset] == 3 ) // exterior value
+ 	{
+ 		#pragma omp critical
+ 		{
+ 			if( phi[neighbor_offset] == 3 ) // exterior value
+ 			{
+ 				phi[neighbor_offset] = 1; // outside boundary value
+ 				flag = true;
+ 			}
+ 		}
+ 		if(flag)  Splited_Lout[tid]->push_front(neighbor_offset);
+ 	} 	
+ 	return;
+ }
  
- 
-\section{Primer paso de mejora}
- 
+ void ActiveContour::add_Rin_neighbor_to_Lin(int neighbor_offset,int tid)
+ {
+ 	bool flag = false;
+ 	if( phi[neighbor_offset] == -3 ) // interior value
+ 	{    
+ 		#pragma omr critical
+ 		{
+ 			if( phi[neighbor_offset] == -3 ) // interior value
+ 			{
+ 				phi[neighbor_offset] = -1; // inside boundary value
+ 				flag = true;
+ 			}
+ 		}
+ 		if(flag)  Splited_Lin[tid]->push_front(neighbor_offset);
+ 	}	
+ 	return;
+ }
+\end{lstlisting}
 
-\section{Segundo paso de mejora}
+\subsection{Rendimiento}
+
+\begin{table}[h]
+	\centering
+	\captionsetup{justification=centering}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+		\hline
+		{\bf Número de thread} & Serie  & 2      & 4     & 8     & 16    & 32    & 48    \\ \hline
+		{\bf Tiempo}           & 16,513 & 10,741 & 6,575 & 5,420 & 3,678 & 6,021 & 6,787 \\ \hline
+	\end{tabular}
+	\caption{Tiempos de ejecución de la segunda implementación}
+\end{table}
+
+
+\begin{figure}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\includegraphics[width=.8\textwidth]{./imagenes/grafico2Imple}
+	\caption{Gráfica de los tiempos de ejecución de la primera y segunda implementación}	
+	\label{grafico2Imple}
+\end{figure}
+
+Como se puede ver en el gráfico \ref{grafico2Imple} la mejora es bastante grande. Esto se debe a que se ha reducido notablemente la contención entre los \textit{threads} al no tener prácticamente operaciones a realizar dentro de la sección crítica. 
+
+\subsubsection{Conclusión}
+
+A pesar de haber mejorado mucho los tiempos el resultado no sigue siendo óptimo del todo ya que la implementación escala poco a poco hasta los 16 \textit{threads} y luego el tiempo va aumentado. Hay que intentar reducir aún más la contención de alguna manera. Analizando un poco más a detalle, la sección crítica se realiza para cualquier vecino que se quiera añadir después de haber exapandido o contraido un punto. Es decir, que no importa la localización de los puntos que se estén tratando, habrá colisión en la sección crítica. En realidad, la sección crítica se puso para evitar que se pudieran añadir varios puntos vecinos a la vez. ¿Hay alguna manera de realizar secciones críticas dependientes del punto? Sería la pregunta clave a responder para poder resolver el problema. 
+
+\section{Segundo paso de mejora: tercera implementación}
+
+Buscando alguna manera de realizar secciones críticas dependiente del punto se encuentra algo interesante que ofrece la API OpenMP: los semáforos o \textit{locks} en inglés. Se podría tener una matriz de \textit{locks} de la misma dimensión que la imagen y cada vez que se vaya a trabajar con un punto cerrar el \textit{lock} que le pertenece. El problema de esta idea de tener un \textit{lock} para cada imagen, en una imagen de 3000x2800, sería la memoría y la gestión de estos, ya que si realizamos la multiplicación el resultado sería muy elevado. De todas formas, se puede realizar la misma idea, pero por zonas. En vez de tener un \textit{lock} para cada punto se podría tener un número de \textit{locks} no muy grande para bloquear cierta zona de la imagen. 
+
+\begin{figure}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\includegraphics[width=.7\textwidth]{./imagenes/mallaLocks}
+	\caption{Ejemplo de una malla de cuatro locks de establecidos en forma rectangular}	
+	\label{mallaLocks}
+\end{figure}
+
+En la imagen \ref{mallaLocks} se puede obsevar un ejemplo de una malla de \textit{locks} en la número de \textit{locks} establecido es 4 y tiene una forma rectangular. El número de óptimo de locks a establecer será lo que se trabaje en esta segunda implementación. Además, el lector podría pensar que se pueden realizar distintas figuras geométricas en la creación de la malla de \textit{locks}, aunque esta opción no se realizará en este proyecto ya que la estrategía de distribución de los puntos en las sublistas se realiza recorriendo la matriz por filas, lo que significa que los rectángulos darán una mejor respuesta temporal ya que habrá poca colisión entre los \textit{threads}.
+\newpage
+
+\begin{lstlisting}
+void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
+{
+	bool flag = false;	
+	if( phi[neighbor_offset] == 3 ) // exterior value
+	{
+		int lockNumber = ( (neighbor_offset/img_width) *numLocks)/img_height;			
+		omp_set_lock(&(locks[lockNumber]));		
+		if( phi[neighbor_offset] == 3 ) // exterior value
+		{
+			phi[neighbor_offset] = 1; // outside boundary value
+			flag = true;
+		}	
+		omp_unset_lock(&(locks[lockNumber]));
+		
+		if(flag)  Splited_Lout[tid]->push_front(neighbor_offset);
+	}
+	return;
+}
+
+void ActiveContour::add_Rin_neighbor_to_Lin(int neighbor_offset,int tid)
+{
+	bool flag = false;
+	if( phi[neighbor_offset] == -3 ) // interior value
+	{    
+		int lockNumber = ( (neighbor_offset/img_width) *numLocks)/img_height;
+		omp_set_lock(&(locks[lockNumber]));
+		if( phi[neighbor_offset] == -3 ) // interior value
+		{
+			phi[neighbor_offset] = -1; // inside boundary value
+			flag = true;
+		}
+		omp_unset_lock(&(locks[lockNumber]));
+		
+		if(flag)  Splited_Lin[tid]->push_front(neighbor_offset);
+	}
+	return;}
+\end{lstlisting}
+
+
+\subsection{Rendimiento}
 
 
 
-
-
+\subsubsection{Conclusión}
 
 
 
