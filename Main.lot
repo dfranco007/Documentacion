@@ -17,13 +17,17 @@
 \contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{41}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'on obtenidos en la primera implementaci\'on paralela\relax }}{53}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'on de la segunda implementaci\'on\relax }}{56}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Rendimiento de las ejecuciones de la primera implementaci\'on paralela\relax }}{53}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Rendimiento obtenido de las ejecuciones de la segunda implementaci\'on paralela\relax }}{56}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Rendimiento obtenido con distintas combinaciones de \textit {threads} y \textit {locks} en la tercera implementaci\'on paralela\relax }}{59}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Comparaci\'on de los resultados obtenidos en este tercera implementaci\'on con los obtenidos en la segunda\relax }}{60}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{61}
+\contentsline {xchapter}{Rendimiento}{63}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{63}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{65}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{65}
+\contentsline {xchapter}{Gesti\'on del proyecto}{67}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Propuestas de mejora}{67}
+\contentsline {xchapter}{Conclusiones}{69}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Propuestas de mejora}{71}

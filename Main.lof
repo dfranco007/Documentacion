@@ -47,11 +47,15 @@
 \contentsline {figure}{\numberline {7.7}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera implementaci\'on paralela\relax }}{54}
 \contentsline {figure}{\numberline {7.8}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera y segunda implementaci\'on\relax }}{56}
 \contentsline {figure}{\numberline {7.9}{\ignorespaces Ejemplo de una malla de cuatro locks de establecidos en forma rectangular\relax }}{57}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on con los locks y la estructura de la <<secci\'on cr\IeC {\'\i }tica normal>>\relax }}{61}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{61}
+\contentsline {xchapter}{Rendimiento}{63}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Tipos de im\'agenes con las que se realizar\'an las pruebas completas de la tercera implementaci\'on\relax }}{64}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{63}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{65}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{65}
+\contentsline {xchapter}{Gesti\'on del proyecto}{67}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Propuestas de mejora}{67}
+\contentsline {xchapter}{Conclusiones}{69}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Propuestas de mejora}{71}

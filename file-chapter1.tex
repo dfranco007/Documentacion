@@ -812,6 +812,7 @@ Por otro lado, la función F de velocidad presentanda antes, normalmente se suele
 
 
 \begin{table}[H]
+	\small
 	\centering
 	\begin{tabular}{|l|}
 		\hline		
@@ -1005,6 +1006,10 @@ Para finalizar, la implementación de la lista ligada se utiliza para representar
  
  
  
+ 
+ 
+ 
+ 
 
 \chapter{Paralelización de la aproximación del \textit{level set}}
 
@@ -1137,6 +1142,8 @@ Al realizar esta unión, también se aprovecha a reinicializar los \textit{heads} 
 
 \newpage
 
+\subsubsection{Código}
+
 \begin{lstlisting}
 void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
 {
@@ -1184,18 +1191,25 @@ Realizada la primera implementación, llega la hora de comprobar su rendimiento y
 
 Las pruebas realizadas han sido en un ordenador de la Universidad del País Vasco con el \textit{hostname}: u010415. Este ordenador tiene una arquitectura SMP y dispone de cuatro procesadores \textit{AMD Opteron(tm) Processor 6168} los cuales tienen doce cores que trabajan a 1900 MHz. Por lo tanto, se disponen de 48 cores para poder realizar las pruebas. También se ha considerado añadir que se ha tenido que separar la parte gráfica del trabajo original de Ofeli y extraer el algoritmo de evolución para poder realizar las pruebas. El tiempo original de Ofeli y del algoritmo sin la parte gráfica en serie es el mismo, ya que en este primero la parte gráfica no trabaja mientras está evolucionando el algoritmo.
 
-Mientras no se diga lo contrario, todas las ejecuciones se realizarán en la misma máquina y los tiempos de todas las tablas que aparezcan serán la media de cinco ejecuciones.
+Mientras no se diga lo contrario, todas las ejecuciones se realizarán en la misma máquina y los tiempos de todas las tablas que aparezcan serán la media de cinco ejecuciones. Ha esta primera implementación se le nombrará como <<sección critica normal>>.
+
 
 \begin{table}[h]
+	\small
 	\centering
-	 	\captionsetup{justification=centering}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\captionsetup{justification=centering}
+	\begin{tabular}{cccccccc}
 		\hline
-		{\bf Número de thread} & Serie  & 2      & 4     & 8     & 16     & 32     & 48     \\ \hline
-		{\bf Tiempo}           & 16,522 & 11,630 & 7,797 & 9,377 & 14,371 & 27,663 & 31,371 \\ \hline
-	\end{tabular}	
-	\caption{Tiempos de ejecución obtenidos en la primera implementación paralela}
-\end{table}
+		\multicolumn{1}{|c|}{{\bf Número de threads}} & \multicolumn{1}{c|}{{\bf Serie}} & \multicolumn{1}{c|}{{\bf 2}} & \multicolumn{1}{c|}{{\bf 4}} & \multicolumn{1}{c|}{{\bf 8}} & \multicolumn{1}{c|}{{\bf 16}} & \multicolumn{1}{c|}{{\bf 32}} & \multicolumn{1}{c|}{{\bf 48}} \\ \hline
+		\multicolumn{1}{|c|}{{\bf Tiempo (s)}}           & \multicolumn{1}{c|}{16,52}      & \multicolumn{1}{c|}{11,63}  & \multicolumn{1}{c|}{7,80}   & \multicolumn{1}{c|}{9,38}   & \multicolumn{1}{c|}{14,37}   & \multicolumn{1}{c|}{27,66}   & \multicolumn{1}{c|}{31,37}   \\ \hline
+		\multicolumn{1}{l}{}                         & \multicolumn{1}{l}{}             & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          \\ \hline
+		\multicolumn{1}{|c|}{{\bf Speed-up}}         & \multicolumn{1}{c|}{1,00}        & \multicolumn{1}{c|}{1,42}    & \multicolumn{1}{c|}{2,12}    & \multicolumn{1}{c|}{1,76}    & \multicolumn{1}{c|}{1,15}     & \multicolumn{1}{c|}{0,60}     & \multicolumn{1}{c|}{0,53}     \\ \hline
+		{\bf }                                       &                                  &                              &                              &                              &                               &                               &                               \\ \hline
+		\multicolumn{1}{|c|}{{\bf Eficiencia}}       & \multicolumn{1}{c|}{100,00\%}    & \multicolumn{1}{c|}{71,03\%} & \multicolumn{1}{c|}{52,98\%} & \multicolumn{1}{c|}{22,02\%} & \multicolumn{1}{c|}{7,19\%}   & \multicolumn{1}{c|}{1,87\%}   & \multicolumn{1}{c|}{1,10\%}   \\ \hline
+	\end{tabular}
+	\caption{Rendimiento de las ejecuciones de la primera implementación paralela}
+\end{table}	
+
 
 \begin{figure}[H]
  	\captionsetup{justification=centering}
@@ -1209,13 +1223,15 @@ Como se puede observar en la figura \ref{grafico1Imple}, esta primera implementa
 
 \subsubsection{Conclusión}
 
-Se sospecha que la sección crítica está siendo el <<cuello de botella>> en esta implementación ya que esta se hace prácticamente siempre, devido a que el contorno suele tender a expandirse, y puede que repetida varias veces por cada punto, al realizarse por cada nuevo vecino. 
+Se sospecha que la sección crítica está siendo el <<cuello de botella>> en esta implementación ya que esta se hace prácticamente siempre, debido a que el contorno suele tender a expandirse, y puede que repetida varias veces por cada punto, al realizarse por cada nuevo vecino. 
 
 \section{Primer paso de mejora: segunda implementación}
 
 Concluido ya que el problema está en la sección crítica se intenta reducir las operaciones dentro de esta reduciendo así el tiempo que cada \textit{thread} está dentro de ella. La <<sección crítica mejorada>> tendrá únicamente dos asignaciones, reduciendo considerablemente el tiempo dentro de ella. El flag se utilizará para saber qué \textit{thread} ha sido el que ha entrado a la sección crítica para posteriormente hacer la operación correspondiente.
 
 \newpage
+
+\subsubsection{Código}
 
 \begin{lstlisting}
  void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
@@ -1258,15 +1274,22 @@ Concluido ya que el problema está en la sección crítica se intenta reducir las o
 \subsection{Rendimiento}
 
 \begin{table}[h]
+	\small
 	\centering
 	\captionsetup{justification=centering}
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\begin{tabular}{cccccccc}
 		\hline
-		{\bf Número de thread} & Serie  & 2      & 4     & 8     & 16    & 32    & 48    \\ \hline
-		{\bf Tiempo}           & 16,513 & 10,741 & 6,575 & 5,420 & 3,678 & 6,021 & 6,787 \\ \hline
+		\multicolumn{1}{|c|}{{\bf Número de threads}} & \multicolumn{1}{c|}{{\bf Serie}} & \multicolumn{1}{c|}{{\bf 2}} & \multicolumn{1}{c|}{{\bf 4}} & \multicolumn{1}{c|}{{\bf 8}} & \multicolumn{1}{c|}{{\bf 16}} & \multicolumn{1}{c|}{{\bf 32}} & \multicolumn{1}{c|}{{\bf 48}} \\ \hline
+		\multicolumn{1}{|c|}{{\bf Tiempo (s)}}           & \multicolumn{1}{c|}{16,51}      & \multicolumn{1}{c|}{10,74}  & \multicolumn{1}{c|}{6,58}   & \multicolumn{1}{c|}{5,42}   & \multicolumn{1}{c|}{3,68}    & \multicolumn{1}{c|}{6,02}    & \multicolumn{1}{c|}{6,79}    \\ \hline
+		\multicolumn{1}{l}{}                         & \multicolumn{1}{l}{}             & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          \\ \hline
+		\multicolumn{1}{|c|}{{\bf Speed-up}}         & \multicolumn{1}{c|}{1,00}        & \multicolumn{1}{c|}{1,54}    & \multicolumn{1}{c|}{2,51}    & \multicolumn{1}{c|}{3,05}    & \multicolumn{1}{c|}{4,49}     & \multicolumn{1}{c|}{2,74}     & \multicolumn{1}{c|}{2,43}     \\ \hline
+		{\bf }                                       &                                  &                              &                              &                              &                               &                               &                               \\ \hline
+		\multicolumn{1}{|c|}{{\bf Eficiencia}}       & \multicolumn{1}{c|}{100,00\%}    & \multicolumn{1}{c|}{76,87\%} & \multicolumn{1}{c|}{62,79\%} & \multicolumn{1}{c|}{38,09\%} & \multicolumn{1}{c|}{28,06\%}  & \multicolumn{1}{c|}{8,57\%}   & \multicolumn{1}{c|}{5,07\%}   \\ \hline
 	\end{tabular}
-	\caption{Tiempos de ejecución de la segunda implementación}
+	\caption{Rendimiento obtenido de las ejecuciones de la segunda implementación paralela}
 \end{table}
+
+
 
 
 \begin{figure}[H]
@@ -1296,7 +1319,10 @@ Buscando alguna manera de realizar secciones críticas dependiente del punto se e
 \end{figure}
 
 En la imagen \ref{mallaLocks} se puede obsevar un ejemplo de una malla de \textit{locks} en la número de \textit{locks} establecido es 4 y tiene una forma rectangular. El número de óptimo de locks a establecer será lo que se trabaje en esta segunda implementación. Además, el lector podría pensar que se pueden realizar distintas figuras geométricas en la creación de la malla de \textit{locks}, aunque esta opción no se realizará en este proyecto ya que la estrategía de distribución de los puntos en las sublistas se realiza recorriendo la matriz por filas, lo que significa que los rectángulos darán una mejor respuesta temporal ya que habrá poca colisión entre los \textit{threads}.
-\newpage
+
+\
+
+\subsubsection{Código}
 
 \begin{lstlisting}
 void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
@@ -1341,8 +1367,115 @@ void ActiveContour::add_Rin_neighbor_to_Lin(int neighbor_offset,int tid)
 \subsection{Rendimiento}
 
 
+\begin{table}[h]
+	\centering
+	\small
+	\captionsetup{justification=centering}	
+	\scalebox{0.8}[1]{
+	\begin{tabular}{cccccccccccccc}
+		\hline
+		\multicolumn{1}{|c|}{{\bf \backslashbox{Locks}{Threads}}}      & \multicolumn{1}{c|}{{\bf 1}}  & \multicolumn{1}{c|}{{\bf 2}} & \multicolumn{1}{c|}{{\bf 4}} & \multicolumn{1}{c|}{{\bf 8}} & \multicolumn{1}{c|}{{\bf 16}} & \multicolumn{1}{c|}{{\bf 20}} & \multicolumn{1}{c|}{{\bf 24}} & \multicolumn{1}{c|}{{\bf 28}} & \multicolumn{1}{c|}{{\bf 32}} & \multicolumn{1}{c|}{{\bf 36}} & \multicolumn{1}{c|}{{\bf 40}} & \multicolumn{1}{c|}{{\bf 44}} & \multicolumn{1}{c|}{{\bf 48}} \\ \hline
+		\multicolumn{1}{|c|}{{\bf 4}}          & \multicolumn{1}{c|}{16,69}    & \multicolumn{1}{c|}{10,49}   & \multicolumn{1}{c|}{6,79}    & \multicolumn{1}{c|}{4,22}    & \multicolumn{1}{c|}{3,99}     & \multicolumn{1}{c|}{3,29}     & \multicolumn{1}{c|}{2,95}     & \multicolumn{1}{c|}{3,03}     & \multicolumn{1}{c|}{2,85}     & \multicolumn{1}{c|}{3,74}     & \multicolumn{1}{c|}{4,12}     & \multicolumn{1}{c|}{4,00}     & \multicolumn{1}{c|}{3,91}     \\ \hline
+		\multicolumn{1}{|c|}{{\bf 8}}          & \multicolumn{1}{c|}{16,64}    & \multicolumn{1}{c|}{10,64}   & \multicolumn{1}{c|}{7,03}    & \multicolumn{1}{c|}{5,73}    & \multicolumn{1}{c|}{3,93}     & \multicolumn{1}{c|}{3,87}     & \multicolumn{1}{c|}{3,28}     & \multicolumn{1}{c|}{2,96}     & \multicolumn{1}{c|}{2,72}     & \multicolumn{1}{c|}{3,81}     & \multicolumn{1}{c|}{4,06}     & \multicolumn{1}{c|}{4,06}     & \multicolumn{1}{c|}{3,91}     \\ \hline
+		\multicolumn{1}{|c|}{{\bf 16}}         & \multicolumn{1}{c|}{16,63}    & \multicolumn{1}{c|}{10,35}   & \multicolumn{1}{c|}{6,86}    & \multicolumn{1}{c|}{5,72}    & \multicolumn{1}{c|}{4,89}     & \multicolumn{1}{c|}{3,88}     & \multicolumn{1}{c|}{3,29}     & \multicolumn{1}{c|}{2,93}     & \multicolumn{1}{c|}{2,80}     & \multicolumn{1}{c|}{3,29}     & \multicolumn{1}{c|}{3,79}     & \multicolumn{1}{c|}{4,05}     & \multicolumn{1}{c|}{3,77}     \\ \hline
+		\multicolumn{1}{|c|}{{\bf 24}}         & \multicolumn{1}{c|}{16,61}    & \multicolumn{1}{c|}{10,52}   & \multicolumn{1}{c|}{6,85}    & \multicolumn{1}{c|}{5,42}    & \multicolumn{1}{c|}{3,26}     & \multicolumn{1}{c|}{3,19}     & \multicolumn{1}{c|}{3,32}     & \multicolumn{1}{c|}{2,92}     & \multicolumn{1}{c|}{2,70}     & \multicolumn{1}{c|}{3,48}     & \multicolumn{1}{c|}{3,98}     & \multicolumn{1}{c|}{3,83}     & \multicolumn{1}{c|}{3,68}     \\ \hline
+		\multicolumn{1}{|c|}{{\bf 32}}         & \multicolumn{1}{c|}{16,79}    & \multicolumn{1}{c|}{10,35}   & \multicolumn{1}{c|}{6,73}    & \multicolumn{1}{c|}{5,44}    & \multicolumn{1}{c|}{4,87}     & \multicolumn{1}{c|}{3,89}     & \multicolumn{1}{c|}{3,30}     & \multicolumn{1}{c|}{2,96}     & \multicolumn{1}{c|}{3,00}     & \multicolumn{1}{c|}{2,85}     & \multicolumn{1}{c|}{3,85}     & \multicolumn{1}{c|}{3,75}     & \multicolumn{1}{c|}{3,82}     \\ \hline
+		\multicolumn{1}{|c|}{{\bf 50}}         & \multicolumn{1}{c|}{16,73}    & \multicolumn{1}{c|}{10,33}   & \multicolumn{1}{c|}{6,60}    & \multicolumn{1}{c|}{5,40}    & \multicolumn{1}{c|}{4,84}     & \multicolumn{1}{c|}{3,89}     & \multicolumn{1}{c|}{3,29}     & \multicolumn{1}{c|}{2,93}     & \multicolumn{1}{c|}{2,80}     & \multicolumn{1}{c|}{3,28}     & \multicolumn{1}{c|}{3,81}     & \multicolumn{1}{c|}{3,74}     & \multicolumn{1}{c|}{3,66}     \\ \hline
+		{\bf }                                 &                               &                              &                              &                              &                               &                               &                               &                               &                               &                               &                               &                               &                               \\ \hline
+		\multicolumn{1}{|c|}{{\bf Speed-up}}   & \multicolumn{1}{c|}{1,00}     & \multicolumn{1}{c|}{1,59}    & \multicolumn{1}{c|}{2,46}    & \multicolumn{1}{c|}{3,96}    & \multicolumn{1}{c|}{4,18}     & \multicolumn{1}{c|}{5,08}     & \multicolumn{1}{c|}{5,65}     & \multicolumn{1}{c|}{5,52}     & \multicolumn{1}{c|}{5,86}     & \multicolumn{1}{c|}{4,46}     & \multicolumn{1}{c|}{4,05}     & \multicolumn{1}{c|}{4,18}     & \multicolumn{1}{c|}{4,27}     \\ \hline
+		{\bf }                                 &                               &                              &                              &                              &                               &                               &                               &                               &                               &                               &                               &                               &                               \\ \hline
+		\multicolumn{1}{|c|}{{\bf Eficiencia}} & \multicolumn{1}{c|}{100\%} & \multicolumn{1}{c|}{79\%} & \multicolumn{1}{c|}{61\%} & \multicolumn{1}{c|}{49\%} & \multicolumn{1}{c|}{26\%}  & \multicolumn{1}{c|}{25\%}  & \multicolumn{1}{c|}{23\%}  & \multicolumn{1}{c|}{19\%}  & \multicolumn{1}{c|}{18\%}  & \multicolumn{1}{c|}{12\%}  & \multicolumn{1}{c|}{10\%}  & \multicolumn{1}{c|}{9\%}   & \multicolumn{1}{c|}{8\%}   \\ \hline
+	\end{tabular}}
+	\caption{Rendimiento obtenido con distintas combinaciones de \textit{threads} y \textit{locks} en la tercera implementación paralela}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\captionsetup{justification=centering}	
+	\begin{tabular}{l}
+		\includegraphics[width=0.8\textwidth]{./imagenes/grafico2Imple} \\
+		\includegraphics[width=0.8\textwidth]{./imagenes/grafico3Imple}
+	\end{tabular}
+	\caption{Comparación de los resultados obtenidos en este tercera implementación con los obtenidos en la segunda}
+	\label{comparacionImplementaciones2-3}
+\end{table}
+
+Como se puede observar en los gráficos \ref{comparacionImplementaciones2-3} se ha mejorado aún más la respuesta temporal, escala bien hasta los 32 \textit{threads} en vez de hasta los 16 que se conseguían con la anterior implementación. Las ejecuciones más rápidas se logran con la combinación de 32 \textit{threads} y con 24 \textit{locks}, teniendo un resultado de 2,7 segundos. 
+
+Por otro lado también se han realizado pruebas con la primera implementación, es decir, con la <<sección crítica normal>>. Esto se refiere a que la sección la crearán los \textit{locks} pero lo que hay dentro será lo que había en la implementación de la <<sección crítica normal>>. Los resultados son los que se muestran en el gráfico \ref{grafico3-2Imple}. Como se puede observar el tiempo obtenido es prácticamente el conseguido con la última implementación realizada. Esto quiere decir que el problema de todo ello era la contención que había con todos los \textit{threads} y no importa tanto el tiempo que se pasa dentro de la sección crítica. Sin embargo, también ahí que decir que con la implementación de la <<sección crítica normal>> son necesarios más locks para evitar esa contención entre los \textit{threads} ya que la sección crítica es más larga.
+
+\begin{figure}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\includegraphics[width=.9\textwidth]{./imagenes/grafico3-2Imple}
+	\caption{Gráfica de los tiempos de ejecución con los locks y la estructura de la <<sección crítica normal>>}	
+	\label{grafico3-2Imple}
+\end{figure}
+
 
 \subsubsection{Conclusión}
+
+Ya que los resultados obtenidos con la última implementación y la primera son parecidos no se podrá reducir mucho más el tiempo en cuanto a la contención, ya que parece que a partir de cierto número de \textit{locks} esta desaparece. Así pués, la reducción tendría que hacerse de otro lado, o bien intentar reducir el tiempo que se realiza en paralelo o entrar en más detalle como la compartición falsa en la memoría caché que pudiera haber con ciertas variables de la implementación. El propio tiempo de gestión de los \textit{locks}, la compartición falsa en caché que pudiera haber con ciertas variables, la gestión de la sección paralela y la división y unión de las listas parece que añaden en total un \textit{overhead} que no se puede reducir. 
+
+En general el \textit{speed-up} máximo que se puede obtener viene determinado por la Ley de Amdahl que se muestra en la ecuación \ref{leyAmdahl}. Esta ley describe la relación entre el \textit{speed-up} esperado de la implementación paralela y de la implementación serie, siendo \textit{N} el número de procesadores y \textit{P} el porcentaje de 0 a 1 de la parte paralela del programa. Por lo que habrá un máximo de speed-up al paralelizar sólo cierta parte del código.
+
+\begin{equation}
+\frac{1}{(1 - P) + \frac{P}{N}}
+\label{leyAmdahl}
+\end{equation}
+
+
+
+
+
+
+
+
+
+\chapter{Rendimiento}
+
+En este cápitulo mostraremos el rendimiento de la mejor versión implementada, la tercera versión, aquella con la <<sección critica mejorada>> y haciendo uso de la malla de \textit{locks} con mas detalle. En las anteriores presentaciones de los rendimientos de las distintas implementaciones se ha utilizado un tipo de imagen, tamaño de esta e inicialización inicial del contorno. En este apartado realizaremos pruebas más completas, combinando distintos factores para ver mas detalladamente el comportamiento de la mejor versión de la paralelización. Además, se podrá llegar a concluir que tipo de combinación beneficia a la evolución del contorno en cierto tipo de imágenes.
+
+Se ha decidido probrar 3 tipos de imágenes diferentes, con varios tamaños de estas, varios tamaños de las mallas de \textit{locks} y varios \textit{threads}. En la figura \ref{tiposImagenes} se puede obsevar los tres tipos de imágenes diferentes que se utilizarán en la realización de dichas pruebas.
+
+
+\begin{figure}[H]
+	\centering	
+	\captionsetup{justification=centering}	
+	\begin{center}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.7\textwidth]{./imagenes/buena1}
+			\subcaption{}\label{buena1}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.8\textwidth]{./imagenes/ejemplo2}	
+			\subcaption{}\label{ejemplo2.1}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.8\textwidth]{./imagenes/buena3}	
+			\subcaption{}\label{buena3}
+		\end{subfigure}
+	\end{center}
+	\caption{Tipos de imágenes con las que se realizarán las pruebas completas de la tercera implementación}
+	\label{tiposImagenes}
+\end{figure} 
+
+
+\section{Primera imágen}
+
+La primera imágen a probar será la imágen \ref{buena1} 
+
+
+
+
+
+
+
+
+
 
 
 

@@ -44,20 +44,25 @@
 \contentsline {subsubsection}{Divisi\'on de la lista}{49}
 \contentsline {subsubsection}{Uni\'on de las sublistas}{50}
 \contentsline {subsubsection}{Secciones cr\IeC {\'\i }ticas}{51}
+\contentsline {subsubsection}{C\'odigo}{52}
 \contentsline {subsection}{\numberline {7.1.2}Rendimiento}{53}
 \contentsline {subsubsection}{Conclusi\'on}{54}
 \contentsline {section}{\numberline {7.2}Primer paso de mejora: segunda implementaci\'on}{54}
+\contentsline {subsubsection}{C\'odigo}{55}
 \contentsline {subsection}{\numberline {7.2.1}Rendimiento}{56}
 \contentsline {subsubsection}{Conclusi\'on}{56}
 \contentsline {section}{\numberline {7.3}Segundo paso de mejora: tercera implementaci\'on}{57}
+\contentsline {subsubsection}{C\'odigo}{58}
 \contentsline {subsection}{\numberline {7.3.1}Rendimiento}{59}
-\contentsline {subsubsection}{Conclusi\'on}{59}
-\contentsline {chapter}{\numberline {8}Funciones extras a\~nadidas en base a la segmentaci\'on}{61}
-\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{63}
-\contentsline {section}{\numberline {9.1}Gesti\'on del alcance}{63}
-\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{63}
-\contentsline {section}{\numberline {9.3}Gesti\'on de los riesgos}{63}
-\contentsline {section}{\numberline {9.4}Gesti\'on del costes}{63}
-\contentsline {chapter}{\numberline {10}Conclusiones}{65}
-\contentsline {chapter}{\numberline {11}Propuestas de mejora}{67}
-\contentsline {chapter}{Bibliograf\'{\i }a}{69}
+\contentsline {subsubsection}{Conclusi\'on}{61}
+\contentsline {chapter}{\numberline {8}Rendimiento}{63}
+\contentsline {section}{\numberline {8.1}Primera im\'agen}{64}
+\contentsline {chapter}{\numberline {9}Funciones extras a\~nadidas en base a la segmentaci\'on}{65}
+\contentsline {chapter}{\numberline {10}Gesti\'on del proyecto}{67}
+\contentsline {section}{\numberline {10.1}Gesti\'on del alcance}{67}
+\contentsline {section}{\numberline {10.2}Gesti\'on del tiempo}{67}
+\contentsline {section}{\numberline {10.3}Gesti\'on de los riesgos}{67}
+\contentsline {section}{\numberline {10.4}Gesti\'on del costes}{67}
+\contentsline {chapter}{\numberline {11}Conclusiones}{69}
+\contentsline {chapter}{\numberline {12}Propuestas de mejora}{71}
+\contentsline {chapter}{Bibliograf\'{\i }a}{73}
