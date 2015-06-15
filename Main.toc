@@ -57,12 +57,26 @@
 \contentsline {subsubsection}{Conclusi\'on}{61}
 \contentsline {chapter}{\numberline {8}Rendimiento}{63}
 \contentsline {section}{\numberline {8.1}Primera im\'agen}{64}
-\contentsline {chapter}{\numberline {9}Funciones extras a\~nadidas en base a la segmentaci\'on}{65}
-\contentsline {chapter}{\numberline {10}Gesti\'on del proyecto}{67}
-\contentsline {section}{\numberline {10.1}Gesti\'on del alcance}{67}
-\contentsline {section}{\numberline {10.2}Gesti\'on del tiempo}{67}
-\contentsline {section}{\numberline {10.3}Gesti\'on de los riesgos}{67}
-\contentsline {section}{\numberline {10.4}Gesti\'on del costes}{67}
-\contentsline {chapter}{\numberline {11}Conclusiones}{69}
-\contentsline {chapter}{\numberline {12}Propuestas de mejora}{71}
-\contentsline {chapter}{Bibliograf\'{\i }a}{73}
+\contentsline {subsubsection}{500x500}{65}
+\contentsline {subsubsection}{1500x1500}{66}
+\contentsline {subsubsection}{3000x3000}{67}
+\contentsline {subsubsection}{Resultado}{68}
+\contentsline {section}{\numberline {8.2}Segunda im\'agen}{68}
+\contentsline {subsubsection}{500x500}{69}
+\contentsline {subsubsection}{1500x1500}{70}
+\contentsline {subsubsection}{3000x3000}{71}
+\contentsline {subsubsection}{Resultado}{72}
+\contentsline {section}{\numberline {8.3}Tercera im\'agen}{72}
+\contentsline {subsubsection}{Tama\~no 500x500}{73}
+\contentsline {subsubsection}{Tama\~no 1500x1500}{74}
+\contentsline {subsubsection}{Tama\~no 3000x3000}{75}
+\contentsline {subsubsection}{Resultado}{76}
+\contentsline {chapter}{\numberline {9}Funciones extras a\~nadidas en base a la segmentaci\'on}{77}
+\contentsline {chapter}{\numberline {10}Gesti\'on del proyecto}{79}
+\contentsline {section}{\numberline {10.1}Gesti\'on del alcance}{79}
+\contentsline {section}{\numberline {10.2}Gesti\'on del tiempo}{79}
+\contentsline {section}{\numberline {10.3}Gesti\'on de los riesgos}{79}
+\contentsline {section}{\numberline {10.4}Gesti\'on del costes}{79}
+\contentsline {chapter}{\numberline {11}Conclusiones}{81}
+\contentsline {chapter}{\numberline {12}Propuestas de mejora}{83}
+\contentsline {chapter}{Bibliograf\'{\i }a}{85}

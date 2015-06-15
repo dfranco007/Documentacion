@@ -23,11 +23,20 @@
 \contentsline {table}{\numberline {7.4}{\ignorespaces Comparaci\'on de los resultados obtenidos en este tercera implementaci\'on con los obtenidos en la segunda\relax }}{60}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Rendimiento}{63}
+\contentsline {table}{\numberline {8.1}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena1} con un tama\~no de 500x500\relax }}{65}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena1} con un tama\~no de 1500x1500\relax }}{66}
+\contentsline {table}{\numberline {8.3}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena1} con un tama\~no de 3000x3000\relax }}{67}
+\contentsline {table}{\numberline {8.4}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena2} con un tama\~no de 500x500\relax }}{69}
+\contentsline {table}{\numberline {8.5}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena2} con un tama\~no de 1500x1500\relax }}{70}
+\contentsline {table}{\numberline {8.6}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena2} con un tama\~no de 3000x3000\relax }}{71}
+\contentsline {table}{\numberline {8.7}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena3} con un tama\~no de 500x500\relax }}{73}
+\contentsline {table}{\numberline {8.8}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena3} con un tama\~no de 1500x1500\relax }}{74}
+\contentsline {table}{\numberline {8.9}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena3} con un tama\~no de 3000x3000\relax }}{75}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{65}
+\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{77}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{67}
+\contentsline {xchapter}{Gesti\'on del proyecto}{79}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{69}
+\contentsline {xchapter}{Conclusiones}{81}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Propuestas de mejora}{71}
+\contentsline {xchapter}{Propuestas de mejora}{83}
