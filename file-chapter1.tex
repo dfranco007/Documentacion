@@ -9,7 +9,7 @@ Una vez realizadas estas tareas, se requiere paralelizar el tipo de técnica de s
 
 \section{Motivación}
 
-Como se explicará más adelante en el apartado \ref{cap:EvoSeg} la segmentación es algo que ha avanzado mucho durante las últimas décadas. Esto se debe a que muchas de las tecnologías que utilizamos diaríamente hacen uso en cierta manera de la segmentación de imagen para realizar ciertas funciones. La segmentación de imagen está presente en la  detección de movimiento y posicionamiento humano en las consolas, en aplicaciones fotográficas en las que se detectan los rostros humanos, en imágenes de satélites espaciales para la predicción temporal del telediario, en la localización de tumores u otros síntomas patológicos en radiografías médicas etc. 
+Como se explicará más adelante en el apartado \ref{cap:EvoSeg} la segmentación es algo que ha avanzado mucho durante las últimas décadas. Esto se debe a que muchas de las tecnologías que utilizamos diaríamente hacen uso en cierta manera de la segmentación de imagen para realizar ciertas funciones. La segmentación de imagen está presente en la  detección de movimiento y posicionamiento humano en las consolas, en aplicaciones fotográficas en las que se detectan los rostros humanos, en imágenes de satélites espaciales para la predicción meteorológica, en la localización de tumores u otros síntomas patológicos en radiografías médicas etc. 
 
 Aparte de ayudar a mejorar ciertas funciones de la vida cotidiana, la segmentación se ha vuelto en muchos campos como la medicina indispensable para hacer ciertos trabajos. Por no decir, que es la pieza clave en trabajos como la cirugía robotizada, ya que es necesario que al estar realizando la operación se detecten con precisión todas las partes físicas del cuerpo humano para no poner en riesgo la vida del paciente. Otra utilidad también sería la reconstrucción craneal y/o cerebral en 3D de pacientes.
 
@@ -23,19 +23,66 @@ En conclusión, la paralelización de métodos de segmentación está a la <<orden de
 
 Este documento está estructurado en varios apartados. 
 
-En la primera parte de la documentación, formada por el primer capítulo, se presentan varios conceptos básicos: la definición de la segmentación y la evolución histórica de esta. Realizada esta introducción, se comentan las aplicaciones que hoy en día tiene este ámbito que, como se podrá observar, serán muchas. Con esta primera parte se espera poder ubicar al lector sobre este análisis de imágenes, pieza angular de este proyecto, para que pueda entender correctamente el resto de la documentación.
+La primera parte de la documentación está formada por el primer, segundo, tercer y cuarto capítulo. Se presentan varios conceptos básicos: la definición de la segmentación y la evolución histórica de esta. Realizada esta introducción, se comentan las aplicaciones que hoy en día tiene este ámbito que, como se podrá observar, serán muchas. Con esta primera parte se espera poder ubicar al lector sobre este análisis de imágenes, pieza angular de este proyecto, para que pueda entender correctamente el resto de la documentación. Más adelante se presenta una clasificación de los diferentes tipos de segmentación de imágenes, explicando individualmente sus características y trabajos que se hayan realizado de estas técnicas. Al final de esta primera parte se centra en una técnica de segmentación concreta: \textit{Level Set}. Se comentarán variaciones de la técnica y mejoras hasta llegar a una aproximación la cuál mejorará el tiempo de ejecución significativamente y con la que se ha trabajado en el proyecto. Se trabajará en base a un trabajo que tiene las características idoneas para abordar el proyecto \cite{ofeli}. 
 
-En la segunda parte, formada por el segundo y tercer capítulo, se presenta una clasificación de los diferentes tipos de segmentación de imágenes, explicando individualmente sus características y trabajos que se hayan realizado de estas técnicas. 
+En la segunda parte del documento, formada por el quinto, sexto y séptimo capítulo, se encuentra todo lo relacionado con la paralelización de la técnica utilizada. La primera toma de contacto o la primera propuesta de paralelización creada, las posteriores fases desarrolladas, las conclusiones y decisiones tomadas con cada fase y las respuestas temporales y rendimientos.
 
-La cuarta parte, que lo forma el cuarto capítulo, se centra en la gestión con el cliente del DIPC. Se nombran sus necesidades, requisitos mínimos y extras necesarios para el desarrollo de su proyecto.
+En la tercera y última parte, formada por el octavo, noveno y décimo capítulo, se presentan las conclusiones del trabajo realizado, algunos aspectos de la gestión del mismo y varias propuesta de mejora. Al final del documento puede encontrase la bibliografía y los anexos.
 
-La quinta parte de la documentación, formada por el quinto y sexto capítulo, se centra en una técnica de segmentación concreta: \textit{Level Set}. Se comentarán variaciones de la técnica y mejoras hasta llegar a una aproximación la cuál mejorará el tiempo de ejecución significativamente y con la que se ha trabajado en el proyecto. Se trabajará en base a un trabajo encontrado que tiene las características idoneas para abordar el proyecto \cite{ofeli}. La explicación y de este trabajo se encuentra en el sexto capítulo.
 
-En la sexta parte del documento, formada por el séptimo y octavo capítulo, se encuentra todo lo relacionado con la paralelización dela técnica utilizada. La primera toma de contacto o la primera propuesta de paralelización creada, las posteriores fases desarrolladas, las conclusiones y decisiones tomadas con cada fase y las respuestas temporales y rendimientos.
+\section{Necesidades del cliente} 
+
+La primera toma de contacto con el director del proyecto interno de la fundación del DIPC fue en el mes de febrero. El proyecto que se está desarrollando es confidencial por lo que no se puede explicar en esta memoría ningún dato sobre el mismo exceptuando la parte que se ha desarrollado en este proyecto.
+Por lo que, lo primero que nos presentó el cliente fueron las necesidades que él tenía sobre la segmentación de imágenes.
+
+\section{Requisitos del proyecto del DIPC}
+
+En el proyecto que el cliente está desarrollando hay una parte que necesita realizar un tratamiento de una imagen para sacar de esta varias conclusiones. El cliente conoce la teoría sobre un algoritmo llamado \textit{level set} que realiza segmentación de imágenes con bastante precisión y que está bastante extendido. Sin embargo, no conoce ninguna implementación de este algoritmo ni el tiempo que puede costar realizar dicha segmentación. Recordando la introducción del proyecto, las imágenes se han sacado de una proyección en cierta lámina de materiales sintetizados mediante la deposición química de vapor, por lo que tendrán una apariencia similiar a las presentandas en la figura \ref{ejemploImagenes}. La principal tarea u objetivo que se deberá realizar en el proyecto es la siguiente:
+
+\begin{enumerate}
+		\item Realizar la segmentación en muy poco tiempo, en fracciones de segundo o en muy pocos segundos. De esta manera la técnica de segmentación podrá ser capaz de analizar un vídeo de la evolución de la deposición de estos materiales \textit{frame} a \textit{frame}.
+\end{enumerate}
+
+ Aparte del principal objetivo, el cliente también necesita varias tareas alternativas una vez realizada la segmentación de la imagen:
  
-En la séptima parte, formada por el octavo capítulo, se presentan las funcionalidades extra añadidas, a posteriori de la segmetnación, que ha necesitado el cliente para el desarrollo de su proyecto, intentando satisfaccer así todas sus necesidades.
+\begin{enumerate}
+	\item Determinar el número de islas existentes
+	\item Porcentaje de recubrimiento de las islas respecto al tamaño de la imagen
+	\item Aislamiento de cada isla 
+	\item Densisdad espectral de cada isla
+	\item Lo que todo ello implica: encontrar las islas\protect\footnotemark contenidas en la imagen
+\end{enumerate}
+\footnotetext{se llamará <<isla>> a cada superficie que se distinga sobre el fondo de la imagen. Ver ejemplo en \ref{ejemplo1}}
 
-En la última parte, noveno capítulo, se presentan las conclusiones del trabajo realizado y algunos aspectos de la gestión del mismo. Al final del documento puede encontrase la bibliografía y los anexos.
+\begin{figure}[H]
+	\captionsetup{justification=centering}	
+	\begin{center}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo1}
+			\subcaption{}\label{ejemplo1}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo2}
+			\subcaption{}\label{ejemplo2}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo3}
+			\subcaption{}\label{ejemplo3}
+		\end{subfigure}
+		\begin{subfigure}[t]{2.5in}
+			\centering
+			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo4}
+			\subcaption{}\label{ejemplo4}
+		\end{subfigure}
+	\end{center}
+	\caption{Ejemplo de proyecciones en láminas de materiales sintetizados mediante la deposición química de vapor}	
+	\label{ejemploImagenes}
+\end{figure}
+Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{ejemplo1} o muy juntas como en la imagen \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.
+
 
 
 
@@ -645,66 +692,10 @@ Aparte de las técnicas que no se han explicado hay que decir que existen muchas 
 
 
 
-\chapter{Necesidades del cliente} 
-
-La primera toma de contacto con el director del proyecto interno de la fundación del DIPC fue en el mes de febrero. El proyecto que se está desarrollando es confidencial por lo que no se puede explicar en esta memoría ningún dato sobre el mismo exceptuando la parte que se ha desarrollado en este proyecto.
-Por lo que, lo primero que nos presentó el cliente fueron las necesidades que el tenía sobre la segmentación de imágenes.
-
-\section{Requisitos del proyecto del DIPC}
-
-El en proyecto que el cliente está desarrollando hay una parte que necesita realizar un tratamiento de una imagen para sacar de esta varias conclusiones. El cliente conoce la teoría sobre un algoritmo llamado \textit{level set} que realiza segmentación de imágenes con bastante precisión y que está bastante extendido. Sin embargo, no conoce ninguna implementación de este algoritmo ni el tiempo que puede costar realizar dicha segmentación. Recordando la introducción del proyecto, las imágenes se han sacado de una proyección en cierta lámina de materiales sintetizados mediante la deposición química de vapor, por lo que tendrán una apariencia similiar a las presentandas en la figura \ref{ejemploImagenes}. Las características que el cliente quiere obtener de la imagen son las siguientes:
-
-\begin{enumerate}
-	\item Encontrar las islas\protect\footnotemark contenidas en la imagen
-	\item Determinar el número de islas existentes
-	\item Porcentaje de recubrimiento de las islas respecto al tamaño de la imagen
-	\item Aislamiento de cada isla 
-	\item Densisdad espectral de cada isla
-\end{enumerate}
-\footnotetext{se llamará <<isla>> a cada superficie que se distinga sobre el fondo de la imagen. Ver ejemplo en \ref{ejemplo1}}
-
-\begin{figure}[H]
-	\captionsetup{justification=centering}	
-	\begin{center}
-		\begin{subfigure}[t]{2.5in}
-			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo1}
-			\subcaption{}\label{ejemplo1}
-		\end{subfigure}
-		\begin{subfigure}[t]{2.5in}
-			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo2}
-			\subcaption{}\label{ejemplo2}
-		\end{subfigure}
-		\begin{subfigure}[t]{2.5in}
-			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo3}
-			\subcaption{}\label{ejemplo3}
-		\end{subfigure}
-		\begin{subfigure}[t]{2.5in}
-			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo4}
-			\subcaption{}\label{ejemplo4}
-		\end{subfigure}
-	\end{center}
-	\caption{Ejemplo de proyecciones en láminas de materiales sintetizados mediante la deposición química de vapor}	
-	\label{ejemploImagenes}
-\end{figure}
-Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{ejemplo1} o muy juntas como en la imagen \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.
-
-\section{Necesidades extra}
-
-Aparte de los principales requisitos también se propusieron necesidades extras que el proyecto del cliente necesitaría. Estas son las necesidades extra:
-
-\begin{enumerate}
-	\item Realizar la segmentación en muy poco tiempo, en fracciones de segundo o en muy pocos segundos.
-	\item Ser capaz de analizar un vídeo de la evolución de la deposición de estos materiales \textit{frame} a \textit{frame}. Para ello es necesario cumplir con la anterior idea, ya que un vídeo esta compuesto en cada segundo por multiples \textit{frames}.
-\end{enumerate}
-
 
 \chapter{Optimizaciones y mejoras del \textit{level set} original} 
 
-Como se ha dado a conocer en el capítulo \ref{sec:conclusiones} hay muchos tipos de mejoras y optimizaciones de cada técnica de segmentación existentes. A la hora de afrontar el problema que el cliente proponía se tenía que elegir un tipo de segmentación de las técnicas estudiadas. Entre todas ellas se escogió el algortimo de \textit{level set}, por ser un algoritmo de segmentación famoso, lo que facilitaría la búsqueda de información sobre el, y además, el cliente había asegurado que se iban a tener buenos resultados con esta técnica según su propia experiencia. 
+Como se ha dado a conocer en el capítulo \ref{sec:conclusiones} hay muchos tipos de mejoras y optimizaciones de cada técnica de segmentación existentes. A la hora de afrontar el problema que el cliente proponía se tenía que elegir un tipo de segmentación de las técnicas estudiadas. Entre todas ellas se escogió el algortimo de \textit{level set}, por ser un algoritmo de segmentación ampliamente utilizado, lo que facilitaría la búsqueda de información sobre él. Además, el cliente recomendaba esta técnica, ya que aseguraba que se iban a obtener buenos resultados con esta técnica. 
 
 Repasando este algoritmo, las ventajas que tiene son que la segmentación conseguida es precisa y que no añade sobrecoste al hacer la división o unión del contorno. Sin embargo, el algoritmo se basa en la resolución de ecuaciones diferenciales, lo que supone que el algoritmo sea costoso y lento. Se han desarrollado varias implementaciones en GPU \cite{eri2015}, también sobre imágenes 3D \cite{aaron1} y hasta en proyectos de fin de carrera también se utilizan GPUs \cite{cudaseg} etc. De la misma manera, también se han desarrollado paralelizaciones en arquitecturas SMP(\textit{Symmetric Multi-Processing}) \cite{jeon1} o en arquitecturas de memoria distrbuida con MPI(\textit{Message Passing Interface})  \cite{moha1}. 
 
