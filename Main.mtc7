@@ -1,17 +1,15 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Planteamiento de la paralelizaci\'on}{\reset@font\mtcSfont 45}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.1}Primera implementaci\'on}{\reset@font\mtcSSfont 48}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Lista enlazada}{\reset@font\mtcSSSfont 49}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Divisi\'on de la lista}{\reset@font\mtcSSSfont 49}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Uni\'on de las sublistas}{\reset@font\mtcSSSfont 50}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Secciones cr\IeC {\'\i }ticas}{\reset@font\mtcSSSfont 51}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 52}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.1.2}Rendimiento}{\reset@font\mtcSSfont 53}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Conclusi\'on}{\reset@font\mtcSSSfont 54}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Primer paso de mejora: segunda implementaci\'on}{\reset@font\mtcSfont 54}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 55}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.2.1}Rendimiento}{\reset@font\mtcSSfont 56}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Conclusi\'on}{\reset@font\mtcSSSfont 56}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Segundo paso de mejora: tercera implementaci\'on}{\reset@font\mtcSfont 57}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 58}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {7.3.1}Rendimiento}{\reset@font\mtcSSfont 59}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Conclusi\'on}{\reset@font\mtcSSSfont 61}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.1}Primera imagen}{\reset@font\mtcSfont 60}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode 500x500}{\reset@font\mtcSSSfont 61}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode 1500x1500}{\reset@font\mtcSSSfont 62}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode 3000x3000}{\reset@font\mtcSSSfont 63}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultado}{\reset@font\mtcSSSfont 64}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.2}Segunda imagen}{\reset@font\mtcSfont 64}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode 500x500}{\reset@font\mtcSSSfont 65}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode 1500x1500}{\reset@font\mtcSSSfont 66}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode 3000x3000}{\reset@font\mtcSSSfont 67}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultado}{\reset@font\mtcSSSfont 68}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {7.3}Tercera imagen}{\reset@font\mtcSfont 68}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Tama\~no 500x500}{\reset@font\mtcSSSfont 69}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Tama\~no 1500x1500}{\reset@font\mtcSSSfont 70}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Tama\~no 3000x3000}{\reset@font\mtcSSSfont 71}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Resultado}{\reset@font\mtcSSSfont 72}}

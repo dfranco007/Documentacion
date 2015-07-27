@@ -2,81 +2,79 @@
 \contentsline {chapter}{\numberline {1}Introducci\'on}{1}
 \contentsline {section}{\numberline {1.1}Motivaci\'on}{1}
 \contentsline {section}{\numberline {1.2}Estructura de la memoria}{2}
-\contentsline {chapter}{\numberline {2}Conceptos b\'asicos}{5}
-\contentsline {section}{\numberline {2.1}Definici\'on de segmentaci\'on}{5}
-\contentsline {section}{\numberline {2.2}Evoluci\'on de la segmentaci\'on}{5}
-\contentsline {section}{\numberline {2.3}Aplicaciones}{7}
-\contentsline {chapter}{\numberline {3}Clasificaci\'on de t\'ecnicas de segmentaci\'on}{9}
-\contentsline {section}{\numberline {3.1}Introducci\'on}{9}
-\contentsline {section}{\numberline {3.2}Segmentaci\'on de imagen basada en el tratamiento de los \textit {pixels}}{10}
-\contentsline {subsection}{\numberline {3.2.1}Thresholding}{10}
-\contentsline {subsection}{\numberline {3.2.2}Clustering}{13}
-\contentsline {subsection}{\numberline {3.2.3}Morphology}{14}
-\contentsline {section}{\numberline {3.3}Segmentaci\'on de imagen basada en la detecci\'on de bordes}{15}
-\contentsline {subsection}{\numberline {3.3.1}Detecci\'on de borde usando gradientes}{16}
-\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Roberts operator}{16}
-\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Sobel operator}{17}
-\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Prewitt operator}{17}
-\contentsline {subsection}{\numberline {3.3.2}Active Contours}{18}
-\contentsline {subsection}{\numberline {3.3.3}Level set}{20}
-\contentsline {section}{\numberline {3.4}Segmentaci\'on de imagen basada en regiones crecientes}{22}
-\contentsline {subsection}{\numberline {3.4.1}Region growing}{22}
-\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax \textit {Region growing} o \textit {Seeded-based region growing segmentation}}{23}
-\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Watershed}{25}
-\contentsline {subsection}{\numberline {3.4.2}Split/Merge}{27}
-\contentsline {subsection}{\numberline {3.4.3}Graph cut}{27}
-\contentsline {section}{\numberline {3.5}Conclusiones de los tipos de segmentaci\'on}{28}
-\contentsline {chapter}{\numberline {4}Necesidades del cliente}{29}
-\contentsline {section}{\numberline {4.1}Requisitos del proyecto del DIPC}{29}
-\contentsline {section}{\numberline {4.2}Necesidades extra}{31}
-\contentsline {chapter}{\numberline {5}Optimizaciones y mejoras del \textit {level set} original}{33}
-\contentsline {section}{\numberline {5.1}Aproximaci\'on a la t\'ecnica de \textit {level set}}{34}
-\contentsline {subsubsection}{Algoritmo}{36}
-\contentsline {section}{\numberline {5.2}Evoluci\'on del contorno}{40}
-\contentsline {chapter}{\numberline {6}Implementaci\'on de la aproximaci\'on y Ofeli}{41}
-\contentsline {section}{\numberline {6.1}Ofeli}{41}
-\contentsline {subsection}{\numberline {6.1.1}Estructura}{41}
-\contentsline {subsection}{\numberline {6.1.2}Esquema general}{43}
-\contentsline {chapter}{\numberline {7}Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
-\contentsline {section}{\numberline {7.1}Planteamiento de la paralelizaci\'on}{45}
-\contentsline {subsection}{\numberline {7.1.1}Primera implementaci\'on}{48}
-\contentsline {subsubsection}{Lista enlazada}{49}
-\contentsline {subsubsection}{Divisi\'on de la lista}{49}
-\contentsline {subsubsection}{Uni\'on de las sublistas}{50}
-\contentsline {subsubsection}{Secciones cr\IeC {\'\i }ticas}{51}
-\contentsline {subsubsection}{C\'odigo}{52}
-\contentsline {subsection}{\numberline {7.1.2}Rendimiento}{53}
+\contentsline {section}{\numberline {1.3}Objetivos y necesidades del cliente}{3}
+\contentsline {chapter}{\numberline {2}Conceptos b\'asicos}{7}
+\contentsline {section}{\numberline {2.1}Definici\'on de segmentaci\'on}{7}
+\contentsline {section}{\numberline {2.2}Evoluci\'on de la segmentaci\'on}{7}
+\contentsline {section}{\numberline {2.3}Aplicaciones}{9}
+\contentsline {chapter}{\numberline {3}Clasificaci\'on de t\'ecnicas de segmentaci\'on}{11}
+\contentsline {section}{\numberline {3.1}Introducci\'on}{11}
+\contentsline {section}{\numberline {3.2}Segmentaci\'on de imagen basada en el tratamiento de los \textit {p\IeC {\'\i }xeles}}{12}
+\contentsline {subsection}{\numberline {3.2.1}Thresholding}{12}
+\contentsline {subsection}{\numberline {3.2.2}Clustering}{15}
+\contentsline {subsection}{\numberline {3.2.3}Morphology}{16}
+\contentsline {section}{\numberline {3.3}Segmentaci\'on de imagen basada en la detecci\'on de bordes}{17}
+\contentsline {subsection}{\numberline {3.3.1}Detecci\'on de borde usando gradientes}{18}
+\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Roberts operator}{18}
+\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Sobel operator}{19}
+\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Prewitt operator}{19}
+\contentsline {subsection}{\numberline {3.3.2}Active Contours}{20}
+\contentsline {subsection}{\numberline {3.3.3}Level set}{22}
+\contentsline {section}{\numberline {3.4}Segmentaci\'on de imagen basada en regiones crecientes}{24}
+\contentsline {subsection}{\numberline {3.4.1}Region growing}{24}
+\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax \textit {Region growing} o \textit {Seeded-based region growing segmentation}}{25}
+\contentsline {subsubsection}{$\blacksquare $ \hskip 1em\relax Watershed}{27}
+\contentsline {subsection}{\numberline {3.4.2}Split/Merge}{29}
+\contentsline {subsection}{\numberline {3.4.3}Graph cut}{29}
+\contentsline {section}{\numberline {3.5}Conclusiones de los tipos de segmentaci\'on}{30}
+\contentsline {chapter}{\numberline {4}Optimizaciones y mejoras del \textit {level set} original}{31}
+\contentsline {section}{\numberline {4.1}Introducci\'on}{31}
+\contentsline {section}{\numberline {4.2}Aproximaci\'on a la t\'ecnica de \textit {level set}}{32}
+\contentsline {subsubsection}{Algoritmo}{34}
+\contentsline {section}{\numberline {4.3}Evoluci\'on del contorno}{38}
+\contentsline {chapter}{\numberline {5}Implementaci\'on de la aproximaci\'on y Ofeli}{39}
+\contentsline {section}{\numberline {5.1}Ofeli}{39}
+\contentsline {subsection}{\numberline {5.1.1}Estructura}{39}
+\contentsline {subsection}{\numberline {5.1.2}Esquema general}{41}
+\contentsline {chapter}{\numberline {6}Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{43}
+\contentsline {section}{\numberline {6.1}Planteamiento de la paralelizaci\'on}{44}
+\contentsline {subsection}{\numberline {6.1.1}Primera implementaci\'on}{46}
+\contentsline {subsubsection}{Lista enlazada}{47}
+\contentsline {subsubsection}{Divisi\'on de la lista}{47}
+\contentsline {subsubsection}{Uni\'on de las sublistas}{48}
+\contentsline {subsubsection}{Secciones cr\IeC {\'\i }ticas}{49}
+\contentsline {subsubsection}{C\'odigo}{50}
+\contentsline {subsection}{\numberline {6.1.2}Rendimiento}{51}
+\contentsline {subsubsection}{Conclusi\'on}{52}
+\contentsline {section}{\numberline {6.2}Primer paso de mejora: segunda implementaci\'on}{52}
+\contentsline {subsubsection}{C\'odigo}{53}
+\contentsline {subsection}{\numberline {6.2.1}Rendimiento}{53}
 \contentsline {subsubsection}{Conclusi\'on}{54}
-\contentsline {section}{\numberline {7.2}Primer paso de mejora: segunda implementaci\'on}{54}
+\contentsline {section}{\numberline {6.3}Segundo paso de mejora: tercera implementaci\'on}{54}
 \contentsline {subsubsection}{C\'odigo}{55}
-\contentsline {subsection}{\numberline {7.2.1}Rendimiento}{56}
-\contentsline {subsubsection}{Conclusi\'on}{56}
-\contentsline {section}{\numberline {7.3}Segundo paso de mejora: tercera implementaci\'on}{57}
-\contentsline {subsubsection}{C\'odigo}{58}
-\contentsline {subsection}{\numberline {7.3.1}Rendimiento}{59}
-\contentsline {subsubsection}{Conclusi\'on}{61}
-\contentsline {chapter}{\numberline {8}Rendimiento}{63}
-\contentsline {section}{\numberline {8.1}Primera im\'agen}{64}
+\contentsline {subsection}{\numberline {6.3.1}Rendimiento}{56}
+\contentsline {subsubsection}{Conclusi\'on}{58}
+\contentsline {chapter}{\numberline {7}Experimentaci\'on}{59}
+\contentsline {section}{\numberline {7.1}Primera imagen}{60}
+\contentsline {subsubsection}{500x500}{61}
+\contentsline {subsubsection}{1500x1500}{62}
+\contentsline {subsubsection}{3000x3000}{63}
+\contentsline {subsubsection}{Resultado}{64}
+\contentsline {section}{\numberline {7.2}Segunda imagen}{64}
 \contentsline {subsubsection}{500x500}{65}
 \contentsline {subsubsection}{1500x1500}{66}
 \contentsline {subsubsection}{3000x3000}{67}
 \contentsline {subsubsection}{Resultado}{68}
-\contentsline {section}{\numberline {8.2}Segunda im\'agen}{68}
-\contentsline {subsubsection}{500x500}{69}
-\contentsline {subsubsection}{1500x1500}{70}
-\contentsline {subsubsection}{3000x3000}{71}
+\contentsline {section}{\numberline {7.3}Tercera imagen}{68}
+\contentsline {subsubsection}{Tama\~no 500x500}{69}
+\contentsline {subsubsection}{Tama\~no 1500x1500}{70}
+\contentsline {subsubsection}{Tama\~no 3000x3000}{71}
 \contentsline {subsubsection}{Resultado}{72}
-\contentsline {section}{\numberline {8.3}Tercera im\'agen}{72}
-\contentsline {subsubsection}{Tama\~no 500x500}{73}
-\contentsline {subsubsection}{Tama\~no 1500x1500}{74}
-\contentsline {subsubsection}{Tama\~no 3000x3000}{75}
-\contentsline {subsubsection}{Resultado}{76}
-\contentsline {chapter}{\numberline {9}Funciones extras a\~nadidas en base a la segmentaci\'on}{77}
-\contentsline {chapter}{\numberline {10}Gesti\'on del proyecto}{79}
-\contentsline {section}{\numberline {10.1}Gesti\'on del alcance}{79}
-\contentsline {section}{\numberline {10.2}Gesti\'on del tiempo}{79}
-\contentsline {section}{\numberline {10.3}Gesti\'on de los riesgos}{79}
-\contentsline {section}{\numberline {10.4}Gesti\'on del costes}{79}
-\contentsline {chapter}{\numberline {11}Conclusiones}{81}
-\contentsline {chapter}{\numberline {12}Propuestas de mejora}{83}
-\contentsline {chapter}{Bibliograf\'{\i }a}{85}
+\contentsline {chapter}{\numberline {8}Gesti\'on del proyecto}{73}
+\contentsline {section}{\numberline {8.1}Gesti\'on del alcance}{73}
+\contentsline {section}{\numberline {8.2}Gesti\'on del tiempo}{73}
+\contentsline {section}{\numberline {8.3}Gesti\'on de los riesgos}{73}
+\contentsline {section}{\numberline {8.4}Gesti\'on del costes}{73}
+\contentsline {chapter}{\numberline {9}Conclusiones}{75}
+\contentsline {section}{\numberline {9.1}L\IeC {\'\i }neas futuras}{75}
+\contentsline {chapter}{Bibliograf\'{\i }a}{77}

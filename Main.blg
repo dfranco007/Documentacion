@@ -1,18 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: Main.aux
 The style file: unsrt.bst
 Database file #1: file-bibliography.bib
-I was expecting a `,' or a `}'---line 130 of file file-bibliography.bib
- : 
- : note ={https://code.google.com/p/ofeli/}
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Warning--empty journal in ofeli
 Warning--empty publisher in zhang1
-Warning--empty journal in eri2015
-Warning--empty journal in aaron1
-Warning--empty journal in jeon1
-Warning--empty journal in moha1
 Warning--empty journal in yong1
 Warning--empty journal in chan
 Warning--empty journal in gitHub1
-(There was 1 error message)
+(There were 4 warnings)

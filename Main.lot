@@ -2,41 +2,35 @@
 \addvspace {10\p@ }
 \contentsline {xchapter}{Introducci\'on}{1}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conceptos b\'asicos}{5}
+\contentsline {xchapter}{Conceptos b\'asicos}{7}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Clasificaci\'on de t\'ecnicas de segmentaci\'on}{9}
-\contentsline {table}{\numberline {3.1}{\ignorespaces M\'ascaras utilizadas por el operador de Roberts de tama\~no 2x2\relax }}{17}
-\contentsline {table}{\numberline {3.2}{\ignorespaces M\'ascaras utilizadas por el operador de Sobel de tama\~no 3x3\relax }}{17}
-\contentsline {table}{\numberline {3.3}{\ignorespaces M\'ascaras utilizadas por el operador de Prewitt de tama\~no 3x3\relax }}{17}
+\contentsline {xchapter}{Clasificaci\'on de t\'ecnicas de segmentaci\'on}{11}
+\contentsline {table}{\numberline {3.1}{\ignorespaces M\'ascaras utilizadas por el operador de Roberts de tama\~no 2x2\relax }}{19}
+\contentsline {table}{\numberline {3.2}{\ignorespaces M\'ascaras utilizadas por el operador de Sobel de tama\~no 3x3\relax }}{19}
+\contentsline {table}{\numberline {3.3}{\ignorespaces M\'ascaras utilizadas por el operador de Prewitt de tama\~no 3x3\relax }}{19}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Necesidades del cliente}{29}
+\contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{31}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{36}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Optimizaciones y mejoras del \textit {level set} original}{33}
-\contentsline {table}{\numberline {5.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{38}
+\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{41}
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{43}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Rendimiento de las ejecuciones de la primera implementaci\'on paralela\relax }}{51}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Rendimiento obtenido de las ejecuciones de la segunda implementaci\'on paralela\relax }}{53}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Rendimiento obtenido con distintas combinaciones de \textit {threads} y \textit {locks} en la tercera implementaci\'on paralela\relax }}{56}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparaci\'on de los resultados obtenidos en este tercera implementaci\'on con los obtenidos en la segunda\relax }}{57}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del \textit {level set}}{45}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Rendimiento de las ejecuciones de la primera implementaci\'on paralela\relax }}{53}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Rendimiento obtenido de las ejecuciones de la segunda implementaci\'on paralela\relax }}{56}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Rendimiento obtenido con distintas combinaciones de \textit {threads} y \textit {locks} en la tercera implementaci\'on paralela\relax }}{59}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Comparaci\'on de los resultados obtenidos en este tercera implementaci\'on con los obtenidos en la segunda\relax }}{60}
+\contentsline {xchapter}{Experimentaci\'on}{59}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 500x500\relax }}{61}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 1500x1500\relax }}{62}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{63}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 500x500\relax }}{65}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 1500x1500\relax }}{66}
+\contentsline {table}{\numberline {7.6}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 3000x3000\relax }}{67}
+\contentsline {table}{\numberline {7.7}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 500x500\relax }}{69}
+\contentsline {table}{\numberline {7.8}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 1500x1500\relax }}{70}
+\contentsline {table}{\numberline {7.9}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{71}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Rendimiento}{63}
-\contentsline {table}{\numberline {8.1}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena1} con un tama\~no de 500x500\relax }}{65}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena1} con un tama\~no de 1500x1500\relax }}{66}
-\contentsline {table}{\numberline {8.3}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena1} con un tama\~no de 3000x3000\relax }}{67}
-\contentsline {table}{\numberline {8.4}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena2} con un tama\~no de 500x500\relax }}{69}
-\contentsline {table}{\numberline {8.5}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena2} con un tama\~no de 1500x1500\relax }}{70}
-\contentsline {table}{\numberline {8.6}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena2} con un tama\~no de 3000x3000\relax }}{71}
-\contentsline {table}{\numberline {8.7}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena3} con un tama\~no de 500x500\relax }}{73}
-\contentsline {table}{\numberline {8.8}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena3} con un tama\~no de 1500x1500\relax }}{74}
-\contentsline {table}{\numberline {8.9}{\ignorespaces Tiempos de ejecuci\'on de la im\'agen \ref {buena3} con un tama\~no de 3000x3000\relax }}{75}
+\contentsline {xchapter}{Gesti\'on del proyecto}{73}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Funciones extras a\~nadidas en base a la segmentaci\'on}{77}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{79}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{81}
-\addvspace {10\p@ }
-\contentsline {xchapter}{Propuestas de mejora}{83}
+\contentsline {xchapter}{Conclusiones}{75}
