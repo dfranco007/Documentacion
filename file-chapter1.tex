@@ -1410,6 +1410,7 @@ void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
 		\multicolumn{1}{|l|}{}                                & {\bf 2}               & 10,49   & 10,64   & 10,35    & 10,52    & 10,35    & 10,33    & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{1,59}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{79,6\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
 		\multicolumn{1}{|l|}{}                                & {\bf 4}               & 6,79    & 7,03    & 6,86     & 6,85     & 6,73     & 6,60     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{2,46}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{61,5\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
 		\multicolumn{1}{|l|}{}                                & {\bf 8}               & 4,22    & 5,73    & 5,72     & 5,42     & 5,44     & 5,40     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{3,96}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{49,5\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 12}               & 4,10    & 4,63    & 4,31     & 4,53     & 5,11     & 5,12     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,07}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{33,9\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
 		\multicolumn{1}{|l|}{}                                & {\bf 16}              & 3,99    & 3,93    & 4,89     & 3,26     & 4,87     & 4,84     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,18}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{26,1\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
 		\multicolumn{1}{|l|}{}                                & {\bf 20}              & 3,29    & 3,87    & 3,88     & 3,19     & 3,89     & 3,89     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{5,08}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{25,4\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
 		\multicolumn{1}{|l|}{}                                & {\bf 24}              & 2,95    & 3,28    & 3,29     & 3,32     & 3,30     & 3,29     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{5,65}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{23,5\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
@@ -1457,9 +1458,9 @@ Ya que los resultados obtenidos con la última implementación y la primera son pa
 
 \chapter{Experimentación}
 
-En este capítulo mostraremos el rendimiento de la mejor versión implementada, la tercera versión, aquella con la <<sección critica mejorada>> y haciendo uso de la malla de \textit{locks} con mas detalle. En las anteriores presentaciones de los rendimientos de las distintas implementaciones se ha utilizado un tipo de imagen, tamaño de esta e inicialización inicial del contorno. En este apartado realizaremos pruebas más completas, combinando distintos factores para ver mas detalladamente el comportamiento de la mejor versión de la paralelización. Además, se podrá llegar a concluir que tipo de combinación beneficia a la evolución del contorno en cierto tipo de imágenes.
+En este capítulo mostraremos el rendimiento de la mejor versión implementada, la tercera versión, aquella con la <<sección critica mejorada>> y haciendo uso de la malla de \textit{locks} con más detalle. En las anteriores presentaciones de los rendimientos de las distintas implementaciones se ha utilizado un tipo concreto de imagen, con un tamaño determinado (3000x2800) y una inicialización específica del contorno. En este apartado realizaremos pruebas más completas, combinando distintos factores para ver más detalladamente el comportamiento de la mejor versión de la paralela. Además, se podrá llegar a concluir qué tipo de combinación beneficia a la evolución del contorno en cierto tipo de imágenes.
 
-Se ha decidido probar 3 tipos de imágenes diferentes, con varios tamaños de estas, varios tamaños de las mallas de \textit{locks} y varios \textit{threads}. En la figura \ref{tiposImagenes} se puede observar los tres tipos de imágenes diferentes que se utilizarán en la realización de dichas pruebas.
+Se ha decidido probar 3 tipos de imágenes diferentes, con varios tamaños de éstas, varios tamaños de las mallas de \textit{locks} y varios \textit{threads}. En la figura \ref{tiposImagenes} se puede observar los tres tipos de imágenes diferentes que se utilizarán en la realización de dichas pruebas.
 
 
 \begin{figure}[H]
@@ -1489,12 +1490,13 @@ Se ha decidido probar 3 tipos de imágenes diferentes, con varios tamaños de esta
 
 \section{Primera imagen}
 
-La primera imagen a probar será la imagen \ref{buena1} y a continuación se presentan los resultados de las ejecuciones con diferentes tamaños de la imagen.
+La primera imagen a probar será la imagen \ref{buena1}, una imagen borrosa, con poca diferencia en tono de gris entre las islas y el fondo, y con una morfología de las islas alargada. A continuación se presentan los resultados de las ejecuciones con diferentes tamaños de la imagen. Se ha resaltado en negrita el mejor tiempo de ejecución y se ha marcado con un asterisco los valores más cercano al óptimo conseguido.
 
 \subsubsection{500x500}
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1502,14 +1504,15 @@ La primera imagen a probar será la imagen \ref{buena1} y a continuación se prese
 		{\bf 2}  & 1,34    & 1,37    & 1,37     & 1,34     & 1,35     & 1,35     \\ \hline
 		{\bf 4}  & 1,00    & 0,96    & 0,96     & 0,97     & 0,96     & 0,95     \\ \hline
 		{\bf 8}  & 0,62    & 0,91    & 0,91     & 0,80     & 0,88     & 0,90     \\ \hline
+		{\bf 12} & 0,62    & 0,72    & 0,72     & 0,64     & 0,81     & 0,81     \\ \hline
 		{\bf 16} & 0,62    & 0,56    & 0,56     & 0,48     & 0,74     & 0,70     \\ \hline
 		{\bf 20} & 0,53    & 0,64    & 0,64     & 0,50     & 0,67     & 0,60     \\ \hline
 		{\bf 24} & 0,43    & 0,52    & 0,52     & 0,56     & 0,56     & 0,49     \\ \hline
 		{\bf 28} & 0,47    & 0,43    & 0,43     & 0,45     & 0,43     & 0,47     \\ \hline
 		{\bf 32} & 0,42    & 0,40    & 0,40     & 0,39     & 0,38     & 0,39     \\ \hline
 		{\bf 36} & 0,44    & 0,37    & 0,37     & 0,35     & 0,34     & 0,36     \\ \hline
-		{\bf 40} & 0,44    & 0,32    & 0,32     & 0,31     & 0,32     & 0,32     \\ \hline
-		{\bf 44} & 0,45    & 0,35    & 0,35     & 0,31     & 0,31     & 0,30     \\ \hline
+		{\bf 40} & 0,44    & 0,32    & 0,32     & 0,31*     & 0,32     & 0,32     \\ \hline
+		{\bf 44} & 0,45    & 0,35    & 0,35     & 0,31*     & 0,31*     & \textbf{0,30}     \\ \hline
 		{\bf 48} & 0,45    & 0,36    & 0,36     & 0,33     & 0,34     & 0,37     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
@@ -1532,6 +1535,7 @@ Como se puede observar en la tabla \ref{img1-500} los mejores tiempos se consigu
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1539,6 +1543,7 @@ Como se puede observar en la tabla \ref{img1-500} los mejores tiempos se consigu
 		{\bf 2}  & 8,52    & 8,54    & 8,42     & 8,54     & 8,52     & 8,50     \\ \hline
 		{\bf 4}  & 5,96    & 5,96    & 5,82     & 5,88     & 5,88     & 5,88     \\ \hline
 		{\bf 8}  & 3,34    & 4,89    & 4,87     & 4,80     & 4,80     & 4,80     \\ \hline
+		{\bf 12} & 3,40    & 4,10    & 4,51     & 3,68     & 4,59     & 4,51     \\ \hline
 		{\bf 16} & 3,45    & 3,40    & 4,27     & 2,58     & 4,28     & 4,27     \\ \hline
 		{\bf 20} & 2,86    & 3,50    & 3,51     & 2,72     & 3,43     & 3,43     \\ \hline
 		{\bf 24} & 2,34    & 2,89    & 2,90     & 2,87     & 2,86     & 2,86     \\ \hline
@@ -1546,8 +1551,8 @@ Como se puede observar en la tabla \ref{img1-500} los mejores tiempos se consigu
 		{\bf 32} & 2,65    & 2,28    & 2,23     & 2,27     & 2,23     & 2,26     \\ \hline
 		{\bf 36} & 2,64    & 2,10    & 2,20     & 2,19     & 2,21     & 2,23     \\ \hline
 		{\bf 40} & 2,69    & 2,16    & 2,17     & 2,17     & 2,16     & 2,16     \\ \hline
-		{\bf 44} & 2,66    & 2,05    & 2,07     & 2,08     & 2,06     & 2,05     \\ \hline
-		{\bf 48} & 2,79    & 2,14    & 2,05     & 2,05     & 2,07     & 2,02     \\ \hline
+		{\bf 44} & 2,66    & 2,05    & 2,07     & 2,08     & 2,06     & 2,05*     \\ \hline
+		{\bf 48} & 2,79    & 2,14    & 2,05*     & 2,05*     & 2,07     & \textbf{2,02}     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
 	\caption{Tiempos de ejecución de la imagen \ref{buena1} con un tamaño de 1500x1500}
@@ -1569,6 +1574,7 @@ En esta ocasión el mejor resultado se consigue con 48 \textit{threads} y 50 \tex
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf }   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1576,6 +1582,7 @@ En esta ocasión el mejor resultado se consigue con 48 \textit{threads} y 50 \tex
 		{\bf 2}  & 28,46   & 26,85   & 26,83    & 26,89    & 26,75    & 26,71    \\ \hline
 		{\bf 4}  & 16,94   & 17,25   & 17,18    & 17,00    & 16,99    & 16,80    \\ \hline
 		{\bf 8}  & 9,53    & 13,34   & 13,42    & 13,42    & 13,34    & 13,38    \\ \hline
+	    {\bf 12} & 9,56    & 11,42   & 12,71    & 10,35    & 12,61    & 12,74    \\ \hline
 		{\bf 16} & 9,59    & 9,50    & 12,01    & 7,36     & 11,98    & 12,00    \\ \hline
 		{\bf 20} & 7,85    & 9,69    & 9,71     & 7,77     & 9,67     & 9,76     \\ \hline
 		{\bf 24} & 6,81    & 8,30    & 8,29     & 8,25     & 8,20     & 8,24     \\ \hline
@@ -1584,7 +1591,7 @@ En esta ocasión el mejor resultado se consigue con 48 \textit{threads} y 50 \tex
 		{\bf 36} & 7,75    & 6,90    & 7,10     & 7,22     & 7,19     & 6,97     \\ \hline
 		{\bf 40} & 8,00    & 7,05    & 6,93     & 6,91     & 6,90     & 6,88     \\ \hline
 		{\bf 44} & 8,17    & 6,62    & 6,64     & 6,63     & 6,78     & 6,72     \\ \hline
-		{\bf 48} & 8,02    & 6,64    & 6,52     & 6,49     & 6,75     & 6,58     \\ \hline
+		{\bf 48} & 8,02    & 6,64    & 6,52*     & \textbf{6,49}     & 6,75     & 6,58     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
 	\caption{Tiempos de ejecución de la imagen \ref{buena1} con un tamaño de 3000x3000}
@@ -1611,19 +1618,20 @@ Los resultados de la segmentación de esta primera imagen han sido los que se mue
 	\captionsetup{justification=centering}
 	\centering
 	\includegraphics[width=.7\textwidth]{./imagenes/result1}
-	\caption{Resultado de la segmentación de la imagen \ref{buena1}}	
+	\caption{Resultado de la segmentación de la imagen \ref{buena1} con un tamaño de 3000x3000}	
 	\label{result1}
 \end{figure}
 
 
 \section{Segunda imagen}
 
-La segunda imagen a probar será la imagen \ref{buena2} y a continuación se presentan los resultados de las ejecuciones con diferentes tamaños de la imagen.
+La segunda imagen a probar será la imagen \ref{buena2}. Esta imagen tiene un contraste mayor que la anterior entre la isla y el fondo. La morfología de las islas es amorfa y algunas tienen pequeños huecos. Las islas también tienen un tamaño más grande. A continuación se presentan los resultados de las ejecuciones con diferentes tamaños de la imagen. Se ha resaltado en negrita el mejor tiempo de ejecución y se ha marcado con un asterisco los valores más cercano al óptimo conseguido.
 
 \subsubsection{500x500}
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1631,14 +1639,15 @@ La segunda imagen a probar será la imagen \ref{buena2} y a continuación se prese
 		{\bf 2}  & 0,35    & 0,35    & 0,35     & 0,35     & 0,34     & 0,34     \\ \hline
 		{\bf 4}  & 0,25    & 0,25    & 0,25     & 0,25     & 0,24     & 0,24     \\ \hline
 		{\bf 8}  & 0,17    & 0,21    & 0,21     & 0,20     & 0,20     & 0,20     \\ \hline
+		{\bf 12} & 0,17    & 0,18    & 0,19     & 0,17     & 0,19     & 0,19     \\ \hline
 		{\bf 16} & 0,16    & 0,15    & 0,18     & 0,13     & 0,18     & 0,18     \\ \hline
 		{\bf 20} & 0,13    & 0,15    & 0,15     & 0,13     & 0,15     & 0,15     \\ \hline
 		{\bf 24} & 0,13    & 0,14    & 0,13     & 0,13     & 0,13     & 0,13     \\ \hline
 		{\bf 28} & 0,16    & 0,12    & 0,12     & 0,12     & 0,12     & 0,12     \\ \hline
 		{\bf 32} & 0,17    & 0,11    & 0,11     & 0,11     & 0,11     & 0,11     \\ \hline
 		{\bf 36} & 0,18    & 0,12    & 0,11     & 0,11     & 0,11     & 0,11     \\ \hline
-		{\bf 40} & 0,20    & 0,11    & 0,11     & 0,10     & 0,10     & 0,11     \\ \hline
-		{\bf 44} & 0,21    & 0,13    & 0,11     & 0,11     & 0,10     & 0,10     \\ \hline
+		{\bf 40} & 0,20    & 0,11    & 0,11     & \textbf{0,10}     & \textbf{0,10}     & 0,11     \\ \hline
+		{\bf 44} & 0,21    & 0,13    & 0,11     & 0,11     & \textbf{0,10}     & \textbf{0,10}     \\ \hline
 		{\bf 48} & 0,23    & 0,18    & 0,14     & 0,13     & 0,14     & 0,15     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
@@ -1661,6 +1670,7 @@ Como se puede observar en la tabla \ref{img2-500} los mejores tiempos se consigu
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1668,11 +1678,12 @@ Como se puede observar en la tabla \ref{img2-500} los mejores tiempos se consigu
 		{\bf 2}  & 3,56    & 3,61    & 3,57     & 3,56     & 3,54     & 3,54     \\ \hline
 		{\bf 4}  & 2,63    & 2,67    & 2,65     & 2,58     & 2,58     & 2,56     \\ \hline
 		{\bf 8}  & 1,68    & 2,23    & 2,20     & 2,11     & 2,11     & 2,10     \\ \hline
+		{\bf 12} & 1,61    & 1,89    & 2,00     & 1,65     & 1,65     & 1,97     \\ \hline
 		{\bf 16} & 1,55    & 1,50    & 1,82     & 1,22     & 1,22     & 1,83     \\ \hline
 		{\bf 20} & 1,31    & 1,53    & 1,53     & 1,21     & 1,23     & 1,53     \\ \hline
 		{\bf 24} & 1,15    & 1,31    & 1,31     & 1,30     & 1,31     & 1,32     \\ \hline
 		{\bf 28} & 1,43    & 1,17    & 1,19     & 1,18     & 1,19     & 1,17     \\ \hline
-		{\bf 32} & 1,59    & 1,12    & 1,12     & 1,12     & 1,13     & 1,10     \\ \hline
+		{\bf 32} & 1,59    & 1,12*    & 1,12*     & 1,12*     & 1,13     & \textbf{1,10}     \\ \hline
 		{\bf 36} & 1,82    & 1,27    & 1,26     & 1,24     & 1,27     & 1,31     \\ \hline
 		{\bf 40} & 1,97    & 1,37    & 1,39     & 1,40     & 1,37     & 1,35     \\ \hline
 		{\bf 44} & 2,03    & 1,40    & 1,38     & 1,41     & 1,36     & 1,39     \\ \hline
@@ -1698,6 +1709,7 @@ Como se puede observar en la tabla \ref{img2-1500} el mejor resultado obtenido e
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1705,11 +1717,12 @@ Como se puede observar en la tabla \ref{img2-1500} el mejor resultado obtenido e
 		{\bf 2}  & 9,64    & 9,65    & 9,83     & 9,61     & 9,58     & 9,58     \\ \hline
 		{\bf 4}  & 12,42   & 12,41   & 12,64    & 12,20    & 12,21    & 12,06    \\ \hline
 		{\bf 8}  & 5,88    & 7,57    & 7,61     & 7,65     & 7,53     & 7,54     \\ \hline
+		{\bf 12} & 5,74    & 6,51    & 7,24     & 6,01     & 7,12     & 7,13     \\ \hline
 		{\bf 16} & 5,67    & 5,43    & 6,74     & 4,48     & 6,71     & 6,72     \\ \hline
 		{\bf 20} & 4,62    & 5,45    & 5,49     & 4,50     & 5,50     & 5,49     \\ \hline
 		{\bf 24} & 4,07    & 4,69    & 4,72     & 4,67     & 4,66     & 4,66     \\ \hline
-		{\bf 28} & 4,50    & 4,16    & 4,27     & 4,27     & 4,13     & 4,10     \\ \hline
-		{\bf 32} & 5,08    & 4,34    & 4,15     & 4,58     & 3,85     & 3,89     \\ \hline
+		{\bf 28} & 4,50    & 4,16    & 4,27     & 4,27     & 4,13*     & 4,10*     \\ \hline
+		{\bf 32} & 5,08    & 4,34    & 4,15     & 4,58     & \textbf{3,85}     & 3,89*     \\ \hline
 		{\bf 36} & 6,14    & 4,72    & 5,03     & 4,95     & 5,16     & 5,27     \\ \hline
 		{\bf 40} & 6,65    & 5,22    & 5,25     & 5,28     & 5,25     & 5,22     \\ \hline
 		{\bf 44} & 7,02    & 5,25    & 5,23     & 5,42     & 5,19     & 5,24     \\ \hline
@@ -1741,19 +1754,20 @@ Los resultados de la segmentación de esta segunda imagen han sido los que se mue
 	\captionsetup{justification=centering}
 	\centering
 	\includegraphics[width=.7\textwidth]{./imagenes/result2}
-	\caption{Resultado de la segmentación de la imagen \ref{buena2}}	
+	\caption{Resultado de la segmentación de la imagen \ref{buena2} con un tamaño de imagen de 3000x3000}	
 	\label{result2}
 \end{figure}
 
 
 \section{Tercera imagen}
 
-La tercera imagen a probar será la imagen \ref{buena3} y a continuación se presentan los resultados de las ejecuciones con diferentes tamaños de la imagen.
+La tercera imagen a probar será la imagen \ref{buena3} y a continuación se presentan los resultados de las ejecuciones con diferentes tamaños de la imagen. Esta imagen tiene más contraste entre el fondo y las islas que la anterior ya que es prácticamente binaria. Morfológicamente las islas son menos redondeadas y tienen aún más grietas comparadas con las de la anterior imagen. Se ha resaltado en negrita el mejor tiempo de ejecución y se ha marcado con un asterisco los valores más cercano al óptimo conseguido.
 
 \subsubsection{Tamaño 500x500}
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1761,14 +1775,15 @@ La tercera imagen a probar será la imagen \ref{buena3} y a continuación se prese
 		{\bf 2}  & 0,48    & 0,48    & 0,48     & 0,48     & 0,48     & 0,48     \\ \hline
 		{\bf 4}  & 0,34    & 0,34    & 0,34     & 0,35     & 0,33     & 0,33     \\ \hline
 		{\bf 8}  & 0,21    & 0,28    & 0,28     & 0,27     & 0,27     & 0,27     \\ \hline
+		{\bf 12} & 0,21    & 0,24    & 0,26     & 0,23     & 0,26     & 0,26     \\ \hline
 		{\bf 16} & 0,20    & 0,19    & 0,24     & 0,16     & 0,24     & 0,24     \\ \hline
 		{\bf 20} & 0,17    & 0,20    & 0,20     & 0,16     & 0,20     & 0,20     \\ \hline
 		{\bf 24} & 0,15    & 0,17    & 0,17     & 0,17     & 0,17     & 0,17     \\ \hline
 		{\bf 28} & 0,17    & 0,15    & 0,15     & 0,15     & 0,15     & 0,15     \\ \hline
 		{\bf 32} & 0,17    & 0,14    & 0,14     & 0,14     & 0,14     & 0,14     \\ \hline
 		{\bf 36} & 0,18    & 0,14    & 0,13     & 0,13     & 0,13     & 0,13     \\ \hline
-		{\bf 40} & 0,19    & 0,12    & 0,13     & 0,12     & 0,12     & 0,12     \\ \hline
-		{\bf 44} & 0,19    & 0,14    & 0,12     & 0,12     & 0,12     & 0,12     \\ \hline
+		{\bf 40} & 0,19    & 0,12    & 0,13     & \textbf{0,12 }    & \textbf{0,12}     & \textbf{0,12}     \\ \hline
+		{\bf 44} & 0,19    & 0,14    & \textbf{0,12}     & \textbf{0,12}     & \textbf{0,12}     & \textbf{0,12 }    \\ \hline
 		{\bf 48} & 0,22    & 0,18    & 0,14     & 0,14     & 0,13     & 0,17     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
@@ -1791,6 +1806,7 @@ Como se puede observar en la tabla \ref{img3-500} los mejores resultados se cons
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1798,12 +1814,13 @@ Como se puede observar en la tabla \ref{img3-500} los mejores resultados se cons
 		{\bf 2}  & 4,78    & 4,79    & 4,76     & 4,77     & 4,75     & 4,75     \\ \hline
 		{\bf 4}  & 3,43    & 3,45    & 3,44     & 3,40     & 3,38     & 3,37     \\ \hline
 		{\bf 8}  & 1,97    & 2,81    & 2,80     & 2,71     & 2,72     & 2,70     \\ \hline
+		{\bf 12} & 1,93    & 2,32    & 2,56     & 2,16     & 2,51     & 2,49     \\ \hline
 		{\bf 16} & 1,86    & 1,82    & 2,31     & 1,46     & 2,30     & 2,30     \\ \hline
 		{\bf 20} & 1,56    & 1,88    & 1,87     & 1,47     & 1,86     & 1,86     \\ \hline
 		{\bf 24} & 1,33    & 1,57    & 1,57     & 1,56     & 1,58     & 1,57     \\ \hline
 		{\bf 28} & 1,42    & 1,37    & 1,39     & 1,39     & 1,39     & 1,38     \\ \hline
 		{\bf 32} & 1,45    & 1,26    & 1,26     & 1,26     & 1,28     & 1,30     \\ \hline
-		{\bf 36} & 1,58    & 1,19    & 1,20     & 1,26     & 1,24     & 1,18     \\ \hline
+		{\bf 36} & 1,58    & 1,19*    & 1,20*     & 1,26     & 1,24     & \textbf{1,18}     \\ \hline
 		{\bf 40} & 1,69    & 1,35    & 1,33     & 1,33     & 1,33     & 1,33     \\ \hline
 		{\bf 44} & 1,73    & 1,33    & 1,31     & 1,31     & 1,30     & 1,31     \\ \hline
 		{\bf 48} & 1,79    & 1,34    & 1,33     & 1,34     & 1,33     & 1,31     \\ \hline
@@ -1813,7 +1830,7 @@ Como se puede observar en la tabla \ref{img3-500} los mejores resultados se cons
 	\label{img3-1500}
 \end{table}
 
-La mejor respuesta temporal en este caso se consigue mediante la combinación de 44 \textit{threads} y 32 \textit{locks}. Se obtiene así un tiempo de 1,30 segundos, un \textit{speed-up} de 5,9 y una eficiencia del 13,5\%.
+La mejor respuesta temporal en este caso se consigue mediante la combinación de 36 \textit{threads} y 50 \textit{locks}. Se obtiene así un tiempo de 1,18 segundos, un \textit{speed-up} de 6,5 y una eficiencia del 18,0\%.
 
 
 \begin{figure}[H]
@@ -1830,6 +1847,7 @@ La mejor respuesta temporal en este caso se consigue mediante la combinación de 
 
 \begin{table}[H]
 	\centering
+	\small
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
@@ -1837,11 +1855,12 @@ La mejor respuesta temporal en este caso se consigue mediante la combinación de 
 		{\bf 2}  & 13,23   & 13,91   & 13,19    & 13,20    & 13,43    & 13,09    \\ \hline
 		{\bf 4}  & 16,18   & 16,28   & 16,33    & 16,10    & 16,00    & 15,88    \\ \hline
 		{\bf 8}  & 6,78    & 9,48    & 9,54     & 9,46     & 9,44     & 9,48     \\ \hline
+		{\bf 12} & 6,80    & 7,70    & 8,98     & 7,39     & 8,96     & 8,93     \\ \hline
 		{\bf 16} & 6,82    & 6,68    & 8,53     & 5,32     & 8,46     & 8,50     \\ \hline
 		{\bf 20} & 5,55    & 6,77    & 6,76     & 5,42     & 6,84     & 6,85     \\ \hline
 		{\bf 24} & 4,81    & 5,70    & 5,69     & 5,67     & 5,74     & 5,74     \\ \hline
 		{\bf 28} & 4,89    & 4,92    & 4,96     & 4,90     & 4,97     & 4,96     \\ \hline
-		{\bf 32} & 4,71    & 4,44    & 4,51     & 4,45     & 4,48     & 4,46     \\ \hline
+		{\bf 32} & 4,71    & \textbf{4,44}    & 4,51*     & 4,45*     & 4,48*     & 4,46*     \\ \hline
 		{\bf 36} & 5,21    & 4,88    & 4,91     & 5,01     & 4,66     & 4,61     \\ \hline
 		{\bf 40} & 5,58    & 5,02    & 5,14     & 5,00     & 5,02     & 5,08     \\ \hline
 		{\bf 44} & 5,69    & 5,03    & 4,90     & 4,92     & 4,91     & 4,98     \\ \hline
