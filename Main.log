@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  24 JUL 2015 14:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  29 JUL 2015 13:30
 entering extended mode
 **Main.tex
 
@@ -444,7 +444,10 @@ slashbox style by K.Yasuoka, May 1993.
 \@slashboxht=\count120
 \@slashsepl=\dimen147
 \@slashsepr=\dimen148
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen149
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
@@ -478,13 +481,13 @@ LaTeX Font Info:    ... okay on input line 23.
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count121
-\scratchdimen=\dimen149
+\scratchdimen=\dimen150
 \scratchbox=\box42
 \nofMPsegments=\count122
 \nofMParguments=\count123
 \everyMPshowfont=\toks28
 \MPscratchCnt=\count124
-\MPscratchDim=\dimen150
+\MPscratchDim=\dimen151
 \MPnumerator=\count125
 \makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks29
@@ -620,9 +623,9 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 ]
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Main.lot")
+de grado\Documentacion\Main.lot" [9])
 \tf@lot=\write6
- [9] [10])
+ [10])
 :<-
 Package srcltx Info: Expanded filename `Config/headers.tex' to `Config/headers.
 tex' on input line 60.
@@ -691,28 +694,28 @@ Cap\'{\i }tulo 1.
 File: ./imagenes/ejemplo1.png Graphic file (type png)
 
 <use ./imagenes/ejemplo1.png>
-Package pdftex.def Info: ./imagenes/ejemplo1.png used on input line 59.
+Package pdftex.def Info: ./imagenes/ejemplo1.png used on input line 58.
 (pdftex.def)             Requested size: 162.60638pt x 123.83769pt.
 
 <./imagenes/ejemplo2.png, id=80, 328.22626pt x 258.9675pt>
 File: ./imagenes/ejemplo2.png Graphic file (type png)
 
 <use ./imagenes/ejemplo2.png>
-Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 64.
+Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 63.
 (pdftex.def)             Requested size: 162.60638pt x 128.294pt.
 
 <./imagenes/ejemplo3.png, id=81, 952.30782pt x 759.58781pt>
 File: ./imagenes/ejemplo3.png Graphic file (type png)
 
 <use ./imagenes/ejemplo3.png>
-Package pdftex.def Info: ./imagenes/ejemplo3.png used on input line 69.
+Package pdftex.def Info: ./imagenes/ejemplo3.png used on input line 68.
 (pdftex.def)             Requested size: 162.60638pt x 129.69614pt.
 
 <./imagenes/ejemplo4.png, id=82, 2258.4375pt x 2107.875pt>
 File: ./imagenes/ejemplo4.png Graphic file (type png)
 
 <use ./imagenes/ejemplo4.png>
-Package pdftex.def Info: ./imagenes/ejemplo4.png used on input line 74.
+Package pdftex.def Info: ./imagenes/ejemplo4.png used on input line 73.
 (pdftex.def)             Requested size: 162.60638pt x 151.74759pt.
  [4 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
 in de grado/Documentacion/imagenes/ejemplo1.png> <C:/Users/Dani/Desktop/Univers
@@ -728,7 +731,7 @@ Cap\'{\i }tulo 2.
 File: ./imagenes/publicaciones.png Graphic file (type png)
 
 <use ./imagenes/publicaciones.png>
-Package pdftex.def Info: ./imagenes/publicaciones.png used on input line 109.
+Package pdftex.def Info: ./imagenes/publicaciones.png used on input line 108.
 (pdftex.def)             Requested size: 350.99762pt x 213.29214pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -738,35 +741,39 @@ in de grado/Documentacion/imagenes/publicaciones.png>] [9] [10
 
 ]
 Cap\'{\i }tulo 3.
-<./imagenes/tecnicasSegmentacion2.png, id=112, 551.81157pt x 392.96812pt>
+<./imagenes/tecnicasSegmentacion2.png, id=112, 912.40875pt x 571.38469pt>
 File: ./imagenes/tecnicasSegmentacion2.png Graphic file (type png)
 
 <use ./imagenes/tecnicasSegmentacion2.png>
 Package pdftex.def Info: ./imagenes/tecnicasSegmentacion2.png used on input lin
-e 154.
-(pdftex.def)             Requested size: 390.0pt x 277.74411pt.
- [11] [12 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyect
-o de fin de grado/Documentacion/imagenes/tecnicasSegmentacion2.png>]
-Overfull \hbox (3.68619pt too wide) in paragraph at lines 186--187
+e 153.
+(pdftex.def)             Requested size: 390.0pt x 244.22589pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+[12 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/tecnicasSegmentacion2.png>]
+Overfull \hbox (4.07785pt too wide) in paragraph at lines 186--187
 [][]\OT1/cmr/m/n/12 Tambien existe la po-si-bi-li-dad de de-fi-nir va-rias in-
-ten-si-da-des um-bra-les (como
+ten-si-da-des um-bra-les (vease
  []
 
-<./imagenes/imageHistogram.png, id=119, 188.20313pt x 88.83188pt>
+<./imagenes/imageHistogram.png, id=120, 188.20313pt x 88.83188pt>
 File: ./imagenes/imageHistogram.png Graphic file (type png)
 
 <use ./imagenes/imageHistogram.png>
 Package pdftex.def Info: ./imagenes/imageHistogram.png used on input line 195.
-(pdftex.def)             Requested size: 272.99881pt x 128.86525pt.
+(pdftex.def)             Requested size: 253.49762pt x 119.66031pt.
 
-<./imagenes/thresholding1.jpg, id=120, 3189.9175pt x 2155.05125pt>
+<./imagenes/thresholding1.jpg, id=121, 3189.9175pt x 2155.05125pt>
 File: ./imagenes/thresholding1.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding1.jpg>
 Package pdftex.def Info: ./imagenes/thresholding1.jpg used on input line 209.
 (pdftex.def)             Requested size: 162.60638pt x 109.83052pt.
 
-<./imagenes/thresholding2.jpg, id=121, 3189.9175pt x 2155.05125pt>
+<./imagenes/thresholding2.jpg, id=122, 3189.9175pt x 2155.05125pt>
 File: ./imagenes/thresholding2.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding2.jpg>
@@ -774,28 +781,28 @@ Package pdftex.def Info: ./imagenes/thresholding2.jpg used on input line 214.
 (pdftex.def)             Requested size: 162.60638pt x 109.83052pt.
  [13 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/imageHistogram.png>] <./imagenes/thresholdi
-ng3.jpg, id=130, 1441.385pt x 807.015pt>
+ng3.jpg, id=131, 1441.385pt x 807.015pt>
 File: ./imagenes/thresholding3.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding3.jpg>
 Package pdftex.def Info: ./imagenes/thresholding3.jpg used on input line 227.
 (pdftex.def)             Requested size: 162.60638pt x 91.0377pt.
 
-<./imagenes/thresholding4.jpg, id=131, 642.4pt x 359.3425pt>
+<./imagenes/thresholding4.jpg, id=132, 642.4pt x 359.3425pt>
 File: ./imagenes/thresholding4.jpg Graphic file (type jpg)
 
 <use ./imagenes/thresholding4.jpg>
 Package pdftex.def Info: ./imagenes/thresholding4.jpg used on input line 232.
 (pdftex.def)             Requested size: 162.60638pt x 90.95395pt.
 
-<./imagenes/thresholding5.png, id=132, 382.42876pt x 289.83281pt>
+<./imagenes/thresholding5.png, id=133, 382.42876pt x 289.83281pt>
 File: ./imagenes/thresholding5.png Graphic file (type png)
 
 <use ./imagenes/thresholding5.png>
 Package pdftex.def Info: ./imagenes/thresholding5.png used on input line 245.
 (pdftex.def)             Requested size: 126.47194pt x 95.84854pt.
 
-<./imagenes/thresholding6.png, id=133, 380.92313pt x 288.3272pt>
+<./imagenes/thresholding6.png, id=134, 380.92313pt x 288.3272pt>
 File: ./imagenes/thresholding6.png Graphic file (type png)
 
 <use ./imagenes/thresholding6.png>
@@ -811,32 +818,32 @@ rado/Documentacion/imagenes/thresholding4.jpg> <C:/Users/Dani/Desktop/Universid
 ad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/t
 hresholding5.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre
 /Proyecto de fin de grado/Documentacion/imagenes/thresholding6.png>]
-<./imagenes/clustering1.jpg, id=137, 3019.28pt x 1967.35pt>
+<./imagenes/clustering1.jpg, id=138, 3019.28pt x 1967.35pt>
 File: ./imagenes/clustering1.jpg Graphic file (type jpg)
 
 <use ./imagenes/clustering1.jpg>
 Package pdftex.def Info: ./imagenes/clustering1.jpg used on input line 286.
 (pdftex.def)             Requested size: 162.60638pt x 105.93813pt.
 
-<./imagenes/clustering2.png, id=138, 3019.28pt x 1967.35pt>
+<./imagenes/clustering2.png, id=139, 3019.28pt x 1967.35pt>
 File: ./imagenes/clustering2.png Graphic file (type png)
 
 <use ./imagenes/clustering2.png>
 Package pdftex.def Info: ./imagenes/clustering2.png used on input line 291.
 (pdftex.def)             Requested size: 162.60638pt x 105.93813pt.
 
-<./imagenes/clustering3.png, id=139, 295.1025pt x 198.7425pt>
+<./imagenes/clustering3.png, id=140, 295.1025pt x 198.7425pt>
 File: ./imagenes/clustering3.png Graphic file (type png)
 
 <use ./imagenes/clustering3.png>
-Package pdftex.def Info: ./imagenes/clustering3.png used on input line 303.
+Package pdftex.def Info: ./imagenes/clustering3.png used on input line 304.
 (pdftex.def)             Requested size: 180.67499pt x 121.68155pt.
 
-<./imagenes/clustering4.png, id=140, 293.59688pt x 197.98969pt>
+<./imagenes/clustering4.png, id=141, 293.59688pt x 197.98969pt>
 File: ./imagenes/clustering4.png Graphic file (type png)
 
 <use ./imagenes/clustering4.png>
-Package pdftex.def Info: ./imagenes/clustering4.png used on input line 308.
+Package pdftex.def Info: ./imagenes/clustering4.png used on input line 309.
 (pdftex.def)             Requested size: 180.67499pt x 121.83997pt.
  [15] [16 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyect
 o de fin de grado/Documentacion/imagenes/clustering1.jpg> <C:/Users/Dani/Deskto
@@ -845,52 +852,52 @@ p/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion
 rso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/clustering
 3.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto d
 e fin de grado/Documentacion/imagenes/clustering4.png>] <./imagenes/morphology1
--1.jpg, id=147, 121.4136pt x 105.5142pt>
+-1.jpg, id=148, 121.4136pt x 105.5142pt>
 File: ./imagenes/morphology1-1.jpg Graphic file (type jpg)
 
 <use ./imagenes/morphology1-1.jpg>
-Package pdftex.def Info: ./imagenes/morphology1-1.jpg used on input line 325.
+Package pdftex.def Info: ./imagenes/morphology1-1.jpg used on input line 327.
 (pdftex.def)             Requested size: 144.54053pt x 125.61981pt.
 
-<./imagenes/morphology1-2.png, id=148, 631.60968pt x 548.80031pt>
+<./imagenes/morphology1-2.png, id=149, 631.60968pt x 548.80031pt>
 File: ./imagenes/morphology1-2.png Graphic file (type png)
 
 <use ./imagenes/morphology1-2.png>
-Package pdftex.def Info: ./imagenes/morphology1-2.png used on input line 330.
+Package pdftex.def Info: ./imagenes/morphology1-2.png used on input line 332.
 (pdftex.def)             Requested size: 144.54053pt x 125.58498pt.
  [17 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/morphology1-1.jpg> <C:/Users/Dani/Desktop/U
 niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
 agenes/morphology1-2.png>]
-Underfull \vbox (badness 3503) has occurred while \output is active []
+Underfull \vbox (badness 1810) has occurred while \output is active []
 
  [18]
-<./imagenes/operator0.jpg, id=159, 642.4pt x 481.8pt>
+<./imagenes/operator0.jpg, id=160, 642.4pt x 481.8pt>
 File: ./imagenes/operator0.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator0.jpg>
-Package pdftex.def Info: ./imagenes/operator0.jpg used on input line 442.
+Package pdftex.def Info: ./imagenes/operator0.jpg used on input line 448.
 (pdftex.def)             Requested size: 162.60638pt x 121.94943pt.
 
-<./imagenes/operator1.jpg, id=160, 640.3925pt x 479.7925pt>
+<./imagenes/operator1.jpg, id=161, 640.3925pt x 479.7925pt>
 File: ./imagenes/operator1.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator1.jpg>
-Package pdftex.def Info: ./imagenes/operator1.jpg used on input line 447.
+Package pdftex.def Info: ./imagenes/operator1.jpg used on input line 453.
 (pdftex.def)             Requested size: 162.60638pt x 121.822pt.
 
-<./imagenes/operator2.jpg, id=161, 638.385pt x 477.785pt>
+<./imagenes/operator2.jpg, id=162, 638.385pt x 477.785pt>
 File: ./imagenes/operator2.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator2.jpg>
-Package pdftex.def Info: ./imagenes/operator2.jpg used on input line 453.
+Package pdftex.def Info: ./imagenes/operator2.jpg used on input line 459.
 (pdftex.def)             Requested size: 162.60638pt x 121.69868pt.
 
-<./imagenes/operator3.jpg, id=162, 640.3925pt x 479.7925pt>
+<./imagenes/operator3.jpg, id=163, 640.3925pt x 479.7925pt>
 File: ./imagenes/operator3.jpg Graphic file (type jpg)
 
 <use ./imagenes/operator3.jpg>
-Package pdftex.def Info: ./imagenes/operator3.jpg used on input line 458.
+Package pdftex.def Info: ./imagenes/operator3.jpg used on input line 464.
 (pdftex.def)             Requested size: 162.60638pt x 121.822pt.
  [19] [20 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyect
 o de fin de grado/Documentacion/imagenes/operator0.jpg> <C:/Users/Dani/Desktop/
@@ -899,27 +906,27 @@ magenes/operator1.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrim
 estre/Proyecto de fin de grado/Documentacion/imagenes/operator2.jpg> <C:/Users/
 Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Do
 cumentacion/imagenes/operator3.jpg>]
-<./imagenes/activeContour1-1.jpg, id=171, 119.10097pt x 115.34293pt>
+<./imagenes/activeContour1-1.jpg, id=172, 119.10097pt x 115.34293pt>
 File: ./imagenes/activeContour1-1.jpg Graphic file (type jpg)
 
 <use ./imagenes/activeContour1-1.jpg>
-Package pdftex.def Info: ./imagenes/activeContour1-1.jpg used on input line 493
+Package pdftex.def Info: ./imagenes/activeContour1-1.jpg used on input line 500
 .
 (pdftex.def)             Requested size: 162.60638pt x 157.48378pt.
 
-<./imagenes/activeContour1-2.png, id=172, 636.12656pt x 600.74437pt>
+<./imagenes/activeContour1-2.png, id=173, 636.12656pt x 600.74437pt>
 File: ./imagenes/activeContour1-2.png Graphic file (type png)
 
 <use ./imagenes/activeContour1-2.png>
-Package pdftex.def Info: ./imagenes/activeContour1-2.png used on input line 498
+Package pdftex.def Info: ./imagenes/activeContour1-2.png used on input line 505
 .
 (pdftex.def)             Requested size: 162.60638pt x 153.55904pt.
 
-<./imagenes/activeContour2.png, id=173, 567.62062pt x 377.91188pt>
+<./imagenes/activeContour2.png, id=174, 567.62062pt x 377.91188pt>
 File: ./imagenes/activeContour2.png Graphic file (type png)
 
 <use ./imagenes/activeContour2.png>
-Package pdftex.def Info: ./imagenes/activeContour2.png used on input line 511.
+Package pdftex.def Info: ./imagenes/activeContour2.png used on input line 519.
 (pdftex.def)             Requested size: 312.00119pt x 207.73108pt.
  [21 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/activeContour1-1.jpg> <C:/Users/Dani/Deskto
@@ -927,133 +934,117 @@ p/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion
 /imagenes/activeContour1-2.png>] [22 <C:/Users/Dani/Desktop/Universidad/4º Cur
 so/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/activeConto
 ur2.png>]
-<./imagenes/levelSet1.jpg, id=180, 213.77466pt x 114.04205pt>
+<./imagenes/levelSet1.jpg, id=181, 213.77466pt x 114.04205pt>
 File: ./imagenes/levelSet1.jpg Graphic file (type jpg)
 
 <use ./imagenes/levelSet1.jpg>
-Package pdftex.def Info: ./imagenes/levelSet1.jpg used on input line 536.
+Package pdftex.def Info: ./imagenes/levelSet1.jpg used on input line 547.
 (pdftex.def)             Requested size: 272.99881pt x 145.65138pt.
 
-<./imagenes/levelSet2.jpg, id=181, 803.0pt x 602.25pt>
+<./imagenes/levelSet2.jpg, id=182, 803.0pt x 602.25pt>
 File: ./imagenes/levelSet2.jpg Graphic file (type jpg)
 
 <use ./imagenes/levelSet2.jpg>
-Package pdftex.def Info: ./imagenes/levelSet2.jpg used on input line 545.
+Package pdftex.def Info: ./imagenes/levelSet2.jpg used on input line 564.
 (pdftex.def)             Requested size: 272.99881pt x 204.7531pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [23 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/levelSet1.jpg>]
-Overfull \hbox (20.18303pt too wide) in paragraph at lines 560--561
-[][]\OT1/cmr/m/n/12 Este sub-grupo agrupa to-dos las tecni-cas re-la-cio-na-da
-s con la tecnica []habitual[]
- []
-
-
 Underfull \vbox (badness 2990) has occurred while \output is active []
 
  [24 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/levelSet2.jpg>]
-<./imagenes/regionGrowing1.jpg, id=188, 198.90239pt x 198.90239pt>
+<./imagenes/regionGrowing1.jpg, id=189, 198.90239pt x 198.90239pt>
 File: ./imagenes/regionGrowing1.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing1.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing1.jpg used on input line 570.
+Package pdftex.def Info: ./imagenes/regionGrowing1.jpg used on input line 589.
 (pdftex.def)             Requested size: 155.99762pt x 156.00516pt.
 
-<./imagenes/regionGrowing6.jpg, id=189, 458.71375pt x 335.2525pt>
+<./imagenes/regionGrowing6.jpg, id=190, 458.71375pt x 335.2525pt>
 File: ./imagenes/regionGrowing6.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing6.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing6.jpg used on input line 581.
+Package pdftex.def Info: ./imagenes/regionGrowing6.jpg used on input line 606.
 (pdftex.def)             Requested size: 162.60638pt x 118.83897pt.
 
-<./imagenes/regionGrowing2.jpg, id=190, 462.72874pt x 324.21124pt>
+<./imagenes/regionGrowing2.jpg, id=191, 462.72874pt x 324.21124pt>
 File: ./imagenes/regionGrowing2.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing2.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing2.jpg used on input line 587.
+Package pdftex.def Info: ./imagenes/regionGrowing2.jpg used on input line 612.
 (pdftex.def)             Requested size: 162.60638pt x 113.93076pt.
 
-<./imagenes/regionGrowing3.jpg, id=191, 462.72874pt x 334.24875pt>
+<./imagenes/regionGrowing3.jpg, id=192, 462.72874pt x 334.24875pt>
 File: ./imagenes/regionGrowing3.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing3.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing3.jpg used on input line 592.
+Package pdftex.def Info: ./imagenes/regionGrowing3.jpg used on input line 617.
 (pdftex.def)             Requested size: 162.60638pt x 117.45802pt.
 
-<./imagenes/regionGrowing4.jpg, id=192, 459.7175pt x 332.24126pt>
+<./imagenes/regionGrowing4.jpg, id=193, 459.7175pt x 332.24126pt>
 File: ./imagenes/regionGrowing4.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing4.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing4.jpg used on input line 597.
+Package pdftex.def Info: ./imagenes/regionGrowing4.jpg used on input line 622.
 (pdftex.def)             Requested size: 162.60638pt x 117.51808pt.
 
-<./imagenes/regionGrowing5.jpg, id=193, 458.71375pt x 329.23pt>
+<./imagenes/regionGrowing5.jpg, id=194, 458.71375pt x 329.23pt>
 File: ./imagenes/regionGrowing5.jpg Graphic file (type jpg)
 
 <use ./imagenes/regionGrowing5.jpg>
-Package pdftex.def Info: ./imagenes/regionGrowing5.jpg used on input line 602.
+Package pdftex.def Info: ./imagenes/regionGrowing5.jpg used on input line 627.
 (pdftex.def)             Requested size: 162.60638pt x 116.70415pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--605
+Underfull \hbox (badness 10000) in paragraph at lines 610--630
 [][] []
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/regionGrowing1.jpg>] [26 <C:/Users/Dani/Des
-ktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentac
-ion/imagenes/regionGrowing6.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2
-º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/regionGrowing2.
-jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/regionGrowing3.jpg> <C:/Users/Dani/Desktop/
-Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/i
-magenes/regionGrowing4.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cu
-atrimestre/Proyecto de fin de grado/Documentacion/imagenes/regionGrowing5.jpg>]
-
-<./imagenes/watershed1.jpg, id=201, 242.00215pt x 80.45746pt>
+[25 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/regionGrowing1.jpg>] [26 <C:/Users/Dani/Desk
+top/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentaci
+on/imagenes/regionGrowing6.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2�
+� cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/regionGrowing2.j
+pg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/regionGrowing3.jpg> <C:/Users/Dani/Desktop/U
+niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
+agenes/regionGrowing4.jpg> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cua
+trimestre/Proyecto de fin de grado/Documentacion/imagenes/regionGrowing5.jpg>]
+<./imagenes/watershed1.jpg, id=202, 242.00215pt x 80.45746pt>
 File: ./imagenes/watershed1.jpg Graphic file (type jpg)
 
 <use ./imagenes/watershed1.jpg>
-Package pdftex.def Info: ./imagenes/watershed1.jpg used on input line 628.
-(pdftex.def)             Requested size: 312.00119pt x 103.73036pt.
-
-Underfull \vbox (badness 5260) has occurred while \output is active []
-
+Package pdftex.def Info: ./imagenes/watershed1.jpg used on input line 658.
+(pdftex.def)             Requested size: 272.99881pt x 90.76239pt.
  [27]
-<./imagenes/watershed2.png, id=205, 633.86812pt x 159.59625pt>
+<./imagenes/watershed2.png, id=206, 633.86812pt x 159.59625pt>
 File: ./imagenes/watershed2.png Graphic file (type png)
 
 <use ./imagenes/watershed2.png>
-Package pdftex.def Info: ./imagenes/watershed2.png used on input line 638.
-(pdftex.def)             Requested size: 350.99762pt x 88.37726pt.
+Package pdftex.def Info: ./imagenes/watershed2.png used on input line 669.
+(pdftex.def)             Requested size: 312.00119pt x 78.55838pt.
 
-<./imagenes/watershed3.png, id=206, 378.66469pt x 184.43906pt>
+<./imagenes/watershed3.png, id=207, 378.66469pt x 184.43906pt>
 File: ./imagenes/watershed3.png Graphic file (type png)
 
 <use ./imagenes/watershed3.png>
-Package pdftex.def Info: ./imagenes/watershed3.png used on input line 648.
+Package pdftex.def Info: ./imagenes/watershed3.png used on input line 681.
 (pdftex.def)             Requested size: 234.00238pt x 113.97954pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [28 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/watershed1.jpg> <C:/Users/Dani/Desktop/Univ
 ersidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/image
-nes/watershed2.png>] [29 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatr
-imestre/Proyecto de fin de grado/Documentacion/imagenes/watershed3.png>]
-<./imagenes/graphCuts1.jpg, id=213, 227.79504pt x 173.73708pt>
+nes/watershed2.png> <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimest
+re/Proyecto de fin de grado/Documentacion/imagenes/watershed3.png>]
+<./imagenes/graphCuts1.jpg, id=211, 227.79504pt x 173.73708pt>
 File: ./imagenes/graphCuts1.jpg Graphic file (type jpg)
 
 <use ./imagenes/graphCuts1.jpg>
-Package pdftex.def Info: ./imagenes/graphCuts1.jpg used on input line 672.
+Package pdftex.def Info: ./imagenes/graphCuts1.jpg used on input line 705.
 (pdftex.def)             Requested size: 195.0pt x 148.7323pt.
 
-Overfull \hbox (7.77979pt too wide) in paragraph at lines 679--679
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Overfull \hbox (7.77979pt too wide) in paragraph at lines 712--712
 [][]\OT1/cmr/bx/n/17.28 Conclusiones de los ti-pos de seg-men-tacion 
  []
 
@@ -1062,77 +1053,77 @@ in de grado/Documentacion/imagenes/graphCuts1.jpg>]
 Cap\'{\i }tulo 4.
 [31
 
-] <./imagenes/aproxLevelSet1.png, id=221, 310.15875pt x 274.77657pt>
+] [32] <./imagenes/aproxLevelSet1.png, id=225, 310.15875pt x 274.77657pt>
 File: ./imagenes/aproxLevelSet1.png Graphic file (type png)
 
 <use ./imagenes/aproxLevelSet1.png>
-Package pdftex.def Info: ./imagenes/aproxLevelSet1.png used on input line 717.
+Package pdftex.def Info: ./imagenes/aproxLevelSet1.png used on input line 772.
 (pdftex.def)             Requested size: 180.67499pt x 160.0623pt.
 
-<./imagenes/aproxLevelSet2.png, id=222, 297.36093pt x 264.23718pt>
+<./imagenes/aproxLevelSet2.png, id=226, 297.36093pt x 264.23718pt>
 File: ./imagenes/aproxLevelSet2.png Graphic file (type png)
 
 <use ./imagenes/aproxLevelSet2.png>
-Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 722.
+Package pdftex.def Info: ./imagenes/aproxLevelSet2.png used on input line 777.
 (pdftex.def)             Requested size: 180.67499pt x 160.5474pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32]
-[33 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/aproxLevelSet1.png> <C:/Users/Dani/Desktop/U
-niversidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/im
-agenes/aproxLevelSet2.png>]
-Overfull \hbox (25.31432pt too wide) in paragraph at lines 788--790
+ [33 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/aproxLevelSet1.png> <C:/Users/Dani/Desktop/
+Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/i
+magenes/aproxLevelSet2.png>]
+Overfull \hbox (25.31432pt too wide) in paragraph at lines 830--832
 [][]\OT1/cmr/m/n/12 La ope-racion \OT1/cmr/m/it/12 switch[]in() \OT1/cmr/m/n/1
 2 para un punto x $\OMS/cmsy/m/n/12 2 \OML/cmm/m/it/12 L[]$ \OT1/cmr/m/n/12 se 
 de-fine como: switch[]in(x): 
  []
 
 [34]
-Overfull \hbox (36.82281pt too wide) in paragraph at lines 810--843
+Overfull \hbox (36.82281pt too wide) in paragraph at lines 852--885
  [][][] 
  []
 
-[35] [36]
+
+Underfull \vbox (badness 3009) has occurred while \output is active []
+
+ [35]
+[36]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 865.
+               Default added (so using `tbp') on input line 907.
 
-<./imagenes/switchLevelSet.png, id=239, 535.2497pt x 243.91125pt>
+<./imagenes/switchLevelSet.png, id=240, 535.2497pt x 243.91125pt>
 File: ./imagenes/switchLevelSet.png Graphic file (type png)
 
 <use ./imagenes/switchLevelSet.png>
-Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 868.
+Package pdftex.def Info: ./imagenes/switchLevelSet.png used on input line 910.
 (pdftex.def)             Requested size: 312.00119pt x 142.1832pt.
  [37 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/switchLevelSet.png>] <./imagenes/chanVese1.
-png, id=245, 80.55093pt x 79.04532pt>
+png, id=246, 80.55093pt x 79.04532pt>
 File: ./imagenes/chanVese1.png Graphic file (type png)
 
 <use ./imagenes/chanVese1.png>
-Package pdftex.def Info: ./imagenes/chanVese1.png used on input line 888.
+Package pdftex.def Info: ./imagenes/chanVese1.png used on input line 930.
 (pdftex.def)             Requested size: 90.3375pt x 88.65315pt.
 
-<./imagenes/chanVese2.png, id=246, 77.53969pt x 77.53969pt>
+<./imagenes/chanVese2.png, id=247, 77.53969pt x 77.53969pt>
 File: ./imagenes/chanVese2.png Graphic file (type png)
 
 <use ./imagenes/chanVese2.png>
-Package pdftex.def Info: ./imagenes/chanVese2.png used on input line 893.
+Package pdftex.def Info: ./imagenes/chanVese2.png used on input line 935.
 (pdftex.def)             Requested size: 90.3375pt x 90.33769pt.
 
-<./imagenes/chanVese3.png, id=247, 79.79813pt x 76.03406pt>
+<./imagenes/chanVese3.png, id=248, 79.79813pt x 76.03406pt>
 File: ./imagenes/chanVese3.png Graphic file (type png)
 
 <use ./imagenes/chanVese3.png>
-Package pdftex.def Info: ./imagenes/chanVese3.png used on input line 898.
+Package pdftex.def Info: ./imagenes/chanVese3.png used on input line 940.
 (pdftex.def)             Requested size: 90.3375pt x 86.07642pt.
 
-<./imagenes/chanVese4.png, id=248, 82.05656pt x 78.2925pt>
+<./imagenes/chanVese4.png, id=249, 82.05656pt x 78.2925pt>
 File: ./imagenes/chanVese4.png Graphic file (type png)
 
 <use ./imagenes/chanVese4.png>
-Package pdftex.def Info: ./imagenes/chanVese4.png used on input line 903.
+Package pdftex.def Info: ./imagenes/chanVese4.png used on input line 945.
 (pdftex.def)             Requested size: 90.3375pt x 86.19487pt.
  [38 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/chanVese1.png> <C:/Users/Dani/Desktop/Unive
@@ -1144,14 +1135,14 @@ tacion/imagenes/chanVese4.png>]
 Cap\'{\i }tulo 5.
 [39
 
-] [40] <./imagenes/esquemaOfeli.png, id=258, 852.18375pt x 438.13687pt>
+] [40] <./imagenes/esquemaOfeli.png, id=259, 852.18375pt x 438.13687pt>
 File: ./imagenes/esquemaOfeli.png Graphic file (type png)
 
 <use ./imagenes/esquemaOfeli.png>
-Package pdftex.def Info: ./imagenes/esquemaOfeli.png used on input line 984.
+Package pdftex.def Info: ./imagenes/esquemaOfeli.png used on input line 1029.
 (pdftex.def)             Requested size: 507.00119pt x 260.67126pt.
 
-Overfull \hbox (117.00119pt too wide) in paragraph at lines 984--985
+Overfull \hbox (117.00119pt too wide) in paragraph at lines 1029--1030
  [][][] 
  []
 
@@ -1164,294 +1155,284 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [43
 
 ]
-Overfull \hbox (8.75159pt too wide) in paragraph at lines 1026--1027
+Overfull \hbox (8.75159pt too wide) in paragraph at lines 1071--1072
 [][]\OT1/cmr/m/n/12 Otro pro-blema re-la-cio-nado con el an-te-rior puede su-ce
 -der cuando
  []
 
-[44] [45] <./imagenes/mismoVecino.png, id=276, 376.40625pt x 341.02406pt>
+[44] [45] <./imagenes/mismoVecino.png, id=277, 376.40625pt x 341.02406pt>
 File: ./imagenes/mismoVecino.png Graphic file (type png)
 
 <use ./imagenes/mismoVecino.png>
-Package pdftex.def Info: ./imagenes/mismoVecino.png used on input line 1052.
+Package pdftex.def Info: ./imagenes/mismoVecino.png used on input line 1097.
 (pdftex.def)             Requested size: 234.00238pt x 212.01033pt.
-
-<./imagenes/1-Imple.png, id=277, 936.49875pt x 261.97874pt>
+ [46 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/mismoVecino.png>] <./imagenes/1-Imple.png, 
+id=282, 1286.55656pt x 361.35pt>
 File: ./imagenes/1-Imple.png Graphic file (type png)
 
 <use ./imagenes/1-Imple.png>
-Package pdftex.def Info: ./imagenes/1-Imple.png used on input line 1064.
-(pdftex.def)             Requested size: 467.99881pt x 130.92108pt.
+Package pdftex.def Info: ./imagenes/1-Imple.png used on input line 1109.
+(pdftex.def)             Requested size: 467.99881pt x 131.44228pt.
 
-Overfull \hbox (77.99881pt too wide) in paragraph at lines 1064--1065
+Overfull \hbox (77.99881pt too wide) in paragraph at lines 1109--1110
  [][][] 
  []
 
-[46 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/mismoVecino.png>] [47 <C:/Users/Dani/Desktop
-/Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/
-imagenes/1-Imple.png>]
-<./imagenes/divisionLista1.png, id=286, 679.03688pt x 106.14656pt>
+[47 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/1-Imple.png>]
+<./imagenes/divisionLista1.png, id=287, 679.03688pt x 106.14656pt>
 File: ./imagenes/divisionLista1.png Graphic file (type png)
 
 <use ./imagenes/divisionLista1.png>
-Package pdftex.def Info: ./imagenes/divisionLista1.png used on input line 1091.
+Package pdftex.def Info: ./imagenes/divisionLista1.png used on input line 1136.
 
 (pdftex.def)             Requested size: 390.0pt x 60.96414pt.
 
-<./imagenes/divisionLista2.png, id=287, 720.44156pt x 120.45pt>
+<./imagenes/divisionLista2.png, id=288, 720.44156pt x 120.45pt>
 File: ./imagenes/divisionLista2.png Graphic file (type png)
 
 <use ./imagenes/divisionLista2.png>
-Package pdftex.def Info: ./imagenes/divisionLista2.png used on input line 1102.
+Package pdftex.def Info: ./imagenes/divisionLista2.png used on input line 1147.
 
 (pdftex.def)             Requested size: 390.0pt x 65.20375pt.
  [48 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/divisionLista1.png> <C:/Users/Dani/Desktop/
 Universidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/i
 magenes/divisionLista2.png>]
-<./imagenes/unionLista1.png, id=291, 737.75626pt x 118.94438pt>
+<./imagenes/unionLista1.png, id=292, 737.75626pt x 118.94438pt>
 File: ./imagenes/unionLista1.png Graphic file (type png)
 
 <use ./imagenes/unionLista1.png>
-Package pdftex.def Info: ./imagenes/unionLista1.png used on input line 1115.
+Package pdftex.def Info: ./imagenes/unionLista1.png used on input line 1160.
 (pdftex.def)             Requested size: 390.0pt x 62.87686pt.
 
-<./imagenes/unionLista2.png, id=292, 679.03688pt x 279.29344pt>
+<./imagenes/unionLista2.png, id=293, 679.03688pt x 279.29344pt>
 File: ./imagenes/unionLista2.png Graphic file (type png)
 
 <use ./imagenes/unionLista2.png>
-Package pdftex.def Info: ./imagenes/unionLista2.png used on input line 1125.
+Package pdftex.def Info: ./imagenes/unionLista2.png used on input line 1170.
 (pdftex.def)             Requested size: 390.0pt x 160.40923pt.
  [49 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/unionLista1.png> <C:/Users/Dani/Desktop/Uni
 versidad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imag
 enes/unionLista2.png>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1139
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 1186
 .
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [50]
-Overfull \hbox (23.60124pt too wide) in paragraph at lines 1185--1186
+Overfull \hbox (23.60124pt too wide) in paragraph at lines 1233--1234
 [][]  \OT1/cmr/bx/n/12 g++ main.cpp ac-ti-ve-con-tour.cpp ac[]withoutedges.cpp 
 -o prueba 
  []
 
 
-Overfull \hbox (52.98665pt too wide) in paragraph at lines 1198--1207
+Overfull \hbox (52.98665pt too wide) in paragraph at lines 1246--1255
  [][][] 
  []
 
-<./imagenes/grafico1Imple.png, id=302, 368.1253pt x 222.07968pt>
+<./imagenes/grafico1Imple.png, id=303, 368.1253pt x 222.07968pt>
 File: ./imagenes/grafico1Imple.png Graphic file (type png)
 
 <use ./imagenes/grafico1Imple.png>
-Package pdftex.def Info: ./imagenes/grafico1Imple.png used on input line 1214.
-(pdftex.def)             Requested size: 312.00119pt x 188.23659pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+Package pdftex.def Info: ./imagenes/grafico1Imple.png used on input line 1262.
+(pdftex.def)             Requested size: 272.99881pt x 164.70575pt.
  [51]
-[52 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/grafico1Imple.png>]
-Overfull \hbox (58.46165pt too wide) in paragraph at lines 1260--1269
+Overfull \hbox (7.09616pt too wide) in paragraph at lines 1277--1285
  [][][] 
  []
 
-<./imagenes/grafico2Imple.png, id=311, 635.37375pt x 359.84438pt>
-File: ./imagenes/grafico2Imple.png Graphic file (type png)
-
-<use ./imagenes/grafico2Imple.png>
-Package pdftex.def Info: ./imagenes/grafico2Imple.png used on input line 1278.
-(pdftex.def)             Requested size: 312.00119pt x 176.70964pt.
-
+[52 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
+in de grado/Documentacion/imagenes/grafico1Imple.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [53]
-[54 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/grafico2Imple.png>]
-<./imagenes/mallaLocks.png, id=319, 2860.6875pt x 2107.875pt>
+<./imagenes/grafico2Imple.png, id=316, 635.37375pt x 359.84438pt>
+File: ./imagenes/grafico2Imple.png Graphic file (type png)
+
+<use ./imagenes/grafico2Imple.png>
+Package pdftex.def Info: ./imagenes/grafico2Imple.png used on input line 1343.
+(pdftex.def)             Requested size: 312.00119pt x 176.70964pt.
+ [54 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/grafico2Imple.png>] <./imagenes/mallaLocks.
+png, id=321, 2860.6875pt x 2107.875pt>
 File: ./imagenes/mallaLocks.png Graphic file (type png)
 
 <use ./imagenes/mallaLocks.png>
-Package pdftex.def Info: ./imagenes/mallaLocks.png used on input line 1296.
+Package pdftex.def Info: ./imagenes/mallaLocks.png used on input line 1364.
 (pdftex.def)             Requested size: 272.99881pt x 201.15079pt.
  [55 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/mallaLocks.png>]
-Overfull \hbox (48.33713pt too wide) in paragraph at lines 1331--1348
+Overfull \hbox (1.8839pt too wide) in paragraph at lines 1405--1423
  [][][] 
  []
 
-File: ./imagenes/grafico2Imple.png Graphic file (type png)
-<use ./imagenes/grafico2Imple.png>
-Package pdftex.def Info: ./imagenes/grafico2Imple.png used on input line 1355.
-(pdftex.def)             Requested size: 312.00119pt x 176.70964pt.
 
-<./imagenes/grafico3Imple.png, id=325, 647.41875pt x 356.0803pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56]
+<./imagenes/grafico3Imple.png, id=330, 647.41875pt x 356.0803pt>
 File: ./imagenes/grafico3Imple.png Graphic file (type png)
 
 <use ./imagenes/grafico3Imple.png>
-Package pdftex.def Info: ./imagenes/grafico3Imple.png used on input line 1356.
+Package pdftex.def Info: ./imagenes/grafico3Imple.png used on input line 1429.
 (pdftex.def)             Requested size: 312.00119pt x 171.6012pt.
-
-Underfull \vbox (badness 3240) has occurred while \output is active []
-
- [56]
-[57 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/imagenes/grafico3Imple.png>]
-<./imagenes/grafico3-2Imple.png, id=334, 548.0475pt x 338.01282pt>
+ [57 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/grafico3Imple.png>] <./imagenes/grafico3-2I
+mple.png, id=335, 548.0475pt x 338.01282pt>
 File: ./imagenes/grafico3-2Imple.png Graphic file (type png)
 
 <use ./imagenes/grafico3-2Imple.png>
-Package pdftex.def Info: ./imagenes/grafico3-2Imple.png used on input line 1369
+Package pdftex.def Info: ./imagenes/grafico3-2Imple.png used on input line 1441
 .
 (pdftex.def)             Requested size: 350.99762pt x 216.48218pt.
  [58 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
-fin de grado/Documentacion/imagenes/grafico3-2Imple.png>]
+fin de grado/Documentacion/imagenes/grafico3-2Imple.png>] [59] [60
+
+]
 Cap\'{\i }tulo 7.
-<./imagenes/buena1.png, id=339, 164.11313pt x 162.6075pt>
+<./imagenes/buena1.png, id=346, 164.11313pt x 162.6075pt>
 File: ./imagenes/buena1.png Graphic file (type png)
 
 <use ./imagenes/buena1.png>
-Package pdftex.def Info: ./imagenes/buena1.png used on input line 1399.
+Package pdftex.def Info: ./imagenes/buena1.png used on input line 1471.
 (pdftex.def)             Requested size: 126.47194pt x 125.31236pt.
 File: ./imagenes/ejemplo2.png Graphic file (type png)
  <use ./imagenes/ejemplo2.png>
-Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 1404.
+Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 1476.
 (pdftex.def)             Requested size: 144.54053pt x 114.04088pt.
 
-<./imagenes/buena3.png, id=340, 769.37437pt x 749.80125pt>
+<./imagenes/buena3.png, id=347, 769.37437pt x 749.80125pt>
 File: ./imagenes/buena3.png Graphic file (type png)
 
 <use ./imagenes/buena3.png>
-Package pdftex.def Info: ./imagenes/buena3.png used on input line 1409.
+Package pdftex.def Info: ./imagenes/buena3.png used on input line 1481.
 (pdftex.def)             Requested size: 144.54053pt x 140.86197pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59
-
-]
+ [61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [60 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [62 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/buena1.png> <C:/Users/Dani/Desktop/Universi
 dad/4º Curso/2º cuatrimestre/Proyecto de fin de grado/Documentacion/imagenes/
-buena3.png>] <./imagenes/graf1-500.png, id=347, 511.15968pt x 343.2825pt>
+buena3.png>] <./imagenes/graf1-500.png, id=355, 511.15968pt x 343.2825pt>
 File: ./imagenes/graf1-500.png Graphic file (type png)
 
 <use ./imagenes/graf1-500.png>
-Package pdftex.def Info: ./imagenes/graf1-500.png used on input line 1453.
+Package pdftex.def Info: ./imagenes/graf1-500.png used on input line 1525.
 (pdftex.def)             Requested size: 272.99881pt x 183.3374pt.
- [61 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [63 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf1-500.png>] <./imagenes/graf1-1500.png,
- id=353, 616.55344pt x 328.22626pt>
+ id=361, 616.55344pt x 328.22626pt>
 File: ./imagenes/graf1-1500.png Graphic file (type png)
 
 <use ./imagenes/graf1-1500.png>
-Package pdftex.def Info: ./imagenes/graf1-1500.png used on input line 1491.
+Package pdftex.def Info: ./imagenes/graf1-1500.png used on input line 1563.
 (pdftex.def)             Requested size: 350.99762pt x 186.86052pt.
- [62 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [64 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf1-1500.png>] <./imagenes/graf1-3000.png
-, id=358, 643.6547pt x 376.40625pt>
+, id=366, 643.6547pt x 376.40625pt>
 File: ./imagenes/graf1-3000.png Graphic file (type png)
 
 <use ./imagenes/graf1-3000.png>
-Package pdftex.def Info: ./imagenes/graf1-3000.png used on input line 1527.
+Package pdftex.def Info: ./imagenes/graf1-3000.png used on input line 1599.
 (pdftex.def)             Requested size: 350.99762pt x 205.26656pt.
- [63 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [65 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf1-3000.png>] <./imagenes/result1.png, i
-d=363, 501.875pt x 501.875pt>
+d=371, 501.875pt x 501.875pt>
 File: ./imagenes/result1.png Graphic file (type png)
 
 <use ./imagenes/result1.png>
-Package pdftex.def Info: ./imagenes/result1.png used on input line 1541.
+Package pdftex.def Info: ./imagenes/result1.png used on input line 1613.
 (pdftex.def)             Requested size: 272.99881pt x 273.01485pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [64 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [66 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/result1.png>]
-<./imagenes/graf2-500.png, id=368, 512.66531pt x 344.78813pt>
+<./imagenes/graf2-500.png, id=376, 512.66531pt x 344.78813pt>
 File: ./imagenes/graf2-500.png Graphic file (type png)
 
 <use ./imagenes/graf2-500.png>
-Package pdftex.def Info: ./imagenes/graf2-500.png used on input line 1582.
+Package pdftex.def Info: ./imagenes/graf2-500.png used on input line 1654.
 (pdftex.def)             Requested size: 272.99881pt x 183.6049pt.
- [65 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [67 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf2-500.png>] <./imagenes/graf2-1500.png,
- id=373, 615.0478pt x 331.2375pt>
+ id=382, 615.0478pt x 331.2375pt>
 File: ./imagenes/graf2-1500.png Graphic file (type png)
 
 <use ./imagenes/graf2-1500.png>
-Package pdftex.def Info: ./imagenes/graf2-1500.png used on input line 1619.
+Package pdftex.def Info: ./imagenes/graf2-1500.png used on input line 1691.
 (pdftex.def)             Requested size: 350.99762pt x 189.03477pt.
- [66 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [68 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf2-1500.png>] <./imagenes/graf2-3000.png
-, id=378, 678.28406pt x 371.88937pt>
+, id=387, 678.28406pt x 371.88937pt>
 File: ./imagenes/graf2-3000.png Graphic file (type png)
 
 <use ./imagenes/graf2-3000.png>
-Package pdftex.def Info: ./imagenes/graf2-3000.png used on input line 1656.
+Package pdftex.def Info: ./imagenes/graf2-3000.png used on input line 1728.
 (pdftex.def)             Requested size: 350.99762pt x 192.4416pt.
- [67 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [69 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf2-3000.png>] <./imagenes/result2.png, i
-d=384, 501.875pt x 501.875pt>
+d=392, 501.875pt x 501.875pt>
 File: ./imagenes/result2.png Graphic file (type png)
 
 <use ./imagenes/result2.png>
-Package pdftex.def Info: ./imagenes/result2.png used on input line 1671.
+Package pdftex.def Info: ./imagenes/result2.png used on input line 1743.
 (pdftex.def)             Requested size: 272.99881pt x 273.01485pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [68 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [70 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/result2.png>]
-<./imagenes/graf3-500.png, id=389, 603.0028pt x 403.5075pt>
+<./imagenes/graf3-500.png, id=397, 603.0028pt x 403.5075pt>
 File: ./imagenes/graf3-500.png Graphic file (type png)
 
 <use ./imagenes/graf3-500.png>
-Package pdftex.def Info: ./imagenes/graf3-500.png used on input line 1712.
+Package pdftex.def Info: ./imagenes/graf3-500.png used on input line 1784.
 (pdftex.def)             Requested size: 272.99881pt x 182.6788pt.
- [69 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [71 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf3-500.png>] <./imagenes/graf3-1500.png,
- id=394, 723.45282pt x 389.20406pt>
+ id=402, 723.45282pt x 389.20406pt>
 File: ./imagenes/graf3-1500.png Graphic file (type png)
 
 <use ./imagenes/graf3-1500.png>
-Package pdftex.def Info: ./imagenes/graf3-1500.png used on input line 1750.
+Package pdftex.def Info: ./imagenes/graf3-1500.png used on input line 1822.
 (pdftex.def)             Requested size: 350.99762pt x 188.82907pt.
- [70 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [72 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf3-1500.png>] <./imagenes/graf3-3000.png
-, id=399, 797.22844pt x 437.38406pt>
+, id=407, 797.22844pt x 437.38406pt>
 File: ./imagenes/graf3-3000.png Graphic file (type png)
 
 <use ./imagenes/graf3-3000.png>
-Package pdftex.def Info: ./imagenes/graf3-3000.png used on input line 1789.
+Package pdftex.def Info: ./imagenes/graf3-3000.png used on input line 1861.
 (pdftex.def)             Requested size: 312.00119pt x 171.17307pt.
- [71 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [73 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf3-3000.png>] <./imagenes/result3.png, i
-d=404, 501.875pt x 501.875pt>
+d=413, 501.875pt x 501.875pt>
 File: ./imagenes/result3.png Graphic file (type png)
 
 <use ./imagenes/result3.png>
-Package pdftex.def Info: ./imagenes/result3.png used on input line 1802.
+Package pdftex.def Info: ./imagenes/result3.png used on input line 1874.
 (pdftex.def)             Requested size: 272.99881pt x 273.01485pt.
- [72 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+ [74 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/result3.png>]
 Cap\'{\i }tulo 8.
 
-LaTeX Warning: Reference `dedicacionTemporal' on page 73 undefined on input lin
-e 1823.
+LaTeX Warning: Reference `dedicacionTemporal' on page 75 undefined on input lin
+e 1895.
 
-[73
+[75
 
-] [74
+] [76
 
 ]
 Cap\'{\i }tulo 9.
-[75])
+[77])
 :<-
 Package srcltx Info: Expanded filename `Config/appendices.tex' to `Config/appen
 dices.tex' on input line 87.
@@ -1465,7 +1446,7 @@ liography.tex' on input line 99.
 :<+ Config/bibliography.tex
 
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
-de grado\Documentacion\Config/bibliography.tex" [76])
+de grado\Documentacion\Config/bibliography.tex" [78])
 :<-
 :<+ Main.bbl
 
@@ -1482,7 +1463,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--55
 -sity of Gi-rona,
  []
 
-[77
+[79
 
 
 ]
@@ -1520,7 +1501,7 @@ Package minitoc(hints) Warning: W0024
 (minitoc(hints))                Some hints have been written 
 (minitoc(hints))                in the Main.log file.
 
-[78]
+[80]
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
 de grado\Documentacion\Main.aux")
 
@@ -1528,39 +1509,40 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 8443 strings out of 493921
- 127724 string characters out of 3147286
- 233695 words of memory out of 3000000
- 11257 multiletter control sequences out of 15000+200000
- 18303 words of font info for 69 fonts, out of 3000000 for 9000
+ 8469 strings out of 493921
+ 128210 string characters out of 3147286
+ 239894 words of memory out of 3000000
+ 11278 multiletter control sequences out of 15000+200000
+ 19366 words of font info for 72 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
- 38i,14n,58p,1542b,1852s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Dani\
-AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk> <C:\Us
-ers\Dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.p
-k><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/la
-sy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Main.pdf (96 pages, 23157996 bytes).
+ 38i,15n,58p,1513b,1978s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+cbx1095.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Us
+ers\Dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.p
+k> <C:\Users\Dani\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
+crm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxsl10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
+txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latx
+font/line10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
+s/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on Main.pdf (98 pages, 23245207 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
+ 521 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

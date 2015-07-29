@@ -1,17 +1,17 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.1}Planteamiento de la paralelizaci\'on}{\reset@font\mtcSfont 44}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.1}Primera implementaci\'on}{\reset@font\mtcSSfont 46}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.1}Primera implementaci\'on}{\reset@font\mtcSSfont 47}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Lista enlazada}{\reset@font\mtcSSSfont 47}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Divisi\'on de la lista}{\reset@font\mtcSSSfont 47}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Uni\'on de las sublistas}{\reset@font\mtcSSSfont 48}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Secciones cr\IeC {\'\i }ticas}{\reset@font\mtcSSSfont 49}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Divisi\'on de la lista}{\reset@font\mtcSSSfont 48}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Uni\'on de las sublistas}{\reset@font\mtcSSSfont 49}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Secciones cr\IeC {\'\i }ticas}{\reset@font\mtcSSSfont 50}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 50}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.1.2}Rendimiento}{\reset@font\mtcSSfont 51}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Conclusi\'on}{\reset@font\mtcSSSfont 52}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Primer paso de mejora: segunda implementaci\'on}{\reset@font\mtcSfont 52}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.2}Primer paso de mejora: segunda implementaci\'on}{\reset@font\mtcSfont 53}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 53}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}Rendimiento}{\reset@font\mtcSSfont 53}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.2.1}Rendimiento}{\reset@font\mtcSSfont 54}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Conclusi\'on}{\reset@font\mtcSSSfont 54}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Segundo paso de mejora: tercera implementaci\'on}{\reset@font\mtcSfont 54}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 55}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.3.1}Rendimiento}{\reset@font\mtcSSfont 56}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {6.3}Segundo paso de mejora: tercera implementaci\'on}{\reset@font\mtcSfont 55}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode C\'odigo}{\reset@font\mtcSSSfont 56}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {6.3.1}Rendimiento}{\reset@font\mtcSSfont 57}}
 {\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Conclusi\'on}{\reset@font\mtcSSSfont 58}}

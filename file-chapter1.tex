@@ -91,23 +91,23 @@ Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{eje
 
 \section{Definición de segmentación}
 
-La segmentación de imagen, también nombrada a veces como \textit{labelling}, es el proceso de dividir la imagen en grupos o regiones contiguas cuyos elementos(p. e. píxeles o \textit{voxels}) tienen propiedades o características comunes. Estas regiones servirán para identificar los objetos de la imagen que posteriormente podrán ser clasificados y etiquetados en base a sus propiedades \cite[pag. 121]{terry1}. 
+La segmentación de imagen, también denominada a veces como \textit{labelling}, es el proceso de dividir la imagen en grupos o regiones contiguas cuyos elementos(p. e. píxeles o \textit{voxels}) tienen propiedades o características comunes. Estas regiones servirán para identificar los objetos de la imagen que posteriormente podrán ser clasificados y etiquetados en base a sus propiedades \cite{terry1}. 
 
-El resultado final de la segmentación de la imagen será un conjunto de regiones o segmentos que formarán la imagen original. Cada uno de los píxeles de una región tendrá una característica común con los píxeles de su región y una diferencia significativa respecto a píxeles de otra región(por ello se habrán agrupado en distinto segmento), ya sea por ejemplo, en el color, la textura o la intensidad. Por lo tanto, se podrán extraer los segmentos de interés de la imagen, es decir, los objetos que esta contiene.
+El resultado final de la segmentación de la imagen será un conjunto de regiones o segmentos que formarán la imagen original. Cada uno de los píxeles de una región tendrá una característica común con los píxeles de dicha región y una diferencia significativa respecto a píxeles de otra región, por ello se habrán agrupado en distinto segmento, ya sea por ejemplo, en el color, la textura o la intensidad. Por lo tanto, se podrán extraer los segmentos de interés de la imagen, es decir, los objetos que ésta contiene.
 
 \section{Evolución de la segmentación}\label{cap:EvoSeg}
 
-Los primeros desarrollos en el ámbito de la segmentación de imagen se remontan a hace 50 años. En 1965 se desarrolló un operador para detectar bordes entre diferentes partes de una imagen, conocido como \textit{Roberts operator} o \textit{Roberts Edge Detector}. Este detector fue el primer paso hacia la descomposición de imágenes en diferentes segmentos o regiones. En esa misma década también se propusieron varios detectores de bordes como \textit{Sobel} y \textit{Prewitt edge detectors}. A partir de ahí, comenzaron a surgir diferentes algoritmos y técnicas de segmentación. Junto con esto, también se aumentó el alcance de estas técnicas: de imagen 2D a 3D, de imágenes fijas a imágenes en <<movimiento>> o secuencias de imagen, de escalas de gris a imágenes a color etc \cite[Capítulo 1]{zhang1}.
+Los primeros desarrollos en el ámbito de la segmentación de imagen se remontan a hace 50 años. En 1965 se desarrolló un operador para detectar bordes entre diferentes partes de una imagen, conocido como \textit{Roberts operator} o \textit{Roberts Edge Detector}. Este detector fue el primer paso hacia la descomposición de imágenes en diferentes segmentos o regiones. En esa misma década también se propusieron varios detectores de bordes como \textit{Sobel} y \textit{Prewitt edge detectors}. A partir de ahí, comenzaron a surgir diferentes algoritmos y técnicas de segmentación. Junto con esto, también se amplió el ámbito de estas técnicas: de imagen 2D a 3D, de imágenes fijas a imágenes en <<movimiento>> o secuencias de imágenes, de escalas de gris a imágenes a color etc \cite{zhang1}.
 
-A pesar de los años de investigación dedicados a estas técnicas y el gran número de ellas existentes, la segmentación de imagen sigue siendo un tema de investigación desafiante y no existe aún un estándar de segmentación que funcione bien para cualquier tipo de imagen. Estas técnicas están en continua evolución y aún están lejos de su madurez. Prueba de ello está en que muchas conferencias de técnicas de imagen tienen apartados de segmentación de imagen, el número de artículos de este ámbito aumenta cada año y muchos libros de procesamiento de imagen tienen capítulos referidos a la segmentación \cite[Capítulo 1]{zhang1}.
+A pesar de los años de investigación dedicados a estas técnicas y el gran número de ellas existentes, la segmentación de imagen sigue siendo un tema de investigación desafiante y no existe aún un estándar de segmentación que funcione bien para cualquier tipo de imagen. Estas técnicas están en continua evolución y aún están lejos de su madurez. Prueba de ello está en que muchas conferencias del ámbito de tratamiento de imagen tienen apartados de segmentación, además, el número de artículos de este ámbito aumenta cada año y muchos libros de procesamiento de imagen tienen capítulos referidos a la segmentación \cite{zhang1}.
 
-Para que el lector se haga una idea, se ha realizado una búsqueda en \cite{ieee1} con las palabras <<image segmentation>> en varios años. Este buscador encuentra artículos, conferencias, estándares, libros, revistas y cursos de aprendizaje relacionados con las palabras introducidas. La figura \ref{regisIEEE} muestra el número de resultados de esa búsqueda desde 1960 hasta 2015. Como se puede observar, el número de resultados aumenta notablemente cada lustro.	
+Para que el lector se haga una idea, se ha realizado una búsqueda en el sitio web \textit{ieee explore}\cite{ieee1} con las palabras <<image segmentation>> en varios años. Este buscador encuentra artículos, conferencias, estándares, libros, revistas y cursos de aprendizaje relacionados con las palabras introducidas. La figura \ref{regisIEEE} muestra el número de resultados de esa búsqueda desde 1960 hasta 2015. Como se puede observar, el número de resultados aumenta notablemente cada lustro.	
 	
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\textwidth]{./imagenes/publicaciones}
 	\captionsetup{justification=centering}
-	\caption{Resultados de búsqueda en \cite{ieee1} con las palabras <<image segmentation>> }
+	\caption{Resultados de búsqueda en el sitio web \textit{ieee explore} \cite{ieee1} con las palabras <<image segmentation>> }
 	\vspace{2 mm}			
 	Fuente: \cite{ieee1}
 	\label{regisIEEE}
@@ -115,7 +115,7 @@ Para que el lector se haga una idea, se ha realizado una búsqueda en \cite{ieee1
  
 \section{Aplicaciones}
 
-Las aplicaciones de segmentación de imágenes son muchas y muy diversas. Cualquier proceso que requiera la extracción de información de una imagen utilizará, en cierta medida, una técnica de segmentación. A continuación nombraremos algunas de las aplicaciones que se han ido recopilando en la realización de esta documentación, por lo que el número de aplicaciones totales será mucho mayor:
+Las aplicaciones de segmentación de imágenes son muchas y muy diversas. Cualquier proceso que requiera la extracción de información de una imagen utilizará, en cierta medida, una técnica de segmentación. A continuación nombraremos algunas de las aplicaciones que se han ido recopilando en la realización de esta documentación, aunque el número de aplicaciones totales es mucho mayor:
 
 \begin{itemize}
 	\item Localización de moléculas en imágenes microscópicas.
@@ -143,9 +143,9 @@ Las aplicaciones de segmentación de imágenes son muchas y muy diversas. Cualquie
 
 \section{Introducción}
 
-Hay bastante controversia en cuanto a la clasificación de las diferentes técnicas de segmentación, por el gran número de estas técnicas existentes, por las diferentes maneras en las que cada una tiene representada la imagen, las diferentes características que utilizan de la imagen etc. Hay trabajos que realizan una clasificación de los algoritmos desde dos puntos de vista diferentes: en función de como puede ser utilizado el algoritmo, es decir, las aplicaciones que pueda tener y otra en base al algoritmo en sí, fijándose en como realiza la segmentación \cite{mc1}. Por otro lado, también hay otros que realizan esta clasificación para ámbitos muy concretos \cite[pag. 11]{mc1}.
+Hay bastante controversia en cuanto a la clasificación de las diferentes técnicas de segmentación, por el gran número de estas técnicas existentes, por las diferentes maneras en las que cada una tiene representada la imagen, las diferentes características que utilizan de la imagen etc. Hay trabajos que realizan una clasificación de los algoritmos desde dos puntos de vista diferentes: en función de cómo puede ser utilizado el algoritmo, es decir, las aplicaciones que pueda tener, y otra en base al algoritmo en sí, fijándose en cómo realiza la segmentación \cite{mc1}. Por otro lado, también hay otros trabajos que realizan esta clasificación para ámbitos muy concretos \cite[pag. 11]{mc1}.
 
-\textit{Zhang} propone una clasificación más clara \cite{zhang1}, creando la división en cuatro grupos: algoritmos basados en detectar la discontinuidad de las diferentes regiones de la imagen, los llamados \textit{edge-based algorithms}, o basados en detectar la continuidad o la similitud de las regiones, los llamados \textit{region-based algorithms}. Posteriormente hace una subdivisión de estos dos grupos en función de la estrategia de procesamiento: los que realizan un procesamiento secuencial, donde el procesamiento de pasos previos se tienen en cuenta en pasos posteriores, y los que realizan un procesamiento paralelo, es decir, decisiones independientes y simultáneas \cite[Sección 1]{zhang1}.
+\textit{Zhang}\cite{zhang1} propone una clasificación más clara, creando la división en dos grupos: a) algoritmos basados en detectar la discontinuidad de las diferentes regiones de la imagen, los llamados \textit{edge-based algorithms} b) basados en detectar la continuidad o la similitud de las regiones, los llamados \textit{region-based algorithms}. Posteriormente hace una subdivisión de estos dos grupos en función de la estrategia de procesamiento: los que realizan un procesamiento secuencial, donde el procesamiento de pasos previos se tienen en cuenta en pasos posteriores, y los que realizan un procesamiento paralelo, es decir, decisiones independientes y simultáneas \cite{zhang1}.
 
 \begin{figure}[ht]
 	\centering
@@ -157,15 +157,15 @@ Hay bastante controversia en cuanto a la clasificación de las diferentes técnica
 	\label{tecnicasSegmentacion}
 \end{figure}
 
-La clasificación elegida tiene varios aspectos en común con la última presentada y descrita \cite{basa1}. Se ha preferido esta clasificación al ser clara en cuanto a la división de las técnicas y las características que estas tienen frente a otras clasificaciones. En la figura  \ref{tecnicasSegmentacion} se muestra el esquema de la clasificación elegida.
+La clasificación elegida tiene varios aspectos en común con la última presentada y descrita \cite{basa1}. Se ha preferido esta clasificación al ser clara en cuanto a la división de las técnicas y las características que éstas tienen frente a otras clasificaciones. En la figura  \ref{tecnicasSegmentacion} se muestra el esquema de la clasificación elegida.
 
 \section{Segmentación de imagen basada en el tratamiento de los \textit{píxeles}}\label{cap:tratPixel}
 
-Este tipo de segmentación consiste en dividir la imagen en segmentos o  conjuntos de píxeles (conocidos como <<superpíxeles>>). Cada píxel de la imagen será tratado y agrupado en función de sus características. Existen varios subgrupos dentro de esta clasificación: \textit{Thresholding},o <<Método del valor umbral>> en castellano, y \textit{Clustering}, o algoritmos de agrupamiento en castellano.
+Este tipo de segmentación consiste en dividir la imagen en segmentos o  conjuntos de píxeles (conocidos como <<superpíxeles>>). Cada píxel de la imagen será tratado y agrupado en función de sus características. Existen varios subgrupos dentro de esta clasificación: \textit{Thresholding},o <<Método del valor umbral>> en castellano, y \textit{Clustering}, o algoritmos de agrupamiento en castellano, entre otros.
 
 \subsection{Thresholding}
 
-Este tipo de segmentación es la más simple de todas y se basa en clasificar los píxeles en dos grupos en función de la intensidad de estos: los que superan la intensidad umbral definida y los que no la superan. El resultado de esta segmentación sería una imagen binaria. 
+Este tipo de segmentación es la más simple de todas y se basa en clasificar los píxeles en dos grupos en función de la intensidad de éstos: los que superan la intensidad umbral definida y los que no la superan. El resultado de esta segmentación sería una imagen binaria (véase la comparación de las figuras \ref{thresholding1} y \ref{thresholding2}). 
 
 Esta técnica puede ser definida como:
 
@@ -181,17 +181,18 @@ for $i = 1,2, ... , N \ $and$ \ j = 1,2, ... , M $
 0 & \quad \mathrm{si \ I(i,j) <\ T}
 \end{array} \right. 
 \end{equation}
+donde $I(i,j)$ es el valor del píxel de la posición i,j de la imagen.
 
-También existe la posibilidad de definir varias intensidades umbrales (como en la figura \ref{thresholding4}), con el fin de particionar la imagen en más segmentos. En sí, se podrán definir tantos umbrales como niveles de gris contiene la imagen, aunque habrá que buscar un buen equilibrio. 
+También existe la posibilidad de definir varias intensidades umbrales (véase la comparación de las figuras \ref{thresholding3} y \ref{thresholding4}), con el fin de particionar la imagen en más segmentos. En sí, se podrán definir tantos umbrales como niveles de gris contiene la imagen, aunque habrá que buscar un buen equilibrio. 
 
-La ventaja de este tipo de segmentación es que es relativamente sencilla comparada con otros tipos de segmentación más avanzada como \textit{watershed} o \textit{level set}. Aun así, esta segmentación funciona bien cuando el fondo y los objetos siguen una distribución bimodal, es decir, que hay una diferencia <<notable>> entre las dos partes. Comúnmente esta característica no se da en todas las imágenes, por lo que no tendrá buenos resultados en las que el fondo no se distinga bien de los objetos \cite{basa1}. Además, esta segmentación tampoco se comporta bien con imágenes que tienen una iluminación gradiente grande como \ref{thresholding6}. Aunque es verdad que para ello también existen varias mejoras que hacen que la segmentación se <<adapte>> para conseguir mejores resultados.
+La ventaja de este tipo de segmentación es que es relativamente sencilla comparada con otros tipos de segmentación más avanzada como \textit{watershed} o \textit{level set}. Aun así, esta segmentación funciona bien cuando el fondo y los objetos siguen una distribución bimodal, es decir, que hay una diferencia <<notable>> entre las dos partes. Comúnmente esta característica no se da en todas las imágenes, por lo que no tendrá buenos resultados en las que el fondo no se distinga bien de los objetos \cite{basa1}. Además, esta segmentación tampoco se comporta bien con imágenes que tienen una iluminación gradiente grande (véase la comparación de las figuras \ref{thresholding5} y \ref{thresholding6}). Aunque es verdad que para ello también existen varias mejoras que hacen que la segmentación se <<adapte>> para conseguir mejores resultados.
 
 En la figura \ref{tecnicasSegmentacion} se muestran varias subclases de \textit{thresholding}. Aunque no se explicarán en profundidad conviene saber que hay varias maneras de realizar esta segmentación. Primeramente se nombra el método de Otso, \textit{Otsu's method} en inglés, que adapta el umbral en función de la dispersión de los niveles de gris. El segundo método, el \textit{Global}, es el más simple y el que hemos estado explicando hasta ahora. Y por último, el método \textit{Adaptative}, mencionado anteriormente, que se adapta a la intensidad de la imagen.
 
 \begin{figure}[H]
 	\centering
 	\captionsetup{justification=centering}
-	\includegraphics[width=.7\textwidth]{./imagenes/imageHistogram}
+	\includegraphics[width=.65\textwidth]{./imagenes/imageHistogram}
 	\caption{Histograma que muestra tres aparentes segmentos de la imagen con dos umbrales}
 	\vspace{2 mm}					
 	Fuente: \cite{basa1}	
@@ -199,7 +200,7 @@ En la figura \ref{tecnicasSegmentacion} se muestran varias subclases de \textit{
 \end{figure}
 
 Las figuras \ref{thresHold1}, \ref{thresHold2} y \ref{thresHold3} muestran varios ejemplos de segmentación utilizando \textit{thresholding}.
-\vspace{-3 mm}			
+\vspace{-2 mm}			
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
@@ -258,23 +259,23 @@ Las figuras \ref{thresHold1}, \ref{thresHold2} y \ref{thresHold3} muestran vario
 
 \subsection{Clustering}
 
-Junto con la técnica de \textit{thresholding} el \textit{clustering} son las técnicas de segmentación más utilizadas. En general esta técnica divide los puntos en varios \textit{clusters} o grupos en función de la distancia entre ellos. En este caso concreto, los puntos serán los píxeles de la imagen y la distancia entre ellos estará relacionada con la intensidad, color y textura, pudiendo combinar varios de estos factores. 
+Junto con la técnica de \textit{thresholding} el \textit{clustering} es la técnica de segmentación más utilizada. En general esta técnica divide los puntos en varios \textit{clusters} o grupos en función de la distancia entre ellos. En este caso concreto, los puntos serán los píxeles de la imagen y la distancia entre ellos estará relacionada con la intensidad, color y textura, pudiendo combinar varios de estos factores. 
 
-Los algoritmos de \textit{clustering} se pueden dividir entre jerárquicos y particionales, donde la principal diferencia entre los dos está en que el jerárquico produce una serie de particiones anidadas de forma jerárquica y el particional genera particiones disjuntas. Los algoritmos jerárquicos suelen ser más precisos, sin embargo, no valen para una cantidad de datos grande como en una imagen ya que el coste computacional es muy elevado. Por lo tanto, la opción escogida suele ser el \textit{clustering} particional. No obstante, esta técnica tiene varias desventajas \cite{oli1}:
+Los algoritmos de \textit{clustering} se pueden dividir entre jerárquicos y particionales, donde la principal diferencia entre los dos está en el modo en que se construyen los grupos. Los algoritmos jerárquicos suelen ser más precisos, sin embargo, no valen para una cantidad de datos grande como en una imagen ya que el coste computacional es muy elevado. Por lo tanto, la opción escogida suele ser el \textit{clustering} particional. No obstante, esta técnica tiene varias desventajas \cite{oli1}:
 
 \begin{enumerate}
 	\item Generalmente es necesario saber previamente el número de \textit{clusters} que hay en la imagen. 
 	\item No utilizan información espacial inherente a la imagen.
-	\item En algunos algoritmos de clustering, como el K-means que se explicará a continuación, no se asegura un resultado óptimo, ya que distintas inicializaciones dan como diferentes resultados.
+	\item En algunos algoritmos de clustering, como el K-means que se explicará a continuación, no se asegura un resultado óptimo, ya que distintas inicializaciones dan diferentes resultados.
 \end{enumerate} 
 
-En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestran varias subclases de la técnica de \textit{clustering} que corresponden a diferentes algoritmos de creación de los \textit{clusters}. El algoritmo \textit{Fuzzy C-Means} agrupa los píxeles utilizando la lógica difusa, donde cada píxel tendrá un grado de pertenencia a su cluster. En general, hay muchos tipos de técnicas de clustering por lo que las técnicas restantes se agruparán en la sección de \textit{Others} de la figura \ref{tecnicasSegmentacion}. El algoritmo K-means es el más utilizado y por ello se explicará con más detalle su funcionamiento:
+En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestran varias subclases de la técnica de \textit{clustering} que corresponden a diferentes algoritmos de creación de \textit{clusters}. El algoritmo \textit{Fuzzy C-Means} agrupa los píxeles utilizando la lógica difusa, donde cada píxel tendrá un grado de pertenencia a todos los \textit{clusters}. En general, hay muchos tipos de técnicas de clustering por lo que las técnicas restantes se agruparán en la sección de \textit{Others} de la figura \ref{tecnicasSegmentacion}. El algoritmo K-means es el más utilizado (véase ejemplos de su segmentación en las figuras \ref{clusteringTotal1} y \ref{clusteringTotal2}). Una descripción de su modo de funcionamiento a grandes rasgos sería:
 
 \begin{enumerate}
  \item Se asignan \textit{K} primeros píxeles como centroides.
- \item Se agrupan los píxeles restantes con los centroides definidos en función de la distancia con estos.
+ \item Se agrupan los píxeles, restantes con los centroides definidos en función de la distancia con estos.
  \item Se calculan los nuevos \textit{K} centroides como los baricentros de los \textit{K} conglomerados obtenidos.
- \item Se alternan los pasos 2 y 3 hasta que se alcance un determinado criterio de convergencia.
+ \item Se alternan los pasos 2 y 3 hasta que se alcance un determinado criterio de convergencia (máxima variación de centroides, por ejemplo).
 \end{enumerate}
 
 \begin{figure}[H]
@@ -291,7 +292,8 @@ En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestr
 		\subcaption{Imagen segmentada}\label{clustering2}
 	\end{subfigure}
 	\caption{Segmentación utilizando K-means con K=16}
-	\vspace{2 mm}			
+	\vspace{2 mm}
+	\label{clusteringTotal1}			
 	Fuente: commons.wikipedia.org
 \end{figure}
 \begin{figure}[H]
@@ -308,13 +310,14 @@ En la clasificación presentada en la figura \ref{tecnicasSegmentacion} se muestr
 		\subcaption{Imagen segmentada}\label{clustering4}
 	\end{subfigure}
 	\caption{Segmentación utilizando K-means con K=6}
-	\vspace{2 mm}			
+	\vspace{2 mm}
+	\label{clusteringTotal2}			
 	Fuente: \textit{imagedatabase.cs.washington.edu/demo/kmcluster/}
 \end{figure}
 
 \subsection{Morphology}
 
-La técnica de la morfología, o \textit{morphology} en inglés, se clasificaría dentro de las técnicas basadas en el tratamiento de los píxeles. Hay varios métodos de morfología y se basan en una máscara llamada \textit{structuring element} para investigar cada píxel. El valor de cada píxel está determinado por el de sus vecinos que pertenecen a esa máscara. Los métodos más simples de esta técnica son la dilatación y la erosión. Para una imagen binaria, la dilatación convierte en uno todos los píxeles de la máscara si los píxeles <<debajo>> del píxel central son ceros como se muestra en la imagen \ref{morphology1}. La erosión es el caso contrario, es decir, convierte en ceros todos los elementos de la máscara si esta contiene algún elemento que sea cero. La combinación de estas simples operaciones junto con otras como el complemento, la unión y la intersección, se pueden llegar a realizar operaciones más avanzadas y complejas. 
+La técnica de la morfología, o \textit{morphology} en inglés, se clasificaría dentro de las técnicas basadas en el tratamiento de los píxeles. Hay varios métodos de morfología y se basan en una máscara llamada \textit{structuring element} para investigar cada píxel. El valor de cada píxel está determinado por el de sus vecinos que pertenecen a esa máscara. Los métodos más simples de esta técnica son la dilatación y la erosión. Para una imagen binaria, la dilatación convierte en uno todos los píxeles de la máscara si los píxeles <<debajo>> del píxel central son ceros como se muestra en la imagen \ref{morphology1}. La erosión es el caso contrario, es decir, convierte en ceros todos los elementos de la máscara si esta contiene algún elemento que sea cero. La combinación de estas simples operaciones junto con otras como el complemento, la unión y la intersección, pueden utilizarse para realizar operaciones más avanzadas y complejas. 
  
 \begin{figure}[ht]
 	\centering
@@ -339,7 +342,7 @@ La técnica de la morfología, o \textit{morphology} en inglés, se clasificaría de
 
 Este tipo de segmentación consiste en encontrar los bordes de los objetos contenidos en la imagen con el fin de poder dividir la imagen en función de los bordes encontrados. Los detectores de bordes tradicionales suelen utilizar los operadores diferenciales de detección de bordes comentados en \ref{cap:EvoSeg}, es decir, los operadores \textit{Sobel}, \textit{Roberts} y \textit{Prewitt edge detectors} que están basados en el gradiente de la función de intensidad de una imagen. Normalmente los bordes suelen detectarse en las intersecciones de dos regiones de la imagen que tienen diferentes intensidades.
 
-La ventaja de este tipo de segmentación frente a la basada en el tratamiento de píxeles es que aparte de hacer la división de las diferentes regiones sabremos exactamente donde se encuentran los bordes de estas, siendo útil para poder extraerlas y poder tratarlas individualmente. Por lo tanto, esta técnica funcionará mejor cuando la diferencia entre las regiones tenga buena calidad. Una de las posibles <<desventajas>> puede ser que la detección de muchos bordes dificulte la extracción de las regiones de interés.
+La ventaja de este tipo de segmentación frente a la basada en el tratamiento de píxeles es que, aparte de hacer la división de las diferentes regiones, sabremos exactamente dónde se encuentran los bordes de éstas, siendo útil para poder extraerlas y poder tratarlas individualmente. Por lo tanto, esta técnica funcionará mejor cuando la diferencia entre las regiones tenga buena calidad. Una de las posibles <<desventajas>> puede ser que la detección de muchos bordes dificulte la extracción de las regiones de interés.
 
 Existen varios subgrupos dentro de esta clasificación: \textit{Edge detection} o <<Detección de bordes>> en castellano, técnicas que tienen que ver con el gradiente de la imagen \textit{Gradient mode}, \textit{Active contours} o <<Contornos activos>> y \textit{level sets} o técnicas del <<Conjunto de nivel>>.
 
@@ -347,13 +350,14 @@ Existen varios subgrupos dentro de esta clasificación: \textit{Edge detection} o
 
 En la figura \ref{tecnicasSegmentacion} se diferencian las dos primeras clasificaciones \textit{Edge detection} y \textit{Gradient mode} pero al estar directamente relacionadas se ha decidido explicarlas en conjunto. 
 
-Las técnicas clásicas de detección de bordes se basan en encontrar la derivada respecto a los ejes que forman la imagen, o dicho de otro modo, el gradiente. El gradiente de un punto de una función escalar, representado con $\nabla$, se representa en forma vectorial. Este vector indica la dirección en la cual la función varia más rápidamente y su módulo representa el ritmo de variación de la función en la dirección de dicho vector. Este módulo se utilizará para determinar si un punto es borde o no si supera un valor umbral dado. Para encontrar la máxima variación en ese punto se deben de hacer las derivadas parciales respecto a cada eje y coger el máximo valor de estas. En general el gradiente se suele aproximar con la fórmula\protect\footnotemark \footnotetext{Válida para una imagen de dos dimensiones. En caso de tener tres dimensiones la fórmula sería $|G| \approx |G_x| + |G_y| + |G_z| $ }$|G| \approx |G_x| + |G_y| $  que es mucho más simple de implementar en la práctica. Valiéndonos de esto, se desarrollaron los primeros operadores diferenciales ya comentados  \textit{Sobel}, \textit{Roberts} y \textit{Prewitt edge detectors}. Estos operadores no son más que máscaras aplicadas al píxel a tratar y a cierta vecindad de este para calcular una aproximación a dichas derivadas $G_x$ y $G_y$. De ahí el nombrarlos como <<operadores>>.
+Las técnicas clásicas de detección de bordes se basan en encontrar la derivada respecto a los ejes que forman la imagen, o dicho de otro modo, el gradiente. El gradiente de un punto de una función escalar, representado con $\nabla$, se representa en forma vectorial. Este vector indica la dirección en la cual la función varia más rápidamente y su módulo representa el ritmo de variación de la función en la dirección de dicho vector. Este módulo se utilizará para determinar si un punto es borde o no, en función de si supera un valor umbral dado. Para encontrar la máxima variación en ese punto se deben de hacer las derivadas parciales respecto a cada eje y coger el máximo valor de éstas. En general el gradiente se suele aproximar con la fórmula\protect\footnotemark \footnotetext{Válida para una imagen de dos dimensiones. En caso de tener tres dimensiones la fórmula sería $|G| \approx |G_x| + |G_y| + |G_z| $ }$|G| \approx |G_x| + |G_y| $  que es mucho más simple de implementar en la práctica. Valiéndonos de esto, se desarrollaron los primeros operadores diferenciales ya comentados  \textit{Sobel}, \textit{Roberts} y \textit{Prewitt edge detectors} (véase un ejemplo de cada segmentación en la figura \ref{prewittTable2}). Estos operadores no son más que máscaras aplicadas al píxel a tratar y a cierta vecindad de éste para calcular una aproximación a dichas derivadas $G_x$ y $G_y$. De ahí el nombrarlos como <<operadores>>.
 
 \
 
 \subsubsection{$\blacksquare$ \quad Roberts operator}
 
-Este operador es el más simple de los tres mencionados y aproxima las derivadas tomando la diferencia de dos valores contiguos. La gran desventaja de este operador es que es muy sensible al ruido al tratar pocos vecinos y sólo permite marcar los puntos del borde pero no su orientación. A pesar de todo ello, es un operador que computacionalmente es poco costoso debido a su simpleza y que trabaja bien con imágenes binarias.
+Este operador es el más simple de los tres mencionados y aproxima las derivadas tomando la diferencia de dos valores contiguos. La gran desventaja de este operador es que es muy sensible al ruido al tratar pocos vecinos y sólo permite marcar los puntos del borde pero no su orientación. A pesar de todo ello, es un operador que computacionalmente es poco costoso debido a su simpleza y que trabaja bien con imágenes binarias. Véase las máscaras utilizadas por esta técnica presentada en la tabla \ref{robetsTable}. 
+
 \begin{table}[H]
 	\parbox{.65\linewidth}{
 		\centering
@@ -376,11 +380,12 @@ Este operador es el más simple de los tres mencionados y aproxima las derivadas 
 	}
 	\captionsetup{justification=centering}
 	\caption{Máscaras utilizadas por el operador de Roberts de tamaño 2x2}
+	\label{robetsTable}
 \end{table}
 
 \subsubsection{$\blacksquare$ \quad Sobel operator}
 
-Este operador utiliza una máscara más grande que el \textit{Roberts operator}, 3x3, por lo que implicará a más vecinos. Enfatiza más los píxeles de alrededor del centro. La ventaja de este operador es que es menos sensible al ruido, detecta muy bien los bordes horizontales y verticales y además proporciona un suavizado. Las desventaja de este operador es que computacionalmente es más costoso, no tiene buena detección de bordes diagonales y no da información sobre la orientación del borde.
+Este operador utiliza una máscara más grande que el \textit{Roberts operator}, 3x3, por lo que implicará a más vecinos. Enfatiza más los píxeles de alrededor del centro. La ventaja de este operador es que es menos sensible al ruido, detecta muy bien los bordes horizontales y verticales y además proporciona un suavizado. Las desventaja de este operador es que computacionalmente es más costoso, no tiene buena detección de bordes diagonales y no da información sobre la orientación del borde. Véase las máscaras utilizadas por esta técnica presentada en la tabla \ref{sobelTable}.
 \begin{table}[H]
 	\parbox{.45\linewidth}{
 	\centering
@@ -404,11 +409,12 @@ Este operador utiliza una máscara más grande que el \textit{Roberts operator}, 3
 	}
 	\captionsetup{justification=centering}
 	\caption{Máscaras utilizadas por el operador de Sobel de tamaño 3x3}
+	\label{sobelTable}
 \end{table}
 
 \subsubsection{$\blacksquare$ \quad Prewitt operator}
 
-Este operador es parecido al operador de Sobel pero este no enfatiza los píxeles cercanos al centro y los coeficientes son diferentes. Las ventajas son que aumenta la respuesta a los bordes diagonales poniéndole peso a píxeles vecinos que antes no tenían, tiene poca sensibilidad la ruido y proporciona la magnitud y orientación del borde (hasta 8 direcciones).
+Este operador es parecido al operador de Sobel pero este no enfatiza los píxeles cercanos al centro y los coeficientes son diferentes. Las ventajas son que aumenta la respuesta a los bordes diagonales poniéndole peso a píxeles vecinos que antes no tenían, tiene poca sensibilidad la ruido y proporciona la magnitud y orientación del borde (hasta 8 direcciones). Véase las máscaras utilizadas por esta técnica presentada en las tablas \ref{prewittTable1} y \ref{prewittTable2}.
  \begin{table}[H]
  	\parbox{.45\linewidth}{
  		\centering
@@ -432,6 +438,7 @@ Este operador es parecido al operador de Sobel pero este no enfatiza los píxeles
  	}
 	\captionsetup{justification=centering}
  	\caption{Máscaras utilizadas por el operador de Prewitt de tamaño 3x3}
+	\label{prewittTable1}
  \end{table}
 
 \begin{figure}[H]
@@ -460,12 +467,13 @@ Este operador es parecido al operador de Sobel pero este no enfatiza los píxeles
 	\caption{Detección de bordes con el uso de los operadores}
 	\vspace{2 mm}
 	\centering
+	\label{prewittTable2}
 	Fuente: commons.wikipedia.org
 \end{figure}
 
 \subsection{Active Contours}\label{cap:actContour}
 
-Desde que fueron introducidos por Kass y colaboradores en 1988 \cite{kass1}, los contornos activos o más comúnmente nombrados como \textit{Snakes}, han ganado popularidad desde entonces gracias a los buenos resultados que se pueden llegar a obtener en la segmentación de imágenes. 
+Desde que fueron introducidos por Kass y colaboradores en 1988 \cite{kass1}, los contornos activos o más comúnmente nombrados como \textit{Snakes}, han ganado popularidad gracias a los buenos resultados que se pueden llegar a obtener en la segmentación de imágenes. 
 
 Un contorno activo o \textit{Snake} es una curva elástica que comienza a moverse dada una posición inicial de manera que llegue a delimitar las regiones de interés de la imagen. La curva se irá moviendo de manera que se minimice su energía hasta llegar a un punto de convergencia. El contorno puede ser definido paramétricamente como $V(s) = [x(s),y(s)]$ donde $x(s)$ e $y(s)$ son las coordenadas de la parte $s$ del contorno. La energía del contorno está compuesta por una energía interna y otra externa, $E_{int}$ y $E_{ext}$ respectivamente. La definición formal sería:
 
@@ -473,7 +481,7 @@ Un contorno activo o \textit{Snake} es una curva elástica que comienza a moverse
 E = \int_{0}^{1}E_{int}(v,s) + E_{ext}(v(s)) ds
 \end{equation}
 
-$E_{int}$ da las características de deformación del contorno elástico, por lo tanto depende de la forma que este tenga. La $E_{int}$ puede ser definida como:
+$E_{int}$ da las características de deformación del contorno elástico, por lo tanto depende de la forma que éste tenga. La $E_{int}$ puede ser definida como:
 \begin{equation}
 E_{int} = \frac{1}{2} (\alpha|\frac{\delta v}{\delta s}|^2 + \beta|\frac{\delta^2 v}{\delta s^2}| ^2)
 \end{equation}
@@ -481,9 +489,9 @@ y los valores $\alpha$ y $\beta$ determinan el grado en el que el contorno se pu
 
 En cuanto a la energía externa hay varias maneras de definirla. Una elección popular sería la magnitud negativa del gradiente de la imagen que se definiría como:
 \begin{equation}
-E_{int} = |\nabla [G_{\alpha} I(x)]|
+E_{int}(\vec{x}) = - |\nabla [G_{\alpha} I(\vec{x})]|^2
 \end{equation}
-donde $G_{\alpha}$ es una convolución con un filtro pasa bajo gaussiano. Está propuesta de energía hace que el contorno se expanda hasta los bordes que haya en la imagen como se puede ver en la figura \ref{activeContour1}.
+donde $G_{\alpha}$ es una convolución con un filtro pasa bajo gaussiano. Esta propuesta de energía hace que el contorno se expanda hasta los bordes que haya en la imagen como se puede ver en la figura \ref{activeContour1}.
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
@@ -503,28 +511,32 @@ donde $G_{\alpha}$ es una convolución con un filtro pasa bajo gaussiano. Está pr
 	\label{activeContour1}
 \end{figure}
 
-La imagen \ref{activeContour1.1} corresponde a la imagen de entrada, mientras que la imagen \ref{activeContour1.2} corresponde a la convolución de la magnitud gradiente de la imagen de entrada con un filtro pasa bajo gaussiano. La línea roja en la imagen \ref{activeContour1.2} es el contorno activo que se moverá hasta la línea verde que corresponde con el borde de la imagen original.
+La imagen \ref{activeContour1.1} corresponde a la imagen de entrada, mientras que la imagen \ref{activeContour1.2} corresponde a la convolución de la magnitud gradiente de la imagen de entrada con un filtro pasa bajo gaussiano. La línea interior (roja) en la imagen \ref{activeContour1.2} es el contorno activo que se moverá hasta la línea exterior (verde) que corresponde con el borde de la imagen original. Un ejemplo de la aplicación de esta técnica se puede ver en la figura \ref{activeContour2}.
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}	
+	\centering
 	\includegraphics[width=.8\textwidth]{./imagenes/activeContour2}
 	\caption{Ejemplo de segmentación de plantas presentando en \cite{suta1} utilizando los contornos activos}
-	\centering
 	\vspace{2 mm}
 	Fuente: \cite{suta1}	
 	\label{activeContour2}
 \end{figure}
 
 
-\subsection{Level set}\label{levelSet}
+\subsection{\textit{Level set}}\label{levelSet}
 Conjuntos de nivel, o \textit{level set} en inglés, es un tipo de segmentación muy parecida a la que hemos explicado en la sección \ref{cap:actContour} ya que también se trata de expandir un contorno dado previamente para encontrar los bordes de la imagen. La ventaja de este método frente al referido es que permite juntar y dividir contornos sin ningún cálculo extra necesario.
 
-El contorno está representado por la función de \textit{level set}, que está definida en una dimensión más que las dimensiones de la imagen a segmentar, es decir, para una imagen 2D tendríamos una superficie de \textit{level set} de tres dimensiones mientras que para una imagen de 3D tendríamos una superficie de 4D. En el caso de una superficie de 3D esta tiene una forma cónica como se puede ver en \ref{levelSet1}. Suponiendo entonces que la imagen a tratar tiene dos dimensiones, podríamos definir la función de \textit{level set} como $z = \phi(x,y,t)$ que devuelve la altura de la superficie de \textit{level set} en el punto $(x,y)$ del plano de la imagen en el tiempo $t$. El contorno es definido implícitamente como <<zero \textit{level set}>>, donde la altura del plano respecto a la superficie es cero ($\phi(x,y,t) = 0$). Esto es justo la intersección entre el plano de la imagen y la superficie. 
+El contorno está representado por la función de \textit{level set}, que está definida en una dimensión más que las dimensiones de la imagen a segmentar, es decir, para una imagen 2D tendríamos una superficie de \textit{level set} de tres dimensiones mientras que para una imagen de 3D tendríamos una superficie de 4D. En el caso de una superficie de 3D ésta tiene una forma cónica como se puede ver en la figura \ref{levelSet1}. Suponiendo entonces que la imagen a tratar tiene dos dimensiones, podríamos definir la función de \textit{level set} como $z = \phi(x,y,t)$ que devuelve la altura de la superficie de \textit{level set} en el punto $(x,y)$ del plano de la imagen en el tiempo $t$. El contorno es definido implícitamente como <<zero \textit{level set}>>, donde la altura del plano respecto a la superficie es cero ($\phi(x,y,t) = 0$). Esto es justo la intersección entre el plano de la imagen y la superficie. Véase las figuras \ref{levelSet1} y \ref{levelSet2} para ver ilustraciones de la técnica de \textit{level set}.
 
-Para propagar el contorno se mueve la superficie de \textit{level set} de manera que esta se expande, sube y baja para encontrar el frente. Suponiendo que cada punto del contorno se mueve en una dirección normal frente al contorno con una velocidad F, el contorno evoluciona usando la siguiente PDE (\textit{partial differential equation} o ecuación en derivadas parciales en castellano):
+\
+
+Para propagar el contorno se mueve la superficie de \textit{level set} en el eje z, como se puede ver en la figura \ref{levelSet1}. La rapidez y la dirección en la que se mueve el contorno está determinada por como se curva la superficie de \textit{level set}. Suponiendo que cada punto del contorno se mueve en una dirección ortogonal frente al contorno con una velocidad F, el contorno evoluciona usando la siguiente PDE (\textit{partial differential equation} o ecuación en derivadas parciales en castellano):
+
 \begin{equation}
 \frac{\delta \phi(x,y,t)}{\delta t} = F(x,y,I) |\nabla \phi(x,y,t)|
 \end{equation}
+
 Esta función de velocidad varía dependiendo del punto de la imagen I a tratar y hace que el contorno se expanda a ciertas áreas de la imagen y no lo haga en otras zonas de esta. Normalmente la función de velocidad se define por la intensidad o el gradiente de los píxeles y por la curva de la función de \textit{level set}.
 
 De la idea de que modificaciones de píxeles lejanos al contorno no afectan a este surgen varias mejoras de esta técnica que tienen en cuenta los píxeles con los que se trabajará en cada iteración: \textit{narrow band} y \textit{sparse field methods}. El método de \textit{narrow band} actualiza los píxeles en una línea estrecha alrededor del contorno. El método \textit{sparse field} actualiza los píxeles vecinos del contorno únicamente.
@@ -538,6 +550,14 @@ De la idea de que modificaciones de píxeles lejanos al contorno no afectan a est
 	Fuente: \cite{eri2015}
 	\label{levelSet1}
 \end{figure}
+\
+
+\
+
+\
+
+\
+
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
@@ -550,17 +570,17 @@ De la idea de que modificaciones de píxeles lejanos al contorno no afectan a est
 
 \section{Segmentación de imagen basada en regiones crecientes}\label{cap:segRegiCreci}
 
-Este tipo de segmentación, más conocida como \textit{region growing}, se basa en la idea de que los píxeles de una región tienen características comunes, como puede ser la intensidad de gris etc. Por ello, al tener que tratar un nuevo píxel si este tiene una intensidad de gris parecida a la intensidad de grises que contiene la región significará que ese punto pertenece a ella. 
+Este tipo de segmentación, más conocida como \textit{region growing}, se basa en la idea de que los píxeles de una región tienen características comunes, como puede ser, la intensidad de gris etc. Por ello, al tener que tratar un nuevo píxel si este tiene una intensidad de gris parecida a la intensidad de grises que contiene la región significará que ese punto pertenece a ella. 
 
-Existen varios subgrupos dentro de esta clasificación: técnicas basadas en la idea principal de regiones crecientes, o \textit{region growing} en inglés, técnicas de \textit{Split/Merge} y técnicas basadas en grafos \textit{Graphs cuts}.
+Existen varios subgrupos dentro de esta clasificación: técnicas basadas en la idea de regiones crecientes, o \textit{region growing} en inglés, técnicas de \textit{Split/Merge} y técnicas basadas en grafos \textit{Graphs cuts}.
 
-\subsection{Region growing}
+\subsection{\textit{Region growing}}
 
-Este subgrupo agrupa todos las técnicas relacionadas con la técnica <<habitual>> explicada en la introducción de esta sección (\ref{cap:segRegiCreci}). Hay dos técnicas conocidas que siguen esta metodología, por lo que en esta ocasión explicaremos más de una técnica es este subgrupo de segmentación.
+Este subgrupo agrupa todos las técnicas que siguen la idea de agrupar los píxeles con características comunes, como el nivel de gris o el color de éstos. Hay dos técnicas conocidas que siguen esta metodología, por lo que en esta ocasión explicaremos más de una técnica de este subgrupo de segmentación.
 
 \subsubsection{$\blacksquare$ \quad \textit{Region growing} o \textit{Seeded-based region growing segmentation}}
 
-Este tipo de segmentación comienza con la selección de un píxel, nombrado a menudo como semilla o \textit{seed} en inglés, que está dentro del objeto de interés. Normalmente la semilla se elige manualmente. A partir de ese píxel semilla (primer punto de la región) se comenzará a extender la región procesando sus vecinos y añadiéndolos en base a un criterio predefinido. Este criterio de inserción será en base a la intensidad, color o textura de la semilla y los puntos que pertenezcan a la región. Cada vez que se inserta un nuevo punto a la región la característica que se este utilizando para realizar la inserción se volverá a calcular, por ejemplo, si se utiliza el nivel de gris, se volverá a calcular el valor medio de los niveles de gris que hay en la región. De esta manera, la región se irá expandiendo añadiendo vecinos hasta que encuentre alguno que no cumplan con la condición de inserción impuesta por el criterio. Si un punto no ha sido añadido a ninguna región se podrá añadir a una región cercana suya si la diferencia entre el nivel de gris de este punto y el nivel de gris medio de la región no supera un valor umbral \textit{T} dado. 
+Este tipo de segmentación comienza con la selección de un píxel, denominado a menudo como semilla o \textit{seed} en inglés, que está dentro del objeto de interés. Normalmente la semilla se elige manualmente. A partir de ese píxel semilla (primer punto de la región) se comenzará a extender la región procesando sus vecinos y añadiéndolos en base a un criterio predefinido. Este criterio de inserción será en base a la intensidad, color o textura de la semilla y los puntos que pertenezcan a la región. Cada vez que se inserta un nuevo punto a la región la característica que se esté utilizando para realizar la inserción se volverá a calcular, por ejemplo, si se utiliza el nivel de gris, se volverá a calcular el valor medio de los niveles de gris que hay en la región generada hasta el momento. De esta manera, la región se irá expandiendo añadiendo vecinos hasta que encuentre alguno que no cumpla con la condición de inserción impuesta por el criterio. Si un punto no ha sido añadido a ninguna región se podrá añadir a una región cercana suya si la diferencia entre, por ejemplo, el nivel de gris de este punto y el nivel de gris medio de la región no supera un valor umbral \textit{T} dado. Véase un ejemplo de esta técnica en la figura \ref{regionGrowing1}.
 
 Esta técnica es útil cuando la intensidad del fondo y del objeto son muy parecidas pero están separadas por un borde <<notable>> o por otra región.
 \begin{figure}[H]
@@ -572,6 +592,12 @@ Esta técnica es útil cuando la intensidad del fondo y del objeto son muy parecid
 	Fuente: \cite{eri2015}
 	\label{regionGrowing1}
 \end{figure}
+\
+
+\
+
+\
+
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\begin{center}
@@ -604,43 +630,51 @@ Esta técnica es útil cuando la intensidad del fondo y del objeto son muy parecid
 	\caption{Ejemplo de la técnica de \textit{region growing}}
 	\centering
 	\vspace{2 mm}
+	\label{regionGrowingEntera}
 	Fuente: commons.wikipedia.org
 \end{figure}
 
-Ejemplo de la técnica de \textit{region growing} donde se quiere encontrar la parte del rayo más fuerte en la imagen. Para ello se eligen como semilla los puntos con mayor valor de gris posible(255). El criterio de inserción de los píxeles es tener el "mismo" nivel de gris. En este caso se ha decidido que los puntos que no han sido insertados en una región se inserten en una cercana si superan el valor umbral \textit{T} dado. Por ello en \ref{regionGrowing2} solo aparecen los puntos semilla ya que no se habrán unido puntos con este criterio y el valor \textit{T} es demasiado alto. En las imágenes \ref{regionGrowing3}, \ref{regionGrowing4} y \ref{regionGrowing5} ese valor \textit{T} se va disminuyendo y cada vez se insertan más puntos en la región. 
+En la figura \ref{regionGrowingEntera} se puede ver un ejemplo de la técnica de \textit{region growing} donde se quiere encontrar la parte del rayo más fuerte en la imagen. Para ello se eligen como semilla los puntos con mayor valor de gris posible(255). El criterio de inserción de los píxeles es tener el "mismo" nivel de gris. En este caso se ha decidido que los puntos que no han sido insertados en una región se inserten en una cercana si superan el valor umbral \textit{T} dado. Por ello en \ref{regionGrowing2} solo aparecen los puntos semilla ya que no se habrán unido puntos con este criterio y el valor \textit{T} es demasiado alto. En las imágenes \ref{regionGrowing3}, \ref{regionGrowing4} y \ref{regionGrowing5} ese valor \textit{T} se va disminuyendo y cada vez se insertan más puntos en la región. 
 
-\subsubsection{$\blacksquare$ \quad Watershed}
+\
+
+\
+
+\subsubsection{$\blacksquare$ \quad \textit{Watershed}}
 
 La idea principal de esta técnica se basa en ver la imagen como una imagen tridimensional donde la tercera dimensión es la altura del píxel. La altura del píxel está determinada por su nivel de gris. Topológicamente quedará algo como se puede ver en \ref{watershed1}. En este <<terreno>> creado se podrán diferenciar hasta tres puntos. Estos puntos son determinados con la analogía de como una gota de agua caería y se movería si se precipitase en ese punto. Hay tres tipos de puntos:
 \begin{enumerate}
 	\item Puntos con un nivel de gris mínimo local donde la gota se estancaría.
-	\item Puntos en los que la gota caería o se deslizaría hacia otros puntos más bajos.
-	\item Puntos en los que la gota podría caer en más de un punto mínimo local.
+	\item Puntos en los que la gota caería o se deslizaría hacia un único punto mínimo local.
+	\item Puntos en los que la gota podría caer hacia más de un punto mínimo local.
 \end{enumerate}
-El segundo tipo de puntos son nombrados como \textit{watersheds} ,o cuencas en castellano, y los del tercer tipo son nombrados como \textit{watersheds lines}, bordes o líneas de las cuencas en castellano.
+El segundo tipo de puntos son nombrados como \textit{watershed} ,o cuencas en castellano, y los del tercer tipo son nombrados como \textit{watersheds lines}, bordes o líneas de las cuencas en castellano.
 
 El objetivo final de esta técnica será encontrar los bordes de las cuencas, que representarán los bordes de la imagen original. Para ello existen varias maneras de hacerlo, la más común es la técnica de \textit{flooding}. La idea es simple, imaginemos que se empieza a echar agua en los puntos de tipo uno, es decir, los que representan un mínimo local y son <<cuencas>>. El nivel del agua empezará a subir hasta que llegue a un punto en el que la cuenca se empiece a desbordar y vaya a juntarse con otra cuenca. En ese momento, se construye una presa o un muro de manera que el agua no se desborde. Esas presas o muros construidos serán los bordes de las cuencas. Con todas estas presas se habrá conseguido la segmentación de la imagen.
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
-	\includegraphics[width=.8\textwidth]{./imagenes/watershed1}
+	\includegraphics[width=.7\textwidth]{./imagenes/watershed1}
 	\caption{Ejemplo del funcionamiento de la técnica de \textit{watershed}}
 	\vspace{2 mm}
 	Fuente: \cite{eri2015}
 	\label{watershed1}
 \end{figure}
-Ejemplo del funcionamiento de la técnica de \textit{watershed} donde la intensidad de los píxeles de la imagen de la izquierda serán la altura de ese mismo punto en la imagen derecha, creando así ese terreno.
+En la figura \ref{watershed2} se puede ver el un ejemplo del funcionamiento de la técnica de \textit{watershed} donde la intensidad de los píxeles de la imagen de la izquierda serán la altura de ese mismo punto en la imagen derecha, creando así ese terreno.
+
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
-	\includegraphics[width=.9\textwidth]{./imagenes/watershed2}
+	\includegraphics[width=.8\textwidth]{./imagenes/watershed2}
 	\caption{Funcionamiento de la técnica de \textit{watershed}}
 	\vspace{2 mm}	
 	Fuente: \textit{http://www.di.ubi.pt/$\sim$agomes/cvm/teoricas/07-regionsegmentation.pdf}	
 	\label{watershed2}
 \end{figure}
-Funcionamiento de la técnica de \textit{watershed} donde se puede ver como va creciendo el nivel de agua hasta encontrar ese <<punto>> de desbordamiento en el que se marcan los bordes.
+
+En la figura \ref{watershed3} se muestra el funcionamiento de la técnica de \textit{watershed} donde se puede ver como va creciendo el nivel de agua hasta encontrar ese <<punto>> de desbordamiento en el que se marcan los bordes.
+
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
@@ -651,19 +685,19 @@ Funcionamiento de la técnica de \textit{watershed} donde se puede ver como va cr
 	\label{watershed3}
 \end{figure}
 
-\subsection{Split/Merge}
+\subsection{\textit{Split/Merge}}
 
-La técnica de \textit{split}, ha diferencia de la técnica de \textit{region growing} que empieza con una serie de puntos <<semilla>>, empieza con la imagen entera como una única región y va subdividiendo la imagen recursivamente en regiones más pequeñas en base a un criterio de homogeneidad.
+La técnica de \textit{split}, a diferencia de la técnica de \textit{region growing} que empieza con una serie de puntos <<semilla>>, empieza con la imagen entera como una única región y va subdividiendo la imagen recursivamente en regiones más pequeñas en base a un criterio de homogeneidad.
 
 En cuanto a la técnica de \textit{merge}, es lo contrario que la de \textit{split}, ya que esta empieza con pequeñas regiones de 2x2 o 4x4 y las va juntando entre sí en base a si tienen o no características comunes entre ellas como el nivel de gris, el color, la textura etc.
 
-\subsection{Graph cut}
+\subsection{\textit{Graph cut}}
 
-La idea principal de esta segmentación es representar la imagen a tratar como un grafo, donde normalmente cada píxel es un nodo y tienen aristas con los nodos vecinos. La ventaja de estos algoritmos esta en que pueden llegar a trabajar bien incluso si la separación entre dos regiones esta <<rota>> o es dudosa. Hay varios algoritmos distintos dentro de esta clasificación, en este caso se ha elegido explicar el método de segmentación de \textit{Markov}, o \textit{Markov random field (MRF) segmentation} y concretamente una variante de este llamada \textit{graph cut}. 
+La idea principal de este tipo de segmentación es representar la imagen a tratar como un grafo, donde normalmente cada píxel es un nodo y tienen aristas con los nodos vecinos. La ventaja de estos algoritmos está en que pueden llegar a trabajar bien incluso si la separación entre dos regiones está <<rota>> o es dudosa. Hay varios algoritmos distintos dentro de esta clasificación, en este caso se ha seleccionado el método de segmentación de \textit{Markov}, o \textit{Markov random field (MRF) segmentation} y concretamente una variante de este llamada \textit{graph cut}. 
 
-MRF considera a cada píxel como un nodo del grafo y tienen aristas con cada píxel vecino. Sin embargo, cada nodo tiene dos conexiones más a un par de nodos especiales llamados \textit{source} (S) y \textit{sink} (T) como se muestra en la figura \ref{graphCuts1}. Se les añade un peso a las aristas entre los nodos de manera que los píxeles que pertenecen al fondo tienen un peso pequeño en la arista que los une con uno de esos dos nodos anteriores y un peso grande con el otro nodo. De forma inversa, los píxeles que pertenezcan al primer plano tendrán un peso pequeño con uno de ellos y un peso grande con el otro. Por otro lado, los pesos de las aristas entre los píxeles son grandes cuando los estos tienen características comunes y un peso pequeño en caso contrario.
+MRF considera a cada píxel como un nodo del grafo y tienen aristas con cada píxel vecino. Sin embargo, cada nodo tiene dos conexiones más a un par de nodos especiales llamados \textit{source} (S) y \textit{sink} (T) como se muestra en la figura \ref{graphCuts1}. Se les añade un peso a las aristas entre los nodos de manera que los píxeles que pertenecen al fondo tienen un peso pequeño en la arista que los une con uno de esos dos nodos anteriores y un peso grande con el otro nodo. De forma inversa, los píxeles que pertenezcan al primer plano tendrán un peso pequeño con uno de ellos y un peso grande con el otro. Por otro lado, los pesos de las aristas entre los píxeles son grandes cuando éstos tienen características comunes y un peso pequeño en caso contrario.
 
-La segmentación se realiza aplicando un algoritmo de corte de grafos. El objetivo es minimizar la suma de las aristas por las que se va a cortar el grafo para ello hay varios algoritmos para buscar el mínimo corte ha realizar.
+La segmentación se realiza aplicando un algoritmo de corte de grafos. El objetivo es minimizar la suma de las aristas por las que se va a cortar el grafo, para ello hay varios algoritmos para buscar el mínimo corte ha realizar.
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}
@@ -679,7 +713,7 @@ La segmentación se realiza aplicando un algoritmo de corte de grafos. El objetiv
 
 Como se ha podido ver a lo largo de este capítulo, hay muchos tipos de técnicas de segmentación de imágenes. Además, existen más técnicas de segmentación que no se han explicado en este trabajo ya que se han añadido las más conocidas y populares con el fin de establecer una base para el lector. 
 
-Aparte de las técnicas que no se han explicado hay que decir que existen muchas mejoras, optimizaciones y variantes de todas las técnicas de segmentación. Por ello en este trabajo se han explicado las ideas principales de los algoritmos sin tener en cuenta esto ya que el trabajo se habría extendido demasiado.
+Aparte de las técnicas que no se han explicado hay que decir que existen muchas mejoras, optimizaciones y variantes de todas las técnicas de segmentación. Por ello, en este trabajo se han explicado las ideas principales de los algoritmos sin tener en cuenta ésto ya que el trabajo se habría extendido demasiado.
 
 
 
@@ -692,21 +726,43 @@ Aparte de las técnicas que no se han explicado hay que decir que existen muchas 
 \chapter{Optimizaciones y mejoras del algoritmo \textit{level set} original} 
 
 
-El algoritmo \textit{level set} es uno de los más utilizados ya que realiza una buena segmentación. Existen optimizaciones que lo hacen muy eficiente, como el trabajo que se presentará a continuación \cite{yong1}, que será capaz de satisfacer la demanda que requiere este proyecto.
+El algoritmo \textit{level set} es uno de los más utilizados  como consecuencia del buen rendimiento que obtiene al segmentar imágenes. Existen optimizaciones que lo hacen muy eficiente, como el trabajo que se presentará a continuación \cite{yong1}, que será capaz de satisfacer la demanda que requiere este proyecto.
+
+\
+
+\
 
 \section{Introducción}
 
-Como se ha dado a conocer en el capítulo \ref{sec:conclusiones} hay muchos tipos de mejoras y optimizaciones de cada técnica de segmentación existentes. A la hora de afrontar el problema que el cliente proponía se tenía que elegir un tipo de segmentación de las técnicas estudiadas. Entre todas ellas se escogió el algoritmo \textit{level set}, por ser un algoritmo de segmentación ampliamente utilizado, lo que facilitaría la búsqueda de información sobre él. Además, el cliente recomendaba esta técnica, ya que aseguraba que se iban a obtener buenos resultados con ella.
+Como se ha dado a conocer en el apartado \ref{sec:conclusiones} hay muchos tipos de mejoras y optimizaciones de cada técnica de segmentación existentes. A la hora de afrontar el problema que el cliente proponía se tenía que elegir un tipo de segmentación de las técnicas estudiadas. Entre todas ellas se escogió el algoritmo \textit{level set}, por ser un algoritmo de segmentación eficiente ampliamente utilizado, lo que facilitaría la búsqueda de información sobre él. Además, el cliente recomendaba esta técnica, ya que aseguraba que se iban a obtener buenos resultados con ella.
 
-Repasando este algoritmo, las ventajas que tiene son que la segmentación conseguida es precisa y que no añade sobrecoste al hacer la división o unión del contorno. Sin embargo, el algoritmo se basa en la resolución de ecuaciones diferenciales, lo que supone que el algoritmo sea costoso y lento. Se han desarrollado varias implementaciones en GPU \cite{eri2015}, también sobre imágenes 3D \cite{aaron1} y hasta en proyectos de fin de carrera también se utilizan GPUs \cite{cudaseg} etc. De la misma manera, también se han desarrollado paralelizaciones en arquitecturas SMP(\textit{Symmetric Multi-Processing}) \cite{jeon1} o en arquitecturas de memoria distribuida con MPI(\textit{Message Passing Interface})  \cite{moha1}. 
+Repasando este algoritmo, las ventajas que tiene son que la segmentación conseguida es precisa y que no añade sobrecoste al hacer la división o unión del contorno. Sin embargo, el algoritmo se basa en la resolución de ecuaciones diferenciales, lo que supone que el algoritmo sea costoso y lento. Se han desarrollado varias implementaciones en GPU \cite{eri2015}, también sobre imágenes 3D \cite{aaron1}, y en proyectos de fin de carrera también se utilizan GPUs \cite{cudaseg} etc. De la misma manera, también se han desarrollado paralelizaciones del algoritmo para arquitecturas SMP(\textit{Symmetric Multi-Processing}) \cite{jeon1} o para arquitecturas de memoria distribuida con MPI(\textit{Message Passing Interface})  \cite{moha1}. 
 
-Hay muchos artículos sobre este algoritmo y alguna implementación paralela pero sobre el algoritmo original, por lo tanto, a pesar de la paralelización consiguen tiempos elevados por encima de las necesidades de este proyecto. Estas paralelizaciones y otras técnicas de optimización que presentan varios trabajos se centran siempre en resolver las PDEs asociadas a la evolución del \textit{level set}. Sin embargo, para muchos problemas de imagen, como la segmentación, no es necesario tanta precisión ya que el objetivo final es encontrar los bordes de los objetos. En este caso, el proceso evolutivo no tiene tanto interés como el resultado final. Siguiendo esta idea Shi y Karl presentaron un artículo muy interesante que será la pieza clave de la segmentación realizada en este proyecto \cite{yong1}.
+Hay muchos artículos sobre este algoritmo, alguna implementación paralela realizada sobre el algoritmo original y, por lo tanto, a pesar de la paralelización, los tiempos que obtienen siguen siendo elevados para las restricciones de este proyecto. Estas paralelizaciones y otras técnicas de optimización se centran siempre en resolver las PDEs asociadas a la evolución del \textit{level set}. Sin embargo, para muchos problemas de imagen, como la segmentación, no es necesario tanta precisión, ya que el objetivo final es encontrar los bordes de los objetos. En este caso, la evolución del proceso no tiene tanto interés como el resultado final. Siguiendo esta idea Shi y Karl presentaron un artículo muy interesante que será la base de la segmentación realizada en este proyecto \cite{yong1}.
+
+\
+
+\
 
 \section{Aproximación a la técnica de \textit{level set}}
 
-Como se ha mencionado anteriormente, no se tienen por que resolver las PDEs en el algoritmo \textit{level set} ya que, en la segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de PDEs conlleva el que se tengan que realizar reinicializaciones de la función de \textit{level set} (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado por Shi y Karl \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y no calculan PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el \textit{level set} original. 
+Como se ha mencionado anteriormente para el objetivo de este proyecto, no se tienen por qué resolver las PDEs en el algoritmo \textit{level set} ya que, para una segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de las PDEs conlleva que se tengan que realizar reinicializaciones de la función de \textit{level set} (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado por Shi y Karl \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y, además, no calculan las PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el \textit{level set} original. 
 
-En este trabajo se presenta una nueva estrategia de implementación del método de \textit{level set}. En el ejemplo de un espacio euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}. La función $\phi$ tendrá un valor negativo dentro de la curva C y un valor positivo fuera de ella, por eso se dice que representa implícitamente a la curva C. 
+En este trabajo se presenta una nueva estrategia de implementación del método de \textit{level set}. Para el caso de un espacio euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}. La función $\phi$ tendrá un valor negativo dentro de la curva C y un valor positivo fuera de ella, por eso se dice que representa implícitamente a la curva C. 
+
+Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.
+
+Se asume que la función $\phi$ está definida sobre un dominio $D \subset R^k$ y está discretizada sobre una rejilla de tamaño $M_1 \times M_2 \times ... \times M_k$. Estando entonces en una representación de dos dimensiones, y siguiendo el ejemplo de la rejilla mostrada anteriormente se pueden definir dos listas de vecindad del contorno C: $L_{in}$ y $L_{out}$.
+
+\
+
+$L_{in} = \{x \ | \ \phi(x) < 0$ y $  \exists y \in N(x)$ tal que $\phi(y) > 0\}$
+
+\
+
+$L_{out} = \{x \ | \ \phi(x) > 0$ y $  \exists y \in N(x)$ tal que $\phi(y) < 0\}$
+
+\
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}	
@@ -727,24 +783,11 @@ En este trabajo se presenta una nueva estrategia de implementación del método de
 	\centering
 	Fuente: \cite{yong1}	
 	\label{aproxLevelSet}
-\end{figure}
-Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.
-
-Estando entonces en una representación de dos dimensiones, y siguiendo el ejemplo de la rejilla mostrada anteriormente se pueden definir dos listas de vecindad del contorno C: $L_{in}$ y $L_{out}$. 	
-
-\
-
-$L_{in} = \{x | \phi(x) < 0$ y $  \exists y \in N(x)$ tal que $\phi(y) > 0\}$
-
-\
-
-$L_{out} = \{x | \phi(x) > 0$ y $  \exists y \in N(x)$ tal que $\phi(y) < 0\}$
-
-\
+\end{figure}	
 
 Siendo x una coordenada de la rejilla denotada como $x = {x_1,x_2,...,x_k}$ y $N(x)$ como un vecino de x con valor discreto definido como:
 \begin{equation}
-N(x) = {y \in D | \sum_{k=1}^{K} |y_k - x_k| = 1}  \forall x \in D
+N(x) = \{y \in D \ | \ \sum_{k=1}^{K} |y_k - x_k| = 1\}  \ \forall x \in D
 \end{equation}
 
 Como podemos observar en la figura \ref{aproxLevelSet} la lista $L_{in}$ está formada por los puntos de la rejilla que están dentro de la curva C y $L_{out}$ está formada por los puntos de la rejilla que están fuera de C. Por lo tanto, como se puede ver en las definiciones formales de las listas, cada punto de ellas tiene que tener un punto vecino de la otra lista, de manera que las dos estén "pegadas".
@@ -753,7 +796,7 @@ Recordando lo visto en la sección de explicación del \textit{level set}(\ref{lev
 \begin{equation}\label{speedLevelSet}
 \frac{d\phi}{dt} + F|\nabla \phi| = 0
 \end{equation}
-La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolución de la PDE mostrada en la ecuación \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacía fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
+La figura \ref{aproxLevelSet2} muestra el proceso evolutivo de la curva C de la figura \ref{aproxLevelSet1}. En el punto marcado como A la curva se ha movido hacia fuera lo que ha modificado el valor de la función $\phi$ de positivo a negativo. En el punto B la curva se ha movido hacia dentro, partiendo la curva en dos y cambiando el valor de la función $\phi$ de negativo a positivo. Todo esto también ocurre en el \textit{level set} original, con la diferencia de que la resolución de la PDE mostrada en la ecuación \ref{speedLevelSet} tiene un coste elevado. Se consiguen los mismos resultados finales fácilmente si se usa la relación entre C, $L_{in}$ y $L_{out}$. Para mover la curva hacia fuera en el punto A de la rejilla tendremos que pasar el punto de la lista $L_{out}$ a $L_{in}$. De manera similar, para mover la curva hacia dentro en el punto B tendremos que cambiar el punto B de $L_{in}$ a $L_{out}$. En general, con aplicar dichas operaciones se va moviendo la curva hacia cualquier punto con el mínimo coste operacional. 
 
 
 \subsubsection{Algoritmo}
@@ -766,7 +809,7 @@ Para la realización del algoritmo son necesarias estas estructuras:
 	\item Dos listas de vecindad de la curva: $L_{in}$ y $L_{out}$.	
 \end{itemize}
 
-Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como <<puntos interiores>> y a los que están fuera de C pero que no pertenecen a $L_{out}$ como <<puntos exteriores>>. Para agilizar aún más el cálculo, los valores que puede tomar la función $\phi$ son cuatro enteros: {-2, -1, 1, 3}.
+Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como <<puntos interiores>> y a los que están fuera de C pero que no pertenecen a $L_{out}$ como <<puntos exteriores>>. Para agilizar aún más el cálculo, los valores que puede tomar la función $\phi$ son cuatro enteros: {-3, -1, 1, 3}.
 \begin{equation}
 \phi (x) = 
 \left \{
@@ -800,7 +843,7 @@ Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como
  	Con esta operación se mueve el contorno un punto de la rejilla hacia dentro. 
  \end{itemize}
 
-Por otro lado, la función F de velocidad presentada antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{in}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva \cite{chan}. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene porque hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos \cite{yong1}, si no que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo(que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
+Por otro lado, la función F de velocidad presentada antes, normalmente se suele separar en dos velocidades: $F_{ext}$ que depende de los datos y $F_{int}$ para la realización de un suavizado del contorno. La velocidad $F_{int}$ es normalmente la curvatura de la curva \cite{chan}. Sin embargo, esta evaluación de la curva usando la función $\phi$ suele ser computacionalmente costosa. Tras varios pasos esta función de velocidad $F_{int}$ puede llegar a ser determinada por un filtro Gaussiano que puede ser aproximado con operaciones con enteros, por lo que se reduce el cómputo. Además, al separar las dos velocidades, no tiene por qué hacerse el suavizado después de cada iteración de evolución del contorno como en otros trabajos \cite{yong1}, sino que se realizará cuando se satisfaga cierta condición, lo que reduce aún más el coste. Con esto entonces, el algoritmo tendrá dos ciclos principales: el primer ciclo en el que se expandirá o evolucionará el contorno y el segundo ciclo (que se realizará de vez en cuando) en el que se suavizará el contorno para que se siga expandiendo con normalidad. 
 
 
 \begin{table}[H]
@@ -812,7 +855,7 @@ Por otro lado, la función F de velocidad presentada antes, normalmente se suele 
 		\tabitem Paso 2: Primer ciclo donde se escanean las dos listas para actualizar $\phi$, $L_{out}$ y $L_{in}$. \\
 		\quad \quad \quad \quad - Se calcula la velocidad para cada punto de $L_{out}$ y $L_{in}$. \\
 		\quad \quad \quad \quad - Evolución hacia fuera. Recorremos la lista $L_{out}$ y se hace  la operación \\ 
-		\quad \quad \quad \quad \ \ \textit{switch\_in(x)} $\forall x \in L_{out}$ si F(x) $>$ 0. \\ 
+		\quad \quad \quad \quad \ \ \textit{switch\_in(x)} $\forall x \in L_{out}$ si $F_{ext}$(x) $>$ 0. \\ 
 		\quad \quad \quad \quad - Se eliminan los puntos redundantes en $L_{in}$ (véase la figura \ref{switchLevelSet}).\\ 
 		\quad \quad \quad \quad \ \ Para ello se tendrá que recorrer la lista y para cada punto $x \in L_{in}$,\\
 		\quad \quad \quad \quad \ \ si $\forall y \in N(x); \phi(y) < 0$, se borra $x$ de $L_{in}$ y se cambia $\phi(x) = -3$. \\ 
@@ -846,26 +889,26 @@ Por otro lado, la función F de velocidad presentada antes, normalmente se suele 
 \end{table}
 
 
-Aclaradas las cuestiones anteriores, el rápido algoritmo \textit{level set} \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano en el segundo ciclo (velocidad $F_{int}$) y de los datos en el primer ciclo (velocidad $F_{out}$). Las operaciones de \textit{switch\_in()} se realizarán cuando el valor de $F_{int}$ sea positivo, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando el valor de $F_{int}$ sea negativo, contrayendo el contorno en ese punto. 
+Aclaradas las cuestiones anteriores, el (rápido) algoritmo \textit{level set} \cite{yong1} se muestra en la tabla \ref{algoritmoFastLevelSet}. Como se puede observar el segundo ciclo es prácticamente igual al primer ciclo, a excepción de que la condición de cambiar un punto de una lista a otra, es decir, de hacer una de las operaciones \textit{switch()} que se han explicado anteriormente, depende de un filtro Gaussiano (G) en el segundo ciclo (velocidad $F_{int}$) y de los datos en el primer ciclo (velocidad $F_{ext}$). Las operaciones de \textit{switch\_in()} se realizarán cuando el valor de $F$ ($F_{ext}$ en el primer ciclo y $F_{int}$ en el segundo ciclo) sea positivo, que querrá decir que el contorno deberá expandirse hacia fuera y las operaciones de \textit{switch\_out()} se realizarán cuando el valor de $F$ ($F_{ext}$ en el primer ciclo y $F_{int}$ en el segundo ciclo) sea negativo, contrayendo el contorno en ese punto. Véase la figura \ref{switchLevelSet} como ejemplo de expansión del contorno en un píxel.
 
 Repasando un poco más el algoritmo \ref{algoritmoFastLevelSet} queda por aclarar las condiciones de parada del algoritmo. Así pues, el algoritmo se parará en el caso de que se cumpla una de estas dos condiciones:
 
 \begin{enumerate}
 	\item Que la velocidad $F_{ext}$ de toda la vecindad del contorno cumpla con:
 	\begin{enumerate}	
-		\item Formalmente: $F(x) \leq 0 \forall x \in L_{out}$, es decir, que no se tenga que expandir el contorno por ninguno de sus puntos.
-		\item Formalmente: $F(x) \geq 0 \forall x \in L_{in}$, es decir, que no se tenga que contraer el contorno en ninguno de sus puntos.
+		\item $F(x) \leq 0 \ \forall x \in L_{out}$, es decir, que no se tenga que expandir el contorno por ninguno de sus puntos.
+		\item $F(x) \geq 0 \ \forall x \in L_{in}$, es decir, que no se tenga que contraer el contorno en ninguno de sus puntos.
 	\end{enumerate}
 	\item Que se alcance un determinado número de iteraciones establecido.
 \end{enumerate}
  
-Para finalizar, el coste del algoritmo es de orden O(2A($P_1$ + $P_2$)), donde A es el número de puntos entre el primer contorno creado y el último ya evolucionado, $P_1$ y $P_2$ el coste de las operaciones de switch() y el coste que tiene el borrado y la inserción de los puntos en las listas respectivamente. El escalar 2 es debido a que los puntos pueden llegar a pertenecer a una lista primero, y luego a otra, realizando así las operaciones dos veces. Nótese que ese A será mucho menor que la O(mn) que sería la anchura (m) por la altura(n) de la imagen, ya que si en la imagen se detectan varios objetos, el tamaño en puntos o píxeles de cada objeto se restará a ese O(mn).
+Para finalizar, el coste del algoritmo es de orden O(2A($P_1$ + $P_2$)), donde A es el número de puntos entre el primer contorno creado y el último ya evolucionado, $P_1$ y $P_2$ el coste de las operaciones de switch() y el coste que tiene el borrado y la inserción de los puntos en las listas respectivamente. El escalar 2 es debido a que los puntos pueden llegar a pertenecer a una lista primero, y luego a otra, realizando así las operaciones dos veces. Nótese que ese A será mucho menor que la $m \times n$ que sería la anchura (m) por la altura (n) de la imagen, ya que si en la imagen se detectan varios objetos, el tamaño en puntos o píxeles de cada objeto se restará a ese $m \times n$.
    
  \begin{figure}[]
  	\captionsetup{justification=centering}
  	\centering
  	\includegraphics[width=.8\textwidth]{./imagenes/switchLevelSet}
- 	\caption{Ilustración de las operaciones realizadas en el paso 3 del algoritmo}
+ 	\caption{Ejemplo de expansión del contorno un píxel hacía fuera. Operaciones que se realizan continuamente en el paso 2 y 3 del algoritmo}
 	\vspace{2 mm}		
  	Fuente: modificaciones de imágenes en \cite{yong1}	
  	\label{switchLevelSet}
@@ -912,18 +955,21 @@ Para tener una mínima idea del avance que esto supuso en la segmentación de imág
  
  
  
+ 
+ 
+ 
 \chapter{Implementación de la aproximación y Ofeli}
 
-Una vez encontrada una técnica que satisficiera los requisitos del proyecto, se empezó a buscar alguna implementación sobre esta técnica. En esa búsqueda se encontró un trabajo llamado Ofeli (\textit{Open, Fast and Efficient Level set Implementation}) \cite{ofeli}. Este trabajo está desarrollado con Qt que es una de librerías multiplataforma para la realización de aplicaciones con GUI (\textit{graphical user interface}) en C++. Esta aplicación es muy completa ya que aparte del algoritmo de interés implementa varias funcionalidades extra como varios tipos de filtrado, preprocesamiento, varios tipos de evolución del contorno etc.
+Una vez encontrada una técnica que contemplara los requisitos del proyecto, se empezó a buscar alguna implementación sobre esta técnica. En esa búsqueda se encontró un trabajo llamado Ofeli (\textit{Open, Fast and Efficient Level set Implementation}) \cite{ofeli}. Este trabajo está desarrollado con Qt que es una de librerías multiplataforma para la realización de aplicaciones con GUI (\textit{graphical user interface}) en C++. Esta aplicación es muy completa ya que, aparte del algoritmo de interés, implementa varias funcionalidades extra como varios tipos de filtrado, preprocesamiento, varios tipos de evolución del contorno, etc.
 
 \section{Ofeli}
 
-En esta sección se explicará la estructura de la implementación y las clases que se utilizan en este trabajo. Se realizará un esquema general para que el lector pueda comprender cuales son los procesos o pautas que se dan en esta implementación para poder segmentar una imagen.
+En esta sección se explicará la estructura de la implementación y las clases que se utilizan en este trabajo. Se realizará un esquema general para que el lector pueda comprender cuáles son los procesos o pautas que se dan en esta implementación para poder segmentar una imagen.
 
 
 \subsection{Estructura}
 
-La implementación está formada por varias clases que se han dividido en dos tipos: las clases o fichero que pertenecen a la GUI (etiquetadas con la palabra <<GUI->> por delante de sus nombres) y las clases que pertenecen a la implementación del algoritmo (etiquetadas con la palabra <<Impl->>).
+La implementación está formada por varias clases que se han dividido en dos tipos: las clases o ficheros que pertenecen a la GUI (etiquetadas con la palabra <<GUI->> por delante de sus nombres) y las clases que pertenecen a la implementación del algoritmo (etiquetadas con la palabra <<Impl->>).
 
 \begin{enumerate}
 	\item Impl-\textbf{ActiveContour}: clase padre de todos los tipos de contornos. Formada por lo ficheros:
@@ -985,11 +1031,11 @@ Se han resaltado las tres clases que interesarán: \textit{ActiveContour}, \texti
  	\label{esquemaOfeli}
  \end{figure}
 
-Como se puede observar la estructura del código es prácticamente igual al algoritmo de aproximación presentado en \ref{algoritmoFastLevelSet} exceptuando que en esta implementación la velocidad de cada punto se calcula a la hora de tratar este, no se calculan todas las velocidades de todos los puntos como se sugiere en el algoritmo \ref{algoritmoFastLevelSet}. El cálculo de estas velocidades son las funciones  \textit{compute\_(internal/external)\_speed\_($Fd/F_{int}$)} que se pueden ver en el esquema \ref{esquemaOfeli}. Las funciones  \textit{update\_for\_means\_(in/out)(1/2)} que se salen del algoritmo de aproximación presentado en \ref{algoritmoFastLevelSet} se realizan para poder <<adaptar>> el contorno a la imagen de manera que se pueda evolucionar este independientemente de los niveles de gris que se estén utilizando en la imagen. Esto se refiere a que se va haciendo una media de las intensidades de los puntos pertenecientes a las listas que representan implícitamente el contorno, es decir, $L_{out}$ y $L_{in}$, de manera que el umbral con el que se va decidiendo la velocidad de cada punto va cambiando en función de los puntos que representan el contorno.
+Como se puede observar la estructura del código es prácticamente igual al algoritmo de aproximación presentado en \ref{algoritmoFastLevelSet} exceptuando que en esta implementación la velocidad de cada punto se calcula a la hora de tratar éste, no se calculan todas las velocidades de todos los puntos a la vez como se sugiere en el algoritmo \ref{algoritmoFastLevelSet}. El cálculo de estas velocidades son las funciones  \textit{compute\_(internal/external)\_speed\_($Fd/F_{int}$)} que se pueden ver en el esquema \ref{esquemaOfeli}. Las funciones  \textit{update\_for\_means\_(in/out)(1/2)} que no están en el algoritmo de aproximación presentado en \ref{algoritmoFastLevelSet} se realizan para poder <<adaptar>> el contorno a la imagen de manera que éste pueda evolucionar independientemente de los niveles de gris que se estén utilizando en la imagen. Esto se refiere a que se va haciendo una media de las intensidades de los puntos pertenecientes a las listas que representan implícitamente el contorno, es decir, $L_{out}$ y $L_{in}$, de manera que el umbral con el que se va decidiendo la velocidad de cada punto va cambiando en función de los puntos que representan el contorno.
 
 Las funciones definidas como \textit{clean()} son las limpiezas de las listas sobre puntos redundantes que pudiera haber que se nombra en el algoritmo \ref{algoritmoFastLevelSet}. Debe de quedar claro que estas funciones recorren las listas completamente al igual que la evolución de cada una de ellas.
 
-Otra cuestión a comentar es la etiqueta <<virtual>> que tienen varias funciones en el esquema \ref{esquemaOfeli} que significa exactamente, que la función es virtual. Esta característica es importante a la hora de entender la jerarquía de las clases y con ello la estructura del trabajo Ofeli. Una función virtual en el lenguaje de programación C++ se utiliza en cuestiones de herencia y polimorfismo, de manera que clases hijas puedan redefinir funciones definidas como virtuales en la clase padre. Así pues, las funciones  \textit{compute\_external\_speed\_Fd} y \textit{update\_for\_means\_(in/out)(1/2)} están definidas con esta cláusula ya que dependen de los datos, en este caso de las imágenes, y hay varias clases para trabajar con ellas en este trabajo. Si son imágenes a color se utilizará la clase \textit{ACwithoutEdgesYUV}, mientras que si es una imagen a escala de grises se trabajará con la clase \textit{ACwithoutEdges} como se ha explicado en el anterior apartado.
+Otra cuestión a comentar es la etiqueta <<virtual>> que tienen varias funciones en el esquema \ref{esquemaOfeli} que significa exactamente, que la función es virtual. Esta característica es importante a la hora de entender la jerarquía de las clases y con ello la estructura del trabajo Ofeli. Una función virtual en el lenguaje de programación C++ se utiliza en cuestiones de herencia y polimorfismo, de manera que clases hijas puedan redefinir funciones definidas como virtuales en la clase padre. Así pues, las funciones  \textit{compute\_external\_speed\_Fd} y \textit{update\_for\_means\_(in/out)(1/2)} están definidas con esta cláusula ya que dependen de los datos, en este caso de las imágenes, y hay varias clases para trabajar con ellas en este trabajo. Si son imágenes a color se utilizará la clase \textit{ACwithoutEdgesYUV}, mientras que si es una imagen a escala de grises se trabajará con la clase \textit{ACwithoutEdges}, como se ha explicado en el anterior apartado.
 
 Comentadas estas cuestiones se deduce que todas las funciones presentadas en el esquema \ref{esquemaOfeli} están implementadas en \textit{ActiveContour}, la clase padre, exceptuando aquellas que tienen la etiqueta <<virtual>> que las implementarán las clases hijas \textit{ACwithoutEdges} y \textit{ACwithoutEdgesYUV} dependiendo de las características de la imagen.
  
@@ -1005,9 +1051,9 @@ Para finalizar, la implementación de la lista ligada se utiliza para representar
 
 \chapter{Paralelización de la aproximación del algoritmo \textit{level set}}
 
-Las clases a modificar sobre el trabajo de Ofeli \cite{ofeli} para poder realizar una implementación paralela son: \textit{ActiveContour}, \textit{ACwithoutEdges} y \textit{list}. De manera que se paralelizará el código para realizar la segmentación de imágenes a escala de grises, ya que en un principio el cliente sólo está interesado en este tipo de imágenes. Aún así, una vez realizada la segmentación para este tipo de imágenes sería muy sencillo poder aplicarlo a imágenes a color, ya que como se ha visto en el capítulo anterior, la mayoría de las funciones son comunes a la clase \textit{ActiveContour}. 
+Las clases a modificar sobre el trabajo de Ofeli \cite{ofeli} para poder realizar una implementación paralela son: \textit{ActiveContour}, \textit{ACwithoutEdges} y \textit{list}. De manera que se paralelizará el código para realizar la segmentación de imágenes a escala de grises, ya que en un principio el cliente sólo está interesado en este tipo de imágenes. Aún así, una vez realizada la segmentación para este tipo de imágenes sería muy sencillo poder aplicarlo a imágenes a color, ya que, como se ha visto en el capítulo anterior, la mayoría de las funciones son comunes a la clase \textit{ActiveContour}. 
 
-La segmentación a resolver es en cierto modo <<poco>> costosa, ya que se realiza en unos cuantos segundos. Las máquinas disponibles para la realización de este proyecto son una máquina propia del cliente para realizar pequeñas pruebas, la máquina propia del autor de esta memoria y una máquina con 48 \textit{cores} de la Facultad de Informática de la UPV/EHU. Por todo ello, se ha elegido realizar la paralelización mediante  OpenMP\cite{openmp} por lo que las pruebas se realizarán en máquinas con una arquitectura SMP. Además, esta elección puede suponer una ventaja a la hora de querer realizar la segmentación de un vídeo ya que se podría combinar con el estándar MPI al tener múltiples imágenes como se explicará en \ref{propuestaDeMejora}. Para aprovechar las mejores opciones que esta API(\textit{Application Programming Interface}) nos ofrece para poder sacarle el máximo rendimiento posible al algoritmo se ha consultado un tutorial de \textit{Livermore Computing Center}, uno de los centros computacionales de primera clase del mundo \cite{live1}.
+La segmentación a resolver es en cierto modo <<poco>> costosa, ya que se realiza en unos cuantos segundos. Las máquinas disponibles para la realización de este proyecto son una máquina propia del cliente  para realizar pequeñas pruebas (4 \textit{cores}), la máquina propia del autor de esta memoria (2 \textit{cores}) y una máquina de la Facultad de Informática de la UPV/EHU (48 \textit{cores}). Por todo ello, se ha elegido realizar la paralelización mediante  OpenMP\cite{openmp} por lo que las pruebas se realizarán en máquinas con una arquitectura SMP. Además, esta elección puede suponer una ventaja a la hora de querer realizar la segmentación de las imágenes de un vídeo ya que se podría combinar con el estándar MPI como se explicará en la sección \ref{propuestaDeMejora}. Para aprovechar las mejores opciones que esta API(\textit{Application Programming Interface}) nos ofrece, es decir, para poder sacarle el máximo rendimiento posible al algoritmo, se ha consultado un tutorial de \textit{Livermore Computing Center}, uno de los centros computacionales de primera clase del mundo \cite{live1}.
 
 \section{Planteamiento de la paralelización}
 
@@ -1016,21 +1062,21 @@ Para empezar, se ha tenido que determinar donde es necesaria la paralelización. 
 Una vez aclarada esta cuestión se debe observar más detalladamente cada recorrido de las listas en busca de condiciones de carrera. Así pues, se desglosan los cuatro recorridos comunes a los dos ciclos por separado:
 
 \begin{enumerate}
-	\item \textbf{Primer bucle}: recorrido de la lista $L_{out}$. La operación que se lleva a cabo en este bucle es la denominada \textit{switch\_in()} si se cumple cierta condición independiente únicamente del punto. Como recuerdo, esta operación trasladaba el punto tratado, perteneciente a la lista $L_{out}$, a la lista $L_{in}$ (al comienzo de la lista) y añadía la nueva vecindad de este punto a $L_{out}$ (también al comienzo de la lista).
+	\item \textbf{Primer bucle}: recorrido de la lista $L_{out}$. La operación que se lleva a cabo en este bucle es la denominada \textit{switch\_in()} y se realiza/ejecuta solo si se cumple cierta condición dependiente únicamente de la velocidad del punto. Como recuerdo, esta operación trasladaba el punto tratado, perteneciente a la lista $L_{out}$, a la lista $L_{in}$ (al comienzo de la lista) y añadía la nueva vecindad de este punto a $L_{out}$ (también al comienzo de la lista).
 	\begin{enumerate}
 		\item Problema:	
 			\begin{enumerate}
-				\item Cuando dos \textit{threads} quieran cambiar el punto que están tratando de la lista $L_{out}$ a la lista $L_{in}$, al estar trabajando con listas ligadas, el querer añadir al mismo tiempo dos puntos al comienzo de la lista daría un problema con los punteros. Por lo tanto, esta operación de cambiar de lista un punto deberá de hacer secuencialmente. 
-				\item Al haber cambiado un punto de una lista a otra, en nuestro caso de $L_{out}$ a $L_{in}$ se añade la nueva vecindad de ese punto a $L_{out}$. Pasa exactamente lo mismo que en el anterior problema, cuando varios \textit{threads} están añadiendo puntos vecinos al principio de la lista habrá un problema con los punteros. 
+				\item Cuando dos \textit{threads} quieran cambiar el punto que están tratando de la lista $L_{out}$ a la lista $L_{in}$, al estar trabajando con listas ligadas, el querer añadir al mismo tiempo dos puntos al comienzo de la lista daría un problema con los punteros. Por lo tanto, esta operación de cambiar de lista un punto deberá de hacer atómicamente. 
+				\item Al haber cambiado un punto de una lista a otra, en nuestro caso de $L_{out}$ a $L_{in}$ se añade la nueva vecindad de ese punto a $L_{out}$. Pasa exactamente lo mismo que en el anterior caso, cuando varios \textit{threads} están añadiendo puntos vecinos al principio de la lista habrá un problema con los punteros. 
 				\item Otro problema relacionado con el anterior puede suceder cuando dos puntos de diferentes \textit{threads} quieran añadir al mismo vecino al mismo tiempo. Esto puede suceder dependiendo de la morfología de las islas de la imagen. Véase la figura \ref{mismoVecino} donde se supone que los puntos de la parte superior los procesa el primer \textit{thread} y los de la parte inferior el segundo \textit{thread}. En este ejemplo el punto A sería un vecino común para el punto directamente superior a él tratado por el primer \textit{thread} y para el punto directamente inferior a él, tratado por el segundo \textit{thread}. Si esto ocurriese, podría haber puntos repetidos en la lista, poniendo en riesgo su consistencia. 
 			\end{enumerate}
 		\item Solución:
 			\begin{enumerate}
-				\item La solución más sencilla para resolver los dos primeros problemas sería poner secciones críticas a la hora de añadir puntos a las listas. Obviamente esto resuelve el problema pero el resultado temporal sería prácticamente el de la ejecución en serie si no es incluso peor que este por el \textit{overhead} que pueda suponer la gestión de la sección paralela. Entonces, si el problema son las operaciones con las listas, está claro que cada \textit{thread} tendrá que tener una estructura propia donde añadir esos puntos para poder evitar estos dos primeros problemas. Así pues, se ha decidido <<partir>> las listas $L_{out}$ y $L_{in}$ en función del numero de \textit{threads}, para que cada uno trabaje con sus listas. Al final del ciclo habrá que volver a unir todos los <<trozos>> que tenga cada \textit{thread} para volver a reconstruir las listas. Estas operaciones pueden suponer un sobrecoste alto en cuanto a la versión serie, aún así, valiéndonos de las posibilidades que nos ofrecen las listas enlazadas podemos llegar a hacer estas dos operaciones casi constantes. En el caso de no poder hacerlas constantes se podrían realizar cada cierto número de ciclos, aunque esto tendrá como consecuencia que la carga este desbalanceada entre distintos \textit{threads} ya que cada uno puede quitar o añadir una diferente cantidad de píxeles. Habrá que buscar un equilibrio entre el coste de estas operaciones para poder hacer un buen \textit{load balancing}. 
+				\item La solución más sencilla para resolver los dos primeros problemas sería poner secciones críticas a la hora de añadir puntos a las listas. Obviamente esto resuelve el problema pero el rendimiento sería prácticamente el de la ejecución en serie si no es incluso peor que éste por el \textit{overhead} que pueda suponer la gestión de la sección crítica. Entonces, si el problema son las operaciones con las listas, está claro que cada \textit{thread} tendrá que tener una estructura propia donde añadir esos puntos para poder evitar estos dos primeros problemas. Así pues, se ha decidido <<partir>> las listas $L_{out}$ y $L_{in}$ en función del numero de \textit{threads}, para que cada uno trabaje con sus listas. Al final del ciclo habrá que volver a unir todos los <<trozos>> que tenga cada \textit{thread} para volver a reconstruir las listas. Estas operaciones pueden suponer un sobrecoste alto en cuanto a la versión serie, aún así, valiéndonos de las posibilidades que nos ofrecen las listas enlazadas podemos llegar a hacer estas dos operaciones casi en tiempo constantes. En el caso de no poder hacerlas eficientemente se podrían realizar cada cierto número de ciclos, aunque esto tendrá como consecuencia que la carga esté desbalanceada entre distintos \textit{threads}, ya que cada uno puede quitar o añadir una diferente cantidad de píxeles. Habrá que buscar un equilibrio para poder hacer un buen \textit{load balancing}. 
 				\item En cuanto al tercer problema, no queda más opción que resolverlo mediante una sección crítica, en la que se asegure la inserción única del vecino. 
 			\end{enumerate}
 	\end{enumerate}
-	\item \textbf{Segundo bucle}: limpieza de la lista $L_in$. En este recorrido se comprueba si hay algún punto redundante en base a su vecindad y si alguno lo es se quita de la lista. 
+	\item \textbf{Segundo bucle}: limpieza de la lista $L_{in}$. En este recorrido se comprueba si hay algún punto redundante en base a su vecindad y si alguno lo es se quita de la lista. 
 	\begin{enumerate}
 		\item Problema:
 			\begin{enumerate}
@@ -1041,8 +1087,8 @@ Una vez aclarada esta cuestión se debe observar más detalladamente cada recorrid
 				\item Este problema quedaría resuelto con la solución propuesta para los primeros problemas del primer bucle, es decir, el troceado de las listas en base al número de \textit{thread}: un trozo por cada uno de ellos.
 			\end{enumerate}
 	\end{enumerate}
-	\item \textbf{Tercer bucle}: recorrido de $L_{in}$. Los problemas y soluciones de este bucle son exactamente iguales a los del primero ya que son simétricos, es decir, que en este caso las operaciones serán las inversas. El cambio de un punto que cumple con la condición de velocidad esta vez será de $L_{in}$ a $L_{out}$ y se añadirán los puntos de este a $L_{in}$. 
-	\item \textbf{Cuarto bucle}: limpieza de $L_{out}$. De la misma manera que el tercer bucle los problemas y soluciones del segundo bucle serán válidos para este también al ser el caso contrario, la limpieza de $L_{out}$.
+	\item \textbf{Tercer bucle}: recorrido de $L_{in}$. Los problemas y soluciones de este bucle son exactamente iguales a los del primero ya que son simétricos, es decir, que en este caso las operaciones serán las inversas. El cambio de un punto que cumple con la condición de velocidad esta vez será de $L_{in}$ a $L_{out}$ y se añadirán los puntos de éste a $L_{in}$. 
+	\item \textbf{Cuarto bucle}: limpieza de $L_{out}$. De la misma manera que el tercer bucle los problemas y soluciones del segundo bucle serán válidos para éste también al ser el caso contrario, la limpieza de $L_{out}$.
 \end{enumerate}
 
  \begin{figure}[H]
@@ -1055,7 +1101,7 @@ Una vez aclarada esta cuestión se debe observar más detalladamente cada recorrid
 
 \subsection{Primera implementación}
 
-En esta sección se explican las características de la primera implementación paralela realizada siguiendo el análisis del anterior apartado. Así pues, cada ciclo quedará estructurado como se ve en la figura \ref{1-Imple}. Las nuevas características se han resaltado en negrita y de color rojo. 
+En esta sección se explican las características de la primera implementación paralela realizada siguiendo el análisis del anterior apartado. Así pues, cada ciclo quedará estructurado como se ve en la figura \ref{1-Imple}. Las nuevas características son de color rojo y se han marcado con un asterisco(*). 
 
  \begin{figure}[H]
  	\captionsetup{justification=centering}
@@ -1073,8 +1119,8 @@ Muchos han sido los cambios realizados en comparación con la implementación de l
 
 \begin{enumerate}
 	\item Se ha insertado en cada nodo un puntero hacia el elemento anterior, es decir, se ha creado una lista doblemente ligada. 
-	\item La modificación anterior a dado pie a crear un apuntador al final de la lista, un \textit{tail}.
-	\item Se ha convertido la función size() en orden constante en lugar de la implementación en orden lineal que estaba.
+	\item La modificación anterior ha dado pie a crear un apuntador al final de la lista, un \textit{tail}.
+	\item Se ha convertido el tiempo de la ejecución de la función size() en orden constante en lugar de la implementación computacionalmente lineal (al número de elementos de la lista) que estaba.
 	\item Otras modificaciones que no influyen en la implementación paralela.
 \end{enumerate}
 
@@ -1082,7 +1128,7 @@ Muchos han sido los cambios realizados en comparación con la implementación de l
 
 Las listas $L_{out}$ y $L_{in}$ se dividen en un número de trozos o sublistas igual al número de \textit{threads} de manera que cada uno tenga la parte de la lista original con la que trabajará. 
 
-Al inicio del programa, después de inicializar las dos listas con el contorno definido manualmente, se crean tantos punteros o apuntadores como \textit{threads} vayan a trabajar en la ejecución. Cada puntero se coloca apuntando al primer elemento que tratará cada \textit{thread}, es decir, suponiendo que tenemos 80 elementos a repartir entre cuatro \textit{threads}, el primer puntero apuntará al primer elemento, ya que será el primer elemento a tratar por el primer \textit{thread}, el segundo puntero apuntará al vigésimo primer elemento y así sucesivamente. Véase la figura \ref{divisionLista1} para ver un ejemplo de ello. Esta primera recolocación de los \textit{heads} de cada \textit{thread} se realiza en tiempo lineal al número de elementos en las listas, sin embargo esta operación sólo se realiza en la preparación de la evolución y por lo tanto, una sola vez. 
+Al inicio del programa, después de inicializar las dos listas con el contorno definido manualmente, se crean tantos punteros o apuntadores como \textit{threads} vayan a trabajar en la ejecución. Cada puntero se coloca apuntando al primer elemento que tratará cada \textit{thread}, es decir, suponiendo que tenemos 80 elementos a repartir entre cuatro \textit{threads}, el primer puntero apuntará al primer elemento, ya que será el primer elemento a tratar por el primer \textit{thread}, el segundo puntero apuntará al vigésimo primer elemento y así sucesivamente. Véase la figura \ref{divisionLista1} para ver un ejemplo de ello. Esta primera recolocación de los \textit{heads} de cada \textit{thread} se realiza en tiempo lineal al número de elementos en las listas, sin embargo, esta operación sólo se realiza en la preparación de la evolución y por lo tanto, una sola vez. 
 
  \begin{figure}[H]
  	\captionsetup{justification=centering}
@@ -1093,7 +1139,7 @@ Al inicio del programa, después de inicializar las dos listas con el contorno de
  \end{figure}
  
  
-Por lo tanto, se accede en un orden constante a cada elemento \textit{head} creado, se establecen los \textit{tails} de las sublistas accediendo al anterior elemento de estos \textit{heads}, se establecen los tamaños de cada sublista (posible conociendo la posición de cada \textit{tail} y llevando una cuenta) y se <<rompen>> los enlaces con sus anteriores elementos de manera que se separen por completo las sublistas. Todo ello es posibles gracias a las modificaciones realizadas en la implementación de la lista ligada. Véase la figura \ref{divisionLista2} para ver un ejemplo de todo ello. 
+Por lo tanto, se accede en un orden constante a cada elemento \textit{head} creado, se establecen los \textit{tails} de las sublistas accediendo al anterior elemento de estos \textit{heads}, se establecen los tamaños de cada sublista (posible conociendo la posición de cada \textit{tail} y llevando una cuenta) y se <<rompen>> los enlaces con sus anteriores elementos de manera que se separen por completo las sublistas. Todo ello es posible gracias a las modificaciones realizadas en la implementación de la lista ligada. Véase la figura \ref{divisionLista2} para ver un ejemplo de todo ello. 
 
  \begin{figure}[H]
  	\captionsetup{justification=centering}
@@ -1130,7 +1176,9 @@ Al realizar esta unión, también se aprovecha a reinicializar los \textit{heads} 
  
  \subsubsection{Secciones críticas} 
  
- Las secciones críticas a realizar para resolver la condición de carrera se han establecido en las funciones de añadir un vecino del punto que se cambia de una lista a otra. A continuación se presenta el código de la sección crítica.
+ Las secciones críticas a realizar para resolver la condición de carrera se han establecido en las funciones de añadir un vecino del punto que se cambia de una lista a otra. Se ha seguido un esquema \textit{Test and Test-and-set} para minimizar la contención de la sección crítica ya que se realiza antes la condición que se debe de hacer en la sección crítica antes de entrar a ésta.
+ 
+ A continuación se presenta el código de la sección crítica.
 
 
 \subsubsection{Código}
@@ -1138,11 +1186,11 @@ Al realizar esta unión, también se aprovecha a reinicializar los \textit{heads} 
 \begin{lstlisting}
 void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
 {
+	//Test, test and set
 	if( phi[neighbor_offset] == 3 ) // exterior value
 	{
 		#pragma omp critical
 		{
-			//Test, test and set
 			if( phi[neighbor_offset] == 3 ) // exterior value
 			{
 				phi[neighbor_offset] = 1; // outside boundary value
@@ -1155,12 +1203,11 @@ return;}
 
 void ActiveContour::add_Rin_neighbor_to_Lin(int neighbor_offset,int tid)
 {
-	// if a neighbor ? Rin
+	//Test, test and set
 	if( phi[neighbor_offset] == -3 ) // interior value
 	{
 		#pragma omp critical
 		{
-			//Test, test and set
 			if( phi[neighbor_offset] == -3 ) // interior value
 			{
 				phi[neighbor_offset] = -1; // inside boundary value
@@ -1175,15 +1222,17 @@ return;}
  
 \subsection{Rendimiento}
  
-Realizada la primera implementación, llega la hora de comprobar su rendimiento y ver la mejora obtenida respecto a la versión serie. En estas primeras pruebas se ha utilizado únicamente una imagen, de tamaño 3000x2800 y que es exactamente la que se muestra en la figura \ref{ejemplo4}.
+Realizada la primera implementación, llega la hora de comprobar su rendimiento y ver la mejora obtenida respecto a la versión serie. En estas primeras pruebas se ha utilizado únicamente una imagen de tamaño 3000x2800 y que es exactamente la que se muestra en la figura \ref{ejemplo4}.
 
-Las pruebas realizadas han sido en un ordenador de la Universidad del País Vasco. Este ordenador tiene una arquitectura SMP, con una memoria principal de 64GB y dispone de cuatro procesadores \textit{AMD Opteron(tm) Processor 6168} los cuales tienen doce cores que trabajan a 1900 MHz. Por lo tanto, se disponen de 48 cores para poder realizar las pruebas. También se ha considerado añadir que se ha tenido que separar la parte gráfica del trabajo original de Ofeli y extraer el algoritmo de evolución para poder realizar las pruebas. El tiempo original de Ofeli y del algoritmo sin la parte gráfica en serie es el mismo, ya que en este primero la parte gráfica no trabaja mientras está evolucionando el algoritmo.
+Las pruebas realizadas han sido en un ordenador de la Universidad del País Vasco. Este ordenador tiene una arquitectura SMP, con una memoria principal de 64GB y dispone de cuatro procesadores \textit{AMD Opteron(tm) Processor 6168} los cuales tienen doce \textit{cores} que trabajan a 1900 MHz. Por lo tanto, se disponen de 48 \textit{cores} para poder realizar las pruebas. También se ha considerado añadir que se ha tenido que separar la parte gráfica del trabajo original de Ofeli y extraer el algoritmo de evolución para poder realizar las pruebas. 
 
 La compilación se ha realizado con el compilador gcc (versión 4.6.3) con la siguiente línea de comandos:
 
+\
+
 \quad \quad \textbf{g++ main.cpp activecontour.cpp ac\_withoutedges.cpp -o prueba}
 
-\quad \quad	\textbf{-fopenmp -Dcimg\_use\_png -lpng -lz -Dcimg\_display=0}
+\quad \quad	\textbf{-O3 -fopenmp -Dcimg\_use\_png -lpng -lz -Dcimg\_display=0}
 
 \
 
@@ -1210,7 +1259,7 @@ Mientras no se diga lo contrario, todas las ejecuciones se realizarán en la mism
 \begin{figure}[H]
  	\captionsetup{justification=centering}
  	\centering
- 	\includegraphics[width=.8\textwidth]{./imagenes/grafico1Imple}
+ 	\includegraphics[width=.7\textwidth]{./imagenes/grafico1Imple}
  	\caption{Gráfica de los tiempos de ejecución de la primera implementación paralela}	
  	\label{grafico1Imple}
 \end{figure}
@@ -1219,21 +1268,37 @@ Como se puede observar en la figura \ref{grafico1Imple}, esta primera implementa
 
 \subsubsection{Conclusión}
 
-Se sospecha que la sección crítica está siendo el <<cuello de botella>> en esta implementación ya que esta se hace prácticamente siempre, debido a que el contorno suele tender a expandirse, y puede que repetida varias veces por cada punto, al realizarse por cada nuevo vecino. 
+Se analizan los tiempos de ejecución y se comprueba que, efectivamente, el cuello de botella está en el acceso a la sección crítica. Véase el desglose del tiempo de ejecución (2 \textit{cores}) de un ciclo en la tabla \ref{tablaConclusiones1}. Aquí se puede observar que la mayoría del tiempo se pierde en realizar los bucles 1 y 2, es decir, donde están las funciones con la secciones críticas. Esto sucede ya que ésta se hace prácticamente siempre, debido a que el contorno suele tender a expandirse, y puede que se repita varias veces por cada punto, al realizarse por cada nuevo vecino. Por otro lado, la ejecución es únicamente con dos \textit{cores}, por lo que la contención de la sección crítica será mayor con más \textit{cores}, razón por la que esta primera implementación no escala bien.
+
+\begin{table}[H]
+	\centering
+	\small
+	\captionsetup{justification=centering}
+	\begin{tabular}{c|c|c|c|c|c|c|c}
+		\cline{2-8}
+		\multicolumn{1}{l|}{}                          & {\bf \begin{tabular}[c]{@{}c@{}}División\\   listas\end{tabular}} & {\bf  \begin{tabular}[c]{@{}c@{}}1º\\   bucle\end{tabular}} & {\bf \begin{tabular}[c]{@{}c@{}}Clean\\   Lin\end{tabular}} & {\bf  \begin{tabular}[c]{@{}c@{}}2º\\   bucle\end{tabular}} & {\bf \begin{tabular}[c]{@{}c@{}}Clean\\   Lout\end{tabular}} & {\bf \begin{tabular}[c]{@{}c@{}}Unión\\   listas\end{tabular}} & \multicolumn{1}{c|}{{\bf \begin{tabular}[c]{@{}c@{}}POR\\   CICLO\end{tabular}}} \\ \hline
+		\multicolumn{1}{|c|}{{\bf Serie}}              & 0,0                  & 0,0127       & 0,008         & 0,0145       & 0,0071         & 0,0                                                               & \multicolumn{1}{c|}{0,043}         \\ \hline
+		\multicolumn{1}{|c|}{{\bf \begin{tabular}[c]{@{}c@{}}Óptimo 2\\   threads\end{tabular}}}   & 0,0                  & 0,0063       & 0,0040        & 0,0072       & 0,0035         & 0,0                                                              & \multicolumn{1}{c|}{0,0215}        \\ \hline
+		\multicolumn{1}{|c|}{{\bf \begin{tabular}[c]{@{}c@{}}Paralelo 2\\   threads\end{tabular}}} & 0,0                  & 0,0093       & 0,0041        & 0,0109       & 0,0038         & 0,0                                                               & \multicolumn{1}{c|}{0,0281}        \\ \hline
+		\multicolumn{1}{|c|}{{\bf Sobrecoste}}           & 0,0\%                    & 46,0\%         & 2,1\%           & 51,3\%         & 8,6\%            & 0,0\%                                                                 & \multicolumn{1}{l}{}                 \\ \cline{1-7}
+	\end{tabular}
+	\caption{Desglose de tiempos (s) de un ciclo del algoritmo con una ejecución paralela con dos \textit{cores} de la primera implementación}		
+	\label{tablaConclusiones1}
+\end{table}
+
 
 \section{Primer paso de mejora: segunda implementación}
 
-Concluido ya que el problema está en la sección crítica se intenta reducir las operaciones dentro de esta reduciendo así el tiempo que cada \textit{thread} está dentro de ella. La <<sección crítica mejorada>> tendrá únicamente dos asignaciones, reduciendo considerablemente el tiempo dentro de ella. El \textit{flag} se utilizará para saber qué \textit{thread} ha sido el que ha entrado a la sección crítica para posteriormente hacer la operación correspondiente. En este caso obviaremos la segunda función ya que tiene las mismas características que la primera.
-
-
-\newpage
+Concluido ya que el problema está en la sección crítica se intenta reducir las operaciones dentro de ésta reduciendo así el tiempo que cada \textit{thread} está dentro de ella. La <<sección crítica mejorada>> tendrá únicamente dos asignaciones, reduciendo considerablemente el tiempo dentro de ella. Se utilizará un \textit{flag} para saber qué \textit{thread} ha sido el que ha entrado a la sección crítica para posteriormente hacer la operación correspondiente. En este caso obviaremos la segunda función ya que tiene las mismas características que la primera.
 
 \subsubsection{Código}
 
 \begin{lstlisting}
+
  void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
  {
  	bool flag = false;
+ 	
  	if( phi[neighbor_offset] == 3 ) // exterior value
  	{
  		#pragma omp critical
@@ -1246,24 +1311,25 @@ Concluido ya que el problema está en la sección crítica se intenta reducir las o
  		}
  		if(flag)  Splited_Lout[tid]->push_front(neighbor_offset);
  	} 	
- 	return;
+ 	return; 
  }
+ 	
 \end{lstlisting}
 
 \subsection{Rendimiento}
 
-\begin{table}[h]
+\begin{table}[H]
 	\small
 	\centering
 	\captionsetup{justification=centering}
 	\begin{tabular}{cccccccc}
 		\hline
-		\multicolumn{1}{|c|}{{\bf Número de threads}} & \multicolumn{1}{c|}{{\bf Serie}} & \multicolumn{1}{c|}{{\bf 2}} & \multicolumn{1}{c|}{{\bf 4}} & \multicolumn{1}{c|}{{\bf 8}} & \multicolumn{1}{c|}{{\bf 16}} & \multicolumn{1}{c|}{{\bf 32}} & \multicolumn{1}{c|}{{\bf 48}} \\ \hline
-		\multicolumn{1}{|c|}{{\bf Tiempo (s)}}           & \multicolumn{1}{c|}{16,51}      & \multicolumn{1}{c|}{10,74}  & \multicolumn{1}{c|}{6,58}   & \multicolumn{1}{c|}{5,42}   & \multicolumn{1}{c|}{3,68}    & \multicolumn{1}{c|}{6,02}    & \multicolumn{1}{c|}{6,79}    \\ \hline
+		\multicolumn{1}{|c|}{{\bf Núm. \textit{threads}}} & \multicolumn{1}{c|}{{\bf Serie}} & \multicolumn{1}{c|}{{\bf 2}} & \multicolumn{1}{c|}{{\bf 4}} & \multicolumn{1}{c|}{{\bf 8}} & \multicolumn{1}{c|}{{\bf 16}} & \multicolumn{1}{c|}{{\bf 32}} & \multicolumn{1}{c|}{{\bf 48}} \\ \hline
+		\multicolumn{1}{|c|}{{\bf Tiempo (s)}}           & \multicolumn{1}{c|}{16,52}      & \multicolumn{1}{c|}{10,74}  & \multicolumn{1}{c|}{6,58}   & \multicolumn{1}{c|}{5,42}   & \multicolumn{1}{c|}{3,68}    & \multicolumn{1}{c|}{6,02}    & \multicolumn{1}{c|}{6,79}    \\ \hline
 		\multicolumn{1}{l}{}                         & \multicolumn{1}{l}{}             & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}         & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}          \\ \hline
 		\multicolumn{1}{|c|}{{\bf Speed-up}}         & \multicolumn{1}{c|}{1,00}        & \multicolumn{1}{c|}{1,54}    & \multicolumn{1}{c|}{2,51}    & \multicolumn{1}{c|}{3,05}    & \multicolumn{1}{c|}{4,49}     & \multicolumn{1}{c|}{2,74}     & \multicolumn{1}{c|}{2,43}     \\ \hline
 		{\bf }                                       &                                  &                              &                              &                              &                               &                               &                               \\ \hline
-		\multicolumn{1}{|c|}{{\bf Eficiencia}}       & \multicolumn{1}{c|}{100,00\%}    & \multicolumn{1}{c|}{76,87\%} & \multicolumn{1}{c|}{62,79\%} & \multicolumn{1}{c|}{38,09\%} & \multicolumn{1}{c|}{28,06\%}  & \multicolumn{1}{c|}{8,57\%}   & \multicolumn{1}{c|}{5,07\%}   \\ \hline
+		\multicolumn{1}{|c|}{{\bf Eficiencia}}       & \multicolumn{1}{c|}{100,0\%}    & \multicolumn{1}{c|}{76,9\%} & \multicolumn{1}{c|}{62,8\%} & \multicolumn{1}{c|}{38,1\%} & \multicolumn{1}{c|}{28,1\%}  & \multicolumn{1}{c|}{8,6\%}   & \multicolumn{1}{c|}{5,1\%}   \\ \hline
 	\end{tabular}
 	\caption{Rendimiento obtenido de las ejecuciones de la segunda implementación paralela}
 \end{table}
@@ -1279,15 +1345,18 @@ Concluido ya que el problema está en la sección crítica se intenta reducir las o
 	\label{grafico2Imple}
 \end{figure}
 
-Como se puede ver en el gráfico \ref{grafico2Imple} la mejora es bastante grande. Esto se debe a que se ha reducido notablemente la contención entre los \textit{threads} al no tener prácticamente operaciones a realizar dentro de la sección crítica. 
+Como se puede ver en el gráfico \ref{grafico2Imple} la mejora es bastante notable. Esto se debe a que se ha reducido notablemente la contención entre los \textit{threads} al no tener prácticamente operaciones a realizar dentro de la sección crítica. El tiempo de ejecución del sistema se reduce hasta los 16 cores.
+
+\
+
 
 \subsubsection{Conclusión}
 
-A pesar de haber mejorado mucho los tiempos el resultado no sigue siendo óptimo del todo ya que la implementación escala poco a poco hasta los 16 \textit{threads} y luego el tiempo va aumentado. Hay que intentar reducir aún más la contención de alguna manera. Analizando un poco más a detalle, la sección crítica se realiza para cualquier vecino que se quiera añadir después de haber expandido o contraído un punto. Es decir, que no importa la localización de los puntos que se estén tratando, habrá colisión en la sección crítica. En realidad, la sección crítica se puso para evitar que se pudieran añadir varios puntos vecinos a la vez. ¿ Hay alguna manera de realizar secciones críticas dependientes del punto? Sería la pregunta clave a responder para poder resolver el problema. 
+A pesar de haber mejorado mucho los tiempos el resultado no sigue siendo óptimo del todo ya que la implementación escala poco a poco hasta los 16 \textit{threads} y luego el tiempo va aumentado. Hay que intentar reducir aún más la contención de alguna manera. Analizando un poco más a detalle, la sección crítica se realiza para cualquier vecino que se quiera añadir después de haber expandido o contraído un punto. Es decir, que no importa la localización de los puntos que se estén tratando, habrá colisión en la sección crítica. En realidad, la sección crítica se puso para evitar que se pudieran añadir varios puntos vecinos a la vez. ¿Hay alguna manera de realizar secciones críticas dependientes del punto? Sería la pregunta clave a responder para poder resolver el problema. 
 
 \section{Segundo paso de mejora: tercera implementación}
 
-Buscando alguna manera de realizar secciones críticas dependiente del punto se deciden usar los semáforos o \textit{locks} en inglés. Se podría tener una matriz de \textit{locks} de la misma dimensión que la imagen y cada vez que se vaya a trabajar con un punto cerrar el \textit{lock} que le pertenece. El problema de esta idea de tener un \textit{lock} para cada píxel, en una imagen de 3000x2800, sería la memoria y la gestión de estos, ya que si realizamos la multiplicación el resultado sería muy elevado. De todas formas, se puede realizar la misma idea, pero por zonas. En vez de tener un \textit{lock} para cada punto se podría tener un número de \textit{locks} no muy grande para bloquear cierta zona de la imagen. 
+Buscando alguna manera de realizar secciones críticas dependiente del punto se deciden usar semáforos o \textit{locks} en inglés. Se podría tener una matriz de \textit{locks} de la misma dimensión que la imagen y cada vez que se vaya a trabajar con un punto cerrar el \textit{lock} que le pertenece. El problema de esta idea de tener un \textit{lock} para cada píxel, en una imagen de 3000x2800, sería la cantidad de memoria y la complejidad de gestión de éstos, ya que el número de \textit{locks} necesarios sería muy elevado. Como alternativa y buscando una solución de compromiso se ha implementado un esquema de \textit{locks} por zonas. En vez de tener un \textit{lock} para cada punto se podría tener un número de \textit{locks} no muy grande para bloquear cierta zona de la imagen. 
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}
@@ -1297,7 +1366,7 @@ Buscando alguna manera de realizar secciones críticas dependiente del punto se d
 	\label{mallaLocks}
 \end{figure}
 
-En la imagen \ref{mallaLocks} se puede observar un ejemplo de una malla de \textit{locks} en la número de \textit{locks} establecido es 4 y tiene una forma rectangular. El número de óptimo de locks a establecer será lo que se trabaje en esta segunda implementación. Además, el lector podría pensar que se pueden realizar distintas figuras geométricas en la creación de la malla de \textit{locks}, aunque esta opción no se realizará en este proyecto ya que la estrategia de distribución de los puntos en las sublistas se realiza recorriendo la matriz por filas, lo que significa que los rectángulos darán una mejor respuesta temporal ya que habrá poca colisión entre los \textit{threads}.
+En la imagen \ref{mallaLocks} se puede observar un ejemplo de una malla de \textit{locks} en la número de \textit{locks} establecido es 4 y tiene una forma rectangular. El número de óptimo de locks a establecer será lo que se trabaje en esta tercera implementación. Además, el lector podría pensar que se pueden realizar distintas figuras geométricas en la creación de la estructura de \textit{locks}, aunque esta opción no se realizará en este proyecto ya que la estrategia de distribución de los puntos en las sublistas se realiza recorriendo la matriz por filas, lo que significa que los rectángulos darán una mejor respuesta temporal ya que habrá poca colisión entre los \textit{threads}.
 
 \subsubsection{Código}
 
@@ -1305,62 +1374,66 @@ En la imagen \ref{mallaLocks} se puede observar un ejemplo de una malla de \text
 void ActiveContour::add_Rout_neighbor_to_Lout(int neighbor_offset,int tid)
 {
 	bool flag = false;	
+	
 	if( phi[neighbor_offset] == 3 ) // exterior value
 	{
 		int lockNumber = ( (neighbor_offset/img_width) *numLocks)/img_height;
 					
-		omp_set_lock(&(locks[lockNumber]));				
+		omp_set_lock(&(locks[lockNumber]));	
+					
 		if( phi[neighbor_offset] == 3 ) // exterior value
 		{
 			phi[neighbor_offset] = 1; // outside boundary value
 			flag = true;
 		}	
+		
 		omp_unset_lock(&(locks[lockNumber]));	
+		
 		if(flag)  Splited_Lout[tid]->push_front(neighbor_offset);
 	}
-	return;}
+	return;	
+}
 \end{lstlisting}
 
 
 \subsection{Rendimiento}
 
-\begin{table}[H]
-	\centering
-	\captionsetup{justification=centering}	
-	\begin{tabular}{|c|c|c|c|c|c|c|l|c|c|c|l}
-		\cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf \backslashbox{Threads}{Locks}} & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} &  & {\bf sp-up} &  & {\bf  Efi$.$} &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 1}     & 16,7    & 16,6    & 16,6     & 16,6     & 16,8     & 16,7     &  & 1              &  & -                &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 2}     & 10,5    & 10,6    & 10,4     & 10,5     & 10,3     & 10,3     &  & 1,6            &  & 79,6\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 4}     & 6,8     & 7,0     & 6,9      & 6,9      & 6,7      & 6,6      &  & 2,5            &  & 61,5\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 8}     & 4,2     & 5,7     & 5,7      & 5,4      & 5,4      & 5,4      &  & 4,0            &  & 49,5\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 16}    & 4,0     & 3,9     & 4,9      & 3,3      & 4,9      & 4,8      &  & 4,2            &  & 26,1\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 20}    & 3,3     & 3,9     & 3,9      & 3,2      & 3,9      & 3,9      &  & 5,1            &  & 25,4\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 24}    & 3,0     & 3,3     & 3,3      & 3,3      & 3,3      & 3,3      &  & 5,7            &  & 23,5\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 28}    & 3,0     & 3,0     & 2,9      & 2,9      & 3,0      & 2,9      &  & 5,5            &  & 19,7\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 32}    & 2,9     & 2,7     & 2,8      & 2,7      & 3,0      & 2,8      &  & 5,9            &  & 18,3\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 36}    & 3,7     & 3,8     & 3,3      & 3,5      & 2,8      & 3,3      &  & 4,5            &  & 12,4\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 40}    & 4,1     & 4,1     & 3,8      & 4,0      & 3,9      & 3,8      &  & 4,1            &  & 10,1\%           &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 44}    & 4,0     & 4,1     & 4,1      & 3,8      & 3,7      & 3,7      &  & 4,2            &  & 9,5\%            &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-		{\bf 48}    & 3,9     & 3,9     & 3,8      & 3,7      & 3,8      & 3,7      &  & 4,3            &  & 8,9\%            &  \\ \cline{1-7} \cline{9-9} \cline{11-11}
-	\end{tabular}
-	\caption{Rendimiento obtenido con distintas combinaciones de \textit{threads} y \textit{locks} en la tercera implementación paralela}
-\end{table}
 
 \begin{table}[H]
 	\centering
-	\captionsetup{justification=centering}	
-	\begin{tabular}{l}
-		\includegraphics[width=0.8\textwidth]{./imagenes/grafico2Imple} \\
-		\includegraphics[width=0.8\textwidth]{./imagenes/grafico3Imple}
+	\captionsetup{justification=centering}
+	\begin{tabular}{lc|c|c|c|c|c|c|lcccl}
+		\cline{3-8}
+		& \multicolumn{1}{l|}{} & \multicolumn{6}{c|}{{\bf Locks}}                              &                       & \multicolumn{1}{l}{}          & \multicolumn{1}{l}{}  & \multicolumn{1}{l}{}            &  \\ \cline{3-8} \cline{10-10} \cline{12-12}
+		&                       & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{{\bf su}} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{{\bf Efi.}} &  \\ \cline{1-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{\multirow{13}{*}{{\bf \rotatebox[origin=c]{90}{THREADS}}}} & {\bf 1}               & 16,69   & 16,64   & 16,63    & 16,61    & 16,79    & 16,73    & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{-}        & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{-}          &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 2}               & 10,49   & 10,64   & 10,35    & 10,52    & 10,35    & 10,33    & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{1,59}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{79,6\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 4}               & 6,79    & 7,03    & 6,86     & 6,85     & 6,73     & 6,60     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{2,46}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{61,5\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 8}               & 4,22    & 5,73    & 5,72     & 5,42     & 5,44     & 5,40     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{3,96}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{49,5\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 16}              & 3,99    & 3,93    & 4,89     & 3,26     & 4,87     & 4,84     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,18}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{26,1\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 20}              & 3,29    & 3,87    & 3,88     & 3,19     & 3,89     & 3,89     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{5,08}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{25,4\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 24}              & 2,95    & 3,28    & 3,29     & 3,32     & 3,30     & 3,29     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{5,65}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{23,5\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 28}              & 3,03    & 2,96    & 2,93     & 2,92     & 2,96     & 2,93     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{5,52}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{19,7\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 32}              & 2,85    & 2,72    & 2,80     & 2,70     & 3,00     & 2,80     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{5,86}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{18,3\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 36}              & 3,74    & 3,81    & 3,29     & 3,48     & 2,85     & 3,28     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,46}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{12,4\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 40}              & 4,12    & 4,06    & 3,79     & 3,98     & 3,85     & 3,81     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,05}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{10,1\%}     &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 44}              & 4,00    & 4,06    & 4,05     & 3,83     & 3,75     & 3,74     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,18}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{9,5\%}      &  \\ \cline{2-8} \cline{10-10} \cline{12-12}
+		\multicolumn{1}{|l|}{}                                & {\bf 48}              & 3,91    & 3,91    & 3,77     & 3,68     & 3,82     & 3,66     & \multicolumn{1}{l|}{} & \multicolumn{1}{c|}{4,27}     & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{8,9\%}      &  \\ \cline{1-8} \cline{10-10} \cline{12-12}
 	\end{tabular}
-	\caption{Comparación de los resultados obtenidos en este tercera implementación con los obtenidos en la segunda}
-	\label{comparacionImplementaciones2-3}
+	\caption{Tiempos de ejecución (s),  eficiencia y \textit{speed-ups} (su) obtenidos con distintas combinaciones de \textit{threads} y \textit{locks} en la tercera implementación paralela}
 \end{table}
 
-Como se puede observar en los gráficos de la tabla \ref{comparacionImplementaciones2-3} se ha mejorado aún más la respuesta temporal, escala bien hasta los 32 \textit{threads} en vez de hasta los 16 que se conseguían con la anterior implementación. Las ejecuciones más rápidas se logran con la combinación de 32 \textit{threads} y con 24 \textit{locks}, teniendo un resultado de 2,7 segundos. 
+\begin{figure}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\includegraphics[width=0.8\textwidth]{./imagenes/grafico3Imple}
+	\caption{Gráfico de los resultados obtenidos en este tercera implementación}
+	\label{Implementacion3}
+\end{figure}
 
-Por otro lado también se han realizado pruebas con la primera implementación, es decir, con la <<sección crítica normal>>. Esto se refiere a que la sección la crearán los \textit{locks} pero lo que hay dentro será lo que había en la implementación de la <<sección crítica normal>>. Los resultados son los que se muestran en el gráfico \ref{grafico3-2Imple}. Como se puede observar el tiempo obtenido es prácticamente el conseguido con la última implementación realizada. Esto quiere decir que el problema de todo ello era la contención que había con todos los \textit{threads} y no importa tanto el tiempo que se pasa dentro de la sección crítica. Sin embargo, también ahí que decir que con la implementación de la <<sección crítica normal>> son necesarios más \textit{locks} para evitar esa contención entre los \textit{threads} ya que la sección crítica es más larga.
+Como se puede observar en la figura \ref{Implementacion3} se ha mejorado aún más la respuesta temporal, escala bien hasta los 32 \textit{threads} en vez de hasta los 16 que se conseguían con la anterior implementación (véase la figura \ref{grafico2Imple}). Las ejecuciones más rápidas se logran con la combinación de 32 \textit{threads} y con 24 \textit{locks}, teniendo un resultado de 2,7 segundos. 
+
+Por otro lado, también se han realizado pruebas con la primera implementación, es decir, con la <<sección crítica normal>> para analizar el efecto de la reducción de la contención mediante la solución de \textit{locks} distribuidos en dicha implementación. Esto se refiere a que la sección la crearán los \textit{locks} pero lo que hay dentro será lo que había en la implementación de la <<sección crítica normal>>. Los resultados son los que se muestran en el gráfico \ref{grafico3-2Imple}. Como se puede observar el tiempo obtenido es prácticamente el conseguido con la última implementación realizada. Esto quiere decir que el problema de todo ello era la contención que había con todos los \textit{threads} y no importa tanto el tiempo que se pasa dentro de la sección crítica. Sin embargo, también ahí que decir que con la implementación de la <<sección crítica normal>> son necesarios más \textit{locks} para evitar esa contención entre los \textit{threads} ya que la sección crítica es más larga.
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}
@@ -1373,7 +1446,7 @@ Por otro lado también se han realizado pruebas con la primera implementación, es
 
 \subsubsection{Conclusión}
 
-Ya que los resultados obtenidos con la última implementación y la primera son parecidos no se podrá reducir mucho más el tiempo en cuanto a la contención, ya que parece que a partir de cierto número de \textit{locks} esta desaparece. Así pues, la reducción tendría que hacerse de otro lado, o bien intentar reducir el tiempo que se realiza en paralelo o entrar en más detalle como la compartición falsa en la memoria caché que pudiera haber con ciertas variables de la implementación. El propio tiempo de gestión de los \textit{locks}, la compartición falsa en caché que pudiera haber con ciertas variables, la gestión de la sección paralela y la división y unión de las listas parece que añaden en total un \textit{overhead} que se ha decidido no reducir. 
+Ya que los resultados obtenidos con la última implementación y la primera son parecidos no se podrá reducir mucho más el tiempo en cuanto a la contención, ya que parece que a partir de cierto número de \textit{locks} ésta desaparece. Así pues, la reducción tendría que hacerse por otra vía, o bien intentar reducir el tiempo que se realiza en paralelo o entrar en más detalle como la compartición falsa en la memoria caché que pudiera haber con ciertas variables de la implementación. El propio tiempo de gestión de los \textit{locks}, la compartición falsa en caché que pudiera haber con ciertas variables, la gestión de la sección paralela y la división y unión de las listas parece que añaden en total un \textit{overhead} que se ha decidido dejar fuera del ámbito de este proyecto. 
 
 
 
@@ -1779,7 +1852,7 @@ La mejor respuesta temporal en este caso se consigue mediante la combinación de 
 	\label{img3-3000}
 \end{table}
 
-Como se puede observar en la tabla \ref{img3-3000} el mejor resultado se consigue con 32 threads y 8 \textit{locks}, logrando un tiempo de 4,44 segundos, un \textit{speed-up} de 6,9 y una eficiencia del 21,7\%.
+Como se puede observar en la tabla \ref{img3-3000} el mejor resultado se consigue con 32 \textit{threads} y 8 \textit{locks}, logrando un tiempo de 4,44 segundos, un \textit{speed-up} de 6,9 y una eficiencia del 21,7\%.
 
 
 \begin{figure}[H]
