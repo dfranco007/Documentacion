@@ -29,7 +29,7 @@
 \contentsline {section}{\numberline {3.5}Conclusiones de los tipos de segmentaci\'on}{30}
 \contentsline {chapter}{\numberline {4}Optimizaciones y mejoras del algoritmo \textit {level set} original}{31}
 \contentsline {section}{\numberline {4.1}Introducci\'on}{31}
-\contentsline {section}{\numberline {4.2}Aproximaci\'on a la t\'ecnica de \textit {level set}}{32}
+\contentsline {section}{\numberline {4.2}Aproximaci\'on a la t\'ecnica \textit {level set}}{32}
 \contentsline {subsubsection}{Algoritmo}{34}
 \contentsline {section}{\numberline {4.3}Evoluci\'on del contorno}{38}
 \contentsline {chapter}{\numberline {5}Implementaci\'on de la aproximaci\'on y Ofeli}{39}
@@ -70,11 +70,17 @@
 \contentsline {subsubsection}{Tama\~no 1500x1500}{72}
 \contentsline {subsubsection}{Tama\~no 3000x3000}{73}
 \contentsline {subsubsection}{Resultado}{74}
-\contentsline {chapter}{\numberline {8}Gesti\'on del proyecto}{75}
-\contentsline {section}{\numberline {8.1}Gesti\'on del alcance}{75}
-\contentsline {section}{\numberline {8.2}Gesti\'on del tiempo}{75}
-\contentsline {section}{\numberline {8.3}Gesti\'on de los riesgos}{75}
-\contentsline {section}{\numberline {8.4}Gesti\'on del costes}{75}
-\contentsline {chapter}{\numberline {9}Conclusiones}{77}
-\contentsline {section}{\numberline {9.1}L\IeC {\'\i }neas futuras}{77}
-\contentsline {chapter}{Bibliograf\'{\i }a}{79}
+\contentsline {section}{\numberline {7.4}Resultados generales}{74}
+\contentsline {chapter}{\numberline {8}Objetivos extra del cliente}{77}
+\contentsline {section}{\numberline {8.1}Recubrimiento}{77}
+\contentsline {section}{\numberline {8.2}Extracci\'on y conteo de islas}{78}
+\contentsline {section}{\numberline {8.3}Densidad}{80}
+\contentsline {section}{\numberline {8.4}Power Spectral Density (PSD)}{80}
+\contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{81}
+\contentsline {section}{\numberline {9.1}Gesti\'on del alcance}{81}
+\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{81}
+\contentsline {section}{\numberline {9.3}Gesti\'on de los riesgos}{81}
+\contentsline {section}{\numberline {9.4}Gesti\'on del costes}{81}
+\contentsline {chapter}{\numberline {10}Conclusiones}{83}
+\contentsline {section}{\numberline {10.1}L\IeC {\'\i }neas futuras}{83}
+\contentsline {chapter}{Bibliograf\'{\i }a}{85}

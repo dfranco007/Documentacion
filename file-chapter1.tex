@@ -14,8 +14,7 @@ Aparte de ayudar a mejorar ciertas funciones de la vida cotidiana, la segmentaci
 
 Las técnicas de segmentación más avanzadas consiguen información detallada sobre la imagen tratada logrando así un resultado mejor, sin embargo cuanta más precisión se necesita más costoso es el algoritmo. Por lo tanto, muchas veces se suele buscar un equilibrio entre la precisión necesaria y la respuesta temporal mínima exigida a la hora de elegir un algoritmo adecuado. Por esta razón, hay muchos trabajos que tratan de mejorar esta respuesta temporal de los algoritmos de segmentación en base a optimizaciones. El resultado son miles de artículos relacionados con implementaciones paralelas e implementaciones en GPU (\textit{Graphics Processing Unit}) aparte de optimizaciones matemáticas y algorítmicas. 
 
-En conclusión, la paralelización de métodos de segmentación está a la <<orden del día>> puesto que es necesaria una respuesta rápida en determinados ámbitos de uso. Este trabajo pretende crear una versión paralela robusta sobre una aproximación al método de \textit{level set} para proporcionar una respuesta rápida sobre este tipo de segmentación. 
-
+En conclusión, la paralelización de métodos de segmentación está a la <<orden del día>> puesto que es necesaria una respuesta rápida en determinados ámbitos de uso. Este trabajo pretende crear una versión paralela robusta sobre una aproximación al método  \textit{level set} para proporcionar una respuesta rápida sobre este tipo de segmentación. 
 
 \section{Estructura de la memoria}
 
@@ -28,8 +27,7 @@ En la segunda parte del documento, formada por el quinto, sexto y séptimo capítu
 
 En la tercera y última parte, formada por el octavo y noveno capítulo, se presentan las conclusiones del trabajo realizado, algunos aspectos de la gestión del mismo y varias propuesta de mejora. Al final del documento puede encontrarse la bibliografía y los anexos.
 
-
-\section{Objetivos y necesidades del cliente} 
+\section{Objetivos y necesidades del cliente}\label{obj-cliente} 
 
 La primera toma de contacto con el director del proyecto Morfokinetics de la fundación del DIPC fue en el mes de febrero. Parte de ese proyecto lo realizó la compañera Estíbaliz Sánchez, por lo que se encontrará más información general de él en la memoria de su PFG \cite{esti}. A lo largo de la documentación de este PFG el director del proyecto Morfokinetics aparecerá nombrado como el cliente, ya que es la persona a la que se le dará respuesta cumpliendo los objetivos de este proyecto.
 
@@ -39,14 +37,13 @@ En el proyecto Morfokinetics hay una parte en la que es necesario realizar un tr
 		\item Realizar la segmentación lo más rápidamente posible. De esta manera la técnica de segmentación podrá ser capaz de analizar un vídeo de la evolución de la deposición de estos materiales \textit{frame} a \textit{frame}.
 \end{enumerate}
 
- Aparte del principal objetivo, el cliente también necesita varias tareas alternativas una vez realizada la segmentación de la imagen:
+Aparte del principal objetivo, el cliente también necesita varias tareas alternativas una vez realizada la segmentación de la imagen:
  
 \begin{enumerate}
-	\item Determinar el número de islas existentes
-	\item Porcentaje de recubrimiento de las islas respecto al tamaño de la imagen
-	\item Aislamiento de cada isla 
-	\item Densidad espectral de cada isla
-	\item Por todo ello, habrá que encontrar las islas\protect\footnotemark contenidas en la imagen
+	\item Porcentaje de recubrimiento de las islas\protect\footnotemark respecto al tamaño de la imagen.
+	\item Encontrar y aislar las islas contenidas en la imagen y determinar su número.
+	\item Densidad de las islas interiores, es decir, las que no están tocando los bordes, y de todas las islas.
+	\item PSD (power spectral density) de cada isla aislada y calcular el PSD promedio. Cálculo del PSD de toda las islas de la imagen (que no estén en los bordes) simultáneamente, es decir, de la imagen entera menos los bordes.
 \end{enumerate}
 \footnotetext{se llamará <<isla>> a cada superficie que se distinga sobre el fondo de la imagen. Ver ejemplo en \ref{ejemplo1}}
 
@@ -55,32 +52,30 @@ En el proyecto Morfokinetics hay una parte en la que es necesario realizar un tr
 	\begin{center}
 		\begin{subfigure}[t]{2.5in}
 			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo1}
+			\includegraphics[width=.8\textwidth]{./imagenes/ejemplo1}
 			\subcaption{}\label{ejemplo1}
 		\end{subfigure}
 		\begin{subfigure}[t]{2.5in}
 			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo2}
+			\includegraphics[width=.8\textwidth]{./imagenes/ejemplo2}
 			\subcaption{}\label{ejemplo2}
 		\end{subfigure}
 		\begin{subfigure}[t]{2.5in}
 			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo3}
+			\includegraphics[width=.8\textwidth]{./imagenes/ejemplo3}
 			\subcaption{}\label{ejemplo3}
 		\end{subfigure}
 		\begin{subfigure}[t]{2.5in}
 			\centering
-			\includegraphics[width=.9\textwidth]{./imagenes/ejemplo4}
+			\includegraphics[width=.8\textwidth]{./imagenes/ejemplo4}
 			\subcaption{}\label{ejemplo4}
 		\end{subfigure}
 	\end{center}
 	\caption{Ejemplo de proyecciones en láminas de materiales sintetizados mediante la deposición química de vapor}	
 	\label{ejemploImagenes}
 \end{figure}
+
 Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{ejemplo1} o muy juntas como en la imagen \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.
-
-
-
 
 
 
@@ -527,7 +522,7 @@ La imagen \ref{activeContour1.1} corresponde a la imagen de entrada, mientras qu
 \subsection{\textit{Level set}}\label{levelSet}
 Conjuntos de nivel, o \textit{level set} en inglés, es un tipo de segmentación muy parecida a la que hemos explicado en la sección \ref{cap:actContour} ya que también se trata de expandir un contorno dado previamente para encontrar los bordes de la imagen. La ventaja de este método frente al referido es que permite juntar y dividir contornos sin ningún cálculo extra necesario.
 
-El contorno está representado por la función de \textit{level set}, que está definida en una dimensión más que las dimensiones de la imagen a segmentar, es decir, para una imagen 2D tendríamos una superficie de \textit{level set} de tres dimensiones mientras que para una imagen de 3D tendríamos una superficie de 4D. En el caso de una superficie de 3D ésta tiene una forma cónica como se puede ver en la figura \ref{levelSet1}. Suponiendo entonces que la imagen a tratar tiene dos dimensiones, podríamos definir la función de \textit{level set} como $z = \phi(x,y,t)$ que devuelve la altura de la superficie de \textit{level set} en el punto $(x,y)$ del plano de la imagen en el tiempo $t$. El contorno es definido implícitamente como <<zero \textit{level set}>>, donde la altura del plano respecto a la superficie es cero ($\phi(x,y,t) = 0$). Esto es justo la intersección entre el plano de la imagen y la superficie. Véase las figuras \ref{levelSet1} y \ref{levelSet2} para ver ilustraciones de la técnica de \textit{level set}.
+El contorno está representado por la función de \textit{level set}, que está definida en una dimensión más que las dimensiones de la imagen a segmentar, es decir, para una imagen 2D tendríamos una superficie de \textit{level set} de tres dimensiones mientras que para una imagen de 3D tendríamos una superficie de 4D. En el caso de una superficie de 3D ésta tiene una forma cónica como se puede ver en la figura \ref{levelSet1}. Suponiendo entonces que la imagen a tratar tiene dos dimensiones, podríamos definir la función de \textit{level set} como $z = \phi(x,y,t)$ que devuelve la altura de la superficie de \textit{level set} en el punto $(x,y)$ del plano de la imagen en el tiempo $t$. El contorno es definido implícitamente como <<zero \textit{level set}>>, donde la altura del plano respecto a la superficie es cero ($\phi(x,y,t) = 0$). Esto es justo la intersección entre el plano de la imagen y la superficie. Véase las figuras \ref{levelSet1} y \ref{levelSet2} para ver ilustraciones de la técnica \textit{level set}.
 
 \
 
@@ -562,7 +557,7 @@ De la idea de que modificaciones de píxeles lejanos al contorno no afectan a est
 	\captionsetup{justification=centering}
 	\centering
 	\includegraphics[width=.7\textwidth]{./imagenes/levelSet2}
-	\caption{Ilustración del método de \textit{level set}}
+	\caption{Ilustración del método \textit{level set}}
 	\vspace{2 mm}
 	Fuente: commons.wikipedia.org
 	\label{levelSet2}
@@ -744,11 +739,11 @@ Hay muchos artículos sobre este algoritmo, alguna implementación paralela realiz
 
 \
 
-\section{Aproximación a la técnica de \textit{level set}}
+\section{Aproximación a la técnica \textit{level set}}
 
 Como se ha mencionado anteriormente para el objetivo de este proyecto, no se tienen por qué resolver las PDEs en el algoritmo \textit{level set} ya que, para una segmentación, importa más el resultado final que la evolución propia del algoritmo. Además, la resolución de las PDEs conlleva que se tengan que realizar reinicializaciones de la función de \textit{level set} (representada con la letra $\phi$) lo que implica aún más cálculo. El trabajo presentado por Shi y Karl \cite{yong1} elimina la reinicialización al tener una colección de enteros (los cuales representan la función $\phi$) que cambian dinámicamente según va propagándose el contorno y, además, no calculan las PDEs. Estas dos mejoras elementales hace que su algoritmo sea mucho más rápido que el \textit{level set} original. 
 
-En este trabajo se presenta una nueva estrategia de implementación del método de \textit{level set}. Para el caso de un espacio euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}. La función $\phi$ tendrá un valor negativo dentro de la curva C y un valor positivo fuera de ella, por eso se dice que representa implícitamente a la curva C. 
+En este trabajo se presenta una nueva estrategia de implementación del método \textit{level set}. Para el caso de un espacio euclídeo de dos dimensiones, una curva C es representada implícitamente como el \textit{zero level set} de una función $\phi$ definida en una cuadrícula como se muestra en la figura \ref{aproxLevelSet}. La función $\phi$ tendrá un valor negativo dentro de la curva C y un valor positivo fuera de ella, por eso se dice que representa implícitamente a la curva C. 
 
 Se definen dos listas de vecindad en esta cuadrícula, $L_{in}$ y $L_{out}$. En la imagen se puede ver que el movimiento de la curva C se puede conseguir moviendo un punto de una lista a otra.
 
@@ -810,7 +805,7 @@ Para la realización del algoritmo son necesarias estas estructuras:
 \end{itemize}
 
 Nombraremos a los puntos que están dentro de C pero no en la lista $L_{in}$ como <<puntos interiores>> y a los que están fuera de C pero que no pertenecen a $L_{out}$ como <<puntos exteriores>>. Para agilizar aún más el cálculo, los valores que puede tomar la función $\phi$ son cuatro enteros: {-3, -1, 1, 3}.
-\begin{equation}
+\begin{equation}\label{phi-levelSetEcuation}
 \phi (x) = 
 \left \{
 \begin{array}{rcl}
@@ -1500,7 +1495,7 @@ La primera imagen a probar será la imagen \ref{buena1}, una imagen borrosa, con 
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 2,01    & 2,03    & 2,03     & 2,04     & 2,04     & 2,03     \\ \hline
+		{\bf Serie}  & 2,01    & 2,03    & 2,03     & 2,04     & 2,04     & 2,03     \\ \hline
 		{\bf 2}  & 1,34    & 1,37    & 1,37     & 1,34     & 1,35     & 1,35     \\ \hline
 		{\bf 4}  & 1,00    & 0,96    & 0,96     & 0,97     & 0,96     & 0,95     \\ \hline
 		{\bf 8}  & 0,62    & 0,91    & 0,91     & 0,80     & 0,88     & 0,90     \\ \hline
@@ -1516,7 +1511,7 @@ La primera imagen a probar será la imagen \ref{buena1}, una imagen borrosa, con 
 		{\bf 48} & 0,45    & 0,36    & 0,36     & 0,33     & 0,34     & 0,37     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena1} con un tamaño de 500x500}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena1} con un tamaño de 500x500}
 	\label{img1-500}	
 \end{table}
 
@@ -1539,7 +1534,7 @@ Como se puede observar en la tabla \ref{img1-500} los mejores tiempos se consigu
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 14,88   & 14,91   & 14,92    & 14,87    & 14,92    & 14,90    \\ \hline
+		{\bf Serie}  & 14,88   & 14,91   & 14,92    & 14,87    & 14,92    & 14,90    \\ \hline
 		{\bf 2}  & 8,52    & 8,54    & 8,42     & 8,54     & 8,52     & 8,50     \\ \hline
 		{\bf 4}  & 5,96    & 5,96    & 5,82     & 5,88     & 5,88     & 5,88     \\ \hline
 		{\bf 8}  & 3,34    & 4,89    & 4,87     & 4,80     & 4,80     & 4,80     \\ \hline
@@ -1555,7 +1550,7 @@ Como se puede observar en la tabla \ref{img1-500} los mejores tiempos se consigu
 		{\bf 48} & 2,79    & 2,14    & 2,05*     & 2,05*     & 2,07     & \textbf{2,02}     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena1} con un tamaño de 1500x1500}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena1} con un tamaño de 1500x1500}
 	\label{img1-1500}
 \end{table}
 
@@ -1578,7 +1573,7 @@ En esta ocasión el mejor resultado se consigue con 48 \textit{threads} y 50 \tex
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf }   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 43,38   & 43,28   & 43,32    & 43,34    & 43,24    & 43,19    \\ \hline
+		{\bf Serie}  & 43,38   & 43,28   & 43,32    & 43,34    & 43,24    & 43,19    \\ \hline
 		{\bf 2}  & 28,46   & 26,85   & 26,83    & 26,89    & 26,75    & 26,71    \\ \hline
 		{\bf 4}  & 16,94   & 17,25   & 17,18    & 17,00    & 16,99    & 16,80    \\ \hline
 		{\bf 8}  & 9,53    & 13,34   & 13,42    & 13,42    & 13,34    & 13,38    \\ \hline
@@ -1594,7 +1589,7 @@ En esta ocasión el mejor resultado se consigue con 48 \textit{threads} y 50 \tex
 		{\bf 48} & 8,02    & 6,64    & 6,52*     & \textbf{6,49}     & 6,75     & 6,58     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena1} con un tamaño de 3000x3000}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena1} con un tamaño de 3000x3000}
 	\label{img1-3000}
 \end{table}
 
@@ -1635,7 +1630,7 @@ La segunda imagen a probar será la imagen \ref{buena2}. Esta imagen tiene un con
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 0,51    & 0,51    & 0,52     & 0,51     & 0,51     & 0,52     \\ \hline
+		{\bf Serie}  & 0,51    & 0,51    & 0,52     & 0,51     & 0,51     & 0,52     \\ \hline
 		{\bf 2}  & 0,35    & 0,35    & 0,35     & 0,35     & 0,34     & 0,34     \\ \hline
 		{\bf 4}  & 0,25    & 0,25    & 0,25     & 0,25     & 0,24     & 0,24     \\ \hline
 		{\bf 8}  & 0,17    & 0,21    & 0,21     & 0,20     & 0,20     & 0,20     \\ \hline
@@ -1651,7 +1646,7 @@ La segunda imagen a probar será la imagen \ref{buena2}. Esta imagen tiene un con
 		{\bf 48} & 0,23    & 0,18    & 0,14     & 0,13     & 0,14     & 0,15     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena2} con un tamaño de 500x500}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena2} con un tamaño de 500x500}
 	\label{img2-500}
 \end{table}
 
@@ -1674,7 +1669,7 @@ Como se puede observar en la tabla \ref{img2-500} los mejores tiempos se consigu
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 5,45    & 5,45    & 5,46     & 5,47     & 5,46     & 5,46     \\ \hline
+		{\bf Serie}  & 5,45    & 5,45    & 5,46     & 5,47     & 5,46     & 5,46     \\ \hline
 		{\bf 2}  & 3,56    & 3,61    & 3,57     & 3,56     & 3,54     & 3,54     \\ \hline
 		{\bf 4}  & 2,63    & 2,67    & 2,65     & 2,58     & 2,58     & 2,56     \\ \hline
 		{\bf 8}  & 1,68    & 2,23    & 2,20     & 2,11     & 2,11     & 2,10     \\ \hline
@@ -1690,7 +1685,7 @@ Como se puede observar en la tabla \ref{img2-500} los mejores tiempos se consigu
 		{\bf 48} & 2,16    & 1,80    & 1,41     & 1,37     & 1,42     & 1,42     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena2} con un tamaño de 1500x1500}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena2} con un tamaño de 1500x1500}
 	\label{img2-1500}
 \end{table}
 
@@ -1713,7 +1708,7 @@ Como se puede observar en la tabla \ref{img2-1500} el mejor resultado obtenido e
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 22,29   & 22,40   & 22,25    & 22,29    & 22,27    & 22,31    \\ \hline
+		{\bf Serie}  & 22,29   & 22,40   & 22,25    & 22,29    & 22,27    & 22,31    \\ \hline
 		{\bf 2}  & 9,64    & 9,65    & 9,83     & 9,61     & 9,58     & 9,58     \\ \hline
 		{\bf 4}  & 12,42   & 12,41   & 12,64    & 12,20    & 12,21    & 12,06    \\ \hline
 		{\bf 8}  & 5,88    & 7,57    & 7,61     & 7,65     & 7,53     & 7,54     \\ \hline
@@ -1729,7 +1724,7 @@ Como se puede observar en la tabla \ref{img2-1500} el mejor resultado obtenido e
 		{\bf 48} & 7,19    & 5,45    & 5,31     & 5,23     & 5,17     & 5,39     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena2} con un tamaño de 3000x3000}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena2} con un tamaño de 3000x3000}
 	\label{img2-3000}
 \end{table}
 
@@ -1771,7 +1766,7 @@ La tercera imagen a probar será la imagen \ref{buena3} y a continuación se prese
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 0,72    & 0,73    & 0,72     & 0,73     & 0,72     & 0,72     \\ \hline
+		{\bf Serie}  & 0,72    & 0,73    & 0,72     & 0,73     & 0,72     & 0,72     \\ \hline
 		{\bf 2}  & 0,48    & 0,48    & 0,48     & 0,48     & 0,48     & 0,48     \\ \hline
 		{\bf 4}  & 0,34    & 0,34    & 0,34     & 0,35     & 0,33     & 0,33     \\ \hline
 		{\bf 8}  & 0,21    & 0,28    & 0,28     & 0,27     & 0,27     & 0,27     \\ \hline
@@ -1787,7 +1782,7 @@ La tercera imagen a probar será la imagen \ref{buena3} y a continuación se prese
 		{\bf 48} & 0,22    & 0,18    & 0,14     & 0,14     & 0,13     & 0,17     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena3} con un tamaño de 500x500}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena3} con un tamaño de 500x500}
 	\label{img3-500}
 \end{table}
 
@@ -1810,7 +1805,7 @@ Como se puede observar en la tabla \ref{img3-500} los mejores resultados se cons
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 7,67    & 7,71    & 7,67     & 7,68     & 7,69     & 7,66     \\ \hline
+		{\bf Serie}  & 7,67    & 7,71    & 7,67     & 7,68     & 7,69     & 7,66     \\ \hline
 		{\bf 2}  & 4,78    & 4,79    & 4,76     & 4,77     & 4,75     & 4,75     \\ \hline
 		{\bf 4}  & 3,43    & 3,45    & 3,44     & 3,40     & 3,38     & 3,37     \\ \hline
 		{\bf 8}  & 1,97    & 2,81    & 2,80     & 2,71     & 2,72     & 2,70     \\ \hline
@@ -1826,7 +1821,7 @@ Como se puede observar en la tabla \ref{img3-500} los mejores resultados se cons
 		{\bf 48} & 1,79    & 1,34    & 1,33     & 1,34     & 1,33     & 1,31     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena3} con un tamaño de 1500x1500}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena3} con un tamaño de 1500x1500}
 	\label{img3-1500}
 \end{table}
 
@@ -1851,7 +1846,7 @@ La mejor respuesta temporal en este caso se consigue mediante la combinación de 
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
 		{\bf \backslashbox{Threads}{Locks}}   & {\bf 4} & {\bf 8} & {\bf 16} & {\bf 24} & {\bf 32} & {\bf 50} \\ \hline
-		{\bf 1}  & 30,89   & 30,78   & 30,84    & 30,88    & 30,77    & 30,91    \\ \hline
+		{\bf Serie}  & 30,89   & 30,78   & 30,84    & 30,88    & 30,77    & 30,91    \\ \hline
 		{\bf 2}  & 13,23   & 13,91   & 13,19    & 13,20    & 13,43    & 13,09    \\ \hline
 		{\bf 4}  & 16,18   & 16,28   & 16,33    & 16,10    & 16,00    & 15,88    \\ \hline
 		{\bf 8}  & 6,78    & 9,48    & 9,54     & 9,46     & 9,44     & 9,48     \\ \hline
@@ -1867,7 +1862,7 @@ La mejor respuesta temporal en este caso se consigue mediante la combinación de 
 		{\bf 48} & 5,96    & 4,98    & 4,84     & 4,90     & 5,01     & 4,93     \\ \hline
 	\end{tabular}
 	\captionsetup{justification=centering}	
-	\caption{Tiempos de ejecución de la imagen \ref{buena3} con un tamaño de 3000x3000}
+	\caption{Tiempos de ejecución (s) de la imagen \ref{buena3} con un tamaño de 3000x3000}
 	\label{img3-3000}
 \end{table}
 
@@ -1894,6 +1889,119 @@ Los resultados de la segmentación de esta tercera y última imagen han sido los q
 	\caption{Resultado de la segmentación de la imagen \ref{buena3}}	
 	\label{result3}
 \end{figure}
+
+
+\section{Resultados generales}
+
+
+En la tabla \ref{resultadosGenerales} se puede observar un pequeño resumen de los mejores resultados obtenidos en las ejecuciones con las tres imágenes pero los tamaños más grandes, es decir, 3000x3000. Se ha seleccionado este tamaño ya que se puede observar mejor la paralelización realizada al tener más datos.
+
+\begin{table}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\begin{tabular}{ccccc}
+		\cline{2-5}
+		\multicolumn{1}{l|}{}                                                           & \multicolumn{1}{c|}{{\bf Tiempo (s)}} & \multicolumn{1}{c|}{{\bf Speed-up}} & \multicolumn{1}{c|}{{\bf Threads}} & \multicolumn{1}{c|}{{\bf Locks}} \\ \hline
+		\multicolumn{1}{|c|}{{\bf \begin{tabular}[c]{@{}c@{}}Imagen \\ 1\end{tabular}}} & \multicolumn{1}{c|}{6,49}         & \multicolumn{1}{c|}{6,7}            & \multicolumn{1}{c|}{48}            & \multicolumn{1}{c|}{24}          \\ \hline
+		\multicolumn{1}{|c|}{{\bf \begin{tabular}[c]{@{}c@{}}Imagen\\ 2\end{tabular}}}  & \multicolumn{1}{c|}{3,85}         & \multicolumn{1}{c|}{5,7}            & \multicolumn{1}{c|}{32}            & \multicolumn{1}{c|}{32}          \\ \hline
+		\multicolumn{1}{|c|}{{\bf \begin{tabular}[c]{@{}c@{}}Imagen\\ 3\end{tabular}}}  & \multicolumn{1}{c|}{4,44}         & \multicolumn{1}{c|}{6,9}            & \multicolumn{1}{c|}{32}            & \multicolumn{1}{c|}{8}            \\ \hline
+		\multicolumn{1}{l}{}                                                            & \multicolumn{1}{l}{}              & \multicolumn{1}{l}{}                & \multicolumn{1}{l}{}               & \multicolumn{1}{l}{}            
+	\end{tabular}
+	\caption{Resultados generales obtenidos en la ejecución de las tres imágenes con un tamaño de 3000x3000 \ref{buena3}}	
+	\label{resultadosGenerales}	
+\end{table}
+
+Como se puede apreciar en la tabla parece ser que las imágenes dos y tres funcionan mejor ejecutándolas con 32 \textit{threads}. En la tercera imagen se consigue el mejor resultado con 8 \textit{locks}, sin embargo, el resultado obtenido con 32 \textit{locks} (4,48s) no se aleja mucho del óptimo conseguido. Además, en estas dos imágenes, a partir de los 32 \textit{threads} los tiempos empeoran debido al \textit{overhead} que añade el \textit{bus bandwidth} con tantos \textit{threads}  .
+
+Por lo tanto, se puede generalizar en que las imágenes del mismo tipo que la segunda y la tercera funcionarán mejor con la combinación de 32 \textit{threads} y 32 \textit{locks}.
+
+En cuanto a la primera imagen el mejor tiempo se consigue con la combinación de 48 \textit{threads} y 24 \textit{locks}. Sin embargo, esta imagen tarda alrededor de 43 segundos en la versión serie y apenas 6,49 segundos con la mejor combinación. Teniendo en cuenta ésto, a partir de los 32 \textit{threads}, el tiempo se ha reducido a alrededor de 7 segundos, reduciéndose lentamente con más \textit{threads} hasta llegar a ese óptimo de 6,49 segundos. La diferencia es apenas medio segundo, que, comparado con el tiempo en serie de 43 segundos, se tendrá que evaluar entre el coste de añadir esos \textit{threads} y la mejora que se obtiene. Además, a partir de los 24 \textit{locks} el problema de contención queda resuelto. 
+
+Como conclusión para los tipos de imágenes que se parezcan a la primera se puede decir que se consiguen resultados cercanos al óptimo con 32 \textit{threads} y 24 \textit{locks}, pudiendo mejorar algo más invirtiendo más \textit{threads}.
+
+
+
+
+
+
+
+
+
+
+\chapter{Objetivos extra del cliente}
+
+
+Como ya se mencionó en la sección \ref{obj-cliente} aparte del objetivo principal del proyecto también se citaron ciertos objetivos <<extra>> o necesidades que el cliente necesitaba una vez realizada la segmentación. Este capítulo se centra en recoger estas necesidades y explicar en general como se han llevado a cabo. Además, con estas tareas también se podrá ver el verdadero propósito de la segmentación de imágenes: el poder extraer los objetos, analizarlos y poder extraer conclusiones del ámbito en el que se esté trabajando.
+
+Como recordatorio, en la aproximación al algoritmo \textit{level set} la función $\phi$, que representa el \textit{level set}, está definida en una cuadrícula (del mismo tamaño que la imagen a segmentar) y puede tomar los valores \{-3, -1, 1, 3\} (véase la ecuación \ref{phi-levelSetEcuation}). Una vez que se haya realizado la segmentación todos los valores negativos representarán las islas, mientras que los valores positivos representará el fondo. Teniendo esta idea en cuenta se realizarán las tareas que se desarrollan a lo largo de este capítulo.
+
+El orden de presentación de cada tarea será el presentado en la sección \ref{obj-cliente}.
+
+
+\section{Recubrimiento}
+
+Teniendo en cuenta lo presentado en la introducción de este capítulo sobre la función $\phi$ esta tarea es realmente sencilla. Dado que las islas tendrán un valor negativo y el fondo uno positivo, únicamente habrá que contar los valores negativos que haya en la matriz. Así pues, se ha paralelizado esta tarea con una reducción\protect\footnotemark como se presenta en el código implementado mostrado a continuación. 
+\footnotetext{Cada thread realiza una suma con una variable local y al final se suman estos resultados locales}
+
+
+\begin{lstlisting}
+double ActiveContour::calculateCovering(int innerValue) const
+{
+	int sum=0,size=img_width*img_height,inValue;
+	
+	#pragma omp parallel for reduction(+:sum)
+	for(int i= 0; i < size; i++)
+	{
+		if(innerValue < 0)
+		{
+			if(phi[i] < 0 )	sum++;
+		}
+		else
+		{
+			if(phi[i] > 0 )	sum++;
+		}
+	}
+	double percentage = (sum * 100) / size;
+	return percentage;
+}	
+\end{lstlisting}
+
+
+
+\section{Extracción y conteo de islas}
+
+Para realizar estas tareas primeramente se debe encontrar una isla de la imagen. Para ello, se busca por filas en la matriz $\phi$ el primer punto que pertenezca a una isla, es decir, que tenga un valor -1, que correspondería al borde de ésta. Una vez encontrada la isla se procede a su extracción. Para ello se recorre recursivamente los puntos vecinos de ese primer punto con un valor $\phi = -1$. Esta situación siempre se dará ya que el valor -1 corresponde a los puntos que pertenecían a la lista $L_{in}$, la cual llegaba a delimitar el borde de la isla por completo. Mientras se realiza ese recorrido se cogen los máximos y mínimos valores de las coordenadas de cada punto del recorrido. De esta manera, cuando se haya terminado por completo el recorrido a la isla, se encuadra en una imagen la isla y se pinta el borde.
+
+Una vez obtenido el contorno de la isla y se haya plasmado en una imagen, se debe de <<pintar>> o rellenar por completo ésta. Esta tarea no esta trivial, ya que la isla puede tener muchas formas distintas, y la idea es que esta operación se realice para cualquier tipo de islas y de forma automática. Estos algoritmos son denominados como \textit{Flood fill algorithms}. Se ha escogido realizar una implementación recursiva, de manera que se pinten todos los píxeles vecinos de un píxel interno dado. De esta manera se escoge un vecino cercano al primer punto de la isla que pertenezca al interior de la isla, es decir, que tenga un valor $\phi = -3$.
+
+Realizado lo anterior, se vuelve a buscar desde el punto de la primera isla otra nueva, de manera que se extraigan todas las islas de la imagen. La tarea de contar se hace mientras se van extrayendo las islas una a una. De esta manera el conteo se puede hacer colateralmente cumpliendo el objetivo de extracción de las islas.
+
+A forma de ejemplo se muestra en la figura \ref{extraccionIslaBuena} el proceso de extracción de las primeras tres islas de la figura \ref{buena1} utilizada en la experimentación. Con propósito de reducir sólo se ha puesto un trozo de esta última imagen y se han señalado la posición de las tres primeras islas.
+
+
+\begin{figure}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\includegraphics[width=1.1\textwidth]{./imagenes/extraccionIslaBuena}
+	\caption{Proceso de extracción de las islas de la figura \ref{buena1} }	
+	\label{extraccionIslaBuena}
+\end{figure}
+
+
+
+\section{Densidad}
+
+Al cliente le interesa saber la densidad de las islas interiores y exteriores por separado y realizar la media de los dos valores. esta tarea se podrá hacer una vez realizada la extracción de las islas, la anterior tarea. El cálculo de la densidad de todas las islas de la imagen sería sencilla, ya que una vez que se hayan extraído únicamente habrá que realizar la división: número de islas $\div$ área total de la imagen. En cuanto a la primera cuestión, se deberían de identificar las islas que están <<tocando>> los bordes o incluso que estén incompletas. La solución es realizar un conteo de las islas que no están en el borde a la par que se van extrayendo, observando si alguna coordenada perteneciente al borde de las islas está tocando el borde de la imagen. Una vez que tengamos el conteo se realizará la misma división pero esta vez entre el número de islas contadas y el área del marco en la que están circunscritas las islas. Para finalizar se realiza la media entre las dos densidades obtenidas.
+
+\section{Power Spectral Density (PSD)}
+
+
+
+
+
+
+
+
 
 
 

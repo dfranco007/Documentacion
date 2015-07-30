@@ -21,16 +21,19 @@
 \contentsline {table}{\numberline {6.4}{\ignorespaces Tiempos de ejecuci\'on (s), eficiencia y \textit {speed-ups} (su) obtenidos con distintas combinaciones de \textit {threads} y \textit {locks} en la tercera implementaci\'on paralela\relax }}{57}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Experimentaci\'on}{61}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 500x500\relax }}{63}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 1500x1500\relax }}{64}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{65}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 500x500\relax }}{67}
-\contentsline {table}{\numberline {7.5}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 1500x1500\relax }}{68}
-\contentsline {table}{\numberline {7.6}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 3000x3000\relax }}{69}
-\contentsline {table}{\numberline {7.7}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 500x500\relax }}{71}
-\contentsline {table}{\numberline {7.8}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 1500x1500\relax }}{72}
-\contentsline {table}{\numberline {7.9}{\ignorespaces Tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena1} con un tama\~no de 500x500\relax }}{63}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena1} con un tama\~no de 1500x1500\relax }}{64}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{65}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena2} con un tama\~no de 500x500\relax }}{67}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena2} con un tama\~no de 1500x1500\relax }}{68}
+\contentsline {table}{\numberline {7.6}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena2} con un tama\~no de 3000x3000\relax }}{69}
+\contentsline {table}{\numberline {7.7}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena3} con un tama\~no de 500x500\relax }}{71}
+\contentsline {table}{\numberline {7.8}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena3} con un tama\~no de 1500x1500\relax }}{72}
+\contentsline {table}{\numberline {7.9}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}
+\contentsline {table}{\numberline {7.10}{\ignorespaces Resultados generales obtenidos en la ejecuci\'on de las tres im\'agenes con un tama\~no de 3000x3000 \ref {buena3}\relax }}{75}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{75}
+\contentsline {xchapter}{Objetivos extra del cliente}{77}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{77}
+\contentsline {xchapter}{Gesti\'on del proyecto}{81}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusiones}{83}

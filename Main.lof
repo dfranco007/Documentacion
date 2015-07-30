@@ -19,7 +19,7 @@
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Ejemplo de un contorno activo\relax }}{21}
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Ejemplo de segmentaci\'on de plantas presentando en \cite {suta1} utilizando los contornos activos\relax }}{22}
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Ilustraci\'on de la superficie de \textit {level set}\relax }}{23}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ilustraci\'on del m\'etodo de \textit {level set}\relax }}{24}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ilustraci\'on del m\'etodo \textit {level set}\relax }}{24}
 \contentsline {figure}{\numberline {3.14}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {region growing}\relax }}{25}
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Ejemplo de la t\'ecnica de \textit {region growing}\relax }}{26}
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}
@@ -63,6 +63,9 @@
 \contentsline {figure}{\numberline {7.12}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}
 \contentsline {figure}{\numberline {7.13}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena3}\relax }}{74}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{75}
+\contentsline {xchapter}{Objetivos extra del cliente}{77}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Proceso de extracci\'on de las islas de la figura \ref {buena1} \relax }}{79}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{77}
+\contentsline {xchapter}{Gesti\'on del proyecto}{81}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Conclusiones}{83}
