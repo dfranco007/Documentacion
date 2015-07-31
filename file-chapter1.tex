@@ -1995,7 +1995,9 @@ Al cliente le interesa saber la densidad de las islas interiores y exteriores po
 
 \section{Power Spectral Density (PSD)}
 
+\textit{Power Spectral Density}, o la densidad espectral de potencia en castellano, es una medida de la intensidad de la potencia de una señal en el dominio de la frecuencia, informando de la distribución de sus distintas componentes frecuenciales en el espectro. El resultado del PSD es una especie de mapa sobre las intensidades que tiene la imagen. Si entrar en más detalles sobre el PSD, el cliente tiene una herramienta en Java que realiza el PSD, por lo que se tendrán que adaptar las imágenes de las islas extraídas (todas del mismo tamaño y cuadradas) de manera que se pueda realizar sin problemas.
 
+Se realizará el PSD de cada isla extraída y se calculará si promedio. También se realizará la misma acción pero esta vez de la imagen entera sin las islas de los bordes, ya que el tener islas <<cortadas>> añadirían ruido al cálculo del PSD. Para esto último se deberá crear una imagen nueva a partir de las islas que no estén tocando los bordes.
 
 
 
