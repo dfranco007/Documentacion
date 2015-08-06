@@ -1,10 +1,16 @@
 \chapter{Introducción}
 
+\
+
 Este proyecto se ha desarrollado para dar respuesta a un proyecto emergente dentro de la fundación Donostia International Physics Center (DIPC) llamado Morfokinetics. Por ello, ciertas de las actividades a desarrollar han sido propuestas por dicho proyecto ya que son necesarias para su avance y desarrollo. Así pues, se ha mantenido contacto con el director del proyecto interno del DIPC durante el ciclo de vida de este proyecto.
 
-El objetivo de este proyecto es el análisis computacional y experimental de la segmentación de imágenes, en este caso, producidas mediante la deposición química de vapor de materiales sintetizados. En el tratamiento de estas imágenes, aparte del objetivo principal de poder encontrar los diferentes elementos que se encuentran en ella, también se presentan varias tareas complementarias: porcentaje de recubrimiento de los elementos encontrados, aislamiento y densidad espectral de cada elemento. 
+El objetivo de este proyecto es el análisis computacional y experimental de la segmentación de imágenes, en este caso, producidas mediante la deposición química de vapor de materiales sintetizados. Se requiere paralelizar el tipo de técnica de segmentación escogida para poder minimizar el tiempo de espera al resultado por parte del usuario (cliente) o, incluso, poder tratar los \textit{frames} de una secuencia de vídeo de manera que se pueda dar una respuesta en tiempo real.
 
-Una vez realizadas estas tareas, se requiere paralelizar el tipo de técnica de segmentación escogida para poder minimizar el tiempo de espera al resultado por parte del usuario (cliente) o, incluso, poder tratar los \textit{frames} de una secuencia de vídeo de manera que se pueda dar una respuesta en tiempo real.
+En la sección \ref{obj-cliente} se definen los objetivos de este proyecto que, como se podrá comprobar, están estrechamente relacionados con las necesidades del cliente. 
+
+\
+
+\
 
 \section{Motivación}
 
@@ -16,16 +22,26 @@ Las técnicas de segmentación más avanzadas consiguen información detallada sobre
 
 En conclusión, la paralelización de métodos de segmentación está a la <<orden del día>> puesto que es necesaria una respuesta rápida en determinados ámbitos de uso. Este trabajo pretende crear una versión paralela robusta sobre una aproximación al método  \textit{level set} para proporcionar una respuesta rápida sobre este tipo de segmentación. 
 
+\
+
+\
+
 \section{Estructura de la memoria}
 
 
 Este documento está estructurado en varios apartados. 
 
-La primera parte de la documentación es el entorno de investigación del proyecto que está formada por el primer, segundo, tercer y cuarto capítulo. Se presentan varios conceptos básicos: la definición de la segmentación y la evolución histórica de ésta. Realizada esta introducción, se comentan las aplicaciones que hoy en día tiene este ámbito que, como se podrá observar, serán muchas. Con esta primera parte se espera poder ubicar al lector sobre este análisis de imágenes, pieza angular de este proyecto, para que pueda entender correctamente el resto de la documentación. Más adelante se presenta una clasificación de los diferentes tipos de segmentación de imágenes, explicando individualmente sus características y algunos trabajos que se hayan realizado de estas técnicas. El final de esta primera parte se centra en una técnica de segmentación concreta: \textit{level set}. Se comentarán variaciones de la técnica y mejoras hasta llegar a una aproximación la cuál mejorará el tiempo de ejecución significativamente y con la que se ha trabajado en el proyecto. El desarrollo realizado en este proyecto está basado en el trabajo publicado en \cite{ofeli}. 
+La primera parte de la documentación es el entorno de investigación del proyecto que está formada por el primer, segundo, tercer y cuarto capítulo. Se presentan varios conceptos básicos: la definición de la segmentación y la evolución histórica de ésta. Realizada esta introducción, se comentan las aplicaciones que hoy en día tiene este ámbito que, como se podrá observar, serán muchas. Con esta primera parte se espera poder ubicar al lector sobre este análisis de imágenes, pieza angular de este proyecto, para que pueda entender correctamente el resto de la documentación. Más adelante se presenta una clasificación de los diferentes tipos de segmentación de imágenes, explicando individualmente sus características y algunos trabajos que se hayan realizado de estas técnicas. Todo ello se realiza con el fin de elegir la mejor técnica de segmentación para cumplir los objetivos del proyecto.
+
+El final de esta primera parte se centra en una técnica de segmentación concreta: \textit{level set}. Se comentarán variaciones de la técnica y mejoras hasta llegar a una aproximación la cuál mejorará el tiempo de ejecución significativamente y con la que se ha trabajado en el proyecto. El desarrollo realizado en este proyecto está basado en el trabajo publicado en \cite{ofeli}. 
 
 En la segunda parte del documento, formada por el quinto, sexto y séptimo capítulo, se encuentra todo lo relacionado con la paralelización de la técnica utilizada. La primera toma de contacto o la primera propuesta de paralelización creada, las posteriores fases desarrolladas, las conclusiones y decisiones tomadas en cada fase y el rendimiento obtenido en la versión final.
 
-En la tercera y última parte, formada por el octavo y noveno capítulo, se presentan las conclusiones del trabajo realizado, algunos aspectos de la gestión del mismo y varias propuesta de mejora. Al final del documento puede encontrarse la bibliografía y los anexos.
+En la tercera y última parte, formada por el octavo, noveno y décimo capítulo, se presentan las tareas u objetivos extras realizados para el cliente, algunos aspectos de la gestión de este PFG, conclusiones del trabajo realizado y varias propuesta de mejora. Al final del documento puede encontrarse la bibliografía y los anexos.
+
+\
+
+\
 
 \section{Objetivos y necesidades del cliente}\label{obj-cliente} 
 
@@ -34,7 +50,9 @@ La primera toma de contacto con el director del proyecto Morfokinetics de la fun
 En el proyecto Morfokinetics hay una parte en la que es necesario realizar un tratamiento de una imagen para sacar de ésta varias conclusiones. El cliente conoce la teoría sobre un algoritmo llamado \textit{level set} que realiza segmentación de imágenes con bastante precisión y que está bastante extendido. Sin embargo, no conoce ninguna implementación de este algoritmo ni el tiempo que puede costar realizar dicha segmentación. Recordando la introducción del proyecto, las imágenes se han sacado de una proyección en cierta lámina de materiales sintetizados mediante la deposición química de vapor, por lo que tendrán una apariencia similar a las presentadas en la figura \ref{ejemploImagenes}. La principal tarea u objetivo que se deberá realizar en este proyecto para satisfacer las necesidades del cliente es la siguiente:
 
 \begin{enumerate}
-		\item Realizar la segmentación lo más rápidamente posible. De esta manera la técnica de segmentación podrá ser capaz de analizar un vídeo de la evolución de la deposición de estos materiales \textit{frame} a \textit{frame}.
+		\item Realizar la segmentación lo más rápidamente posible. De esta manera la técnica de segmentación podrá ser capaz de analizar un vídeo de la evolución de la deposición de estos materiales \textit{frame} a \textit{frame}. 
+		
+		Para ello se realizará un estudio previo de las diferentes técnicas de segmentación y se elegirá la más adecuada para cumplir con este objetivo principal a pesar de que el cliente tenga conocimientos previos sobre el algoritmo \textit{level set}. Esto se debe a que puede haber otras técnicas más rápidas o eficientes que se adapten mejor a las especificaciones de este proyecto.
 \end{enumerate}
 
 Aparte del principal objetivo, el cliente también necesita varias tareas alternativas una vez realizada la segmentación de la imagen:
@@ -46,6 +64,8 @@ Aparte del principal objetivo, el cliente también necesita varias tareas alterna
 	\item PSD (power spectral density) de cada isla aislada y calcular el PSD promedio. Cálculo del PSD de toda las islas de la imagen (que no estén en los bordes) simultáneamente, es decir, de la imagen entera menos los bordes.
 \end{enumerate}
 \footnotetext{se llamará <<isla>> a cada superficie que se distinga sobre el fondo de la imagen. Ver ejemplo en \ref{ejemplo1}}
+
+Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{ejemplo1} o muy juntas como en la imagen \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.
 
 \begin{figure}[H]
 	\captionsetup{justification=centering}	
@@ -74,10 +94,6 @@ Aparte del principal objetivo, el cliente también necesita varias tareas alterna
 	\caption{Ejemplo de proyecciones en láminas de materiales sintetizados mediante la deposición química de vapor}	
 	\label{ejemploImagenes}
 \end{figure}
-
-Las islas puede que estén muy separadas, como se puede ver en la imagen \ref{ejemplo1} o muy juntas como en la imagen \ref{ejemplo3}. También se puede observar que la forma de estas islas no es siempre la misma. Estas características dependen de ciertas variables físicas que hacen que el material se <<pegue>> de una determinada manera en la lámina, dando lugar a estas imágenes abstractas.
-
-
 
 
 
@@ -1928,22 +1944,17 @@ Como conclusión para los tipos de imágenes que se parezcan a la primera se puede
 
 
 
-\chapter{Objetivos extra del cliente}
+\chapter{Objetivos secundarios del cliente}
 
-
-Como ya se mencionó en la sección \ref{obj-cliente} aparte del objetivo principal del proyecto también se citaron ciertos objetivos <<extra>> o necesidades que el cliente necesitaba una vez realizada la segmentación. Este capítulo se centra en recoger estas necesidades y explicar en general como se han llevado a cabo. Además, con estas tareas también se podrá ver el verdadero propósito de la segmentación de imágenes: el poder extraer los objetos, analizarlos y poder extraer conclusiones del ámbito en el que se esté trabajando.
+Como ya se mencionó en la sección \ref{obj-cliente} aparte del objetivo principal del proyecto también se citaron ciertos objetivos <<extra>> o necesidades que el cliente necesitaba una vez realizada la segmentación. Este capítulo se centra en recoger estas necesidades y explicar en general como se han llevado a cabo. Además, con estas tareas también se podrá ver el verdadero propósito de la segmentación de imágenes: el poder encontrar los objetos, analizarlos y poder extraer conclusiones de éstos en el ámbito en el que se esté trabajando.
 
 Como recordatorio, en la aproximación al algoritmo \textit{level set} la función $\phi$, que representa el \textit{level set}, está definida en una cuadrícula (del mismo tamaño que la imagen a segmentar) y puede tomar los valores \{-3, -1, 1, 3\} (véase la ecuación \ref{phi-levelSetEcuation}). Una vez que se haya realizado la segmentación todos los valores negativos representarán las islas, mientras que los valores positivos representará el fondo. Teniendo esta idea en cuenta se realizarán las tareas que se desarrollan a lo largo de este capítulo.
 
 El orden de presentación de cada tarea será el presentado en la sección \ref{obj-cliente}.
-
-
 \section{Recubrimiento}
 
-Teniendo en cuenta lo presentado en la introducción de este capítulo sobre la función $\phi$ esta tarea es realmente sencilla. Dado que las islas tendrán un valor negativo y el fondo uno positivo, únicamente habrá que contar los valores negativos que haya en la matriz. Así pues, se ha paralelizado esta tarea con una reducción\protect\footnotemark como se presenta en el código implementado mostrado a continuación. 
+Teniendo en cuenta lo presentado en la introducción de este capítulo sobre la función $\phi$ esta tarea es realmente sencilla. Dado que las islas tendrán un valor negativo y el fondo uno valor positivo, únicamente habrá que contar los valores negativos que haya en la matriz. Se ha realizado una implementación paralela de esta tarea con una reducción\protect\footnotemark como se presenta en el código mostrado a continuación. 
 \footnotetext{Cada thread realiza una suma con una variable local y al final se suman estos resultados locales}
-
-
 \begin{lstlisting}
 double ActiveContour::calculateCovering(int innerValue) const
 {
@@ -1953,21 +1964,14 @@ double ActiveContour::calculateCovering(int innerValue) const
 	for(int i= 0; i < size; i++)
 	{
 		if(innerValue < 0)
-		{
 			if(phi[i] < 0 )	sum++;
-		}
 		else
-		{
 			if(phi[i] > 0 )	sum++;
-		}
 	}
 	double percentage = (sum * 100) / size;
 	return percentage;
 }	
 \end{lstlisting}
-
-
-
 \section{Extracción y conteo de islas}
 
 Para realizar estas tareas primeramente se debe encontrar una isla de la imagen. Para ello, se busca por filas en la matriz $\phi$ el primer punto que pertenezca a una isla, es decir, que tenga un valor -1, que correspondería al borde de ésta. Una vez encontrada la isla se procede a su extracción. Para ello se recorre recursivamente los puntos vecinos de ese primer punto con un valor $\phi = -1$. Esta situación siempre se dará ya que el valor -1 corresponde a los puntos que pertenecían a la lista $L_{in}$, la cual llegaba a delimitar el borde de la isla por completo. Mientras se realiza ese recorrido se cogen los máximos y mínimos valores de las coordenadas de cada punto del recorrido. De esta manera, cuando se haya terminado por completo el recorrido a la isla, se encuadra en una imagen la isla y se pinta el borde.
@@ -2011,17 +2015,61 @@ Se realizará el PSD de cada isla extraída y se calculará si promedio. También se
 
 \chapter{Gestión del proyecto}
 
-\section{Gestión del alcance}
+
+
+
+\section{Gestión del alcance}\label{alcance}
+ 
+El alcance inicial de este proyecto está descrito en la sección \ref{obj-cliente}, sin embargo, el alcance del proyecto puede verse alterado en base al primer riesgo identificado que se explicará en la sección \ref{riesgos}. Debido a eso, se ha definido un alcance alternativo como recurso en caso de que se cumpla dicho riesgo. 
+
+Por lo tanto, se procederá a cambiar la planificación completa del proyecto. Los objetivos a cumplir en ese caso serían los siguientes:
+
+\begin{enumerate}
+	\item Se haría un estudio de las diferentes técnicas de segmentación existentes de una forma más exahustiva, es decir, se estudiarían las diferentes optimizaciones o mejoras que se hayan realizado para cada técnica de segmentación. 
+	\item Se buscarían implementaciones ya realizadas de manera eficiente de cada técnica de segmentación, de manera que se hiciera una tabla completa con las ventajas y las desventajas de cada una, poder probar estas implementaciones con diferentes imágenes si se pudiera, y comparar los resultados de la segmentación, tiempos de ejecución y rendimientos de cada una de éstas. Con todo ello se realizarían gráficas de los resultados obtenidos.
+	\item Encontrada la mejor optimización de alguna de las diferentes técnicas se podría proceder a realizar su implementación eficaz, si la técnica no es muy compleja, en diferentes arquitecturas como NUMA, SMP o en GPUs. Se compararía lo realizado con las diferentes opciones encontradas en la anterior idea. 
+	\item En función de la carga de las anteriores ideas, se podría proceder a realizar alguna implementación de otro algoritmo de segmentación más con el mismo fin de realizar una comparativa con otras técnicas.
+\end{enumerate}
+ 
+ 
+
+
 
 \section{Gestión del tiempo}
 
-\section{Gestión de los riesgos}
+Los siguientes son los hitos más significativos que han tenido lugar en el desarrollo del proyecto:
 
-El único riesgo más aparente que se puede producir en este proyecto es la pérdida de la memoria escrita o de la implementación paralela realizada a lo largo del proyecto. Para evitar que pueda producirse tal situación se requiere el uso de dos herramientas \textit{online}: el sistema de almacenamiento de Google, \textit{Drive}, y un sistema de gestión de versiones, en este caso \textit{Github}. Con estas dos herramienta se ha podido realizar un sistema de \textit{backup} sencillo como gestión de este riesgo. La memoria con todos sus documentos se ha guardado diariamente en el \textit{Drive} de manera que en caso de pérdida se pueda recuperar los avances de un día anterior. La implementación se ha ido creando en manera de versiones en las que se le han ido añadiendo funcionalidades extras en cada versión. Cada una de estas versiones se ha ido subiendo a la plataforma \textit{Github} del autor de esta memoria en \cite{gitHub1}. 
+
 
 \section{Gestión del costes}
 
-Los costes de este proyecto ha sido únicamente la dedicación de horas humanas con las que se ha realizado. Esto se puede ver en la tabla \ref{dedicacionTemporal}. 
+EL costes de este proyecto ha sido únicamente la dedicación de horas humanas que se han dedicado para su realización. Esto se puede ver en la tabla \ref{dedicacionTemporal}. 
+
+
+
+
+
+\section{Gestión de los riesgos}\label{riesgos}
+
+Al inicio del proyecto se han identificado una serie de riesgos que podrían poner en peligro el desarrollo del proyecto.
+
+\begin{enumerate}
+	\item El primer y principal riesgo del proyecto, y por lo tanto, el que mayor impacto tendría sería el no poder encontrar una solución implementada de un algoritmo de segmentación eficiente y eficaz. La eficiencia del algoritmo es necesaria, ya que, el proyecto del cliente da respuesta en tiempo real, por lo que la segmentación se debe de hacer lo más rápidamente posible. De la misma manera, la eficacia del algoritmo es necesaria de manera que se consiga la mayor precisión posible en la extración de los objetos de la imagen.
+	
+	La alternativa sería el realizar el estudio de posibilidades en sí mismo, de manera que se ofrezca al cliente la mejor solución para intentar resolver el principal objetivo del proyecto. Esta alternativa cambiaría el alcance de este proyecto como se ha descrito en la sección anterior de gestión del alcance \ref{alcance}.
+	
+	\item Una vez escogido un algoritmo de segmentación, encontrado una implementación de dicho algoritmo, o incluso, haber podido realizar una implementación propia de este, se define el segundo riesgo. Se buscará realizar una solución eficiente para una arquitectura SMP de ésto, sin embargo, puede que no se pueda satisfaccer los requisitos del cliente para uan arquitectura SMP.
+	
+	La alternativa para este riesgo es realizar una implementación eficiente para otras arquitecturas, como NUMA o GPUs, en cuyo caso se utilizaría el estandar MPI o la librería CUDA respectivamente.
+	
+	\item El tercer y último riesgo identificado es la pérdida de la memoria escrita o de la implementación paralela realizada a lo largo del proyecto. Para evitar que pueda producirse tal situación se requiere el uso de un sistema de gestión de versiones, en este caso, \textit{Github}. Con esta herramienta se puede realizar un sistema de \textit{backup} sencillo como gestión de este riesgo. La memoria con todos sus documentos se guardará diariamente en el \textit{Github} de manera que en caso de pérdida se pueda recuperar los avances realizados hasta el día anterior. La implementación se creará en forma de versiones en las que se le irán añadiendo funcionalidades extras en cada versión. Cada una de estas versiones se subirán a la plataforma \textit{Github} del autor de esta memoria \cite{gitHub1}. 
+	
+	La solución a este último riesgo es práticamente inmediata al tener realizados los \textit{backups} de todo lo realizado. En caso de pérdida de la documentación, se perdería un día de avances, por lo que no supone mucho coste. En caso de pérdida de la implementación se tendrán que volver a realizar los cambios desde una versión anterior, tarea que, si cada vez que realicemos un pequeño avance lo guardamos, no supondrá un sobrecoste muy grande.
+	
+\end{enumerate}
+
+
+\section{Seguimiento y control}
 
 
 

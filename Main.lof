@@ -1,7 +1,7 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Introducci\'on}{1}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de proyecciones en l\'aminas de materiales sintetizados mediante la deposici\'on qu\IeC {\'\i }mica de vapor\relax }}{4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de proyecciones en l\'aminas de materiales sintetizados mediante la deposici\'on qu\IeC {\'\i }mica de vapor\relax }}{5}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conceptos b\'asicos}{7}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Resultados de b\'usqueda en el sitio web \textit {ieee explore} \cite {ieee1} con las palabras <<image segmentation>> \relax }}{8}
@@ -63,9 +63,9 @@
 \contentsline {figure}{\numberline {7.12}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}
 \contentsline {figure}{\numberline {7.13}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena3}\relax }}{74}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Objetivos extra del cliente}{77}
+\contentsline {xchapter}{Objetivos secundarios del cliente}{77}
 \contentsline {figure}{\numberline {8.1}{\ignorespaces Proceso de extracci\'on de las islas de la figura \ref {buena1} \relax }}{79}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Gesti\'on del proyecto}{81}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{83}
+\contentsline {xchapter}{Conclusiones}{85}

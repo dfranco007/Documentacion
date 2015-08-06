@@ -71,16 +71,17 @@
 \contentsline {subsubsection}{Tama\~no 3000x3000}{73}
 \contentsline {subsubsection}{Resultado}{74}
 \contentsline {section}{\numberline {7.4}Resultados generales}{74}
-\contentsline {chapter}{\numberline {8}Objetivos extra del cliente}{77}
+\contentsline {chapter}{\numberline {8}Objetivos secundarios del cliente}{77}
 \contentsline {section}{\numberline {8.1}Recubrimiento}{77}
 \contentsline {section}{\numberline {8.2}Extracci\'on y conteo de islas}{78}
 \contentsline {section}{\numberline {8.3}Densidad}{80}
 \contentsline {section}{\numberline {8.4}Power Spectral Density (PSD)}{80}
 \contentsline {chapter}{\numberline {9}Gesti\'on del proyecto}{81}
 \contentsline {section}{\numberline {9.1}Gesti\'on del alcance}{81}
-\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{81}
-\contentsline {section}{\numberline {9.3}Gesti\'on de los riesgos}{81}
-\contentsline {section}{\numberline {9.4}Gesti\'on del costes}{81}
-\contentsline {chapter}{\numberline {10}Conclusiones}{83}
-\contentsline {section}{\numberline {10.1}L\IeC {\'\i }neas futuras}{83}
-\contentsline {chapter}{Bibliograf\'{\i }a}{85}
+\contentsline {section}{\numberline {9.2}Gesti\'on del tiempo}{82}
+\contentsline {section}{\numberline {9.3}Gesti\'on del costes}{82}
+\contentsline {section}{\numberline {9.4}Gesti\'on de los riesgos}{82}
+\contentsline {section}{\numberline {9.5}Seguimiento y control}{83}
+\contentsline {chapter}{\numberline {10}Conclusiones}{85}
+\contentsline {section}{\numberline {10.1}L\IeC {\'\i }neas futuras}{85}
+\contentsline {chapter}{Bibliograf\'{\i }a}{87}
