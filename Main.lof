@@ -1,71 +1,74 @@
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Introducci\'on}{1}
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de proyecciones en l\'aminas de materiales sintetizados mediante la deposici\'on qu\IeC {\'\i }mica de vapor\relax }}{5}
+\contentsline {xchapter}{Introducci\'on}{1}{chapter.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de proyecciones en l\'aminas de materiales sintetizados mediante la deposici\'on qu\IeC {\'\i }mica de vapor\relax }}{5}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conceptos b\'asicos}{7}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Resultados de b\'usqueda en el sitio web \textit {ieee explore} \cite {ieee1} con las palabras <<image segmentation>> \relax }}{8}
+\contentsline {xchapter}{Conceptos b\'asicos}{7}{chapter.2}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Resultados de b\'usqueda en el sitio web \textit {ieee explore} \cite {ieee1} con las palabras <<image segmentation>> \relax }}{8}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {xchapter}{T\'ecnicas de segmentaci\'on}{11}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Clasificaci\'on de las t\'ecnicas de segmentaci\'on\relax }}{12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Histograma que muestra tres aparentes segmentos de la imagen con dos umbrales\relax }}{13}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Segmentaci\'on con \textit {thresholding}\relax }}{14}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Segmentaci\'on con \textit {thresholding} con varios umbrales\relax }}{14}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Segmentaci\'on con \textit {thresholding} en imagen con iluminaci\'on gradiente\relax }}{14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Segmentaci\'on utilizando K-means con K=16\relax }}{16}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Segmentaci\'on utilizando K-means con K=6\relax }}{16}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ejemplo de dilataci\'on de la t\'ecnica de morfolog\IeC {\'\i }a\relax }}{17}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Detecci\'on de bordes con el uso de los operadores\relax }}{20}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Ejemplo de un contorno activo\relax }}{21}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Ejemplo de segmentaci\'on de plantas presentando en \cite {suta1} utilizando los contornos activos\relax }}{22}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Ilustraci\'on de la superficie de \textit {level set}\relax }}{23}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Ilustraci\'on del m\'etodo \textit {level set}\relax }}{24}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {region growing}\relax }}{25}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Ejemplo de la t\'ecnica de \textit {region growing}\relax }}{26}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {graph cut} en una imagen 3x3\relax }}{30}
+\contentsline {xchapter}{T\'ecnicas de segmentaci\'on}{11}{chapter.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Clasificaci\'on de las t\'ecnicas de segmentaci\'on\relax }}{12}{figure.caption.10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Histograma que muestra tres aparentes segmentos de la imagen con dos umbrales\relax }}{13}{figure.caption.11}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Segmentaci\'on con \textit {thresholding}\relax }}{14}{figure.caption.12}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Segmentaci\'on con \textit {thresholding} con varios umbrales\relax }}{14}{figure.caption.13}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Segmentaci\'on con \textit {thresholding} en imagen con iluminaci\'on gradiente\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Segmentaci\'on utilizando K-means con K=16\relax }}{16}{figure.caption.15}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Segmentaci\'on utilizando K-means con K=6\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ejemplo de dilataci\'on de la t\'ecnica de morfolog\IeC {\'\i }a\relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Detecci\'on de bordes con el uso de los operadores\relax }}{20}{figure.caption.24}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ejemplo de un contorno activo\relax }}{21}{figure.caption.25}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Ejemplo de segmentaci\'on de plantas presentando en \cite {suta1} utilizando los contornos activos\relax }}{22}{figure.caption.26}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Ilustraci\'on de la superficie de \textit {level set}\relax }}{23}{figure.caption.27}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Ilustraci\'on del m\'etodo \textit {level set}\relax }}{24}{figure.caption.28}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {region growing}\relax }}{25}{figure.caption.30}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Ejemplo de la t\'ecnica de \textit {region growing}\relax }}{26}{figure.caption.31}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Ejemplo del funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}{figure.caption.33}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}{figure.caption.34}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {watershed}\relax }}{28}{figure.caption.35}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Funcionamiento de la t\'ecnica de \textit {graph cut} en una imagen 3x3\relax }}{30}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Optimizaciones y mejoras del algoritmo \textit {level set} original}{31}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Representaci\'on de la curva C\relax }}{33}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de expansi\'on del contorno un p\IeC {\'\i }xel hac\IeC {\'\i }a fuera. Operaciones que se realizan continuamente en el paso 2 y 3 del algoritmo\relax }}{37}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Posibles inicializaciones del contorno con el m\'etodo de Chan-Vese\relax }}{38}
+\contentsline {xchapter}{Optimizaciones y mejoras del algoritmo \textit {level set} original}{31}{chapter.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Representaci\'on de la curva C\relax }}{33}{figure.caption.37}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de expansi\'on del contorno un p\IeC {\'\i }xel hac\IeC {\'\i }a fuera. Operaciones que se realizan continuamente en el paso 2 y 3 del algoritmo\relax }}{37}{figure.caption.40}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Posibles inicializaciones del contorno con el m\'etodo de Chan-Vese\relax }}{38}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{39}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Esquema de las funciones utilizadas en el trabajo de Ofeli para realizar el algoritmo \textit {level set }aproximado\relax }}{41}
+\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{39}{chapter.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Esquema de las funciones utilizadas en el trabajo de Ofeli para realizar el algoritmo \textit {level set }aproximado\relax }}{41}{figure.caption.42}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del algoritmo \textit {level set}}{43}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de condici\'on de carrera al querer a\~nadir un punto vecino en com\'un a puntos tratados por distintos \textit {threads}\relax }}{46}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Esquema de la primera implementaci\'on\relax }}{47}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Esquema de la colocaci\'on de los \textit {heads} de trozo de lista a crear\relax }}{48}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Ejemplo de creaci\'on de cada sublista usando los \textit {heads} establecidos\relax }}{48}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{49}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{49}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera implementaci\'on paralela\relax }}{52}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera y segunda implementaci\'on\relax }}{54}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Ejemplo de una malla de cuatro locks de establecidos en forma rectangular\relax }}{55}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Gr\'afico de los resultados obtenidos en este tercera implementaci\'on\relax }}{57}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on con los \textit {locks} y la estructura de la <<secci\'on cr\IeC {\'\i }tica normal>>\relax }}{58}
+\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del algoritmo \textit {level set}}{43}{chapter.6}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo de condici\'on de carrera al querer a\~nadir un punto vecino en com\'un a puntos tratados por distintos \textit {threads}\relax }}{46}{figure.caption.43}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Esquema de la primera implementaci\'on\relax }}{47}{figure.caption.44}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Esquema de la colocaci\'on de los \textit {heads} de trozo de lista a crear\relax }}{48}{figure.caption.47}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Ejemplo de creaci\'on de cada sublista usando los \textit {heads} establecidos\relax }}{48}{figure.caption.48}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{49}{figure.caption.50}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Ejemplo de uni\'on de cada sublista usando los \textit {heads} y \textit {tails} de cada una\relax }}{49}{figure.caption.51}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera implementaci\'on paralela\relax }}{52}{figure.caption.55}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la primera y segunda implementaci\'on\relax }}{54}{figure.caption.60}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Ejemplo de una malla de cuatro locks de establecidos en forma rectangular\relax }}{55}{figure.caption.62}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Gr\'afico de los resultados obtenidos en este tercera implementaci\'on\relax }}{57}{figure.caption.65}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on con los \textit {locks} y la estructura de la <<secci\'on cr\IeC {\'\i }tica normal>>\relax }}{58}{figure.caption.66}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experimentaci\'on}{61}
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Tipos de im\'agenes con las que se realizar\'an las pruebas completas de la tercera implementaci\'on\relax }}{62}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 500x500\relax }}{63}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 1500x1500\relax }}{64}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{65}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{66}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 500x500\relax }}{67}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 1500x1500\relax }}{68}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 3000x3000\relax }}{69}
-\contentsline {figure}{\numberline {7.9}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena2} con un tama\~no de imagen de 3000x3000\relax }}{70}
-\contentsline {figure}{\numberline {7.10}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 500x500\relax }}{71}
-\contentsline {figure}{\numberline {7.11}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 1500x1500\relax }}{72}
-\contentsline {figure}{\numberline {7.12}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}
-\contentsline {figure}{\numberline {7.13}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena3}\relax }}{74}
+\contentsline {xchapter}{Experimentaci\'on}{61}{chapter.7}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Tipos de im\'agenes con las que se realizar\'an las pruebas completas de la tercera implementaci\'on\relax }}{62}{figure.caption.68}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 500x500\relax }}{63}{figure.caption.71}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 1500x1500\relax }}{64}{figure.caption.74}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{65}{figure.caption.77}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{66}{figure.caption.79}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 500x500\relax }}{67}{figure.caption.82}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 1500x1500\relax }}{68}{figure.caption.85}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena2} con un tama\~no de 3000x3000\relax }}{69}{figure.caption.88}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena2} con un tama\~no de imagen de 3000x3000\relax }}{70}{figure.caption.90}
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 500x500\relax }}{71}{figure.caption.93}
+\contentsline {figure}{\numberline {7.11}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 1500x1500\relax }}{72}{figure.caption.96}
+\contentsline {figure}{\numberline {7.12}{\ignorespaces Gr\'afica de los tiempos de ejecuci\'on de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}{figure.caption.99}
+\contentsline {figure}{\numberline {7.13}{\ignorespaces Resultado de la segmentaci\'on de la imagen \ref {buena3}\relax }}{74}{figure.caption.101}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Objetivos secundarios del cliente}{77}
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Proceso de extracci\'on de las islas de la figura \ref {buena1} \relax }}{79}
+\contentsline {xchapter}{Objetivos secundarios del cliente}{77}{chapter.8}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Proceso de extracci\'on de las islas de la figura \ref {buena1} \relax }}{79}{figure.caption.103}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{81}
+\contentsline {xchapter}{Gesti\'on del proyecto}{81}{chapter.9}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces EDT\relax }}{81}{figure.caption.104}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conclusiones}{85}
+\contentsline {xchapter}{Conclusiones}{87}{chapter.10}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Ciclos principales del algoritmo \textit {level set}}{95}{chapter.1}

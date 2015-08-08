@@ -25,6 +25,19 @@
 \usepackage{slashbox}
 \usepackage{graphicx}
 \usepackage{multirow}
+\usepackage{array,booktabs}
+\usepackage[hidelinks, pagebackref, pdfpagelayout=TwoPageRight, bookmarksnumbered=true]{hyperref}
+\usepackage{bookmark}
+
+\usepackage[xindy]{glossaries}
+
+\makeatletter
+\def\toclevel@chapter{-1}
+\makeatother
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\makeglossaries
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}

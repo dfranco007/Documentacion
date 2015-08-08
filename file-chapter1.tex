@@ -43,7 +43,7 @@ En la tercera y última parte, formada por el octavo, noveno y décimo capítulo, s
 
 \
 
-\section{Objetivos y necesidades del cliente}\label{obj-cliente} 
+\section{Alcance}\label{obj-cliente} 
 
 La primera toma de contacto con el director del proyecto Morfokinetics de la fundación del DIPC fue en el mes de febrero. Parte de ese proyecto lo realizó la compañera Estíbaliz Sánchez, por lo que se encontrará más información general de él en la memoria de su PFG \cite{esti}. A lo largo de la documentación de este PFG el director del proyecto Morfokinetics aparecerá nombrado como el cliente, ya que es la persona a la que se le dará respuesta cumpliendo los objetivos de este proyecto.
 
@@ -1064,7 +1064,7 @@ Para finalizar, la implementación de la lista ligada se utiliza para representar
 
 Las clases a modificar sobre el trabajo de Ofeli \cite{ofeli} para poder realizar una implementación paralela son: \textit{ActiveContour}, \textit{ACwithoutEdges} y \textit{list}. De manera que se paralelizará el código para realizar la segmentación de imágenes a escala de grises, ya que en un principio el cliente sólo está interesado en este tipo de imágenes. Aún así, una vez realizada la segmentación para este tipo de imágenes sería muy sencillo poder aplicarlo a imágenes a color, ya que, como se ha visto en el capítulo anterior, la mayoría de las funciones son comunes a la clase \textit{ActiveContour}. 
 
-La segmentación a resolver es en cierto modo <<poco>> costosa, ya que se realiza en unos cuantos segundos. Las máquinas disponibles para la realización de este proyecto son una máquina propia del cliente  para realizar pequeñas pruebas (4 \textit{cores}), la máquina propia del autor de esta memoria (2 \textit{cores}) y una máquina de la Facultad de Informática de la UPV/EHU (48 \textit{cores}). Por todo ello, se ha elegido realizar la paralelización mediante  OpenMP\cite{openmp} por lo que las pruebas se realizarán en máquinas con una arquitectura SMP. Además, esta elección puede suponer una ventaja a la hora de querer realizar la segmentación de las imágenes de un vídeo ya que se podría combinar con el estándar MPI como se explicará en la sección \ref{propuestaDeMejora}. Para aprovechar las mejores opciones que esta API(\textit{Application Programming Interface}) nos ofrece, es decir, para poder sacarle el máximo rendimiento posible al algoritmo, se ha consultado un tutorial de \textit{Livermore Computing Center}, uno de los centros computacionales de primera clase del mundo \cite{live1}.
+La segmentación a resolver es en cierto modo <<poco>> costosa, ya que se realiza en unos cuantos segundos. Las máquinas disponibles para la realización de este proyecto son una máquina propia del cliente  para realizar pequeñas pruebas (4 \textit{cores}), la máquina propia del autor de esta memoria (2 \textit{cores}) y una máquina de la Facultad de Informática de la UPV/EHU (48 \textit{cores}). Por todo ello, se ha elegido realizar la paralelización mediante  OpenMP\cite{openmp} por lo que las pruebas se realizarán en máquinas con una arquitectura SMP. Además, esta elección puede suponer una ventaja a la hora de querer realizar la segmentación de las imágenes de un vídeo ya que se podría combinar con el estándar MPI como se explicará en la sección \ref{propuestaDeMejora}. Para aprovechar las mejores opciones que esta API(\textit{Application Programming Interface}) nos ofrece, es decir, para poder sacarle el máximo rendimiento posible al algoritmo, se ha consultado un tutorial de \textit{Livermore Computing Center} \cite{live1} ya que es una fuente fiable.
 
 \section{Planteamiento de la paralelización}
 
@@ -1460,7 +1460,7 @@ Por otro lado, también se han realizado pruebas con la primera implementación, e
 
 Ya que los resultados obtenidos con la última implementación y la primera son parecidos no se podrá reducir mucho más el tiempo en cuanto a la contención, ya que parece que a partir de cierto número de \textit{locks} ésta desaparece. Así pues, la reducción tendría que hacerse por otra vía, o bien intentar reducir el tiempo que se realiza en paralelo o entrar en más detalle como la compartición falsa en la memoria caché que pudiera haber con ciertas variables de la implementación. El propio tiempo de gestión de los \textit{locks}, la compartición falsa en caché que pudiera haber con ciertas variables, la gestión de la sección paralela y la división y unión de las listas parece que añaden en total un \textit{overhead} que se ha decidido dejar fuera del ámbito de este proyecto. 
 
-
+En el apéndice \ref{apendice1} se puede encontrar el código de los ciclos principales de la evolución del algoritmo \textit{level set}, piezas principales de la implementación paralela realizada. 
 
 
 
@@ -2015,36 +2015,82 @@ Se realizará el PSD de cada isla extraída y se calculará si promedio. También se
 
 \chapter{Gestión del proyecto}
 
+En este capítulo se presenta todo lo relacionado con la gestión del proyecto realizado: EDT, la gestión del alcance, de costes, de tiempo y de los riesgos.
 
+\section{EDT}
+
+\begin{figure}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\includegraphics[width=1.2\textwidth]{./imagenes/EDT}
+	\caption{EDT}	
+	\label{EDT}
+\end{figure}
 
 
 \section{Gestión del alcance}\label{alcance}
  
-El alcance inicial de este proyecto está descrito en la sección \ref{obj-cliente}, sin embargo, el alcance del proyecto puede verse alterado en base al primer riesgo identificado que se explicará en la sección \ref{riesgos}. Debido a eso, se ha definido un alcance alternativo como recurso en caso de que se cumpla dicho riesgo. 
-
-Por lo tanto, se procederá a cambiar la planificación completa del proyecto. Los objetivos a cumplir en ese caso serían los siguientes:
+El alcance inicial de este proyecto está descrito en la sección \ref{obj-cliente}, sin embargo, este puede verse alterado en base al primer riesgo identificado que se explicará en la sección \ref{riesgos}. Debido a eso, se ha definido un alcance alternativo como recurso en caso de que se cumpla dicho riesgo. Los objetivos a cumplir en ese caso serían los siguientes:
 
 \begin{enumerate}
-	\item Se haría un estudio de las diferentes técnicas de segmentación existentes de una forma más exahustiva, es decir, se estudiarían las diferentes optimizaciones o mejoras que se hayan realizado para cada técnica de segmentación. 
-	\item Se buscarían implementaciones ya realizadas de manera eficiente de cada técnica de segmentación, de manera que se hiciera una tabla completa con las ventajas y las desventajas de cada una, poder probar estas implementaciones con diferentes imágenes si se pudiera, y comparar los resultados de la segmentación, tiempos de ejecución y rendimientos de cada una de éstas. Con todo ello se realizarían gráficas de los resultados obtenidos.
-	\item Encontrada la mejor optimización de alguna de las diferentes técnicas se podría proceder a realizar su implementación eficaz, si la técnica no es muy compleja, en diferentes arquitecturas como NUMA, SMP o en GPUs. Se compararía lo realizado con las diferentes opciones encontradas en la anterior idea. 
+	\item Se haría un estudio de las diferentes técnicas de segmentación existentes de una forma más exhaustiva, es decir, se estudiarían las diferentes optimizaciones o mejoras que se hayan realizado para cada técnica de segmentación. 
+	\item Se buscarían implementaciones ya realizadas de manera eficiente de cada técnica de segmentación, de manera que se hiciera una tabla completa con las ventajas y las desventajas de cada una, poder probar estas implementaciones con diferentes imágenes si se pudiera, y comparar los resultados de la segmentación, gráficas de los tiempos de ejecución y rendimientos de cada una de éstas. 
+	\item Encontrada la mejor optimización de alguna de las diferentes técnicas se podría proceder a realizar su implementación eficaz, si la técnica no es muy compleja, en diferentes arquitecturas como MPP, SMP o en GPUs. Se compararía lo realizado con las diferentes opciones encontradas en la anterior idea. 
 	\item En función de la carga de las anteriores ideas, se podría proceder a realizar alguna implementación de otro algoritmo de segmentación más con el mismo fin de realizar una comparativa con otras técnicas.
 \end{enumerate}
  
+\
+
+\section{Gestión del costes}
+
+El costes de este proyecto ha sido únicamente la dedicación de horas dedicadas en su realización. En la tabla \ref{dedicacionTemporal} se puede observar la dedicación atribuida a cada tarea.
  
+\
+
+\begin{table}[H]
+	\captionsetup{justification=centering}
+	\centering
+	\begin{tabular}{clcp{20mm}p{20mm}M{20mm}}\toprule
+		{\bf Categoría}                & {\bf Tarea}            & {\bf Dedicación (h)} \\ \midrule\midrule
+		 \multirow{2}{*}{Investigación} & Técnicas de segmentación (general)           & 28                   \\  \cmidrule(l){2-3}
+		 & {\it Level set}                              & 11                   \\ \midrule \midrule
+		  & Revisión código Ofeli (ver factibilidad)     & 2                    \\ \cmidrule(l){2-3}
+		& Familiarización código Ofeli                 & 5                    \\ \cmidrule(l){2-3}
+		& Diseño de estrategia de paralelización       & 6                    \\ \cmidrule(l){2-3}
+		\multirow{2}{*}{Programación} & Extracción GUI de Ofeli                      & 8                    \\  \cmidrule(l){2-3}
+		 & Implementación paralela                      & 88                   \\ \cmidrule(l){2-3}
+		& Preparación de las máquinas para las pruebas & 4                    \\ \cmidrule(l){2-3}
+		& Realización de pruebas                       & 16                   \\ \cmidrule(l){2-3}
+		& Implementación objetivos secundarios         & 20                   \\ \midrule \midrule
+		       & Recogida de requisitos                       & 5                    \\ \cmidrule(l){2-3}
+		Cliente & Reuniones de seguimiento y control           & 22                   \\ \cmidrule(l){2-3}
+		& Reunión final                                & 3                    \\ \midrule \midrule
+		     & Aprendizaje \LaTeX y adaptación de plantilla  & 5                    \\ \cmidrule(l){2-3}
+		 & Redacción de memoria                         & 104                  \\ \cmidrule(l){2-3}
+         & Aprendizaje C++ y repaso de Github y OpenMP  & 7                    \\ \cmidrule(l){2-3}
+         Otros & Planificación & 16 \\ \cmidrule(l){2-3}
+         & Preparación de la defensa (estimado)         & 20                   \\ \midrule \midrule
+         & \bf{TOTAL}            & \textbf{370} \\ \midrule                
+	\end{tabular}
+	\caption{Dedicación del proyecto}	
+	\label{dedicacionTemporal}	
+\end{table}
+
 
 
 
 \section{Gestión del tiempo}
 
-Los siguientes son los hitos más significativos que han tenido lugar en el desarrollo del proyecto:
+El proyecto dio comienzo el día 8 de Enero de 2015 con el primer planteamiento del proyecto y finalizó el 16 de Septiembre del 2015 con la defensa del proyecto. Los siguientes son los hitos más significativos que han tenido lugar en el desarrollo del proyecto:
 
-
-
-\section{Gestión del costes}
-
-EL costes de este proyecto ha sido únicamente la dedicación de horas humanas que se han dedicado para su realización. Esto se puede ver en la tabla \ref{dedicacionTemporal}. 
-
+\begin{itemize}
+	\item \textbf{16 de Febrero},  resultados de la investigación aprobados por los tutores y el cliente: aproximación del level set y Ofeli.
+	\item \textbf{21 de Abril}, 1º Implementación paralela Ofeli completa.
+	\item \textbf{15 de Mayo}, 2º implementación paralela.
+	\item \textbf{30 de Mayo}, 3º implementación paralela.
+	\item \textbf{10 de Agosto}, finalización de objetivos extra del cliente.
+	\item \textbf{20 de Agosto}, finalización de la memoria.
+\end{itemize}
 
 
 
@@ -2054,22 +2100,22 @@ EL costes de este proyecto ha sido únicamente la dedicación de horas humanas que
 Al inicio del proyecto se han identificado una serie de riesgos que podrían poner en peligro el desarrollo del proyecto.
 
 \begin{enumerate}
-	\item El primer y principal riesgo del proyecto, y por lo tanto, el que mayor impacto tendría sería el no poder encontrar una solución implementada de un algoritmo de segmentación eficiente y eficaz. La eficiencia del algoritmo es necesaria, ya que, el proyecto del cliente da respuesta en tiempo real, por lo que la segmentación se debe de hacer lo más rápidamente posible. De la misma manera, la eficacia del algoritmo es necesaria de manera que se consiga la mayor precisión posible en la extración de los objetos de la imagen.
+	\item El primer y principal riesgo del proyecto, y por lo tanto, el que mayor impacto tendría sería el no poder encontrar una solución implementada de un algoritmo de segmentación eficiente y eficaz. La eficiencia del algoritmo es necesaria, ya que, el proyecto del cliente da respuesta en tiempo real, por lo que la segmentación se debe de hacer lo más rápidamente posible. De la misma manera, la eficacia del algoritmo es necesaria de manera que se consiga la mayor precisión posible en la extracción de los objetos de la imagen.
 	
 	La alternativa sería el realizar el estudio de posibilidades en sí mismo, de manera que se ofrezca al cliente la mejor solución para intentar resolver el principal objetivo del proyecto. Esta alternativa cambiaría el alcance de este proyecto como se ha descrito en la sección anterior de gestión del alcance \ref{alcance}.
 	
-	\item Una vez escogido un algoritmo de segmentación, encontrado una implementación de dicho algoritmo, o incluso, haber podido realizar una implementación propia de este, se define el segundo riesgo. Se buscará realizar una solución eficiente para una arquitectura SMP de ésto, sin embargo, puede que no se pueda satisfaccer los requisitos del cliente para uan arquitectura SMP.
+	\item Una vez escogido un algoritmo de segmentación, encontrado una implementación de dicho algoritmo, o incluso, haber podido realizar una implementación propia de este, se define el segundo riesgo. Se buscará realizar una solución eficiente para una arquitectura SMP de ésto, sin embargo, puede que no se pueda satisfacer los requisitos del cliente para una arquitectura SMP.
 	
-	La alternativa para este riesgo es realizar una implementación eficiente para otras arquitecturas, como NUMA o GPUs, en cuyo caso se utilizaría el estandar MPI o la librería CUDA respectivamente.
+	La alternativa para este riesgo es realizar una implementación eficiente para otras arquitecturas, como MPP o GPUs, en cuyo caso se utilizaría el estándar MPI o la librería CUDA respectivamente.
 	
-	\item El tercer y último riesgo identificado es la pérdida de la memoria escrita o de la implementación paralela realizada a lo largo del proyecto. Para evitar que pueda producirse tal situación se requiere el uso de un sistema de gestión de versiones, en este caso, \textit{Github}. Con esta herramienta se puede realizar un sistema de \textit{backup} sencillo como gestión de este riesgo. La memoria con todos sus documentos se guardará diariamente en el \textit{Github} de manera que en caso de pérdida se pueda recuperar los avances realizados hasta el día anterior. La implementación se creará en forma de versiones en las que se le irán añadiendo funcionalidades extras en cada versión. Cada una de estas versiones se subirán a la plataforma \textit{Github} del autor de esta memoria \cite{gitHub1}. 
+	\item El tercer y último riesgo identificado es la pérdida de la memoria escrita o de la implementación paralela realizada a lo largo del proyecto. Para evitar que pueda producirse tal situación se requiere el uso de un sistema de gestión de versiones, en este caso, \textit{Github}. Con esta herramienta se puede realizar un sistema de \textit{backup} sencillo como gestión de este riesgo. La memoria con todos sus documentos se guardará diariamente en el repositorio de \textit{Github} de manera que en caso de pérdida se pueda recuperar los avances realizados hasta el día anterior. La implementación se creará en forma de versiones en las que se le irán añadiendo funcionalidades extras en cada versión. Cada una de estas versiones se subirán a la plataforma \textit{Github} del autor de esta memoria \cite{gitHub1}. 
 	
-	La solución a este último riesgo es práticamente inmediata al tener realizados los \textit{backups} de todo lo realizado. En caso de pérdida de la documentación, se perdería un día de avances, por lo que no supone mucho coste. En caso de pérdida de la implementación se tendrán que volver a realizar los cambios desde una versión anterior, tarea que, si cada vez que realicemos un pequeño avance lo guardamos, no supondrá un sobrecoste muy grande.
+	La solución a este último riesgo es prácticamente inmediata al tener realizados los \textit{backups} de todo lo realizado. En caso de pérdida de la documentación, se perdería un día de avances, por lo que no supone mucho coste. En caso de pérdida de la implementación se tendrán que volver a realizar los cambios desde una versión anterior, tarea que, si cada vez que realicemos un pequeño avance lo guardamos, no supondrá un sobrecoste muy grande.
 	
 \end{enumerate}
 
 
-\section{Seguimiento y control}
+
 
 
 
@@ -2079,7 +2125,20 @@ Al inicio del proyecto se han identificado una serie de riesgos que podrían pone
 
 \chapter{Conclusiones}
 
-CONCLUSIONES
+En este capítulo se presentan las conclusiones del proyecto. Al principio se realiza una conclusión general del proyecto y más adelante se presentan los posibles trabajos futuros que se podrían realizar en este trabajo.
+
+\section{Conclusiones generales del proyecto}
+
+En el proyecto aquí presentado se ha realizado una implementación paralela sobre una aproximación del algoritmo \textit{level set} para la segmentación de imágenes. Se ha mantenido relación durante el proyecto con un cliente que, en este caso, pertenece a la fundación DIPC, y está desarrollando un proyecto interno en el cuál es necesaria la segmentación de imagen con el fin de extraer ciertas características de ella. 
+
+Al inicio del proyecto se establecieron los requisitos con el cliente, los cuales sirvieron para establecer el alcance inicial del proyecto. Se realizó una investigación de las diferentes técnicas de segmentación existentes con el fin de encontrar aquella que se adaptase mejor a los objetivos del proyecto. 
+
+Una vez realizada la investigación se opto por elegir como mejor opción el algoritmo \textit{level set}, por ser un algoritmo de segmentación eficiente ampliamente utilizado, lo que facilitaría la búsqueda de información sobre él, y además, el cliente recomendaba esta técnica, ya que aseguraba que se iban a obtener buenos resultados con ella. Realizando una investigación más profunda sobre esta técnica se encontró una aproximación a este algoritmo, presentado por Y. Shi y W. Karl \cite{yong1}, el cual mejoraba significativamente la rapidez de éste. Encontrada la aproximación se investigó sobre una posible implementación de éste, entonces, se encontró un trabajo llamado Ofeli, el cuál implementaba la aproximación del algoritmo \textit{level set} encontrada.
+
+Después de un análisis de viabilidad del código de Ofeli se empezó con la implementación eficiente de éste. Se comenzó por diseñar la solución paralela. Posteriormente, se desarrollaron varias implementaciones eficientes consecutivas, las cuales mejoraban el tiempo de ejecución de sus predecesoras, hasta llegar a una solución final. Una vez realizada la implementación eficiente se comenzó con la realización de las pruebas.
+
+Para finalizar el proyecto se realizaron los objetivos secundarios planteados por el cliente, así pues, se extrajeron ciertas características de las imágenes valiéndonos de la segmentación realizada. Como colofón decir que se han completado todos los objetivos impuestos al inicio del proyecto, aunque, para ello, se haya retrasado la finalización del proyecto.
+
 
 
 \section{Líneas futuras}\label{propuestaDeMejora}
@@ -2087,9 +2146,9 @@ CONCLUSIONES
 A pesar de haber conseguido buenos resultados temporales de la paralelización del algoritmo \textit{level set} estos se podrían haber mejorado un poco más de haber tenido más tiempo para la realización del proyecto. A continuación se listan unas posibles mejoras o ideas futuras interesantes:
 
 \begin{enumerate}
-	\item Eliminar la compartición falsa en la memoria caché de algunas variables de la implementación que han tenido que ser creadas para poder realizar la paralelización. Por lo tanto, al ejecutar en una máquina SMP, como ciertos \textit{cores} comparten entre ellos la misma memoria caché, al realizar escrituras sobre la misma variable invalida a los demás \textit{cores} esa misma variable, por lo que tendrán que volver a cogerla de la memoria principal. Si esta operación se da muchas veces, puede suponer un sobrecoste alto a la implementación.
-	\item La idea propuesta de la realización de la paralelización de los \textit{frames} de un vídeo puede llevarse a cabo mediante la librería MPI. Cada \textit{frame} se le pasaría a cada nodo del \textit{cluster} y que cada uno segmente esa imagen. En esta tarea se podrá utilizar el algoritmo desarrollado a lo largo de este proyecto en OpenMP. De esta manera, la combinación de estas dos técnicas conseguiría poder realizar la segmentación de un vídeo satisfactoriamente.
-	\item El trabajo realizado en este proyecto también se podía haber desarrollado con CUDA para realizar el algoritmo en GPUs. Sin embargo, esta opción no se llevó a cabo ya que el tratamiento de las listas en CUDA es bastante complejo y no es <<natural>> comparado con el modelo de programación que se sigue en CUDA. Existen técnicas para realizar un tratamiento de estas listas más eficientemente aunque el hecho de que este tratamiento ya tenga complicación no augura muy buena eficiencia. Aparte de esto, el acceso a máquinas de pruebas podía suponer alguna complicación. Por todo ello se decidió no utilizar CUDA en ese primer momento aunque se cree que puede ser una buena opción el poder realizar este trabajo en un futuro. 
+	\item Eliminar la compartición falsa en la memoria caché de algunas variables de la implementación que han tenido que ser creadas para poder realizar la paralelización. Por lo tanto, al ejecutar en una máquina SMP, como ciertos \textit{cores} comparten entre ellos ciertos bloques de la memoria caché, al realizar escrituras sobre la misma variable invalida a las copias de los demás \textit{cores}, por lo que tendrán que volver a leer el bloque completo de la memoria principal. Si esta operación se da muchas veces, puede suponer un sobrecoste alto a la implementación.
+	\item La idea propuesta de la realización de la paralelización de los \textit{frames} de un vídeo puede llevarse a cabo mediante la librería MPI. Cada \textit{frame} se le pasaría a cada nodo del \textit{cluster} y que cada uno segmente esa imagen. En esta tarea se podrá utilizar el algoritmo desarrollado a lo largo de este proyecto en OpenMP. De esta manera, la combinación de estas dos técnicas conseguiría poder realizar la segmentación de un vídeo satisfactoriamente utilizando una solución paralela híbrida (OpenMP + MPI).
+	\item El trabajo realizado en este proyecto también se podía haber desarrollado con CUDA para realizar el algoritmo en GPUs. Sin embargo, esta opción no se llevó a cabo ya que el tratamiento de las listas en CUDA es bastante complejo y no es <<natural>> comparado con el modelo de programación que se sigue en CUDA. Existen técnicas para realizar un tratamiento de estas listas más eficientemente aunque el hecho de que este tratamiento ya tenga complicación no augura muy buena eficiencia. Aparte de esto, el acceso a máquinas de pruebas podía suponer alguna complicación. Por todo ello, se decidió no utilizar CUDA en ese primer momento aunque se cree que puede ser una buena opción el poder realizar este trabajo en un futuro. 
 \end{enumerate}
 
 

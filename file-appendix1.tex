@@ -1,7 +1,167 @@
-\tocchapter{Primer ap\'{e}ndice}
+\chapter{Ciclos principales del algoritmo \textit{level set}}\label{apendice1}
 
-Este es el primer ap\'{e}ndice.
 
-\section{Primera secci\'{o}n}
+\subsubsection{Primer ciclo}
+\begin{lstlisting}
 
-Esta es la primera secci\'{o}n del primear ap\'{e}ndice.
+void ActiveContour::do_one_iteration_in_cycle1()
+{
+	// means of the Chan-Vese model for children classes ACwithoutEdges and ACwithoutEdgesYUV
+	calculate_means(); // virtual function for region-based models
+	
+	hasOutwardEvolution = false;
+	hasInwardEvolution = false;
+	
+	Lout.splitList(Splited_Lout,numThreads,sublistHead, sublistHeadPosition,0);
+	Lin.splitList(Splited_Lin,numThreads,sublistHead, sublistHeadPosition,1);
+	
+	int tid;
+	#pragma omp parallel private(tid)
+	{
+		tid = omp_get_thread_num();
+		hasOutwardEvolutionInThread[tid]=false;     
+		
+		for( list<int>::iterator Lout_point = Splited_Lout[tid]->begin(); !Lout_point.end();)
+		{
+			if(compute_external_speed_Fd(*Lout_point, tid) > 0)
+			{
+				hasOutwardEvolutionInThread[tid]=true;
+			
+				// updates of the variables to calculate the means Cout and Cin
+				updates_for_means_in1(tid); // virtual function for region-based models
+				Lout_point = switch_in(Lout_point,tid); // outward local movement
+				// switch_in function returns a new Lout_point
+				// which is the next point of the former Lout_point
+			}
+			else
+			{
+				++Lout_point;
+			}
+		}
+		clean_Lin(tid); // eliminate Lin redundant points
+		
+		hasInwardEvolutionInThread[tid]=false;
+		
+		for( list<int>::iterator Lin_point = Splited_Lin[tid]->begin(); !Lin_point.end(); )
+		{
+			if(compute_external_speed_Fd(*Lin_point,tid) < 0)
+			{
+				hasInwardEvolutionInThread[tid]=true;
+				
+				// updates of the variables to calculate the means Cout and Cin
+				updates_for_means_out1(tid); // virtual function for region-based models
+				Lin_point = switch_out(Lin_point,tid); // inward local movement
+				// switch_out function returns a new Lin_point
+				// which is the next point of the former Lin_point
+			}
+			else
+			{
+				++Lin_point;
+			}
+		}
+		
+		clean_Lout(tid); // eliminate Lout redundant points
+	}
+		
+	Lout.collectList(&Splited_Lout,sublistHead, sublistHeadPosition,0,numThreads );
+	Lin.collectList(&Splited_Lin,sublistHead, sublistHeadPosition,1,numThreads);
+	
+	//Recalculate thread private variables
+	for(int i=0; i < numThreads; i++)
+	{
+		if(hasOutwardEvolutionInThread[i])
+		{
+			hasOutwardEvolution = true;
+			break;
+		}
+	}
+	for(int i=0; i < numThreads; i++)
+	{
+		if(hasInwardEvolutionInThread[i])
+		{
+			hasInwardEvolution = true;
+			break;
+		}
+	}
+	//Collect all counters of each thread
+	update_for_means_global();
+	
+	iteration++;
+	return;
+}
+\end{lstlisting}
+
+\subsubsection{Segundo ciclo}
+
+
+\begin{lstlisting}
+void ActiveContour::do_one_iteration_in_cycle2()
+{
+	int offset,tid,listSize;
+	lists_length = 0;
+	
+	Lout.splitList(Splited_Lout,numThreads,sublistHead, sublistHeadPosition,0);
+	Lin.splitList(Splited_Lin,numThreads,sublistHead, sublistHeadPosition,1);
+	
+	#pragma omp parallel private(tid,offset) reduction(+:listSize)
+	{
+		listSize=0;
+		tid = omp_get_thread_num();
+		
+		// scan through Lout with a conditional increment
+		for( list<int>::iterator Lout_point = Splited_Lout[tid]->begin(); !Lout_point.end(); )
+			{
+			offset = *Lout_point;
+			
+			if( compute_internal_speed_Fint(offset) > 0 )
+			{
+				// updates of the variables to calculate the means Cout and Cin
+				updates_for_means_in2(offset,tid); // virtual function for region-based models
+				Lout_point = switch_in(Lout_point,tid); // outward local movement
+				// switch_in function returns a new Lout_point
+				// which is the next point of the former Lout_point
+			}
+			else
+			{
+				listSize++;
+				++Lout_point;
+			}
+		}
+		
+		clean_Lin(tid); // eliminate Lin redundant points
+		
+		// scan through Lin with a conditional increment
+		for( list<int>::iterator Lin_point = Splited_Lin[tid]->begin(); !Lin_point.end(); )
+		{
+			offset = *Lin_point;
+			
+			if( compute_internal_speed_Fint(offset) < 0 )
+			{
+				// updates of the variables to calculate the means Cout and Cin
+				updates_for_means_out2(offset,tid); // virtual function for region-based models
+				Lin_point = switch_out(Lin_point,tid); // inward local movement
+				// switch_out function returns a new Lin_point
+				// which is the next point of the former Lin_point
+			}
+			else
+			{
+				listSize++;
+				++Lin_point;
+			}
+		}
+		clean_Lout(tid); // eliminate Lout redundant points
+	}
+	
+	Lout.collectList(&Splited_Lout,sublistHead, sublistHeadPosition,0,numThreads );
+	Lin.collectList(&Splited_Lin,sublistHead, sublistHeadPosition,1,numThreads);
+	
+	lists_length = listSize;
+	
+	//Collect all counters of each thread
+	update_for_means_global();
+	
+	iteration++;
+	return;
+}
+\end{lstlisting}
+
