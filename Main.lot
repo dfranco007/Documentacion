@@ -1,42 +1,42 @@
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Introducci\'on}{1}{chapter.1}
+\contentsline {xchapter}{Introducci\'{o}n}{1}{chapter.1}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Conceptos b\'asicos}{7}{chapter.2}
+\contentsline {xchapter}{Conceptos b\'{a}sicos}{7}{chapter.2}
 \addvspace {10\p@ }
-\contentsline {xchapter}{T\'ecnicas de segmentaci\'on}{11}{chapter.3}
-\contentsline {table}{\numberline {3.1}{\ignorespaces M\'ascaras utilizadas por el operador de Roberts de tama\~no 2x2\relax }}{19}{table.caption.19}
-\contentsline {table}{\numberline {3.2}{\ignorespaces M\'ascaras utilizadas por el operador de Sobel de tama\~no 3x3\relax }}{19}{table.caption.21}
-\contentsline {table}{\numberline {3.3}{\ignorespaces M\'ascaras utilizadas por el operador de Prewitt de tama\~no 3x3\relax }}{19}{table.caption.23}
+\contentsline {xchapter}{T\'{e}cnicas de segmentaci\'{o}n}{11}{chapter.3}
+\contentsline {table}{\numberline {3.1}{\ignorespaces M\'{a}scaras utilizadas por el operador de Roberts de tama\~{n}o 2x2\relax }}{19}{table.caption.19}
+\contentsline {table}{\numberline {3.2}{\ignorespaces M\'{a}scaras utilizadas por el operador de Sobel de tama\~{n}o 3x3\relax }}{19}{table.caption.21}
+\contentsline {table}{\numberline {3.3}{\ignorespaces M\'{a}scaras utilizadas por el operador de Prewitt de tama\~{n}o 3x3\relax }}{19}{table.caption.23}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Optimizaciones y mejoras del algoritmo \textit {level set} original}{31}{chapter.4}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Algoritmo completo de la aproximaci\'on del \textit {level set}\relax }}{36}{table.caption.39}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Algoritmo completo de la aproximaci\'{o}n del \textit {level set}\relax }}{36}{table.caption.39}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Implementaci\'on de la aproximaci\'on y Ofeli}{39}{chapter.5}
+\contentsline {xchapter}{Implementaci\'{o}n de la aproximaci\'{o}n y Ofeli}{39}{chapter.5}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Paralelizaci\'on de la aproximaci\'on del algoritmo \textit {level set}}{43}{chapter.6}
-\contentsline {table}{\numberline {6.1}{\ignorespaces Rendimiento de las ejecuciones de la primera implementaci\'on paralela\relax }}{51}{table.caption.54}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Desglose de tiempos (s) de un ciclo del algoritmo con una ejecuci\'on paralela con dos \textit {cores} de la primera implementaci\'on\relax }}{52}{table.caption.57}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Rendimiento obtenido de las ejecuciones de la segunda implementaci\'on paralela\relax }}{54}{table.caption.59}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Tiempos de ejecuci\'on (s), eficiencia y \textit {speed-ups} (su) obtenidos con distintas combinaciones de \textit {threads} y \textit {locks} en la tercera implementaci\'on paralela\relax }}{57}{table.caption.64}
+\contentsline {xchapter}{Paralelizaci\'{o}n de la aproximaci\'{o}n del algoritmo \textit {level set}}{43}{chapter.6}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Rendimiento de las ejecuciones de la primera implementaci\'{o}n paralela\relax }}{51}{table.caption.54}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Desglose de tiempos (s) de un ciclo del algoritmo con una ejecuci\'{o}n paralela con dos \textit {cores} de la primera implementaci\'{o}n\relax }}{52}{table.caption.57}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Rendimiento obtenido de las ejecuciones de la segunda implementaci\'{o}n paralela\relax }}{54}{table.caption.59}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Tiempos de ejecuci\'{o}n (s), eficiencia y \textit {speed-ups} (su) obtenidos con distintas combinaciones de \textit {threads} y \textit {locks} en la tercera implementaci\'{o}n paralela\relax }}{57}{table.caption.64}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Experimentaci\'on}{61}{chapter.7}
-\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena1} con un tama\~no de 500x500\relax }}{63}{table.caption.70}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena1} con un tama\~no de 1500x1500\relax }}{64}{table.caption.73}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena1} con un tama\~no de 3000x3000\relax }}{65}{table.caption.76}
-\contentsline {table}{\numberline {7.4}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena2} con un tama\~no de 500x500\relax }}{67}{table.caption.81}
-\contentsline {table}{\numberline {7.5}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena2} con un tama\~no de 1500x1500\relax }}{68}{table.caption.84}
-\contentsline {table}{\numberline {7.6}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena2} con un tama\~no de 3000x3000\relax }}{69}{table.caption.87}
-\contentsline {table}{\numberline {7.7}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena3} con un tama\~no de 500x500\relax }}{71}{table.caption.92}
-\contentsline {table}{\numberline {7.8}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena3} con un tama\~no de 1500x1500\relax }}{72}{table.caption.95}
-\contentsline {table}{\numberline {7.9}{\ignorespaces Tiempos de ejecuci\'on (s) de la imagen \ref {buena3} con un tama\~no de 3000x3000\relax }}{73}{table.caption.98}
-\contentsline {table}{\numberline {7.10}{\ignorespaces Resultados generales obtenidos en la ejecuci\'on de las tres im\'agenes con un tama\~no de 3000x3000 \ref {buena3}\relax }}{75}{table.caption.102}
+\contentsline {xchapter}{Experimentaci\'{o}n}{61}{chapter.7}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena1} con un tama\~{n}o de 500x500\relax }}{63}{table.caption.70}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena1} con un tama\~{n}o de 1500x1500\relax }}{64}{table.caption.73}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena1} con un tama\~{n}o de 3000x3000\relax }}{65}{table.caption.76}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena2} con un tama\~{n}o de 500x500\relax }}{67}{table.caption.81}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena2} con un tama\~{n}o de 1500x1500\relax }}{68}{table.caption.84}
+\contentsline {table}{\numberline {7.6}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena2} con un tama\~{n}o de 3000x3000\relax }}{69}{table.caption.87}
+\contentsline {table}{\numberline {7.7}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena3} con un tama\~{n}o de 500x500\relax }}{71}{table.caption.92}
+\contentsline {table}{\numberline {7.8}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena3} con un tama\~{n}o de 1500x1500\relax }}{72}{table.caption.95}
+\contentsline {table}{\numberline {7.9}{\ignorespaces Tiempos de ejecuci\'{o}n (s) de la imagen \ref {buena3} con un tama\~{n}o de 3000x3000\relax }}{73}{table.caption.98}
+\contentsline {table}{\numberline {7.10}{\ignorespaces Resultados generales obtenidos en la ejecuci\'{o}n de las tres im\'{a}genes con un tama\~{n}o de 3000x3000 \ref {buena3}\relax }}{75}{table.caption.102}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Objetivos secundarios del cliente}{77}{chapter.8}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Gesti\'on del proyecto}{81}{chapter.9}
-\contentsline {table}{\numberline {9.1}{\ignorespaces Dedicaci\'on del proyecto\relax }}{83}{table.caption.105}
+\contentsline {xchapter}{Gesti\'{o}n del proyecto}{81}{chapter.9}
+\contentsline {table}{\numberline {9.1}{\ignorespaces Dedicaci\'{o}n del proyecto\relax }}{83}{table.caption.105}
 \addvspace {10\p@ }
 \contentsline {xchapter}{Conclusiones}{87}{chapter.10}
 \addvspace {10\p@ }
-\contentsline {xchapter}{Ciclos principales del algoritmo \textit {level set}}{95}{chapter.1}
+\contentsline {xchapter}{Ciclos principales del algoritmo \textit {level set}}{93}{Ap\penalty \@M \hskip \z@skip \unhbox \voidb@x \bgroup \let \unhbox \voidb@x \setbox \@tempboxa \hbox {e\global \mathchardef \accent@spacefactor \spacefactor }\accent 19 e\egroup \spacefactor \accent@spacefactor \penalty \@M \hskip \z@skip \setbox \@tempboxa \hbox {e\global \mathchardef \accent@spacefactor \spacefactor }\spacefactor \accent@spacefactor ndice.1.Alph1}

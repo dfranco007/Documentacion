@@ -1,58 +1,61 @@
-\BOOKMARK [-1][-]{chapter.1}{1 Introducci\363n}{}% 1
-\BOOKMARK [0][-]{section.1.1}{1.1 Motivaci\363n}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{1.2 Estructura de la memoria}{section.1.1}% 3
-\BOOKMARK [1][-]{section.1.3}{1.3 Alcance}{section.1.1}% 4
-\BOOKMARK [-1][-]{chapter.2}{2 Conceptos b\341sicos}{}% 5
-\BOOKMARK [0][-]{section.2.1}{2.1 Definici\363n de segmentaci\363n}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.2}{2.2 Evoluci\363n de la segmentaci\363n}{section.2.1}% 7
-\BOOKMARK [1][-]{section.2.3}{2.3 Aplicaciones}{section.2.1}% 8
-\BOOKMARK [-1][-]{chapter.3}{3 T\351cnicas de segmentaci\363n}{}% 9
-\BOOKMARK [0][-]{section.3.1}{3.1 Introducci\363n}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{3.2 Segmentaci\363n de imagen basada en el tratamiento de los p\355xeles}{section.3.1}% 11
+\BOOKMARK [0][-]{chapter.1}{1 Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.1.1}{1.1 Motivaci\363n}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{1.2 Estructura de la memoria}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{1.3 Alcance}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{2 Conceptos b\341sicos}{}% 5
+\BOOKMARK [1][-]{section.2.1}{2.1 Definici\363n de segmentaci\363n}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{2.2 Evoluci\363n de la segmentaci\363n}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.3}{2.3 Aplicaciones}{chapter.2}% 8
+\BOOKMARK [0][-]{chapter.3}{3 T\351cnicas de segmentaci\363n}{}% 9
+\BOOKMARK [1][-]{section.3.1}{3.1 Introducci\363n}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{3.2 Segmentaci\363n de imagen basada en el tratamiento de los p\355xeles}{chapter.3}% 11
 \BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Thresholding}{section.3.2}% 12
 \BOOKMARK [2][-]{subsection.3.2.2}{3.2.2 Clustering}{section.3.2}% 13
 \BOOKMARK [2][-]{subsection.3.2.3}{3.2.3 Morphology}{section.3.2}% 14
-\BOOKMARK [1][-]{section.3.3}{3.3 Segmentaci\363n de imagen basada en la detecci\363n de bordes}{section.3.1}% 15
+\BOOKMARK [1][-]{section.3.3}{3.3 Segmentaci\363n de imagen basada en la detecci\363n de bordes}{chapter.3}% 15
 \BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Detecci\363n de borde usando gradientes}{section.3.3}% 16
 \BOOKMARK [2][-]{subsection.3.3.2}{3.3.2 Active Contours}{section.3.3}% 17
 \BOOKMARK [2][-]{subsection.3.3.3}{3.3.3 Level set}{section.3.3}% 18
-\BOOKMARK [1][-]{section.3.4}{3.4 Segmentaci\363n de imagen basada en regiones crecientes}{section.3.1}% 19
+\BOOKMARK [1][-]{section.3.4}{3.4 Segmentaci\363n de imagen basada en regiones crecientes}{chapter.3}% 19
 \BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Region growing}{section.3.4}% 20
 \BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Split/Merge}{section.3.4}% 21
 \BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 Graph cut}{section.3.4}% 22
-\BOOKMARK [1][-]{section.3.5}{3.5 Conclusiones de los tipos de segmentaci\363n}{section.3.1}% 23
-\BOOKMARK [-1][-]{chapter.4}{4 Optimizaciones y mejoras del algoritmo level set original}{}% 24
-\BOOKMARK [0][-]{section.4.1}{4.1 Introducci\363n}{chapter.4}% 25
-\BOOKMARK [1][-]{section.4.2}{4.2 Aproximaci\363n a la t\351cnica level set}{section.4.1}% 26
-\BOOKMARK [1][-]{section.4.3}{4.3 Evoluci\363n del contorno}{section.4.1}% 27
-\BOOKMARK [-1][-]{chapter.5}{5 Implementaci\363n de la aproximaci\363n y Ofeli}{}% 28
-\BOOKMARK [0][-]{section.5.1}{5.1 Ofeli}{chapter.5}% 29
-\BOOKMARK [1][-]{subsection.5.1.1}{5.1.1 Estructura}{section.5.1}% 30
-\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Esquema general}{subsection.5.1.1}% 31
-\BOOKMARK [-1][-]{chapter.6}{6 Paralelizaci\363n de la aproximaci\363n del algoritmo level set}{}% 32
-\BOOKMARK [0][-]{section.6.1}{6.1 Planteamiento de la paralelizaci\363n}{chapter.6}% 33
-\BOOKMARK [1][-]{subsection.6.1.1}{6.1.1 Primera implementaci\363n}{section.6.1}% 34
-\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Rendimiento}{subsection.6.1.1}% 35
-\BOOKMARK [1][-]{section.6.2}{6.2 Primer paso de mejora: segunda implementaci\363n}{section.6.1}% 36
+\BOOKMARK [1][-]{section.3.5}{3.5 Conclusiones de los tipos de segmentaci\363n}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{4 Optimizaciones y mejoras del algoritmo level set original}{}% 24
+\BOOKMARK [1][-]{section.4.1}{4.1 Introducci\363n}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{4.2 Aproximaci\363n a la t\351cnica level set}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{4.3 Evoluci\363n del contorno}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{5 Implementaci\363n de la aproximaci\363n y Ofeli}{}% 28
+\BOOKMARK [1][-]{section.5.1}{5.1 Ofeli}{chapter.5}% 29
+\BOOKMARK [2][-]{subsection.5.1.1}{5.1.1 Estructura}{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.2}{5.1.2 Esquema general}{section.5.1}% 31
+\BOOKMARK [0][-]{chapter.6}{6 Paralelizaci\363n de la aproximaci\363n del algoritmo level set}{}% 32
+\BOOKMARK [1][-]{section.6.1}{6.1 Planteamiento de la paralelizaci\363n}{chapter.6}% 33
+\BOOKMARK [2][-]{subsection.6.1.1}{6.1.1 Primera implementaci\363n}{section.6.1}% 34
+\BOOKMARK [2][-]{subsection.6.1.2}{6.1.2 Rendimiento}{section.6.1}% 35
+\BOOKMARK [1][-]{section.6.2}{6.2 Primer paso de mejora: segunda implementaci\363n}{chapter.6}% 36
 \BOOKMARK [2][-]{subsection.6.2.1}{6.2.1 Rendimiento}{section.6.2}% 37
-\BOOKMARK [1][-]{section.6.3}{6.3 Segundo paso de mejora: tercera implementaci\363n}{section.6.1}% 38
+\BOOKMARK [1][-]{section.6.3}{6.3 Segundo paso de mejora: tercera implementaci\363n}{chapter.6}% 38
 \BOOKMARK [2][-]{subsection.6.3.1}{6.3.1 Rendimiento}{section.6.3}% 39
-\BOOKMARK [-1][-]{chapter.7}{7 Experimentaci\363n}{}% 40
-\BOOKMARK [0][-]{section.7.1}{7.1 Primera imagen}{chapter.7}% 41
-\BOOKMARK [1][-]{section.7.2}{7.2 Segunda imagen}{section.7.1}% 42
-\BOOKMARK [1][-]{section.7.3}{7.3 Tercera imagen}{section.7.1}% 43
-\BOOKMARK [1][-]{section.7.4}{7.4 Resultados generales}{section.7.1}% 44
-\BOOKMARK [-1][-]{chapter.8}{8 Objetivos secundarios del cliente}{}% 45
-\BOOKMARK [0][-]{section.8.1}{8.1 Recubrimiento}{chapter.8}% 46
-\BOOKMARK [1][-]{section.8.2}{8.2 Extracci\363n y conteo de islas}{section.8.1}% 47
-\BOOKMARK [1][-]{section.8.3}{8.3 Densidad}{section.8.1}% 48
-\BOOKMARK [1][-]{section.8.4}{8.4 Power Spectral Density \(PSD\)}{section.8.1}% 49
-\BOOKMARK [-1][-]{chapter.9}{9 Gesti\363n del proyecto}{}% 50
-\BOOKMARK [0][-]{section.9.1}{9.1 EDT}{chapter.9}% 51
-\BOOKMARK [1][-]{section.9.2}{9.2 Gesti\363n del alcance}{section.9.1}% 52
-\BOOKMARK [1][-]{section.9.3}{9.3 Gesti\363n del costes}{section.9.1}% 53
-\BOOKMARK [1][-]{section.9.4}{9.4 Gesti\363n del tiempo}{section.9.1}% 54
-\BOOKMARK [1][-]{section.9.5}{9.5 Gesti\363n de los riesgos}{section.9.1}% 55
-\BOOKMARK [-1][-]{chapter.10}{10 Conclusiones}{}% 56
-\BOOKMARK [0][-]{section.10.1}{10.1 L\355neas futuras}{chapter.10}% 57
-\BOOKMARK [-1][-]{Item.75}{Bibliograf\355a}{}% 58
+\BOOKMARK [0][-]{chapter.7}{7 Experimentaci\363n}{}% 40
+\BOOKMARK [1][-]{section.7.1}{7.1 Primera imagen}{chapter.7}% 41
+\BOOKMARK [1][-]{section.7.2}{7.2 Segunda imagen}{chapter.7}% 42
+\BOOKMARK [1][-]{section.7.3}{7.3 Tercera imagen}{chapter.7}% 43
+\BOOKMARK [1][-]{section.7.4}{7.4 Resultados generales}{chapter.7}% 44
+\BOOKMARK [0][-]{chapter.8}{8 Objetivos secundarios del cliente}{}% 45
+\BOOKMARK [1][-]{section.8.1}{8.1 Recubrimiento}{chapter.8}% 46
+\BOOKMARK [1][-]{section.8.2}{8.2 Extracci\363n y conteo de islas}{chapter.8}% 47
+\BOOKMARK [1][-]{section.8.3}{8.3 Densidad}{chapter.8}% 48
+\BOOKMARK [1][-]{section.8.4}{8.4 Power Spectral Density \(PSD\)}{chapter.8}% 49
+\BOOKMARK [0][-]{chapter.9}{9 Gesti\363n del proyecto}{}% 50
+\BOOKMARK [1][-]{section.9.1}{9.1 EDT}{chapter.9}% 51
+\BOOKMARK [1][-]{section.9.2}{9.2 Gesti\363n del alcance}{chapter.9}% 52
+\BOOKMARK [1][-]{section.9.3}{9.3 Gesti\363n del costes}{chapter.9}% 53
+\BOOKMARK [1][-]{section.9.4}{9.4 Gesti\363n del tiempo}{chapter.9}% 54
+\BOOKMARK [1][-]{section.9.5}{9.5 Gesti\363n de los riesgos}{chapter.9}% 55
+\BOOKMARK [0][-]{chapter.10}{10 Conclusiones}{}% 56
+\BOOKMARK [1][-]{section.10.1}{10.1 Conclusiones generales del proyecto}{chapter.10}% 57
+\BOOKMARK [1][-]{section.10.2}{10.2 L\355neas futuras}{chapter.10}% 58
+\BOOKMARK [0][-]{section*.106}{Bibliograf\355a}{}% 59
+\BOOKMARK [0][-]{section*.108}{Ap\351ndice A}{}% 60
+\BOOKMARK [0][-]{chapter.1}{A Ciclos principales del algoritmo level set}{}% 61

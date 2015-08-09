@@ -1,0 +1,27 @@
+\chapter{Conclusiones}
+
+En este cap\'{i}tulo se presentan las conclusiones del proyecto. Al principio se realiza una conclusi\'{o}n general del proyecto y m\'{a}s adelante se presentan los posibles trabajos futuros que se podr\'{i}an realizar en este trabajo.
+
+\section{Conclusiones generales del proyecto}
+
+En el proyecto aqu\'{i} presentado se ha realizado una implementaci\'{o}n paralela sobre una aproximaci\'{o}n del algoritmo \textit{level set} para la segmentaci\'{o}n de im\'{a}genes. Se ha mantenido relaci\'{o}n durante el proyecto con un cliente que, en este caso, pertenece a la fundaci\'{o}n DIPC, y est\'{a} desarrollando un proyecto interno en el cu\'{a}l es necesaria la segmentaci\'{o}n de imagen con el fin de extraer ciertas caracter\'{i}sticas de ella. 
+
+Al inicio del proyecto se establecieron los requisitos con el cliente, los cuales sirvieron para establecer el alcance inicial del proyecto. Se realiz\'{o} una investigaci\'{o}n de las diferentes t\'{e}cnicas de segmentaci\'{o}n existentes con el fin de encontrar aquella que se adaptase mejor a los objetivos del proyecto. 
+
+Una vez realizada la investigaci\'{o}n se opto por elegir como mejor opci\'{o}n el algoritmo \textit{level set}, por ser un algoritmo de segmentaci\'{o}n eficiente ampliamente utilizado, lo que facilitar\'{i}a la b\'{u}squeda de informaci\'{o}n sobre \'{e}l, y adem\'{a}s, el cliente recomendaba esta t\'{e}cnica, ya que aseguraba que se iban a obtener buenos resultados con ella. Realizando una investigaci\'{o}n m\'{a}s profunda sobre esta t\'{e}cnica se encontr\'{o} una aproximaci\'{o}n a este algoritmo, presentado por Y. Shi y W. Karl \cite{yong1}, el cual mejoraba significativamente la rapidez de \'{e}ste. Encontrada la aproximaci\'{o}n se investig\'{o} sobre una posible implementaci\'{o}n de \'{e}ste, entonces, se encontr\'{o} un trabajo llamado Ofeli, el cu\'{a}l implementaba la aproximaci\'{o}n del algoritmo \textit{level set} encontrada.
+
+Despu\'{e}s de un an\'{a}lisis de viabilidad del c\'{o}digo de Ofeli se empez\'{o} con la implementaci\'{o}n eficiente de \'{e}ste. Se comenz\'{o} por dise\~{n}ar la soluci\'{o}n paralela. Posteriormente, se desarrollaron varias implementaciones eficientes consecutivas, las cuales mejoraban el tiempo de ejecuci\'{o}n de sus predecesoras, hasta llegar a una soluci\'{o}n final. Una vez realizada la implementaci\'{o}n eficiente se comenz\'{o} con la realizaci\'{o}n de las pruebas.
+
+Para finalizar el proyecto se realizaron los objetivos secundarios planteados por el cliente, as\'{i} pues, se extrajeron ciertas caracter\'{i}sticas de las im\'{a}genes vali\'{e}ndonos de la segmentaci\'{o}n realizada. Como colof\'{o}n decir que se han completado todos los objetivos impuestos al inicio del proyecto, aunque, para ello, se haya retrasado la finalizaci\'{o}n del proyecto.
+
+
+
+\section{L\'{i}neas futuras}\label{propuestaDeMejora}
+
+A pesar de haber conseguido buenos resultados temporales de la paralelizaci\'{o}n del algoritmo \textit{level set} estos se podr\'{i}an haber mejorado un poco m\'{a}s de haber tenido m\'{a}s tiempo para la realizaci\'{o}n del proyecto. A continuaci\'{o}n se listan unas posibles mejoras o ideas futuras interesantes:
+
+\begin{enumerate}
+	\item Eliminar la compartici\'{o}n falsa en la memoria cach\'{e} de algunas variables de la implementaci\'{o}n que han tenido que ser creadas para poder realizar la paralelizaci\'{o}n. Por lo tanto, al ejecutar en una m\'{a}quina SMP, como ciertos \textit{cores} comparten entre ellos ciertos bloques de la memoria cach\'{e}, al realizar escrituras sobre la misma variable invalida a las copias de los dem\'{a}s \textit{cores}, por lo que tendr\'{a}n que volver a leer el bloque completo de la memoria principal. Si esta operaci\'{o}n se da muchas veces, puede suponer un sobrecoste alto a la implementaci\'{o}n.
+	\item La idea propuesta de la realizaci\'{o}n de la paralelizaci\'{o}n de los \textit{frames} de un v\'{i}deo puede llevarse a cabo mediante la librer\'{i}a MPI. Cada \textit{frame} se le pasar\'{i}a a cada nodo del \textit{cluster} y que cada uno segmente esa imagen. En esta tarea se podr\'{a} utilizar el algoritmo desarrollado a lo largo de este proyecto en OpenMP. De esta manera, la combinaci\'{o}n de estas dos t\'{e}cnicas conseguir\'{i}a poder realizar la segmentaci\'{o}n de un v\'{i}deo satisfactoriamente utilizando una soluci\'{o}n paralela h\'{i}brida (OpenMP + MPI).
+	\item El trabajo realizado en este proyecto tambi\'{e}n se pod\'{i}a haber desarrollado con CUDA para realizar el algoritmo en GPUs. Sin embargo, esta opci\'{o}n no se llev\'{o} a cabo ya que el tratamiento de las listas en CUDA es bastante complejo y no es <<natural>> comparado con el modelo de programaci\'{o}n que se sigue en CUDA. Existen t\'{e}cnicas para realizar un tratamiento de estas listas m\'{a}s eficientemente aunque el hecho de que este tratamiento ya tenga complicaci\'{o}n no augura muy buena eficiencia. Aparte de esto, el acceso a m\'{a}quinas de pruebas pod\'{i}a suponer alguna complicaci\'{o}n. Por todo ello, se decidi\'{o} no utilizar CUDA en ese primer momento aunque se cree que puede ser una buena opci\'{o}n el poder realizar este trabajo en un futuro. 
+\end{enumerate}
