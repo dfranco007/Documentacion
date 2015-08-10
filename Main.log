@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  9 AUG 2015 12:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  10 AUG 2015 16:38
 entering extended mode
 **Main.tex
 
@@ -1566,18 +1566,18 @@ Cap\'{\i }tulo 7.
 File: ./imagenes/buena1.png Graphic file (type png)
 
 <use ./imagenes/buena1.png>
-Package pdftex.def Info: ./imagenes/buena1.png used on input line 14.
+Package pdftex.def Info: ./imagenes/buena1.png used on input line 17.
 (pdftex.def)             Requested size: 126.47194pt x 125.31236pt.
 File: ./imagenes/ejemplo2.png Graphic file (type png)
  <use ./imagenes/ejemplo2.png>
-Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 19.
+Package pdftex.def Info: ./imagenes/ejemplo2.png used on input line 22.
 (pdftex.def)             Requested size: 144.54053pt x 114.04088pt.
 
 <./imagenes/buena3.png, id=1100, 769.37437pt x 749.80125pt>
 File: ./imagenes/buena3.png Graphic file (type png)
 
 <use ./imagenes/buena3.png>
-Package pdftex.def Info: ./imagenes/buena3.png used on input line 24.
+Package pdftex.def Info: ./imagenes/buena3.png used on input line 27.
 (pdftex.def)             Requested size: 144.54053pt x 140.86197pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1592,7 +1592,7 @@ buena3.png>] <./imagenes/graf1-500.png, id=1113, 511.15968pt x 344.78813pt>
 File: ./imagenes/graf1-500.png Graphic file (type png)
 
 <use ./imagenes/graf1-500.png>
-Package pdftex.def Info: ./imagenes/graf1-500.png used on input line 70.
+Package pdftex.def Info: ./imagenes/graf1-500.png used on input line 73.
 (pdftex.def)             Requested size: 272.99881pt x 184.14153pt.
  [63 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf1-500.png>] <./imagenes/graf1-1500.png,
@@ -1600,7 +1600,7 @@ fin de grado/Documentacion/imagenes/graf1-500.png>] <./imagenes/graf1-1500.png,
 File: ./imagenes/graf1-1500.png Graphic file (type png)
 
 <use ./imagenes/graf1-1500.png>
-Package pdftex.def Info: ./imagenes/graf1-1500.png used on input line 110.
+Package pdftex.def Info: ./imagenes/graf1-1500.png used on input line 113.
 (pdftex.def)             Requested size: 350.99762pt x 190.12248pt.
  [64 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf1-1500.png>] <./imagenes/graf1-3000.png
@@ -1608,7 +1608,7 @@ fin de grado/Documentacion/imagenes/graf1-1500.png>] <./imagenes/graf1-3000.png
 File: ./imagenes/graf1-3000.png Graphic file (type png)
 
 <use ./imagenes/graf1-3000.png>
-Package pdftex.def Info: ./imagenes/graf1-3000.png used on input line 148.
+Package pdftex.def Info: ./imagenes/graf1-3000.png used on input line 151.
 (pdftex.def)             Requested size: 350.99762pt x 207.40648pt.
  [65 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf1-3000.png>] <./imagenes/result1.png, i
@@ -1616,7 +1616,7 @@ d=1147, 501.875pt x 501.875pt>
 File: ./imagenes/result1.png Graphic file (type png)
 
 <use ./imagenes/result1.png>
-Package pdftex.def Info: ./imagenes/result1.png used on input line 162.
+Package pdftex.def Info: ./imagenes/result1.png used on input line 165.
 (pdftex.def)             Requested size: 272.99881pt x 273.01485pt.
 
 Underfull \vbox (badness 1072) has occurred while \output is active []
@@ -1627,7 +1627,7 @@ fin de grado/Documentacion/imagenes/result1.png>]
 File: ./imagenes/graf2-500.png Graphic file (type png)
 
 <use ./imagenes/graf2-500.png>
-Package pdftex.def Info: ./imagenes/graf2-500.png used on input line 205.
+Package pdftex.def Info: ./imagenes/graf2-500.png used on input line 208.
 (pdftex.def)             Requested size: 272.99881pt x 180.80432pt.
  [67 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf2-500.png>] <./imagenes/graf2-1500.png,
@@ -1635,7 +1635,7 @@ fin de grado/Documentacion/imagenes/graf2-500.png>] <./imagenes/graf2-1500.png,
 File: ./imagenes/graf2-1500.png Graphic file (type png)
 
 <use ./imagenes/graf2-1500.png>
-Package pdftex.def Info: ./imagenes/graf2-1500.png used on input line 244.
+Package pdftex.def Info: ./imagenes/graf2-1500.png used on input line 247.
 (pdftex.def)             Requested size: 350.99762pt x 188.54242pt.
  [68 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf2-1500.png>] <./imagenes/graf2-3000.png
@@ -1643,7 +1643,7 @@ fin de grado/Documentacion/imagenes/graf2-1500.png>] <./imagenes/graf2-3000.png
 File: ./imagenes/graf2-3000.png Graphic file (type png)
 
 <use ./imagenes/graf2-3000.png>
-Package pdftex.def Info: ./imagenes/graf2-3000.png used on input line 283.
+Package pdftex.def Info: ./imagenes/graf2-3000.png used on input line 286.
 (pdftex.def)             Requested size: 350.99762pt x 190.5463pt.
  [69 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf2-3000.png>] <./imagenes/result2.png, i
@@ -1651,7 +1651,7 @@ d=1194, 501.875pt x 501.875pt>
 File: ./imagenes/result2.png Graphic file (type png)
 
 <use ./imagenes/result2.png>
-Package pdftex.def Info: ./imagenes/result2.png used on input line 298.
+Package pdftex.def Info: ./imagenes/result2.png used on input line 301.
 (pdftex.def)             Requested size: 272.99881pt x 273.01485pt.
 
 Underfull \vbox (badness 1072) has occurred while \output is active []
@@ -1662,7 +1662,7 @@ fin de grado/Documentacion/imagenes/result2.png>]
 File: ./imagenes/graf3-500.png Graphic file (type png)
 
 <use ./imagenes/graf3-500.png>
-Package pdftex.def Info: ./imagenes/graf3-500.png used on input line 341.
+Package pdftex.def Info: ./imagenes/graf3-500.png used on input line 344.
 (pdftex.def)             Requested size: 272.99881pt x 182.91727pt.
  [71 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf3-500.png>] <./imagenes/graf3-1500.png,
@@ -1670,7 +1670,7 @@ fin de grado/Documentacion/imagenes/graf3-500.png>] <./imagenes/graf3-1500.png,
 File: ./imagenes/graf3-1500.png Graphic file (type png)
 
 <use ./imagenes/graf3-1500.png>
-Package pdftex.def Info: ./imagenes/graf3-1500.png used on input line 381.
+Package pdftex.def Info: ./imagenes/graf3-1500.png used on input line 384.
 (pdftex.def)             Requested size: 350.99762pt x 187.56256pt.
  [72 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf3-1500.png>] <./imagenes/graf3-3000.png
@@ -1678,7 +1678,7 @@ fin de grado/Documentacion/imagenes/graf3-1500.png>] <./imagenes/graf3-3000.png
 File: ./imagenes/graf3-3000.png Graphic file (type png)
 
 <use ./imagenes/graf3-3000.png>
-Package pdftex.def Info: ./imagenes/graf3-3000.png used on input line 422.
+Package pdftex.def Info: ./imagenes/graf3-3000.png used on input line 425.
 (pdftex.def)             Requested size: 312.00119pt x 170.28922pt.
  [73 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/graf3-3000.png>] <./imagenes/result3.png, i
@@ -1686,7 +1686,7 @@ d=1241, 501.875pt x 501.875pt>
 File: ./imagenes/result3.png Graphic file (type png)
 
 <use ./imagenes/result3.png>
-Package pdftex.def Info: ./imagenes/result3.png used on input line 435.
+Package pdftex.def Info: ./imagenes/result3.png used on input line 438.
 (pdftex.def)             Requested size: 272.99881pt x 273.01485pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1903,9 +1903,9 @@ fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/la
 txfont/lasy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latx
 font/line10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
 s/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Main.pdf (117 pages, 23604492 bytes).
+Output written on Main.pdf (117 pages, 23606934 bytes).
 PDF statistics:
- 2000 PDF objects out of 2073 (max. 8388607)
+ 1999 PDF objects out of 2073 (max. 8388607)
  639 named destinations out of 1000 (max. 500000)
  880 words of extra memory for PDF output out of 10000 (max. 10000000)
 
