@@ -1,6 +1,6 @@
 \chapter{Gesti\'{o}n del proyecto}
 
-En este cap\'{i}tulo se presenta todo lo relacionado con la gesti\'{o}n del proyecto realizado: EDT, la gesti\'{o}n del alcance, de costes, de tiempo y de los riesgos.
+En este cap\'{i}tulo se presenta todo lo relacionado con la gesti\'{o}n del proyecto realizado: EDT (Estructura de descomposici\'{o}n del trabajo), la gesti\'{o}n del alcance, de los costes, de tiempo y de los riesgos.
 
 \section{EDT}
 
@@ -15,7 +15,9 @@ En este cap\'{i}tulo se presenta todo lo relacionado con la gesti\'{o}n del proy
 
 \section{Gesti\'{o}n del alcance}\label{alcance}
  
-El alcance inicial de este proyecto est\'{a} descrito en la secci\'{o}n \ref{obj-cliente}, sin embargo, \'{e}ste puede verse alterado en base al primer riesgo identificado que se explicar\'{a} en la secci\'{o}n \ref{riesgos}. Debido a eso, se ha definido un alcance alternativo como recurso en caso de que se cumpla dicho riesgo. Los objetivos a cumplir en ese caso ser\'{i}an los siguientes:
+El alcance inicial de este proyecto est\'{a} descrito en la secci\'{o}n \ref{obj-cliente}, sin embargo, \'{e}ste puede verse alterado en base al primer riesgo identificado que se explicar\'{a} en la secci\'{o}n \ref{riesgos}. Por lo tanto, se ha definido un alcance alternativo como recurso en caso de que se diera dicho riesgo.
+
+\subsubsection{Nuevos objetivos a cumplir dado el primer riesgo}
 
 \begin{enumerate}
 	\item Se har\'{i}a un estudio de las diferentes t\'{e}cnicas de segmentaci\'{o}n existentes de una forma m\'{a}s exhaustiva, es decir, se estudiar\'{i}an las diferentes optimizaciones o mejoras que se hayan realizado para cada t\'{e}cnica de segmentaci\'{o}n. 
@@ -26,7 +28,7 @@ El alcance inicial de este proyecto est\'{a} descrito en la secci\'{o}n \ref{obj
  
 \
 
-\section{Gesti\'{o}n del costes}
+\section{Gesti\'{o}n de los costes}
 
 El coste de este proyecto ha sido \'{u}nicamente la dedicaci\'{o}n de horas dedicadas en su realizaci\'{o}n. En la tabla \ref{dedicacionTemporal} se puede observar la dedicaci\'{o}n atribuida a cada tarea.
  
@@ -36,26 +38,26 @@ El coste de este proyecto ha sido \'{u}nicamente la dedicaci\'{o}n de horas dedi
 	\captionsetup{justification=centering}
 	\centering
 	\begin{tabular}{clcp{20mm}p{20mm}M{20mm}}\toprule
-		{\bf Categor\'{i}a}                & {\bf Tarea}            & {\bf Dedicaci\'{o}n (h)} \\ \midrule\midrule
-		 \multirow{2}{*}{Investigaci\'{o}n} & T\'{e}cnicas de segmentaci\'{o}n (general)           & 28                   \\  \cmidrule(l){2-3}
-		 & {\it Level set}                              & 11                   \\ \midrule \midrule
-		  & Revisi\'{o}n c\'{o}digo Ofeli (ver factibilidad)     & 2                    \\ \cmidrule(l){2-3}
-		& Familiarizaci\'{o}n c\'{o}digo Ofeli                 & 5                    \\ \cmidrule(l){2-3}
-		& Dise\~{n}o de estrategia de paralelizaci\'{o}n       & 6                    \\ \cmidrule(l){2-3}
-		\multirow{2}{*}{Programaci\'{o}n} & Extracci\'{o}n GUI de Ofeli                      & 8                    \\  \cmidrule(l){2-3}
-		 & Implementaci\'{o}n paralela                      & 88                   \\ \cmidrule(l){2-3}
-		& Preparaci\'{o}n de las m\'{a}quinas para las pruebas & 4                    \\ \cmidrule(l){2-3}
-		& Realizaci\'{o}n de pruebas                       & 16                   \\ \cmidrule(l){2-3}
-		& Implementaci\'{o}n objetivos secundarios         & 20                   \\ \midrule \midrule
-		       & Recogida de requisitos                       & 5                    \\ \cmidrule(l){2-3}
-		Cliente & Reuniones de seguimiento y control           & 22                   \\ \cmidrule(l){2-3}
-		& Reuni\'{o}n final                                & 3                    \\ \midrule \midrule
-		     & Aprendizaje \LaTeX y adaptaci\'{o}n de plantilla  & 5                    \\ \cmidrule(l){2-3}
-		 & Redacci\'{o}n de memoria                         & 110                  \\ \cmidrule(l){2-3}
-         & Aprendizaje C++ y repaso de Github y OpenMP  & 7                    \\ \cmidrule(l){2-3}
-         Otros & Planificaci\'{o}n & 16 \\ \cmidrule(l){2-3}
-         & Preparaci\'{o}n de la defensa (estimado)         & 20                   \\ \midrule \midrule
-         & \bf{TOTAL}            & \textbf{376} \\ \midrule                
+		{\bf Categor\'{i}a}                						& {\bf Tarea}            							   	& {\bf Dedicaci\'{o}n (h)} \\ \midrule\midrule
+		 \multirow{2}{*}{Investigaci\'{o}n} 					& T\'{e}cnicas de segmentaci\'{o}n (general)           	& 28                   \\  \cmidrule(l){2-3}
+		& {\it Level set}                             			& 11                   \\ \midrule \midrule
+		& Revisi\'{o}n c\'{o}digo Ofeli (ver factibilidad)     	& 2                    \\ \cmidrule(l){2-3}
+		& Familiarizaci\'{o}n c\'{o}digo Ofeli                 	& 5                    \\ \cmidrule(l){2-3}
+		& Dise\~{n}o de estrategia de paralelizaci\'{o}n       	& 6                    \\ \cmidrule(l){2-3}		\multirow{2}{*}{Programaci\'{o}n} & Extracci\'{o}n GUI de Ofeli                      & 8                    \\  \cmidrule(l){2-3}
+		& Implementaci\'{o}n paralela                      		& 94                   \\ \cmidrule(l){2-3}
+		& Preparaci\'{o}n de las m\'{a}quinas para las pruebas	& 4                    \\ \cmidrule(l){2-3}
+		& Realizaci\'{o}n de pruebas                       		& 16                   \\ \cmidrule(l){2-3}
+		& Implementaci\'{o}n objetivos secundarios         		& 35                   \\ \midrule \midrule
+		& Recogida de requisitos                       			& 5                    \\ \cmidrule(l){2-3}
+		Cliente & Reuniones de seguimiento y control (cliente)          	& 7                   \\ \cmidrule(l){2-3}
+		& Reuni\'{o}n final                                		& 3                    \\ \midrule \midrule
+        & Aprendizaje \LaTeX y adaptaci\'{o}n de plantilla  	& 5                    \\ \cmidrule(l){2-3}
+		& Redacci\'{o}n de memoria                         		& 112                  \\ \cmidrule(l){2-3}
+		\multirow{2}{*}{Otros} & Reuniones de seguimiento y control (proyecto)         & 18                   \\ \cmidrule(l){2-3}
+        & Aprendizaje C++ y repaso de Github y OpenMP  			& 7                    \\ \cmidrule(l){2-3}
+        & Planificaci\'{o}n 								& 16 \\ \cmidrule(l){2-3}
+        & Preparaci\'{o}n de la defensa (estimado)         		& 20                   \\ \midrule \midrule
+        & \bf{TOTAL}            & \textbf{402} \\ \midrule                
 	\end{tabular}
 	\caption{Dedicaci\'{o}n del proyecto}	
 	\label{dedicacionTemporal}	
@@ -73,6 +75,8 @@ El proyecto dio comienzo el d\'{i}a 8 de Enero de 2015 con el primer planteamien
 	\item \textbf{21 de Abril}, primera Implementaci\'{o}n paralela Ofeli completa.
 	\item \textbf{15 de Mayo}, segunda implementaci\'{o}n paralela.
 	\item \textbf{30 de Mayo}, tercera implementaci\'{o}n paralela.
+	\item \textbf{28 de Junio}, una primera versi\'{o}n provisional de la memoria del proyecto.
+	\item \textbf{21 de Julio}, segunda versi\'{o}n provisional de la memoria del proyecto.
 	\item \textbf{10 de Agosto}, finalizaci\'{o}n de objetivos extra del cliente.
 	\item \textbf{20 de Agosto}, finalizaci\'{o}n de la memoria.
 \end{itemize}
@@ -89,7 +93,7 @@ Al inicio del proyecto se han identificado una serie de riesgos que podr\'{i}an 
 	
 	La alternativa ser\'{i}a el realizar el estudio de posibilidades en s\'{i} mismo, de manera que se ofrezca al cliente la mejor soluci\'{o}n para intentar resolver el principal objetivo del proyecto. Esta alternativa cambiar\'{i}a el alcance de este proyecto como se ha descrito en la secci\'{o}n anterior de gesti\'{o}n del alcance \ref{alcance}.
 	
-	\item Una vez escogido un algoritmo de segmentaci\'{o}n, encontrado una implementaci\'{o}n de dicho algoritmo, o incluso, haber podido realizar una implementaci\'{o}n propia de este, se define el segundo riesgo. Se buscar\'{a} realizar una soluci\'{o}n eficiente para una arquitectura SMP de lo conseguido, sin embargo, puede que no se pueda satisfacer los requisitos del cliente para una arquitectura SMP.
+	\item Una vez escogido un algoritmo de segmentaci\'{o}n, encontrado una implementaci\'{o}n de dicho algoritmo, o incluso, haber podido realizar una implementaci\'{o}n propia de \'{e}ste, se define el segundo riesgo. Se buscar\'{a} realizar una soluci\'{o}n eficiente para una arquitectura SMP de lo conseguido, sin embargo, puede que no se pueda satisfacer los requisitos del cliente para una arquitectura SMP.
 	
 	La alternativa es realizar una implementaci\'{o}n eficiente para otras arquitecturas, como MPP o en GPUs, en cuyo caso se utilizar\'{i}a el est\'{a}ndar MPI o la librer\'{i}a CUDA respectivamente.
 	

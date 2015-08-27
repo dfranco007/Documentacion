@@ -110,6 +110,14 @@ OpenMP~API specification for~parallel programming.
 Livermore Computing~Center (LC).
 \newblock {\em https://computing.llnl.gov}.
 
+\bibitem{jour}
+E.~Cox, M.~Li, P.~Chung, C.~Ghosh, T.~S. Rahman, C.~J. Jenks, J.~W. Evans, and
+  P.~A. Thiel.
+\newblock Temperature dependence of island growth shapes during submonolayer
+  deposition of ag on ag(111).
+\newblock {\em Phys. Rev. B}, vol. 71:Iss. 11, 2005.
+\newblock http://journals.aps.org/prb/abstract/10.1103/PhysRevB.71.115414.
+
 \bibitem{gitHub1}
 D.~Franco.
 \newblock Repositorio github.
