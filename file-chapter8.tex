@@ -55,24 +55,24 @@ Al cliente le interesa saber la densidad de las islas interiores y exteriores po
 
 \section{Power Spectral Density (PSD)}
 
-\textit{Power Spectral Density}, o la densidad espectral de potencia en castellano, es una medida de la intensidad de la potencia de una se\~{n}al en el dominio de la frecuencia, informando de la distribuci\'{o}n de sus distintas componentes frecuenciales en el espectro. Para el cliente de este proyecto, este c\'{a}lculo ayudar\'{a} a evaluar las caracter\'{i}sticas de las islas que contiene la imagen que, como ya se ha mencionado anteriormente, est\'{a}n producidas por ciertos experimentos. El resultado del PSD es una especie de <<mapa>> sobre las intensidades que tiene la imagen. El cliente tiene una herramienta en Java (desarrollada por Nestor Ferrando y adaptada por Joseba Alberdi) que realiza el PSD de una imagen representada en un fichero <<.txt>>, por lo que se tendr\'{a}n que adaptar las im\'{a}genes de las islas extra\'{i}das y generar ese formato de manera que se pueda realizar el c\'{a}lculo con dicha herramienta.
+\textit{Power Spectral Density}, o la densidad espectral de potencia en castellano, es una medida de la intensidad de la potencia de una se\~{n}al en el dominio de la frecuencia, informando de la distribuci\'{o}n de sus distintas componentes frecuenciales en el espectro. Para el cliente de este proyecto, este c\'{a}lculo ayudar\'{a} a evaluar las caracter\'{i}sticas de las islas que contiene la imagen que, como ya se ha mencionado anteriormente, est\'{a}n producidas por ciertos experimentos. El resultado del PSD es una especie de <<mapa>> sobre las intensidades que tiene la imagen. El cliente tiene una herramienta en Java (desarrollada por Nestor Ferrando y adaptada por Joseba Alberdi) que realiza el PSD de una imagen representada en forma de <<tienda de campa\~{n}a>> (v\'{e}ase las figuras \ref{tienda} y \ref{tienda2}). Para crear esta representaci\'{o}n de <<tienda de campa\~{n}a>> se deber\'{a} generar un fichero <<.txt>> de aquello que se quiera calcular el PSD, por lo que se tendr\'{a}n que adaptar las im\'{a}genes extra\'{i}das de la segmentaci\'{o}n y generar ese formato de manera que se pueda realizar el c\'{a}lculo con dicha herramienta.
 
 El cliente necesita sacar conclusiones sobre varios c\'{a}lculos de PSD y la comparaci\'{o}n entre \'{e}stos. Para ello, se han tenido que realizar varias tareas:
 
 \begin{itemize}
-	\item Se ha realizado una imagen con todas las islas encontradas en la segmentaci\'{o}n, incluyendo las islas de los bordes y otra imagen aparte excluyendo \'{e}stas. De la misma manera, se han generado sus correspondientes ficheros <<.txt>> para poder realizar el c\'{a}lculo del PSD con las dos im\'{a}genes.
-	\item Se han centrado las im\'{a}genes de todas las islas extra\'{i}das, se han convertido en im\'{a}genes cuadradas y todas del mismo tama\~{n}o (tama\~{n}o de la isla m\'{a}s grande). Para cada una de estas islas se ha generado su fichero <<.txt>> correspondiente. Adem\'{a}s de estas islas, se han identificado las islas que <<no>> est\'{a}n <<cortadas>> por el borde de la imagen y se han generado nuevamente sus correspondientes ficheros <<.txt>>.
-	\item Se ha generado otra nueva imagen por cada isla, pero esta vez se ha pintado la isla en el lugar original donde se encontraba en la imagen original, por lo tanto, tendr\'{a} el mismo tama\~{n}o que la imagen original. Posteriormente se ha generado su fichero <<.txt>> correspondiente.
-	\item Se ha generado otra nueva imagen por cada islas, aparte de las dos anteriores generadas, con un tama\~{n}o igual al de la imagen original y centradas. De la misma manera tambi\'{e}n se han generado sus correspondientes ficheros <<.txt>>.  
+	\item Se ha realizado una imagen, del mismo tama\~{n}o que la imagen original, de todas las islas encontradas en la segmentaci\'{o}n, incluyendo las islas de los bordes y posicionando todas ellas en la posici\'{o}n que se encontraban en la imagen original. Adem\'{a}s, se ha realizado otra imagen aparte de las mismas caracter\'{i}sticas que la anterior pero excluyendo las islas de los bordes. De la misma manera, se han generado sus correspondientes ficheros <<.txt>> para poder realizar el c\'{a}lculo del PSD con las dos im\'{a}genes.
+	\item Se han centrado las im\'{a}genes de todas las islas extra\'{i}das, se han convertido en im\'{a}genes cuadradas y todas del mismo tama\~{n}o (tama\~{n}o de la isla m\'{a}s grande). Para cada una de estas islas se ha generado su fichero <<.txt>> correspondiente. Adem\'{a}s, se han identificado las islas que <<no>> est\'{a}n <<cortadas>> por el borde de la imagen y se han generado nuevamente sus correspondientes ficheros <<.txt>>.
+	\item Se ha generado otra nueva imagen por cada isla, pero esta vez se ha pintado la isla en el lugar donde se encontraba en la imagen original, por lo tanto, tendr\'{a} el mismo tama\~{n}o que esta \'{u}ltima. Posteriormente se ha generado su fichero <<.txt>> correspondiente.
+	\item Se ha generado otra nueva imagen por cada isla, aparte de las dos anteriores generadas, con el tama\~{n}o de la imagen original y centradas. De la misma manera tambi\'{e}n se han generado sus correspondientes ficheros <<.txt>>.  
 \end{itemize}
 
-Con los ficheros generados se generan las denominadas <<tiendas de campa\~{n}a>> que se pueden observar en las figuras \ref{tienda} y \ref{tienda2}. Despu\'{e}s, estas representaciones son utilizadas por la herramienta del cliente para crear el PSD. La figura \ref{tienda} corresponde a la <<tienda de campa\~{n}a>> utilizada para el c\'{a}lculo del PSD de la media de las islas de la figura \ref{result3}. 
- \vspace{-.7cm}
+Con los ficheros generados se generan las <<tiendas de campa\~{n}a>> que se pueden observar en las figuras \ref{tienda} y \ref{tienda2}. Despu\'{e}s, la herramienta del cliente crea el PSD a partir de estas representaciones. La figura \ref{tienda} corresponde a la <<tienda de campa\~{n}a>> utilizada para el c\'{a}lculo del PSD de la media de las islas de la figura \ref{result3}. 
+
 \begin{figure}[H]
 	\captionsetup{justification=centering}
 	\centering
-	\includegraphics[width=.85\textwidth]{./pdfs/psd}
-	\caption{Ejemplo de <<tienda de campa\~{n}a>> de la media de las islas de la imagen \ref{result3}}	
+	\includegraphics[width=.6\textwidth]{./imagenes/psd}
+	\caption{Ejemplo de <<tienda de campa\~{n}a>> de la media de las islas de la figura \ref{result3}}	
 	\label{tienda}
 	Fuente: Joseba Alberdi
 \end{figure}
@@ -89,7 +89,7 @@ A modo de ejemplo, se muestra en la figura \ref{tienda2} la <<tienda de campa\~{
 	\end{subfigure}	
 	\begin{subfigure}[t]{2.6in}
 		\centering
-		\includegraphics[width=1.4\textwidth]{./pdfs/surface_raw}	
+		\includegraphics[width=1.45\textwidth]{./pdfs/surface_raw}	
 		\subcaption{}\label{tienda2}
 	\end{subfigure}
 	\caption{Ilustraci\'{o}n de la octava isla }	

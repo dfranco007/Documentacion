@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  27 AUG 2015 20:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.5)  28 AUG 2015 13:01
 entering extended mode
 **Main.tex
 
@@ -1759,20 +1759,15 @@ Underfull \vbox (badness 2426) has occurred while \output is active []
 
  [79 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/imagenes/extraccionIslaBuena.png>] [80]
-<./pdfs/psd.pdf, id=1323, 845.1575pt x 597.23125pt>
-File: ./pdfs/psd.pdf Graphic file (type pdf)
- <use ./pdfs/psd.pdf>
-Package pdftex.def Info: ./pdfs/psd.pdf used on input line 74.
-(pdftex.def)             Requested size: 331.50238pt x 234.25885pt.
+<./imagenes/psd.png, id=1325, 930.47626pt x 512.66531pt>
+File: ./imagenes/psd.png Graphic file (type png)
 
-Overfull \hbox (12.58032pt too wide) in paragraph at lines 69--78
-[][]\OT1/cmr/m/n/12 Con los fi-che-ros ge-ne-ra-dos se ge-ne-ran las de-no-mi-n
-a-das []tiendas de campa~na[]
- []
-
-[81 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de f
-in de grado/Documentacion/pdfs/psd.pdf>]
-<./imagenes/tiendaAux.png, id=1339, 543.53062pt x 451.6875pt>
+<use ./imagenes/psd.png>
+Package pdftex.def Info: ./imagenes/psd.png used on input line 74.
+(pdftex.def)             Requested size: 234.00238pt x 128.9248pt.
+ [81 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
+fin de grado/Documentacion/imagenes/psd.png>]
+<./imagenes/tiendaAux.png, id=1337, 543.53062pt x 451.6875pt>
 File: ./imagenes/tiendaAux.png Graphic file (type png)
 
 <use ./imagenes/tiendaAux.png>
@@ -1783,18 +1778,18 @@ Overfull \hbox (56.37129pt too wide) in paragraph at lines 87--88
  [][][] 
  []
 
-<./pdfs/surface_raw.pdf, id=1340, 845.1575pt x 597.23125pt>
+<./pdfs/surface_raw.pdf, id=1338, 845.1575pt x 597.23125pt>
 File: ./pdfs/surface_raw.pdf Graphic file (type pdf)
 
 <use ./pdfs/surface_raw.pdf>
 Package pdftex.def Info: ./pdfs/surface_raw.pdf used on input line 92.
-(pdftex.def)             Requested size: 263.06226pt x 185.89615pt.
+(pdftex.def)             Requested size: 272.45795pt x 192.53952pt.
 
-Overfull \hbox (75.15982pt too wide) in paragraph at lines 92--93
+Overfull \hbox (84.55551pt too wide) in paragraph at lines 92--93
  [][][] 
  []
 
-<./imagenes/PSDmap.png, id=1342, 735.49782pt x 618.05907pt>
+<./imagenes/PSDmap.png, id=1340, 735.49782pt x 618.05907pt>
 File: ./imagenes/PSDmap.png Graphic file (type png)
 
 <use ./imagenes/PSDmap.png>
@@ -1816,7 +1811,7 @@ imagenes/PSDmap.png>] [83] [84
 
 ]
 Cap\'{\i }tulo 9.
-<./imagenes/EDT.png, id=1363, 1025.33063pt x 583.42969pt>
+<./imagenes/EDT.png, id=1361, 1025.33063pt x 583.42969pt>
 File: ./imagenes/EDT.png Graphic file (type png)
 
 <use ./imagenes/EDT.png>
@@ -1935,7 +1930,7 @@ tex' on input line 119.
 ("C:\Users\Dani\Desktop\Universidad\4º Curso\2º cuatrimestre\Proyecto de fin 
 de grado\Documentacion\file-appendix2.tex" [102]
 Ap\'{e}ndice B.
-<./pdfs/PSD_informe.pdf, id=1616, 597.50829pt x 845.0471pt>
+<./pdfs/PSD_informe.pdf, id=1614, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf>
@@ -1946,7 +1941,7 @@ File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./pdfs/PSD_informe.pdf used on input line 5.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-<./pdfs/PSD_informe.pdf, id=1619, page=1, 597.50829pt x 845.0471pt>
+<./pdfs/PSD_informe.pdf, id=1617, page=1, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf, page 1>
@@ -1976,7 +1971,7 @@ Package pdftex.def Info: ./pdfs/PSD_informe.pdf, page1 used on input line 5.
 
 [104 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de 
 fin de grado/Documentacion/pdfs/PSD_informe.pdf>]
-<./pdfs/PSD_informe.pdf, id=1671, page=2, 597.50829pt x 845.0471pt>
+<./pdfs/PSD_informe.pdf, id=1669, page=2, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf, page 2>
@@ -1993,7 +1988,7 @@ Package pdftex.def Info: ./pdfs/PSD_informe.pdf, page2 used on input line 5.
 (pdftex.def)             Requested size: 598.00826pt x 646.4183pt.
  [105 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de
  fin de grado/Documentacion/pdfs/PSD_informe.pdf>] <./pdfs/PSD_informe.pdf, id=
-1705, page=3, 597.50829pt x 845.0471pt>
+1703, page=3, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf, page 3>
@@ -2010,7 +2005,7 @@ Package pdftex.def Info: ./pdfs/PSD_informe.pdf, page3 used on input line 5.
 (pdftex.def)             Requested size: 598.00826pt x 646.4183pt.
  [106 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de
  fin de grado/Documentacion/pdfs/PSD_informe.pdf>] <./pdfs/PSD_informe.pdf, id=
-1733, page=4, 597.50829pt x 845.0471pt>
+1731, page=4, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf, page 4>
@@ -2027,7 +2022,7 @@ Package pdftex.def Info: ./pdfs/PSD_informe.pdf, page4 used on input line 5.
 (pdftex.def)             Requested size: 598.00826pt x 646.4183pt.
  [107 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de
  fin de grado/Documentacion/pdfs/PSD_informe.pdf>] <./pdfs/PSD_informe.pdf, id=
-1790, page=5, 597.50829pt x 845.0471pt>
+1788, page=5, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf, page 5>
@@ -2044,7 +2039,7 @@ Package pdftex.def Info: ./pdfs/PSD_informe.pdf, page5 used on input line 5.
 (pdftex.def)             Requested size: 598.00826pt x 646.4183pt.
  [108 <C:/Users/Dani/Desktop/Universidad/4º Curso/2º cuatrimestre/Proyecto de
  fin de grado/Documentacion/pdfs/PSD_informe.pdf>] <./pdfs/PSD_informe.pdf, id=
-1851, page=6, 597.50829pt x 845.0471pt>
+1849, page=6, 597.50829pt x 845.0471pt>
 File: ./pdfs/PSD_informe.pdf Graphic file (type pdf)
 
 <use ./pdfs/PSD_informe.pdf, page 6>
@@ -2097,8 +2092,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
  ) 
 Here is how much of TeX's memory you used:
  14224 strings out of 493921
- 217998 string characters out of 3147286
- 352216 words of memory out of 3000000
+ 218014 string characters out of 3147286
+ 351216 words of memory out of 3000000
  16250 multiletter control sequences out of 15000+200000
  19021 words of font info for 71 fonts, out of 3000000 for 9000
  842 hyphenation exceptions out of 8191
@@ -2128,9 +2123,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/lasy10.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on Main.pdf (130 pages, 27458770 bytes).
+Output written on Main.pdf (130 pages, 27495979 bytes).
 PDF statistics:
- 2272 PDF objects out of 2487 (max. 8388607)
+ 2270 PDF objects out of 2487 (max. 8388607)
  658 named destinations out of 1000 (max. 500000)
  1073 words of extra memory for PDF output out of 10000 (max. 10000000)
 
